@@ -1561,8 +1561,8 @@ func  (this *hyperliquid) CreateOrder(symbol interface{}, typeVar interface{}, s
             params := GetArg(optionalArgs, 1, map[string]interface{} {})
             _ = params
         
-            retRes14028 := (<-this.LoadMarkets())
-            PanicOnError(retRes14028)
+            // retRes14028 := (<-this.LoadMarkets())
+            // PanicOnError(retRes14028)
             orderglobalParamsVariable := this.ParseCreateEditOrderArgs(nil, symbol, typeVar, side, amount, price, params);
             order := GetValue(orderglobalParamsVariable,0);
             globalParams := GetValue(orderglobalParamsVariable,1)
@@ -1593,8 +1593,8 @@ func  (this *hyperliquid) CreateOrders(orders interface{}, optionalArgs ...inter
                     params := GetArg(optionalArgs, 0, map[string]interface{} {})
             _ = params
         
-            retRes14188 := (<-this.LoadMarkets())
-            PanicOnError(retRes14188)
+            // retRes14188 := (<-this.LoadMarkets())
+            // PanicOnError(retRes14188)
             var request interface{} = this.CreateOrdersRequest(orders, params)
         
             response:= (<-this.PrivatePostExchange(request))
