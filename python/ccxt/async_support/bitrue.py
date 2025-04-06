@@ -57,6 +57,7 @@ class bitrue(Exchange, ImplicitAPI):
                 'createMarketOrderWithCost': False,
                 'createMarketSellOrderWithCost': False,
                 'createOrder': True,
+                'createReduceOnlyOrder': True,
                 'createStopLimitOrder': True,
                 'createStopMarketOrder': True,
                 'createStopOrder': True,
@@ -1229,7 +1230,7 @@ class bitrue(Exchange, ImplicitAPI):
         #         "time": 1699338305000
         #     }
         #
-        timestamp = self.safe_integer(response, 'time')
+        timestamp = self.safe_integer_2(response, 'time', 'lastUpdateId')
         orderbook = self.parse_order_book(response, symbol, timestamp)
         orderbook['nonce'] = self.safe_integer(response, 'lastUpdateId')
         return orderbook

@@ -280,13 +280,6 @@ export interface WithdrawalResponse {
     id: string;
 }
 
-export interface DepositAddressResponse {
-    currency: Str;
-    address: string;
-    info: any;
-    tag?: Str;
-}
-
 export interface FundingRate {
     symbol: string;
     info: any;
@@ -621,4 +614,34 @@ export type implicitReturnType = any;
 
 export type Market = MarketInterface | undefined;
 export type Currency = CurrencyInterface | undefined;
+interface BaseConstructorArgs {
+    apiKey?: string;
+    secret?: string;
+    password?: string;
+    privateKey?: string;
+    walletAddress?: string;
+    uid?: string;
+    verbose?: boolean;
+    sandbox?: boolean; // redundant with testnet but kept for backward compatibility
+    testnet?: boolean;
+    options?: Dict;
+    enableRateLimit?: boolean;
+    httpsProxy?: string;
+    socksProxy?: string;
+    wssProxy?: string;
+    proxy?: string;
+    rateLimit?: number;
+    commonCurrencies?: Dict;
+    userAgent?: string;
+    userAgents?: Dict;
+    timeout?: number;
+    markets?: Dict;
+    currencies?: Dict;
+    hostname?: string
+    urls?: Dict;
+    headers?: Dict;
+}
 
+export type ConstructorArgs = Partial<BaseConstructorArgs> & {
+    [key: string]: any;
+};

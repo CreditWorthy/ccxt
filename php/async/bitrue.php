@@ -43,6 +43,7 @@ class bitrue extends Exchange {
                 'createMarketOrderWithCost' => false,
                 'createMarketSellOrderWithCost' => false,
                 'createOrder' => true,
+                'createReduceOnlyOrder' => true,
                 'createStopLimitOrder' => true,
                 'createStopMarketOrder' => true,
                 'createStopOrder' => true,
@@ -1258,7 +1259,7 @@ class bitrue extends Exchange {
             //         "time" => 1699338305000
             //     }
             //
-            $timestamp = $this->safe_integer($response, 'time');
+            $timestamp = $this->safe_integer_2($response, 'time', 'lastUpdateId');
             $orderbook = $this->parse_order_book($response, $symbol, $timestamp);
             $orderbook['nonce'] = $this->safe_integer($response, 'lastUpdateId');
             return $orderbook;

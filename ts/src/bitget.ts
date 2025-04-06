@@ -1748,11 +1748,7 @@ export default class bitget extends Exchange {
         if (this.options['adjustForTimeDifference']) {
             await this.loadTimeDifference ();
         }
-        const sandboxMode = this.safeBool (this.options, 'sandboxMode', false);
-        let types = this.safeValue (this.options, 'fetchMarkets', [ 'spot', 'swap' ]);
-        if (sandboxMode) {
-            types = [ 'swap' ];
-        }
+        const types = this.safeValue (this.options, 'fetchMarkets', [ 'spot', 'swap' ]);
         const promises = [];
         let fetchMargins = false;
         for (let i = 0; i < types.length; i++) {
@@ -1921,7 +1917,7 @@ export default class bitget extends Exchange {
             const priceDecimals = this.safeInteger (market, 'pricePlace');
             const amountDecimals = this.safeInteger (market, 'volumePlace');
             const priceStep = this.safeString (market, 'priceEndStep');
-            const amountStep = this.safeString (market, 'minTradeNum');
+            const amountStep = this.safeString (market, 'sizeMultiplier');
             const precise = new Precise (priceStep);
             precise.decimals = Math.max (precise.decimals, priceDecimals);
             precise.reduce ();
@@ -2447,18 +2443,20 @@ export default class bitget extends Exchange {
         if (paginate) {
             return await this.fetchPaginatedCallCursor ('fetchWithdrawals', undefined, since, limit, params, 'idLessThan', 'idLessThan', undefined, 100) as Transaction[];
         }
-        if (code === undefined) {
-            throw new ArgumentsRequired (this.id + ' fetchWithdrawals() requires a `code` argument');
+        let currency = undefined;
+        if (code !== undefined) {
+            currency = this.currency (code);
         }
-        const currency = this.currency (code);
         if (since === undefined) {
             since = this.milliseconds () - 7776000000; // 90 days
         }
         let request: Dict = {
-            'coin': currency['id'],
             'startTime': since,
             'endTime': this.milliseconds (),
         };
+        if (currency !== undefined) {
+            request['coin'] = currency['id'];
+        }
         [ request, params ] = this.handleUntilOption ('endTime', request, params);
         if (limit !== undefined) {
             request['limit'] = limit;

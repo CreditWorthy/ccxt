@@ -162,22 +162,6 @@ class Exchange extends _base_Exchange_js__WEBPACK_IMPORTED_MODULE_0__/* .Exchang
 
 /***/ }),
 
-/***/ 2085:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _base_Exchange_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2961);
-// -------------------------------------------------------------------------------
-
-class Exchange extends _base_Exchange_js__WEBPACK_IMPORTED_MODULE_0__/* .Exchange */ .k {
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Exchange);
-
-
-/***/ }),
-
 /***/ 1578:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1362,22 +1346,6 @@ class Exchange extends _base_Exchange_js__WEBPACK_IMPORTED_MODULE_0__/* .Exchang
 
 /***/ }),
 
-/***/ 4025:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _base_Exchange_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2961);
-// -------------------------------------------------------------------------------
-
-class Exchange extends _base_Exchange_js__WEBPACK_IMPORTED_MODULE_0__/* .Exchange */ .k {
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Exchange);
-
-
-/***/ }),
-
 /***/ 995:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1634,22 +1602,28 @@ class ace extends _abstract_ace_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
             'rateLimit': 100,
             'pro': false,
             'has': {
-                'CORS': undefined,
-                'spot': true,
-                'margin': false,
-                'swap': false,
-                'future': false,
-                'option': false,
+                'addMargin': false,
+                'borrowCrossMargin': false,
+                'borrowIsolatedMargin': false,
+                'borrowMargin': false,
                 'cancelAllOrders': false,
                 'cancelOrder': true,
                 'cancelOrders': false,
                 'closeAllPositions': false,
                 'closePosition': false,
+                'CORS': undefined,
                 'createOrder': true,
+                'createOrderWithTakeProfitAndStopLoss': false,
+                'createOrderWithTakeProfitAndStopLossWs': false,
+                'createReduceOnlyOrder': false,
                 'editOrder': false,
                 'fetchBalance': true,
+                'fetchBorrowInterest': false,
+                'fetchBorrowRate': false,
                 'fetchBorrowRateHistories': false,
                 'fetchBorrowRateHistory': false,
+                'fetchBorrowRates': false,
+                'fetchBorrowRatesPerSymbol': false,
                 'fetchClosedOrders': false,
                 'fetchCrossBorrowRate': false,
                 'fetchCrossBorrowRates': false,
@@ -1657,18 +1631,36 @@ class ace extends _abstract_ace_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
                 'fetchDepositAddress': false,
                 'fetchDeposits': false,
                 'fetchFundingHistory': false,
+                'fetchFundingInterval': false,
+                'fetchFundingIntervals': false,
                 'fetchFundingRate': false,
                 'fetchFundingRateHistory': false,
                 'fetchFundingRates': false,
+                'fetchGreeks': false,
                 'fetchIndexOHLCV': false,
                 'fetchIsolatedBorrowRate': false,
                 'fetchIsolatedBorrowRates': false,
+                'fetchIsolatedPositions': false,
+                'fetchLeverage': false,
+                'fetchLeverages': false,
+                'fetchLeverageTiers': false,
+                'fetchLiquidations': false,
+                'fetchLongShortRatio': false,
+                'fetchLongShortRatioHistory': false,
+                'fetchMarginAdjustmentHistory': false,
                 'fetchMarginMode': false,
+                'fetchMarginModes': false,
+                'fetchMarketLeverageTiers': false,
                 'fetchMarkets': true,
                 'fetchMarkOHLCV': false,
+                'fetchMarkPrices': false,
+                'fetchMyLiquidations': false,
+                'fetchMySettlementHistory': false,
                 'fetchMyTrades': true,
                 'fetchOHLCV': true,
+                'fetchOpenInterest': false,
                 'fetchOpenInterestHistory': false,
+                'fetchOpenInterests': false,
                 'fetchOpenOrders': true,
                 'fetchOrder': true,
                 'fetchOrderBook': true,
@@ -1682,6 +1674,7 @@ class ace extends _abstract_ace_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
                 'fetchPositionsHistory': false,
                 'fetchPositionsRisk': false,
                 'fetchPremiumIndexOHLCV': false,
+                'fetchSettlementHistory': false,
                 'fetchTicker': true,
                 'fetchTickers': true,
                 'fetchTime': false,
@@ -1694,8 +1687,18 @@ class ace extends _abstract_ace_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
                 'fetchTransfers': false,
                 'fetchWithdrawal': false,
                 'fetchWithdrawals': false,
+                'future': false,
+                'margin': false,
+                'option': false,
+                'reduceMargin': false,
+                'repayCrossMargin': false,
+                'repayIsolatedMargin': false,
                 'setLeverage': false,
+                'setMargin': false,
                 'setMarginMode': false,
+                'setPositionMode': false,
+                'spot': true,
+                'swap': false,
                 'transfer': false,
                 'withdraw': false,
                 'ws': false,
@@ -2080,7 +2083,7 @@ class ace extends _abstract_ace_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
         //                 ],
         //                 [
         //                     "0.001",
-        //                     "20948.12"
+        //                     "20948.13"
         //                 ]
         //             ]
         //         },
@@ -2809,6 +2812,10 @@ class alpaca extends _abstract_alpaca_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
                 'swap': false,
                 'future': false,
                 'option': false,
+                'addMargin': false,
+                'borrowCrossMargin': false,
+                'borrowIsolatedMargin': false,
+                'borrowMargin': false,
                 'cancelAllOrders': true,
                 'cancelOrder': true,
                 'closeAllPositions': false,
@@ -2817,26 +2824,61 @@ class alpaca extends _abstract_alpaca_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
                 'createMarketBuyOrderWithCost': true,
                 'createMarketOrderWithCost': true,
                 'createOrder': true,
+                'createOrderWithTakeProfitAndStopLoss': false,
+                'createOrderWithTakeProfitAndStopLossWs': false,
+                'createReduceOnlyOrder': false,
                 'createStopOrder': true,
                 'createTriggerOrder': true,
                 'editOrder': true,
                 'fetchBalance': true,
                 'fetchBidsAsks': false,
+                'fetchBorrowInterest': false,
+                'fetchBorrowRate': false,
+                'fetchBorrowRateHistories': false,
+                'fetchBorrowRateHistory': false,
+                'fetchBorrowRates': false,
+                'fetchBorrowRatesPerSymbol': false,
                 'fetchClosedOrders': true,
+                'fetchCrossBorrowRate': false,
+                'fetchCrossBorrowRates': false,
                 'fetchCurrencies': false,
                 'fetchDepositAddress': true,
                 'fetchDepositAddressesByNetwork': false,
                 'fetchDeposits': true,
                 'fetchDepositsWithdrawals': true,
                 'fetchFundingHistory': false,
+                'fetchFundingInterval': false,
+                'fetchFundingIntervals': false,
                 'fetchFundingRate': false,
                 'fetchFundingRateHistory': false,
                 'fetchFundingRates': false,
+                'fetchGreeks': false,
+                'fetchIndexOHLCV': false,
+                'fetchIsolatedBorrowRate': false,
+                'fetchIsolatedBorrowRates': false,
+                'fetchIsolatedPositions': false,
                 'fetchL1OrderBook': true,
                 'fetchL2OrderBook': false,
+                'fetchLeverage': false,
+                'fetchLeverages': false,
+                'fetchLeverageTiers': false,
+                'fetchLiquidations': false,
+                'fetchLongShortRatio': false,
+                'fetchLongShortRatioHistory': false,
+                'fetchMarginAdjustmentHistory': false,
+                'fetchMarginMode': false,
+                'fetchMarginModes': false,
+                'fetchMarketLeverageTiers': false,
                 'fetchMarkets': true,
+                'fetchMarkOHLCV': false,
+                'fetchMarkPrices': false,
+                'fetchMyLiquidations': false,
+                'fetchMySettlementHistory': false,
                 'fetchMyTrades': true,
                 'fetchOHLCV': true,
+                'fetchOpenInterest': false,
+                'fetchOpenInterestHistory': false,
+                'fetchOpenInterests': false,
                 'fetchOpenOrder': false,
                 'fetchOpenOrders': true,
                 'fetchOrder': true,
@@ -2849,6 +2891,8 @@ class alpaca extends _abstract_alpaca_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
                 'fetchPositionsForSymbol': false,
                 'fetchPositionsHistory': false,
                 'fetchPositionsRisk': false,
+                'fetchPremiumIndexOHLCV': false,
+                'fetchSettlementHistory': false,
                 'fetchStatus': false,
                 'fetchTicker': true,
                 'fetchTickers': true,
@@ -2860,9 +2904,14 @@ class alpaca extends _abstract_alpaca_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
                 'fetchTransactions': false,
                 'fetchTransfers': false,
                 'fetchWithdrawals': true,
+                'reduceMargin': false,
+                'repayCrossMargin': false,
+                'repayIsolatedMargin': false,
                 'sandbox': true,
                 'setLeverage': false,
+                'setMargin': false,
                 'setMarginMode': false,
+                'setPositionMode': false,
                 'transfer': false,
                 'withdraw': true,
             },
@@ -5178,7 +5227,7 @@ class ascendex extends _abstract_ascendex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         const ids = Object.keys(dataById);
         const result = {};
         for (let i = 0; i < ids.length; i++) {
-            const id = ids[i];
+            const id = this.safeString(ids, i);
             const currency = dataById[id];
             const code = this.safeCurrencyCode(id);
             const scale = this.safeString2(currency, 'precisionScale', 'nativeScale');
@@ -6672,7 +6721,7 @@ class ascendex extends _abstract_ascendex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         //         "code": 0,
         //         "data": [
         //             {
-        //                 "avgPx": "0",         // Average filled price of the order
+        //                 "avgPx": "0",        // Average filled price of the order
         //                 "cumFee": "0",       // cumulative fee paid for this order
         //                 "cumFilledQty": "0", // cumulative filled quantity
         //                 "errorCode": "",     // error code; could be empty
@@ -8353,7 +8402,7 @@ class Exchange {
         this.validateClientSsl = false;
         this.timeout = 10000; // milliseconds
         this.verbose = false;
-        this.twofa = undefined; // two-factor authentication (2FA)
+        this.twofa = undefined; // two-factor authentication (2-FA)
         this.balance = {};
         this.liquidations = {};
         this.orderbooks = {};
@@ -8631,6 +8680,9 @@ class Exchange {
         }
         this.newUpdates = (this.options.newUpdates !== undefined) ? this.options.newUpdates : true;
         this.afterConstruct();
+        if (this.safeBool(userConfig, 'sandbox') || this.safeBool(userConfig, 'testnet')) {
+            this.setSandboxMode(true);
+        }
     }
     encodeURIComponent(...args) {
         // @ts-expect-error
@@ -8829,7 +8881,7 @@ class Exchange {
         if (proxyUrl !== undefined) {
             // part only for node-js
             if (isNode) {
-                // in node we need to set header to *
+                // in node-js we need to set header to *
                 headers = this.extend({ 'Origin': this.origin }, headers);
                 // only for http proxy
                 if (proxyUrl.substring(0, 5) === 'http:') {
@@ -10797,7 +10849,8 @@ class Exchange {
         const length = keys.length;
         if (length !== 0) {
             for (let i = 0; i < length; i++) {
-                const network = networks[keys[i]];
+                const key = keys[i];
+                const network = networks[key];
                 const deposit = this.safeBool(network, 'deposit');
                 if (currencyDeposit === undefined || deposit) {
                     currency['deposit'] = deposit;
@@ -10809,6 +10862,15 @@ class Exchange {
                 const active = this.safeBool(network, 'active');
                 if (currencyActive === undefined || active) {
                     currency['active'] = active;
+                }
+                // set network 'active' to false if D or W is disabled
+                if (this.safeBool(network, 'active') === undefined) {
+                    if (deposit && withdraw) {
+                        currency['networks'][key]['active'] = true;
+                    }
+                    else if (deposit !== undefined && withdraw !== undefined) {
+                        currency['networks'][key]['active'] = false;
+                    }
                 }
                 // find lowest fee (which is more desired)
                 const fee = this.safeString(network, 'fee');
@@ -12420,6 +12482,25 @@ class Exchange {
             params = this.omit(params, [paramName1, paramName2]);
         }
         return [value, params];
+    }
+    /**
+     * @param {object} params - extra parameters
+     * @param {object} request - existing dictionary of request
+     * @param {string} exchangeSpecificKey - the key for chain id to be set in request
+     * @param {object} currencyCode - (optional) existing dictionary of request
+     * @param {boolean} isRequired - (optional) whether that param is required to be present
+     * @returns {object[]} - returns [request, params] where request is the modified request object and params is the modified params object
+     */
+    handleRequestNetwork(params, request, exchangeSpecificKey, currencyCode = undefined, isRequired = false) {
+        let networkCode = undefined;
+        [networkCode, params] = this.handleNetworkCodeAndParams(params);
+        if (networkCode !== undefined) {
+            request[exchangeSpecificKey] = this.networkCodeToId(networkCode, currencyCode);
+        }
+        else if (isRequired) {
+            throw new _errors_js__WEBPACK_IMPORTED_MODULE_3__.ArgumentsRequired(this.id + ' - "network" param is required for this request');
+        }
+        return [request, params];
     }
     resolvePath(path, params) {
         return [
@@ -14971,23 +15052,13 @@ class Exchange {
         }
         return result;
     }
-    removeRepeatedElementsFromArray(input) {
+    removeRepeatedElementsFromArray(input, fallbackToTimestamp = true) {
         const uniqueResult = {};
         for (let i = 0; i < input.length; i++) {
             const entry = input[i];
-            const id = this.safeString(entry, 'id');
-            if (id !== undefined) {
-                if (this.safeString(uniqueResult, id) === undefined) {
-                    uniqueResult[id] = entry;
-                }
-            }
-            else {
-                const timestamp = this.safeInteger2(entry, 'timestamp', 0);
-                if (timestamp !== undefined) {
-                    if (this.safeString(uniqueResult, timestamp) === undefined) {
-                        uniqueResult[timestamp] = entry;
-                    }
-                }
+            const uniqValue = fallbackToTimestamp ? this.safeStringN(entry, ['id', 'timestamp', 0]) : this.safeString(entry, 'id');
+            if (uniqValue !== undefined && !(uniqValue in uniqueResult)) {
+                uniqueResult[uniqValue] = entry;
             }
         }
         const values = Object.values(uniqueResult);
@@ -22457,12 +22528,13 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
                 },
                 'quoteOrderQty': true,
                 'broker': {
-                    'spot': 'x-R4BD3S82',
-                    'margin': 'x-R4BD3S82',
-                    'future': 'x-xcKtGhcu',
+                    'spot': 'x-TKT5PX2F',
+                    'margin': 'x-TKT5PX2F',
+                    'future': 'x-cvBPrNm9',
                     'delivery': 'x-xcKtGhcu',
-                    'swap': 'x-xcKtGhcu',
+                    'swap': 'x-cvBPrNm9',
                     'option': 'x-xcKtGhcu',
+                    'inverse': 'x-xcKtGhcu',
                 },
                 'accountsByType': {
                     'main': 'MAIN',
@@ -24108,9 +24180,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchTime
      * @description fetches the current integer timestamp in milliseconds from the exchange server
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#check-server-time                            // spot
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-endpoints#check-server-time          // spot
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Check-Server-Time    // swap
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Check-Server-time             // future
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Check-Server-time    // future
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.subType] "linear" or "inverse"
      * @returns {int} the current integer timestamp in milliseconds from the exchange server
@@ -24373,12 +24445,12 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchMarkets
      * @description retrieves data on all markets for binance
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#exchange-information                             // spot
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/general-endpoints#exchange-information           // spot
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Exchange-Information     // swap
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Exchange-Information              // future
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Exchange-Information     // future
      * @see https://developers.binance.com/docs/derivatives/option/market-data/Exchange-Information                             // option
-     * @see https://developers.binance.com/docs/margin_trading/market-data/Get-All-Cross-Margin-Pairs                             // cross margin
-     * @see https://developers.binance.com/docs/margin_trading/market-data/Get-All-Isolated-Margin-Symbol                             // isolated margin
+     * @see https://developers.binance.com/docs/margin_trading/market-data/Get-All-Cross-Margin-Pairs                           // cross margin
+     * @see https://developers.binance.com/docs/margin_trading/market-data/Get-All-Isolated-Margin-Symbol                       // isolated margin
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object[]} an array of objects representing market data
      */
@@ -24987,12 +25059,12 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchBalance
      * @description query for balance and get the amount of funds available for trading or funds locked in orders
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#account-information-user_data                    // spot
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/account-endpoints#account-information-user_data  // spot
      * @see https://developers.binance.com/docs/margin_trading/account/Query-Cross-Margin-Account-Details                       // cross margin
      * @see https://developers.binance.com/docs/margin_trading/account/Query-Isolated-Margin-Account-Info                       // isolated margin
      * @see https://developers.binance.com/docs/wallet/asset/funding-wallet                                                     // funding
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Futures-Account-Balance-V2   // swap
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/Futures-Account-Balance               // future
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/rest-api/Futures-Account-Balance      // future
      * @see https://developers.binance.com/docs/derivatives/option/account/Option-Account-Information                           // option
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Account-Balance                            // portfolio margin
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -25261,9 +25333,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchOrderBook
      * @description fetches information on open orders with bid (buy) and ask (sell) prices, volumes and other data
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#order-book                           // spot
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints#order-book     // spot
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Order-Book   // swap
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Order-Book            // future
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Order-Book   // future
      * @see https://developers.binance.com/docs/derivatives/option/market-data/Order-Book                           // option
      * @param {string} symbol unified symbol of the market to fetch the order book for
      * @param {int} [limit] the maximum amount of order book entries to return
@@ -25338,9 +25410,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         //
         //     {
         //         "symbol": "BTCUSDT",
-        //         "markPrice": "11793.63104562",  // mark price
+        //         "markPrice": "11793.63104562", // mark price
         //         "indexPrice": "11781.80495970", // index price
-        //         "estimatedSettlePrice": "11781.16138815", // Estimated Settle Price, only useful in the last hour before the settlement starts.
+        //         "estimatedSettlePrice": "11781.16138815", // Estimated Settle Price, only useful in the last hour before the settlement starts
         //         "lastFundingRate": "0.00038246",  // This is the lastest estimated funding rate
         //         "nextFundingTime": 1597392000000,
         //         "interestRate": "0.00010000",
@@ -25527,10 +25599,10 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchTicker
      * @description fetches a price ticker, a statistical calculation with the information calculated over the past 24 hours for a specific market
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#24hr-ticker-price-change-statistics                           // spot
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#rolling-window-price-change-statistics                        // spot
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints#24hr-ticker-price-change-statistics     // spot
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints#rolling-window-price-change-statistics  // spot
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/24hr-Ticker-Price-Change-Statistics   // swap
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/24hr-Ticker-Price-Change-Statistics            // future
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/24hr-Ticker-Price-Change-Statistics   // future
      * @see https://developers.binance.com/docs/derivatives/option/market-data/24hr-Ticker-Price-Change-Statistics                           // option
      * @param {string} symbol unified symbol of the market to fetch the ticker for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -25573,9 +25645,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchBidsAsks
      * @description fetches the bid and ask price and volume for multiple markets
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#symbol-order-book-ticker                         // spot
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints#symbol-order-book-ticker   // spot
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Symbol-Order-Book-Ticker // swap
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Symbol-Order-Book-Ticker          // future
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Symbol-Order-Book-Ticker // future
      * @param {string[]|undefined} symbols unified symbols of the markets to fetch the bids and asks for, all markets are returned if not assigned
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.subType] "linear" or "inverse"
@@ -25612,9 +25684,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchLastPrices
      * @description fetches the last price for multiple markets
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#symbol-price-ticker                          // spot
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints#symbol-price-ticker    // spot
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Symbol-Price-Ticker  // swap
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Symbol-Price-Ticker           // future
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Symbol-Price-Ticker  // future
      * @param {string[]|undefined} symbols unified symbols of the markets to fetch the last prices
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.subType] "linear" or "inverse"
@@ -25716,9 +25788,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchTickers
      * @description fetches price tickers for multiple markets, statistical information calculated over the past 24 hours for each market
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#24hr-ticker-price-change-statistics                          // spot
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints#24hr-ticker-price-change-statistics    // spot
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/24hr-Ticker-Price-Change-Statistics  // swap
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/24hr-Ticker-Price-Change-Statistics           // future
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/24hr-Ticker-Price-Change-Statistics  // future
      * @see https://developers.binance.com/docs/derivatives/option/market-data/24hr-Ticker-Price-Change-Statistics                          // option
      * @param {string[]} [symbols] unified symbols of the markets to fetch the ticker for, all market tickers are returned if not assigned
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -25760,8 +25832,8 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchMarkPrice
      * @description fetches mark price for the market
-     * @see https://binance-docs.github.io/apidocs/futures/en/#mark-price
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#index-price-and-mark-price
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Index-Price-and-Mark-Price
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Mark-Price
      * @param {string} symbol unified symbol of the market to fetch the ticker for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.subType] "linear" or "inverse"
@@ -25796,8 +25868,8 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchMarkPrices
      * @description fetches mark prices for multiple markets
-     * @see https://binance-docs.github.io/apidocs/futures/en/#mark-price
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#index-price-and-mark-price
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Index-Price-and-Mark-Price
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Mark-Price
      * @param {string[]} [symbols] unified symbols of the markets to fetch the ticker for, all market tickers are returned if not assigned
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.subType] "linear" or "inverse"
@@ -25890,16 +25962,16 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchOHLCV
      * @description fetches historical candlestick data containing the open, high, low, and close price, and the volume of a market
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#klinecandlestick-data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints#klinecandlestick-data
      * @see https://developers.binance.com/docs/derivatives/option/market-data/Kline-Candlestick-Data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Kline-Candlestick-Data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Index-Price-Kline-Candlestick-Data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Mark-Price-Kline-Candlestick-Data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Premium-Index-Kline-Data
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Kline-Candlestick-Data
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Index-Price-Kline-Candlestick-Data
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Mark-Price-Kline-Candlestick-Data
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Premium-Index-Kline-Data
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Kline-Candlestick-Data
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Index-Price-Kline-Candlestick-Data
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Mark-Price-Kline-Candlestick-Data
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Premium-Index-Kline-Data
      * @param {string} symbol unified symbol of the market to fetch OHLCV data for
      * @param {string} timeframe the length of time each candle represents
      * @param {int} [since] timestamp in ms of the earliest candle to fetch
@@ -26301,17 +26373,17 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchTrades
      * @description get the list of most recent trades for a particular symbol
      * Default fetchTradesMethod
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#compressedaggregate-trades-list                          // publicGetAggTrades (spot)
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints#compressedaggregate-trades-list    // publicGetAggTrades (spot)
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Compressed-Aggregate-Trades-List // fapiPublicGetAggTrades (swap)
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Compressed-Aggregate-Trades-List          // dapiPublicGetAggTrades (future)
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Compressed-Aggregate-Trades-List // dapiPublicGetAggTrades (future)
      * @see https://developers.binance.com/docs/derivatives/option/market-data/Recent-Trades-List                                       // eapiPublicGetTrades (option)
      * Other fetchTradesMethod
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#recent-trades-list                                       // publicGetTrades (spot)
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints#recent-trades-list                 // publicGetTrades (spot)
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Recent-Trades-List               // fapiPublicGetTrades (swap)
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Recent-Trades-List                        // dapiPublicGetTrades (future)
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#old-trade-lookup                                         // publicGetHistoricalTrades (spot)
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Recent-Trades-List               // dapiPublicGetTrades (future)
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints#old-trade-lookup                   // publicGetHistoricalTrades (spot)
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Old-Trades-Lookup                // fapiPublicGetHistoricalTrades (swap)
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Old-Trades-Lookup                         // dapiPublicGetHistoricalTrades (future)
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Old-Trades-Lookup                // dapiPublicGetHistoricalTrades (future)
      * @see https://developers.binance.com/docs/derivatives/option/market-data/Old-Trades-Lookup                                        // eapiPublicGetHistoricalTrades (option)
      * @param {string} symbol unified symbol of the market to fetch trades for
      * @param {int} [since] only used when fetchTradesMethod is 'publicGetAggTrades', 'fapiPublicGetAggTrades', or 'dapiPublicGetAggTrades'
@@ -26447,7 +26519,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#editSpotOrder
      * @ignore
      * @description edit a trade order
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#cancel-an-existing-order-and-send-a-new-order-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#cancel-an-existing-order-and-send-a-new-order-trade
      * @param {string} id cancel order id
      * @param {string} symbol unified symbol of the market to create an order in
      * @param {string} type 'market' or 'limit' or 'STOP_LOSS' or 'STOP_LOSS_LIMIT' or 'TAKE_PROFIT' or 'TAKE_PROFIT_LIMIT' or 'STOP'
@@ -26491,7 +26563,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         //             "symbol": "BTCUSDT",
         //             "orderId": 16383176297,
         //             "orderListId": -1,
-        //             "clientOrderId": "x-R4BD3S8222ecb58eb9074fb1be018c",
+        //             "clientOrderId": "x-TKT5PX2F22ecb58eb9074fb1be018c",
         //             "transactTime": 1670891847932,
         //             "price": "13500.00000000",
         //             "origQty": "0.00085000",
@@ -26671,7 +26743,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#editContractOrder
      * @description edit a trade order
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Modify-Order
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Modify-Order
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Modify-Order
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Modify-UM-Order
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Modify-CM-Order
      * @param {string} id cancel order id
@@ -26745,9 +26817,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#editOrder
      * @description edit a trade order
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#cancel-an-existing-order-and-send-a-new-order-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#cancel-an-existing-order-and-send-a-new-order-trade
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Modify-Order
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Modify-Order
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Modify-Order
      * @param {string} id cancel order id
      * @param {string} symbol unified symbol of the market to create an order in
      * @param {string} type 'market' or 'limit'
@@ -26775,7 +26847,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#editOrders
      * @description edit a list of trade orders
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Modify-Multiple-Orders
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Modify-Multiple-Orders
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Modify-Multiple-Orders
      * @param {Array} orders list of orders to create, each object should contain the parameters required by createOrder, namely symbol, type, side, amount, price and params
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object} an [order structure]{@link https://docs.ccxt.com/#/?id=order-structure}
@@ -26898,7 +26970,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         //         "symbol": "BTCUSDT",
         //         "orderId": 16383176297,
         //         "orderListId": -1,
-        //         "clientOrderId": "x-R4BD3S8222ecb58eb9074fb1be018c",
+        //         "clientOrderId": "x-TKT5PX2F22ecb58eb9074fb1be018c",
         //         "transactTime": 1670891847932,
         //         "price": "13500.00000000",
         //         "origQty": "0.00085000",
@@ -26961,7 +27033,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         //       "symbol": "BTCUSDT",
         //       "orderId": 5403233939,
         //       "orderListId": -1,
-        //       "clientOrderId": "x-R4BD3S825e669e75b6c14f69a2c43e",
+        //       "clientOrderId": "x-TKT5PX2F5e669e75b6c14f69a2c43e",
         //       "transactTime": 1617151923742,
         //       "price": "0.00000000",
         //       "origQty": "0.00050000",
@@ -27136,7 +27208,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         // createOrder, cancelAllOrders, cancelOrder: portfolio margin spot margin
         //
         //     {
-        //         "clientOrderId": "x-R4BD3S82e9ef29d8346440f0b28b86",
+        //         "clientOrderId": "x-TKT5PX2Fe9ef29d8346440f0b28b86",
         //         "cummulativeQuoteQty": "0.00000000",
         //         "executedQty": "0.00000000",
         //         "fills": [],
@@ -27157,7 +27229,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         //     {
         //         "symbol": "BTCUSDT",
         //         "orderId": 24700763749,
-        //         "clientOrderId": "x-R4BD3S826f724c2a4af6425f98c7b6",
+        //         "clientOrderId": "x-TKT5PX2F6f724c2a4af6425f98c7b6",
         //         "price": "35000.00000000",
         //         "origQty": "0.00100000",
         //         "executedQty": "0.00000000",
@@ -27438,7 +27510,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#createOrders
      * @description *contract only* create a list of trade orders
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Place-Multiple-Orders
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Place-Multiple-Orders
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Place-Multiple-Orders
      * @see https://developers.binance.com/docs/derivatives/option/trade/Place-Multiple-Orders
      * @param {Array} orders list of orders to create, each object should contain the parameters required by createOrder, namely symbol, type, side, amount, price and params
@@ -27521,12 +27593,12 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#createOrder
      * @description create a trade order
      * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#new-order-trade
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/public-api-endpoints#test-new-order-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/testnet/rest-api/trading-endpoints#test-new-order-trade
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/New-Order
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/New-Order
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api
      * @see https://developers.binance.com/docs/derivatives/option/trade/New-Order
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#sor
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#test-new-order-using-sor-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#sor
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/testnet/rest-api/trading-endpoints#sor
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/New-UM-Order
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/New-CM-Order
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/New-Margin-Order
@@ -27754,8 +27826,12 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         const clientOrderIdRequest = isPortfolioMarginConditional ? 'newClientStrategyId' : 'newClientOrderId';
         if (clientOrderId === undefined) {
             const broker = this.safeDict(this.options, 'broker', {});
-            const defaultId = (market['contract']) ? 'x-xcKtGhcu' : 'x-R4BD3S82';
-            const brokerId = this.safeString(broker, marketType, defaultId);
+            const defaultId = (market['contract']) ? 'x-xcKtGhcu' : 'x-TKT5PX2F';
+            let idMarketType = 'spot';
+            if (market['contract']) {
+                idMarketType = (market['swap'] && market['linear']) ? 'swap' : 'inverse';
+            }
+            const brokerId = this.safeString(broker, idMarketType, defaultId);
             request[clientOrderIdRequest] = brokerId + this.uuid22();
         }
         else {
@@ -27973,7 +28049,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#createMarketOrderWithCost
      * @description create a market order by providing the symbol, side and cost
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#new-order-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#new-order-trade
      * @param {string} symbol unified symbol of the market to create an order in
      * @param {string} side 'buy' or 'sell'
      * @param {float} cost how much you want to trade in units of the quote currency
@@ -27986,14 +28062,16 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         if (!market['spot']) {
             throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.NotSupported(this.id + ' createMarketOrderWithCost() supports spot orders only');
         }
-        params['cost'] = cost;
-        return await this.createOrder(symbol, 'market', side, cost, undefined, params);
+        const req = {
+            'cost': cost,
+        };
+        return await this.createOrder(symbol, 'market', side, cost, undefined, this.extend(req, params));
     }
     /**
      * @method
      * @name binance#createMarketBuyOrderWithCost
      * @description create a market buy order by providing the symbol and cost
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#new-order-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#new-order-trade
      * @param {string} symbol unified symbol of the market to create an order in
      * @param {float} cost how much you want to trade in units of the quote currency
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -28005,14 +28083,16 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         if (!market['spot']) {
             throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.NotSupported(this.id + ' createMarketBuyOrderWithCost() supports spot orders only');
         }
-        params['cost'] = cost;
-        return await this.createOrder(symbol, 'market', 'buy', cost, undefined, params);
+        const req = {
+            'cost': cost,
+        };
+        return await this.createOrder(symbol, 'market', 'buy', cost, undefined, this.extend(req, params));
     }
     /**
      * @method
      * @name binance#createMarketSellOrderWithCost
      * @description create a market sell order by providing the symbol and cost
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#new-order-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#new-order-trade
      * @param {string} symbol unified symbol of the market to create an order in
      * @param {float} cost how much you want to trade in units of the quote currency
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -28031,9 +28111,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchOrder
      * @description fetches information on an order made by the user
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#query-order-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#query-order-user_data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Query-Order
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Query-Order
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Query-Order
      * @see https://developers.binance.com/docs/derivatives/option/trade/Query-Single-Order
      * @see https://developers.binance.com/docs/margin_trading/trade/Query-Margin-Account-Order
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Query-UM-Order
@@ -28113,9 +28193,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchOrders
      * @description fetches information on multiple orders made by the user
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#all-orders-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#all-orders-user_data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/All-Orders
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/All-Orders
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/All-Orders
      * @see https://developers.binance.com/docs/derivatives/option/trade/Query-Option-Order-History
      * @see https://developers.binance.com/docs/margin_trading/trade/Query-Margin-Account-All-Orders
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Query-All-UM-Orders
@@ -28365,7 +28445,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         //         {
         //             "symbol": "BTCUSDT",
         //             "orderId": 24684460474,
-        //             "clientOrderId": "x-R4BD3S82e9ef29d8346440f0b28b86",
+        //             "clientOrderId": "x-TKT5PX2Fe9ef29d8346440f0b28b86",
         //             "price": "35000.00000000",
         //             "origQty": "0.00100000",
         //             "executedQty": "0.00000000",
@@ -28392,9 +28472,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchOpenOrders
      * @description fetch all unfilled currently open orders
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#current-open-orders-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#current-open-orders-user_data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Current-All-Open-Orders
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Current-All-Open-Orders
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Current-All-Open-Orders
      * @see https://developers.binance.com/docs/derivatives/option/trade/Query-Current-Open-Option-Orders
      * @see https://developers.binance.com/docs/margin_trading/trade/Query-Margin-Account-Open-Orders
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Query-All-Current-UM-Open-Orders
@@ -28498,7 +28578,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchOpenOrder
      * @description fetch an open order by the id
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Query-Current-Open-Order
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Query-Current-Open-Order
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Query-Current-Open-Order
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Query-Current-UM-Open-Order
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Query-Current-UM-Open-Conditional-Order
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Query-Current-CM-Open-Order
@@ -28715,9 +28795,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchClosedOrders
      * @description fetches information on multiple closed orders made by the user
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#all-orders-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#all-orders-user_data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/All-Orders
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/All-Orders
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/All-Orders
      * @see https://developers.binance.com/docs/derivatives/option/trade/Query-Option-Order-History
      * @see https://developers.binance.com/docs/margin_trading/trade/Query-Margin-Account-All-Orders
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Query-All-UM-Orders
@@ -28745,9 +28825,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchCanceledOrders
      * @description fetches information on multiple canceled orders made by the user
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#all-orders-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#all-orders-user_data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/All-Orders
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/All-Orders
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/All-Orders
      * @see https://developers.binance.com/docs/derivatives/option/trade/Query-Option-Order-History
      * @see https://developers.binance.com/docs/margin_trading/trade/Query-Margin-Account-All-Orders
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Query-All-UM-Orders
@@ -28775,9 +28855,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchCanceledAndClosedOrders
      * @description fetches information on multiple canceled orders made by the user
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#all-orders-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#all-orders-user_data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/All-Orders
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/All-Orders
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/All-Orders
      * @see https://developers.binance.com/docs/derivatives/option/trade/Query-Option-Order-History
      * @see https://developers.binance.com/docs/margin_trading/trade/Query-Margin-Account-All-Orders
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Query-All-UM-Orders
@@ -28808,9 +28888,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#cancelOrder
      * @description cancels an open order
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#cancel-order-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#cancel-order-trade
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Cancel-Order
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Cancel-Order
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Cancel-Order
      * @see https://developers.binance.com/docs/derivatives/option/trade/Cancel-Option-Order
      * @see https://developers.binance.com/docs/margin_trading/trade/Margin-Account-Cancel-Order
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Cancel-UM-Order
@@ -28914,8 +28994,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#cancelAllOrders
      * @description cancel all open orders in a market
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#cancel-all-open-orders-on-a-symbol-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/trading-endpoints#cancel-all-open-orders-on-a-symbol-trade
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Cancel-All-Open-Orders
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Cancel-All-Open-Orders
      * @see https://developers.binance.com/docs/derivatives/option/trade/Cancel-all-Option-orders-on-specific-symbol
      * @see https://developers.binance.com/docs/margin_trading/trade/Margin-Account-Cancel-All-Open-Orders
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Cancel-All-UM-Open-Orders
@@ -29057,7 +29138,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
             //    [
             //        {
             //            "symbol": "ADAUSDT",
-            //            "origClientOrderId": "x-R4BD3S82662cde7a90114475b86e21",
+            //            "origClientOrderId": "x-TKT5PX2F662cde7a90114475b86e21",
             //            "orderId": 3935107,
             //            "orderListId": -1,
             //            "clientOrderId": "bqM2w1oTlugfRAjnTIFBE8",
@@ -29091,7 +29172,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#cancelOrders
      * @description cancel multiple orders
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Cancel-Multiple-Orders
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Cancel-Multiple-Orders
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Cancel-Multiple-Orders
      * @param {string[]} ids order ids
      * @param {string} [symbol] unified market symbol
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -29162,9 +29243,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchOrderTrades
      * @description fetch all the trades made from a single order
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#account-trade-list-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/account-endpoints#account-trade-list-user_data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Account-Trade-List
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Account-Trade-List
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Account-Trade-List
      * @see https://developers.binance.com/docs/margin_trading/trade/Query-Margin-Account-Trade-List
      * @param {string} id order id
      * @param {string} symbol unified market symbol
@@ -29193,9 +29274,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchMyTrades
      * @description fetch all trades made by the user
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api#account-trade-list-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/rest-api/account-endpoints#account-trade-list-user_data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Account-Trade-List
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Account-Trade-List
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Account-Trade-List
      * @see https://developers.binance.com/docs/margin_trading/trade/Query-Margin-Account-Trade-List
      * @see https://developers.binance.com/docs/derivatives/option/trade/Account-Trade-List
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/UM-Account-Trade-List
@@ -30776,7 +30857,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @description fetch the trading fees for a market
      * @see https://developers.binance.com/docs/wallet/asset/trade-fee
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/User-Commission-Rate
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/User-Commission-Rate
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/rest-api/User-Commission-Rate
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Get-User-Commission-Rate-for-UM
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Get-User-Commission-Rate-for-CM
      * @param {string} symbol unified market symbol
@@ -30849,7 +30930,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @description fetch the trading fees for multiple markets
      * @see https://developers.binance.com/docs/wallet/asset/trade-fee
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Account-Information-V2
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/Account-Information
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/rest-api/Account-Information
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Account-Config
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.subType] "linear" or "inverse"
@@ -31060,7 +31141,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchFundingRate
      * @description fetch the current funding rate
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Mark-Price
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Index-Price-and-Mark-Price
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Index-Price-and-Mark-Price
      * @param {string} symbol unified market symbol
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object} a [funding rate structure]{@link https://docs.ccxt.com/#/?id=funding-rate-structure}
@@ -31103,7 +31184,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchFundingRateHistory
      * @description fetches historical funding rate prices
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Rate-History
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Get-Funding-Rate-History-of-Perpetual-Futures
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Get-Funding-Rate-History-of-Perpetual-Futures
      * @param {string} symbol unified symbol of the market to fetch the funding rate history for
      * @param {int} [since] timestamp in ms of the earliest funding rate to fetch
      * @param {int} [limit] the maximum amount of [funding rate structures]{@link https://docs.ccxt.com/#/?id=funding-rate-history-structure} to fetch
@@ -31185,7 +31266,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchFundingRates
      * @description fetch the funding rate for multiple markets
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Mark-Price
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Index-Price-and-Mark-Price
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Index-Price-and-Mark-Price
      * @param {string[]|undefined} symbols list of unified market symbols
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.subType] "linear" or "inverse"
@@ -31863,7 +31944,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchLeverageTiers
      * @description retrieve information on the maximum leverage, and maintenance margin for trades of varying trade sizes
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Notional-and-Leverage-Brackets
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/Notional-Bracket-for-Symbol
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/rest-api/Notional-Bracket-for-Pair
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/UM-Notional-and-Leverage-Brackets
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/CM-Notional-and-Leverage-Brackets
      * @param {string[]|undefined} symbols list of unified market symbols
@@ -32147,9 +32228,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchPositions
      * @description fetch all open positions
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Account-Information-V2
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/Account-Information
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/rest-api/Account-Information
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Position-Information-V2
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Position-Information
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Position-Information
      * @see https://developers.binance.com/docs/derivatives/option/trade/Option-Position-Information
      * @param {string[]} [symbols] list of unified market symbols
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -32189,9 +32270,9 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @ignore
      * @description fetch account positions
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Account-Information-V2
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/Account-Information
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/rest-api/Account-Information
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Position-Information-V2
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Position-Information
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Position-Information
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Account-Information-V3
      * @param {string[]} [symbols] list of unified market symbols
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -32321,7 +32402,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @ignore
      * @description fetch positions risk
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Position-Information-V2
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Position-Information
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Position-Information
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Query-UM-Position-Information
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Query-CM-Position-Information
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Position-Information-V3
@@ -32500,7 +32581,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchFundingHistory
      * @description fetch the history of funding payments paid and received on this account
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Get-Income-History
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/Get-Income-History
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/rest-api/Get-Income-History
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Get-UM-Income-History
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Get-CM-Income-History
      * @param {string} symbol unified market symbol
@@ -32566,7 +32647,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#setLeverage
      * @description set the level of leverage for a market
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Change-Initial-Leverage
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Change-Initial-Leverage
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Change-Initial-Leverage
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Change-UM-Initial-Leverage
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Change-CM-Initial-Leverage
      * @param {float} leverage the rate of leverage
@@ -32619,7 +32700,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#setMarginMode
      * @description set margin mode to 'cross' or 'isolated'
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Change-Margin-Type
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Change-Margin-Type
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Change-Margin-Type
      * @param {string} marginMode 'cross' or 'isolated'
      * @param {string} symbol unified market symbol
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -32687,7 +32768,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#setPositionMode
      * @description set hedged to true or false for a market
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Change-Position-Mode
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Change-Position-Mode
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Change-Position-Mode
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Get-UM-Current-Position-Mode
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Get-CM-Current-Position-Mode
      * @param {bool} hedged set to true to use dualSidePosition
@@ -32748,7 +32829,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchLeverages
      * @description fetch the set leverage for all markets
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Account-Information-V2
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/Account-Information
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/rest-api/Account-Information
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Get-UM-Account-Detail
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Get-CM-Account-Detail
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Symbol-Config
@@ -33051,7 +33132,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @description fetch the history of changes, actions done by the user or operations that altered the balance of the user
      * @see https://developers.binance.com/docs/derivatives/option/account/Account-Funding-Flow
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Get-Income-History
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/Get-Income-History
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/rest-api/Get-Income-History
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Get-UM-Income-History
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/account/Get-CM-Income-History
      * @param {string} [code] unified currency code
@@ -33270,7 +33351,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
                 if (newClientOrderId === undefined) {
                     const isSpotOrMargin = (api.indexOf('sapi') > -1 || api === 'private');
                     const marketType = isSpotOrMargin ? 'spot' : 'future';
-                    const defaultId = (!isSpotOrMargin) ? 'x-xcKtGhcu' : 'x-R4BD3S82';
+                    const defaultId = (!isSpotOrMargin) ? 'x-xcKtGhcu' : 'x-TKT5PX2F';
                     const broker = this.safeDict(this.options, 'broker', {});
                     const brokerId = this.safeString(broker, marketType, defaultId);
                     params['newClientOrderId'] = brokerId + this.uuid22();
@@ -33600,7 +33681,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#reduceMargin
      * @description remove margin from a position
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Modify-Isolated-Position-Margin
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Modify-Isolated-Position-Margin
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Modify-Isolated-Position-Margin
      * @param {string} symbol unified market symbol
      * @param {float} amount the amount of margin to remove
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -33614,7 +33695,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#addMargin
      * @description add margin
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Modify-Isolated-Position-Margin
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Modify-Isolated-Position-Margin
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Modify-Isolated-Position-Margin
      * @param {string} symbol unified market symbol
      * @param {float} amount amount of margin to add
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -34202,7 +34283,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchOpenInterestHistory
      * @description Retrieves the open interest history of a currency
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Open-Interest-Statistics
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Open-Interest-Statistics
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Open-Interest-Statistics
      * @param {string} symbol Unified CCXT market symbol
      * @param {string} timeframe "5m","15m","30m","1h","2h","4h","6h","12h", or "1d"
      * @param {int} [since] the time(ms) of the earliest record to retrieve as a unix timestamp
@@ -34275,7 +34356,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchOpenInterest
      * @description retrieves the open interest of a contract trading pair
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Open-Interest
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Open-Interest
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Open-Interest
      * @see https://developers.binance.com/docs/derivatives/option/market-data/Open-Interest
      * @param {string} symbol unified CCXT market symbol
      * @param {object} [params] exchange specific parameters
@@ -34374,7 +34455,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @description retrieves the users liquidated positions
      * @see https://developers.binance.com/docs/margin_trading/trade/Get-Force-Liquidation-Record
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Users-Force-Orders
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Users-Force-Orders
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Users-Force-Orders
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Query-Users-UM-Force-Orders
      * @see https://developers.binance.com/docs/derivatives/portfolio-margin/trade/Query-Users-CM-Force-Orders
      * @param {string} [symbol] unified CCXT market symbol
@@ -34711,7 +34792,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchPositionMode
      * @description fetchs the position mode, hedged or one way, hedged for binance is set identically for all linear markets or all inverse markets
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Get-Current-Position-Mode
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/Get-Current-Position-Mode
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/rest-api/Get-Current-Position-Mode
      * @param {string} symbol unified symbol of the market to fetch the order book for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.subType] "linear" or "inverse"
@@ -34749,7 +34830,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchMarginModes
      * @description fetches margin modes ("isolated" or "cross") that the market for the symbol in in, with symbol=undefined all markets for a subType (linear/inverse) are returned
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/Account-Information
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/rest-api/Account-Information
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Account-Information-V2
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Symbol-Config
      * @param {string[]} symbols unified market symbols
@@ -34846,7 +34927,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchMarginMode
      * @description fetches the margin mode of a specific symbol
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/rest-api/Symbol-Config
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/Account-Information
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/rest-api/Account-Information
      * @param {string} symbol unified symbol of the market the order was made in
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.subType] "linear" or "inverse"
@@ -34995,7 +35076,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchMarginAdjustmentHistory
      * @description fetches the history of margin added or reduced from contract isolated positions
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/rest-api/Get-Position-Margin-Change-History
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/Get-Position-Margin-Change-History
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/rest-api/Get-Position-Margin-Change-History
      * @param {string} symbol unified market symbol
      * @param {string} [type] "add" or "reduce"
      * @param {int} [since] timestamp in ms of the earliest change to fetch
@@ -35466,8 +35547,8 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @method
      * @name binance#fetchFundingIntervals
      * @description fetch the funding rate interval for multiple markets
-     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Info
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Get-Funding-Info
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Rate-Info
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Get-Funding-Info
      * @param {string[]} [symbols] list of unified market symbols
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.subType] "linear" or "inverse"
@@ -35511,7 +35592,7 @@ class binance extends _abstract_binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
      * @name binance#fetchLongShortRatioHistory
      * @description fetches the long short ratio history for a unified market symbol
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Long-Short-Ratio
-     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/Long-Short-Ratio
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/market-data/rest-api/Long-Short-Ratio
      * @param {string} symbol unified symbol of the market to fetch the long short ratio for
      * @param {string} [timeframe] the period for the ratio, default is 24 hours
      * @param {int} [since] the earliest time in ms to fetch ratios for
@@ -36355,6 +36436,7 @@ class bingx extends _abstract_bingx_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"
                                 'uid': 1,
                                 'apiKey/query': 2,
                                 'account/apiPermissions': 5,
+                                'allAccountBalance': 2,
                             },
                             'post': {
                                 'innerTransfer/authorizeSubAccount': 1,
@@ -36791,7 +36873,7 @@ class bingx extends _abstract_bingx_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"
         //                  {
         //                    "symbol": "GEAR-USDT",
         //                    "minQty": 735, // deprecated
-        //                    "maxQty": 2941177, // deprecated
+        //                    "maxQty": 2941177, // deprecated.
         //                    "minNotional": 5,
         //                    "maxNotional": 20000,
         //                    "status": 1,
@@ -37427,62 +37509,82 @@ class bingx extends _abstract_bingx_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"
         // spot
         //
         //     {
-        //         "code": 0,
-        //         "data": {
-        //           "bids": [
-        //             [
-        //               "26324.73",
-        //               "0.37655"
+        //         "code":0,
+        //         "timestamp":1743240504535,
+        //         "data":{
+        //             "bids":[
+        //                 ["83775.39","1.981875"],
+        //                 ["83775.38","0.001076"],
+        //                 ["83775.34","0.254716"],
         //             ],
-        //             [
-        //               "26324.71",
-        //               "0.31888"
+        //             "asks":[
+        //                 ["83985.40","0.000013"],
+        //                 ["83980.00","0.000011"],
+        //                 ["83975.70","0.000061000000000000005"],
         //             ],
-        //         ],
-        //         "asks": [
-        //             [
-        //               "26340.30",
-        //               "6.45221"
-        //             ],
-        //             [
-        //               "26340.15",
-        //               "6.73261"
-        //             ],
-        //         ]}
+        //             "ts":1743240504535,
+        //             "lastUpdateId":13565639906
+        //         }
         //     }
         //
-        // swap
+        //
+        // linear swap
         //
         //     {
-        //         "code": 0,
-        //         "msg": "",
-        //         "data": {
-        //           "T": 1683914263304,
-        //           "bids": [
-        //             [
-        //               "26300.90000000",
-        //               "30408.00000000"
+        //         "code":0,
+        //         "msg":"",
+        //         "data":{
+        //             "T":1743240836255,
+        //             "bids":[
+        //                 ["83760.7","7.0861"],
+        //                 ["83760.6","0.0044"],
+        //                 ["83757.7","1.9526"],
         //             ],
-        //             [
-        //               "26300.80000000",
-        //               "50906.00000000"
+        //             "asks":[
+        //                 ["83784.3","8.3531"],
+        //                 ["83782.8","23.7289"],
+        //                 ["83780.1","18.0617"],
         //             ],
-        //         ],
-        //         "asks": [
-        //             [
-        //               "26301.00000000",
-        //               "43616.00000000"
+        //             "bidsCoin":[
+        //                 ["83760.7","0.0007"],
+        //                 ["83760.6","0.0000"],
+        //                 ["83757.7","0.0002"],
         //             ],
-        //             [
-        //               "26301.10000000",
-        //               "49402.00000000"
+        //             "asksCoin":[
+        //                 ["83784.3","0.0008"],
+        //                 ["83782.8","0.0024"],
+        //                 ["83780.1","0.0018"],
+        //             ]
+        //         }
+        //     }
+        //
+        // inverse swap
+        //
+        //     {
+        //         "code":0,
+        //         "msg":"",
+        //         "timestamp":1743240979146,
+        //         "data":{
+        //             "T":1743240978691,
+        //             "bids":[
+        //                 ["83611.4","241.0"],
+        //                 ["83611.3","1.0"],
+        //                 ["83602.9","666.0"],
         //             ],
-        //         ]}
+        //             "asks":[
+        //                 ["83645.0","4253.0"],
+        //                 ["83640.5","3188.0"],
+        //                 ["83636.0","5540.0"],
+        //             ]
+        //         }
         //     }
         //
         const orderbook = this.safeDict(response, 'data', {});
+        const nonce = this.safeInteger(orderbook, 'lastUpdateId');
         const timestamp = this.safeInteger2(orderbook, 'T', 'ts');
-        return this.parseOrderBook(orderbook, market['symbol'], timestamp, 'bids', 'asks', 0, 1);
+        const result = this.parseOrderBook(orderbook, market['symbol'], timestamp, 'bids', 'asks', 0, 1);
+        result['nonce'] = nonce;
+        return result;
     }
     /**
      * @method
@@ -42628,24 +42730,35 @@ class bit2c extends _abstract_bit2c_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"
                 'fetchMarginMode': false,
                 'fetchMarkOHLCV': false,
                 'fetchMyTrades': true,
+                'fetchOpenInterest': false,
+                'fetchOpenInterests': false,
                 'fetchOpenInterestHistory': false,
                 'fetchOpenOrders': true,
                 'fetchOrder': true,
                 'fetchOrderBook': true,
                 'fetchPosition': false,
+                'fetchPositionHistory': false,
+                'fetchPositionsHistory': false,
+                'fetchPositionsForSymbol': false,
                 'fetchPositionMode': false,
                 'fetchPositions': false,
                 'fetchPositionsRisk': false,
                 'fetchPremiumIndexOHLCV': false,
+                'fetchSettlementHistory': false,
                 'fetchTicker': true,
                 'fetchTrades': true,
                 'fetchTradingFee': false,
                 'fetchTradingFees': true,
                 'fetchTransfer': false,
                 'fetchTransfers': false,
+                'fetchUnderlyingAssets': false,
                 'reduceMargin': false,
+                'repayCrossMargin': false,
+                'repayIsolatedMargin': false,
+                'repayMargin': false,
                 'setLeverage': false,
                 'setMarginMode': false,
+                'setMargin': false,
                 'setPositionMode': false,
                 'transfer': false,
                 'ws': false,
@@ -49924,1785 +50037,6 @@ class bitfinex extends _abstract_bitfinex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
 
 /***/ }),
 
-/***/ 7674:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ bitfinex1)
-/* harmony export */ });
-/* harmony import */ var _abstract_bitfinex1_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2085);
-/* harmony import */ var _base_errors_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2079);
-/* harmony import */ var _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5147);
-/* harmony import */ var _base_functions_number_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1579);
-/* harmony import */ var _static_dependencies_noble_hashes_sha512_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7481);
-//  ---------------------------------------------------------------------------
-
-
-
-
-
-//  ---------------------------------------------------------------------------
-/**
- * @class bitfinex1
- * @augments Exchange
- */
-class bitfinex1 extends _abstract_bitfinex1_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A {
-    describe() {
-        return this.deepExtend(super.describe(), {
-            'id': 'bitfinex1',
-            'name': 'Bitfinex',
-            'countries': ['VG'],
-            'version': 'v1',
-            // cheapest is 90 requests a minute = 1.5 requests per second on average => ( 1000ms / 1.5) = 666.666 ms between requests on average
-            'rateLimit': 666.666,
-            'pro': true,
-            // new metainfo interface
-            'has': {
-                'CORS': undefined,
-                'spot': true,
-                'margin': undefined,
-                'swap': undefined,
-                'future': undefined,
-                'option': undefined,
-                'cancelAllOrders': true,
-                'cancelOrder': true,
-                'createDepositAddress': true,
-                'createOrder': true,
-                'editOrder': true,
-                'fetchBalance': true,
-                'fetchClosedOrders': true,
-                'fetchDepositAddress': true,
-                'fetchDepositAddresses': false,
-                'fetchDepositAddressesByNetwork': false,
-                'fetchDeposits': false,
-                'fetchDepositsWithdrawals': true,
-                'fetchDepositWithdrawFee': 'emulated',
-                'fetchDepositWithdrawFees': true,
-                'fetchFundingHistory': false,
-                'fetchFundingRate': false,
-                'fetchFundingRateHistory': false,
-                'fetchFundingRates': false,
-                'fetchIndexOHLCV': false,
-                'fetchLeverageTiers': false,
-                'fetchMarginMode': false,
-                'fetchMarkets': true,
-                'fetchMarkOHLCV': false,
-                'fetchMyTrades': true,
-                'fetchOHLCV': true,
-                'fetchOpenOrders': true,
-                'fetchOrder': true,
-                'fetchOrderBook': true,
-                'fetchPositionMode': false,
-                'fetchPositions': true,
-                'fetchPremiumIndexOHLCV': false,
-                'fetchTicker': true,
-                'fetchTickers': true,
-                'fetchTime': false,
-                'fetchTrades': true,
-                'fetchTradingFee': false,
-                'fetchTradingFees': true,
-                'fetchTransactionFees': true,
-                'fetchTransactions': 'emulated',
-                'transfer': true,
-                'withdraw': true,
-            },
-            'timeframes': {
-                '1m': '1m',
-                '5m': '5m',
-                '15m': '15m',
-                '30m': '30m',
-                '1h': '1h',
-                '3h': '3h',
-                '4h': '4h',
-                '6h': '6h',
-                '12h': '12h',
-                '1d': '1D',
-                '1w': '7D',
-                '2w': '14D',
-                '1M': '1M',
-            },
-            'urls': {
-                'logo': 'https://github.com/user-attachments/assets/9147c6c5-7197-481e-827b-7483672bb0e9',
-                'api': {
-                    'v2': 'https://api-pub.bitfinex.com',
-                    'public': 'https://api.bitfinex.com',
-                    'private': 'https://api.bitfinex.com',
-                },
-                'www': 'https://www.bitfinex.com',
-                'referral': 'https://www.bitfinex.com/?refcode=P61eYxFL',
-                'doc': [
-                    'https://docs.bitfinex.com/v1/docs',
-                    'https://github.com/bitfinexcom/bitfinex-api-node',
-                ],
-            },
-            'api': {
-                // v2 symbol ids require a 't' prefix
-                // just the public part of it (use bitfinex2 for everything else)
-                'v2': {
-                    'get': {
-                        'platform/status': 3,
-                        'tickers': 1,
-                        'ticker/{symbol}': 1,
-                        'tickers/hist': 1,
-                        'trades/{symbol}/hist': 1,
-                        'book/{symbol}/{precision}': 0.375,
-                        'book/{symbol}/P0': 0.375,
-                        'book/{symbol}/P1': 0.375,
-                        'book/{symbol}/P2': 0.375,
-                        'book/{symbol}/P3': 0.375,
-                        'book/{symbol}/R0': 0.375,
-                        'stats1/{key}:{size}:{symbol}:{side}/{section}': 1,
-                        'stats1/{key}:{size}:{symbol}/{section}': 1,
-                        'stats1/{key}:{size}:{symbol}:long/last': 1,
-                        'stats1/{key}:{size}:{symbol}:long/hist': 1,
-                        'stats1/{key}:{size}:{symbol}:short/last': 1,
-                        'stats1/{key}:{size}:{symbol}:short/hist': 1,
-                        'candles/trade:{timeframe}:{symbol}/{section}': 1,
-                        'candles/trade:{timeframe}:{symbol}/last': 1,
-                        'candles/trade:{timeframe}:{symbol}/hist': 1,
-                    },
-                },
-                'public': {
-                    'get': {
-                        'book/{symbol}': 1,
-                        // 'candles/{symbol}':0,
-                        'lendbook/{currency}': 6,
-                        'lends/{currency}': 3,
-                        'pubticker/{symbol}': 3,
-                        'stats/{symbol}': 6,
-                        'symbols': 18,
-                        'symbols_details': 18,
-                        'tickers': 1,
-                        'trades/{symbol}': 3, // 60 requests a minute = 1 request per second => (1000ms / rateLimit) / 1 = 1.5 ... but only works if set to 3
-                    },
-                },
-                'private': {
-                    'post': {
-                        'account_fees': 18,
-                        'account_infos': 6,
-                        'balances': 9.036,
-                        'basket_manage': 6,
-                        'credits': 6,
-                        'deposit/new': 18,
-                        'funding/close': 6,
-                        'history': 6,
-                        'history/movements': 6,
-                        'key_info': 6,
-                        'margin_infos': 3,
-                        'mytrades': 3,
-                        'mytrades_funding': 6,
-                        'offer/cancel': 6,
-                        'offer/new': 6,
-                        'offer/status': 6,
-                        'offers': 6,
-                        'offers/hist': 90.03,
-                        'order/cancel': 0.2,
-                        'order/cancel/all': 0.2,
-                        'order/cancel/multi': 0.2,
-                        'order/cancel/replace': 0.2,
-                        'order/new': 0.2,
-                        'order/new/multi': 0.2,
-                        'order/status': 0.2,
-                        'orders': 0.2,
-                        'orders/hist': 90.03,
-                        'position/claim': 18,
-                        'position/close': 18,
-                        'positions': 18,
-                        'summary': 18,
-                        'taken_funds': 6,
-                        'total_taken_funds': 6,
-                        'transfer': 18,
-                        'unused_taken_funds': 6,
-                        'withdraw': 18,
-                    },
-                },
-            },
-            'fees': {
-                'trading': {
-                    'feeSide': 'get',
-                    'tierBased': true,
-                    'percentage': true,
-                    'maker': this.parseNumber('0.001'),
-                    'taker': this.parseNumber('0.002'),
-                    'tiers': {
-                        'taker': [
-                            [this.parseNumber('0'), this.parseNumber('0.002')],
-                            [this.parseNumber('500000'), this.parseNumber('0.002')],
-                            [this.parseNumber('1000000'), this.parseNumber('0.002')],
-                            [this.parseNumber('2500000'), this.parseNumber('0.002')],
-                            [this.parseNumber('5000000'), this.parseNumber('0.002')],
-                            [this.parseNumber('7500000'), this.parseNumber('0.002')],
-                            [this.parseNumber('10000000'), this.parseNumber('0.0018')],
-                            [this.parseNumber('15000000'), this.parseNumber('0.0016')],
-                            [this.parseNumber('20000000'), this.parseNumber('0.0014')],
-                            [this.parseNumber('25000000'), this.parseNumber('0.0012')],
-                            [this.parseNumber('30000000'), this.parseNumber('0.001')],
-                        ],
-                        'maker': [
-                            [this.parseNumber('0'), this.parseNumber('0.001')],
-                            [this.parseNumber('500000'), this.parseNumber('0.0008')],
-                            [this.parseNumber('1000000'), this.parseNumber('0.0006')],
-                            [this.parseNumber('2500000'), this.parseNumber('0.0004')],
-                            [this.parseNumber('5000000'), this.parseNumber('0.0002')],
-                            [this.parseNumber('7500000'), this.parseNumber('0')],
-                            [this.parseNumber('10000000'), this.parseNumber('0')],
-                            [this.parseNumber('15000000'), this.parseNumber('0')],
-                            [this.parseNumber('20000000'), this.parseNumber('0')],
-                            [this.parseNumber('25000000'), this.parseNumber('0')],
-                            [this.parseNumber('30000000'), this.parseNumber('0')],
-                        ],
-                    },
-                },
-                'funding': {
-                    'tierBased': false,
-                    'percentage': false,
-                    // Actually deposit fees are free for larger deposits (> $1000 USD equivalent)
-                    // these values below are deprecated, we should not hardcode fees and limits anymore
-                    // to be reimplemented with bitfinex funding fees from their API or web endpoints
-                    'deposit': {},
-                    'withdraw': {},
-                },
-            },
-            // todo rewrite for https://api-pub.bitfinex.com//v2/conf/pub:map:tx:method
-            'commonCurrencies': {
-                'ALG': 'ALGO',
-                'AMP': 'AMPL',
-                'ATO': 'ATOM',
-                'BCHABC': 'XEC',
-                'BCHN': 'BCH',
-                'DAT': 'DATA',
-                'DOG': 'MDOGE',
-                'DSH': 'DASH',
-                // https://github.com/ccxt/ccxt/issues/7399
-                // https://coinmarketcap.com/currencies/pnetwork/
-                // https://en.cryptonomist.ch/blog/eidoo/the-edo-to-pnt-upgrade-what-you-need-to-know-updated/
-                'EDO': 'PNT',
-                'EUS': 'EURS',
-                'EUT': 'EURT',
-                'IDX': 'ID',
-                'IOT': 'IOTA',
-                'IQX': 'IQ',
-                'LUNA': 'LUNC',
-                'LUNA2': 'LUNA',
-                'MNA': 'MANA',
-                'ORS': 'ORS Group',
-                'PAS': 'PASS',
-                'QSH': 'QASH',
-                'QTM': 'QTUM',
-                'RBT': 'RBTC',
-                'SNG': 'SNGLS',
-                'STJ': 'STORJ',
-                'TERRAUST': 'USTC',
-                'TSD': 'TUSD',
-                'YGG': 'YEED',
-                'YYW': 'YOYOW',
-                'UDC': 'USDC',
-                'UST': 'USDT',
-                'VSY': 'VSYS',
-                'WAX': 'WAXP',
-                'XCH': 'XCHF',
-                'ZBT': 'ZB',
-            },
-            'exceptions': {
-                'exact': {
-                    'temporarily_unavailable': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ExchangeNotAvailable,
-                    'Order could not be cancelled.': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.OrderNotFound,
-                    'No such order found.': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.OrderNotFound,
-                    'Order price must be positive.': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.InvalidOrder,
-                    'Could not find a key matching the given X-BFX-APIKEY.': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.AuthenticationError,
-                    'Key price should be a decimal number, e.g. "123.456"': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.InvalidOrder,
-                    'Key amount should be a decimal number, e.g. "123.456"': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.InvalidOrder,
-                    'ERR_RATE_LIMIT': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.RateLimitExceeded,
-                    'Ratelimit': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.RateLimitExceeded,
-                    'Nonce is too small.': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.InvalidNonce,
-                    'No summary found.': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ExchangeError,
-                    'Cannot evaluate your available balance, please try again': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ExchangeNotAvailable,
-                    'Unknown symbol': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.BadSymbol,
-                    'Cannot complete transfer. Exchange balance insufficient.': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.InsufficientFunds,
-                    'Momentary balance check. Please wait few seconds and try the transfer again.': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ExchangeError,
-                },
-                'broad': {
-                    'Invalid X-BFX-SIGNATURE': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.AuthenticationError,
-                    'This API key does not have permission': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.PermissionDenied,
-                    'not enough exchange balance for ': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.InsufficientFunds,
-                    'minimum size for ': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.InvalidOrder,
-                    'Invalid order': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.InvalidOrder,
-                    'The available balance is only': _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.InsufficientFunds, // {"status":"error","message":"Cannot withdraw 1.0027 ETH from your exchange wallet. The available balance is only 0.0 ETH. If you have limit orders, open positions, unused or active margin funding, this will decrease your available balance. To increase it, you can cancel limit orders or reduce/close your positions.","withdrawal_id":0,"fees":"0.0027"}
-                },
-            },
-            'precisionMode': _base_functions_number_js__WEBPACK_IMPORTED_MODULE_2__/* .SIGNIFICANT_DIGITS */ .v,
-            'options': {
-                'currencyNames': {
-                    'AGI': 'agi',
-                    'AID': 'aid',
-                    'AIO': 'aio',
-                    'ANT': 'ant',
-                    'AVT': 'aventus',
-                    'BAT': 'bat',
-                    // https://github.com/ccxt/ccxt/issues/5833
-                    'BCH': 'bab',
-                    // 'BCH': 'bcash', // undocumented
-                    'BCI': 'bci',
-                    'BFT': 'bft',
-                    'BSV': 'bsv',
-                    'BTC': 'bitcoin',
-                    'BTG': 'bgold',
-                    'CFI': 'cfi',
-                    'COMP': 'comp',
-                    'DAI': 'dai',
-                    'DADI': 'dad',
-                    'DASH': 'dash',
-                    'DATA': 'datacoin',
-                    'DTH': 'dth',
-                    'EDO': 'eidoo',
-                    'ELF': 'elf',
-                    'EOS': 'eos',
-                    'ETC': 'ethereumc',
-                    'ETH': 'ethereum',
-                    'ETP': 'metaverse',
-                    'FUN': 'fun',
-                    'GNT': 'golem',
-                    'IOST': 'ios',
-                    'IOTA': 'iota',
-                    // https://github.com/ccxt/ccxt/issues/5833
-                    'LEO': 'let',
-                    // 'LEO': 'les', // EOS chain
-                    'LINK': 'link',
-                    'LRC': 'lrc',
-                    'LTC': 'litecoin',
-                    'LYM': 'lym',
-                    'MANA': 'mna',
-                    'MIT': 'mit',
-                    'MKR': 'mkr',
-                    'MTN': 'mtn',
-                    'NEO': 'neo',
-                    'ODE': 'ode',
-                    'OMG': 'omisego',
-                    'OMNI': 'mastercoin',
-                    'QASH': 'qash',
-                    'QTUM': 'qtum',
-                    'RCN': 'rcn',
-                    'RDN': 'rdn',
-                    'REP': 'rep',
-                    'REQ': 'req',
-                    'RLC': 'rlc',
-                    'SAN': 'santiment',
-                    'SNGLS': 'sng',
-                    'SNT': 'status',
-                    'SPANK': 'spk',
-                    'STORJ': 'stj',
-                    'TNB': 'tnb',
-                    'TRX': 'trx',
-                    'TUSD': 'tsd',
-                    'USD': 'wire',
-                    'USDC': 'udc',
-                    'UTK': 'utk',
-                    'USDT': 'tetheruso',
-                    // 'USDT': 'tetheruse', // Tether on ERC20
-                    // 'USDT': 'tetherusl', // Tether on Liquid
-                    // 'USDT': 'tetherusx', // Tether on Tron
-                    // 'USDT': 'tetheruss', // Tether on EOS
-                    'VEE': 'vee',
-                    'WAX': 'wax',
-                    'XLM': 'xlm',
-                    'XMR': 'monero',
-                    'XRP': 'ripple',
-                    'XVG': 'xvg',
-                    'YOYOW': 'yoyow',
-                    'ZEC': 'zcash',
-                    'ZRX': 'zrx',
-                    'XTZ': 'xtz',
-                },
-                'orderTypes': {
-                    'limit': 'exchange limit',
-                    'market': 'exchange market',
-                },
-                'fiat': {
-                    'USD': 'USD',
-                    'EUR': 'EUR',
-                    'JPY': 'JPY',
-                    'GBP': 'GBP',
-                    'CNH': 'CNH',
-                },
-                'accountsByType': {
-                    'spot': 'exchange',
-                    'margin': 'trading',
-                    'funding': 'deposit',
-                    'swap': 'trading',
-                },
-            },
-        });
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchTransactionFees
-     * @deprecated
-     * @description please use fetchDepositWithdrawFees instead
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-fees
-     * @param {string[]|undefined} codes list of unified currency codes
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object[]} a list of [fees structures]{@link https://docs.ccxt.com/#/?id=fee-structure}
-     */
-    async fetchTransactionFees(codes = undefined, params = {}) {
-        await this.loadMarkets();
-        const result = {};
-        const response = await this.privatePostAccountFees(params);
-        //
-        // {
-        //     "withdraw": {
-        //         "BTC": "0.0004",
-        //     }
-        // }
-        //
-        const fees = this.safeDict(response, 'withdraw', {});
-        const ids = Object.keys(fees);
-        for (let i = 0; i < ids.length; i++) {
-            const id = ids[i];
-            const code = this.safeCurrencyCode(id);
-            if ((codes !== undefined) && !this.inArray(code, codes)) {
-                continue;
-            }
-            result[code] = {
-                'withdraw': this.safeNumber(fees, id),
-                'deposit': {},
-                'info': this.safeNumber(fees, id),
-            };
-        }
-        return result;
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchDepositWithdrawFees
-     * @description fetch deposit and withdraw fees
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-fees
-     * @param {string[]|undefined} codes list of unified currency codes
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object[]} a list of [fees structures]{@link https://docs.ccxt.com/#/?id=fee-structure}
-     */
-    async fetchDepositWithdrawFees(codes = undefined, params = {}) {
-        await this.loadMarkets();
-        const response = await this.privatePostAccountFees(params);
-        //
-        //    {
-        //        "withdraw": {
-        //            "BTC": "0.0004",
-        //            ...
-        //        }
-        //    }
-        //
-        const withdraw = this.safeList(response, 'withdraw');
-        return this.parseDepositWithdrawFees(withdraw, codes);
-    }
-    parseDepositWithdrawFee(fee, currency = undefined) {
-        //
-        //    '0.0004'
-        //
-        return {
-            'withdraw': {
-                'fee': this.parseNumber(fee),
-                'percentage': undefined,
-            },
-            'deposit': {
-                'fee': undefined,
-                'percentage': undefined,
-            },
-            'networks': {},
-            'info': fee,
-        };
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchTradingFees
-     * @description fetch the trading fees for multiple markets
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-summary
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a dictionary of [fee structures]{@link https://docs.ccxt.com/#/?id=fee-structure} indexed by market symbols
-     */
-    async fetchTradingFees(params = {}) {
-        await this.loadMarkets();
-        const response = await this.privatePostSummary(params);
-        //
-        //     {
-        //          "time": "2022-02-23T16:05:47.659000Z",
-        //          "status": { resid_hint: null, login_last: "2022-02-23T16:05:48Z" },
-        //          "is_locked": false,
-        //          "leo_lev": "0",
-        //          "leo_amount_avg": "0.0",
-        //          "trade_vol_30d": [
-        //          {
-        //              "curr": "Total (USD)",
-        //              "vol": "0.0",
-        //              "vol_safe": "0.0",
-        //              "vol_maker": "0.0",
-        //              "vol_BFX": "0.0",
-        //              "vol_BFX_safe": "0.0",
-        //              "vol_BFX_maker": "0.0"
-        //          }
-        //          ],
-        //          "fees_funding_30d": {},
-        //          "fees_funding_total_30d": "0",
-        //          "fees_trading_30d": {},
-        //          "fees_trading_total_30d": "0",
-        //          "rebates_trading_30d": {},
-        //          "rebates_trading_total_30d": "0",
-        //          "maker_fee": "0.001",
-        //          "taker_fee": "0.002",
-        //          "maker_fee_2crypto": "0.001",
-        //          "maker_fee_2stablecoin": "0.001",
-        //          "maker_fee_2fiat": "0.001",
-        //          "maker_fee_2deriv": "0.0002",
-        //          "taker_fee_2crypto": "0.002",
-        //          "taker_fee_2stablecoin": "0.002",
-        //          "taker_fee_2fiat": "0.002",
-        //          "taker_fee_2deriv": "0.00065",
-        //          "deriv_maker_rebate": "0.0002",
-        //          "deriv_taker_fee": "0.00065",
-        //          "trade_last": null
-        //     }
-        //
-        const result = {};
-        const fiat = this.safeDict(this.options, 'fiat', {});
-        const makerFee = this.safeNumber(response, 'maker_fee');
-        const takerFee = this.safeNumber(response, 'taker_fee');
-        const makerFee2Fiat = this.safeNumber(response, 'maker_fee_2fiat');
-        const takerFee2Fiat = this.safeNumber(response, 'taker_fee_2fiat');
-        const makerFee2Deriv = this.safeNumber(response, 'maker_fee_2deriv');
-        const takerFee2Deriv = this.safeNumber(response, 'taker_fee_2deriv');
-        for (let i = 0; i < this.symbols.length; i++) {
-            const symbol = this.symbols[i];
-            const market = this.market(symbol);
-            const fee = {
-                'info': response,
-                'symbol': symbol,
-                'percentage': true,
-                'tierBased': true,
-            };
-            if (market['quote'] in fiat) {
-                fee['maker'] = makerFee2Fiat;
-                fee['taker'] = takerFee2Fiat;
-            }
-            else if (market['contract']) {
-                fee['maker'] = makerFee2Deriv;
-                fee['taker'] = takerFee2Deriv;
-            }
-            else {
-                fee['maker'] = makerFee;
-                fee['taker'] = takerFee;
-            }
-            result[symbol] = fee;
-        }
-        return result;
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchMarkets
-     * @description retrieves data on all markets for bitfinex
-     * @see https://docs.bitfinex.com/v1/reference/rest-public-symbols
-     * @see https://docs.bitfinex.com/v1/reference/rest-public-symbol-details
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object[]} an array of objects representing market data
-     */
-    async fetchMarkets(params = {}) {
-        const idsPromise = this.publicGetSymbols();
-        //
-        //     [ "btcusd", "ltcusd", "ltcbtc" ]
-        //
-        const detailsPromise = this.publicGetSymbolsDetails();
-        //
-        //     [
-        //         {
-        //             "pair":"btcusd",
-        //             "price_precision":5,
-        //             "initial_margin":"10.0",
-        //             "minimum_margin":"5.0",
-        //             "maximum_order_size":"2000.0",
-        //             "minimum_order_size":"0.0002",
-        //             "expiration":"NA",
-        //             "margin":true
-        //         },
-        //     ]
-        //
-        const [ids, details] = await Promise.all([idsPromise, detailsPromise]);
-        const result = [];
-        for (let i = 0; i < details.length; i++) {
-            const market = details[i];
-            let id = this.safeString(market, 'pair');
-            if (!this.inArray(id, ids)) {
-                continue;
-            }
-            id = id.toUpperCase();
-            let baseId = undefined;
-            let quoteId = undefined;
-            if (id.indexOf(':') >= 0) {
-                const parts = id.split(':');
-                baseId = parts[0];
-                quoteId = parts[1];
-            }
-            else {
-                baseId = id.slice(0, 3);
-                quoteId = id.slice(3, 6);
-            }
-            const base = this.safeCurrencyCode(baseId);
-            const quote = this.safeCurrencyCode(quoteId);
-            const symbol = base + '/' + quote;
-            let type = 'spot';
-            if (id.indexOf('F0') > -1) {
-                type = 'swap';
-            }
-            result.push({
-                'id': id,
-                'symbol': symbol,
-                'base': base,
-                'quote': quote,
-                'settle': undefined,
-                'baseId': baseId,
-                'quoteId': quoteId,
-                'settleId': undefined,
-                'type': type,
-                'spot': (type === 'spot'),
-                'margin': this.safeBool(market, 'margin'),
-                'swap': (type === 'swap'),
-                'future': false,
-                'option': false,
-                'active': true,
-                'contract': (type === 'swap'),
-                'linear': undefined,
-                'inverse': undefined,
-                'contractSize': undefined,
-                'expiry': undefined,
-                'expiryDatetime': undefined,
-                'strike': undefined,
-                'optionType': undefined,
-                'precision': {
-                    // https://docs.bitfinex.com/docs/introduction#amount-precision
-                    // The amount field allows up to 8 decimals.
-                    // Anything exceeding this will be rounded to the 8th decimal.
-                    'amount': parseInt('8'),
-                    'price': this.safeInteger(market, 'price_precision'),
-                },
-                'limits': {
-                    'leverage': {
-                        'min': undefined,
-                        'max': undefined,
-                    },
-                    'amount': {
-                        'min': this.safeNumber(market, 'minimum_order_size'),
-                        'max': this.safeNumber(market, 'maximum_order_size'),
-                    },
-                    'price': {
-                        'min': this.parseNumber('1e-8'),
-                        'max': undefined,
-                    },
-                    'cost': {
-                        'min': undefined,
-                        'max': undefined,
-                    },
-                },
-                'created': undefined,
-                'info': market,
-            });
-        }
-        return result;
-    }
-    amountToPrecision(symbol, amount) {
-        // https://docs.bitfinex.com/docs/introduction#amount-precision
-        // The amount field allows up to 8 decimals.
-        // Anything exceeding this will be rounded to the 8th decimal.
-        symbol = this.safeSymbol(symbol);
-        return this.decimalToPrecision(amount, _base_functions_number_js__WEBPACK_IMPORTED_MODULE_2__/* .TRUNCATE */ .R3, this.markets[symbol]['precision']['amount'], _base_functions_number_js__WEBPACK_IMPORTED_MODULE_2__/* .DECIMAL_PLACES */ .fv);
-    }
-    priceToPrecision(symbol, price) {
-        symbol = this.safeSymbol(symbol);
-        price = this.decimalToPrecision(price, _base_functions_number_js__WEBPACK_IMPORTED_MODULE_2__/* .ROUND */ .D_, this.markets[symbol]['precision']['price'], this.precisionMode);
-        // https://docs.bitfinex.com/docs/introduction#price-precision
-        // The precision level of all trading prices is based on significant figures.
-        // All pairs on Bitfinex use up to 5 significant digits and up to 8 decimals (e.g. 1.2345, 123.45, 1234.5, 0.00012345).
-        // Prices submit with a precision larger than 5 will be cut by the API.
-        return this.decimalToPrecision(price, _base_functions_number_js__WEBPACK_IMPORTED_MODULE_2__/* .TRUNCATE */ .R3, 8, _base_functions_number_js__WEBPACK_IMPORTED_MODULE_2__/* .DECIMAL_PLACES */ .fv);
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchBalance
-     * @description query for balance and get the amount of funds available for trading or funds locked in orders
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-wallet-balances
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a [balance structure]{@link https://docs.ccxt.com/#/?id=balance-structure}
-     */
-    async fetchBalance(params = {}) {
-        await this.loadMarkets();
-        const accountsByType = this.safeDict(this.options, 'accountsByType', {});
-        const requestedType = this.safeString(params, 'type', 'exchange');
-        const accountType = this.safeString(accountsByType, requestedType, requestedType);
-        if (accountType === undefined) {
-            const keys = Object.keys(accountsByType);
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ExchangeError(this.id + ' fetchBalance() type parameter must be one of ' + keys.join(', '));
-        }
-        const query = this.omit(params, 'type');
-        const response = await this.privatePostBalances(query);
-        //    [ { type: "deposit",
-        //        "currency": "btc",
-        //        "amount": "0.00116721",
-        //        "available": "0.00116721" },
-        //      { type: "exchange",
-        //        "currency": "ust",
-        //        "amount": "0.0000002",
-        //        "available": "0.0000002" },
-        //      { type: "trading",
-        //        "currency": "btc",
-        //        "amount": "0.0005",
-        //        "available": "0.0005" } ],
-        const result = { 'info': response };
-        const isDerivative = requestedType === 'derivatives';
-        for (let i = 0; i < response.length; i++) {
-            const balance = response[i];
-            const type = this.safeString(balance, 'type');
-            const currencyId = this.safeStringLower(balance, 'currency', '');
-            const start = currencyId.length - 2;
-            const isDerivativeCode = currencyId.slice(start) === 'f0';
-            // this will only filter the derivative codes if the requestedType is 'derivatives'
-            const derivativeCondition = (!isDerivative || isDerivativeCode);
-            if ((accountType === type) && derivativeCondition) {
-                const code = this.safeCurrencyCode(currencyId);
-                // bitfinex had BCH previously, now it's BAB, but the old
-                // BCH symbol is kept for backward-compatibility
-                // we need a workaround here so that the old BCH balance
-                // would not override the new BAB balance (BAB is unified to BCH)
-                // https://github.com/ccxt/ccxt/issues/4989
-                if (!(code in result)) {
-                    const account = this.account();
-                    account['free'] = this.safeString(balance, 'available');
-                    account['total'] = this.safeString(balance, 'amount');
-                    result[code] = account;
-                }
-            }
-        }
-        return this.safeBalance(result);
-    }
-    /**
-     * @method
-     * @name bitfinex1#transfer
-     * @description transfer currency internally between wallets on the same account
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-transfer-between-wallets
-     * @param {string} code unified currency code
-     * @param {float} amount amount to transfer
-     * @param {string} fromAccount account to transfer from
-     * @param {string} toAccount account to transfer to
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a [transfer structure]{@link https://docs.ccxt.com/#/?id=transfer-structure}
-     */
-    async transfer(code, amount, fromAccount, toAccount, params = {}) {
-        // transferring between derivatives wallet and regular wallet is not documented in their API
-        // however we support it in CCXT (from just looking at web inspector)
-        await this.loadMarkets();
-        const accountsByType = this.safeDict(this.options, 'accountsByType', {});
-        const fromId = this.safeString(accountsByType, fromAccount, fromAccount);
-        const toId = this.safeString(accountsByType, toAccount, toAccount);
-        const currency = this.currency(code);
-        const fromCurrencyId = this.convertDerivativesId(currency['id'], fromAccount);
-        const toCurrencyId = this.convertDerivativesId(currency['id'], toAccount);
-        const requestedAmount = this.currencyToPrecision(code, amount);
-        const request = {
-            'amount': requestedAmount,
-            'currency': fromCurrencyId,
-            'currency_to': toCurrencyId,
-            'walletfrom': fromId,
-            'walletto': toId,
-        };
-        const response = await this.privatePostTransfer(this.extend(request, params));
-        //
-        //     [
-        //         {
-        //             "status": "success",
-        //             "message": "0.0001 Bitcoin transfered from Margin to Exchange"
-        //         }
-        //     ]
-        //
-        const result = this.safeValue(response, 0);
-        const message = this.safeString(result, 'message');
-        if (message === undefined) {
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ExchangeError(this.id + ' transfer failed');
-        }
-        return this.extend(this.parseTransfer(result, currency), {
-            'fromAccount': fromAccount,
-            'toAccount': toAccount,
-            'amount': this.parseNumber(requestedAmount),
-        });
-    }
-    parseTransfer(transfer, currency = undefined) {
-        //
-        //     {
-        //         "status": "success",
-        //         "message": "0.0001 Bitcoin transfered from Margin to Exchange"
-        //     }
-        //
-        return {
-            'info': transfer,
-            'id': undefined,
-            'timestamp': undefined,
-            'datetime': undefined,
-            'currency': this.safeCurrencyCode(undefined, currency),
-            'amount': undefined,
-            'fromAccount': undefined,
-            'toAccount': undefined,
-            'status': this.parseTransferStatus(this.safeString(transfer, 'status')),
-        };
-    }
-    parseTransferStatus(status) {
-        const statuses = {
-            'SUCCESS': 'ok',
-        };
-        return this.safeString(statuses, status, status);
-    }
-    convertDerivativesId(currencyId, type) {
-        const start = currencyId.length - 2;
-        const isDerivativeCode = currencyId.slice(start) === 'F0';
-        if ((type !== 'derivatives' && type !== 'trading' && type !== 'margin') && isDerivativeCode) {
-            currencyId = currencyId.slice(0, start);
-        }
-        else if (type === 'derivatives' && !isDerivativeCode) {
-            currencyId = currencyId + 'F0';
-        }
-        return currencyId;
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchOrderBook
-     * @description fetches information on open orders with bid (buy) and ask (sell) prices, volumes and other data
-     * @see https://docs.bitfinex.com/v1/reference/rest-public-orderbook
-     * @param {string} symbol unified symbol of the market to fetch the order book for
-     * @param {int} [limit] the maximum amount of order book entries to return
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} A dictionary of [order book structures]{@link https://docs.ccxt.com/#/?id=order-book-structure} indexed by market symbols
-     */
-    async fetchOrderBook(symbol, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        const request = {
-            'symbol': market['id'],
-        };
-        if (limit !== undefined) {
-            request['limit_bids'] = limit;
-            request['limit_asks'] = limit;
-        }
-        const response = await this.publicGetBookSymbol(this.extend(request, params));
-        return this.parseOrderBook(response, market['symbol'], undefined, 'bids', 'asks', 'price', 'amount');
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchTickers
-     * @description fetches price tickers for multiple markets, statistical information calculated over the past 24 hours for each market
-     * @param {string[]} [symbols] unified symbols of the markets to fetch the ticker for, all market tickers are returned if not assigned
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a dictionary of [ticker structures]{@link https://docs.ccxt.com/#/?id=ticker-structure}
-     */
-    async fetchTickers(symbols = undefined, params = {}) {
-        await this.loadMarkets();
-        symbols = this.marketSymbols(symbols);
-        const response = await this.publicGetTickers(params);
-        const result = {};
-        for (let i = 0; i < response.length; i++) {
-            const ticker = this.parseTicker(response[i]);
-            const symbol = ticker['symbol'];
-            result[symbol] = ticker;
-        }
-        return this.filterByArrayTickers(result, 'symbol', symbols);
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchTicker
-     * @description fetches a price ticker, a statistical calculation with the information calculated over the past 24 hours for a specific market
-     * @see https://docs.bitfinex.com/v1/reference/rest-public-ticker
-     * @param {string} symbol unified symbol of the market to fetch the ticker for
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a [ticker structure]{@link https://docs.ccxt.com/#/?id=ticker-structure}
-     */
-    async fetchTicker(symbol, params = {}) {
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        const request = {
-            'symbol': market['id'],
-        };
-        const ticker = await this.publicGetPubtickerSymbol(this.extend(request, params));
-        //
-        //    {
-        //        mid: '63560.5',
-        //        bid: '63560.0',
-        //        ask: '63561.0',
-        //        last_price: '63547.0',
-        //        low: '62812.0',
-        //        high: '64480.0',
-        //        volume: '517.25634977',
-        //        timestamp: '1715102384.9849467'
-        //    }
-        //
-        return this.parseTicker(ticker, market);
-    }
-    parseTicker(ticker, market = undefined) {
-        //
-        //    {
-        //        mid: '63560.5',
-        //        bid: '63560.0',
-        //        ask: '63561.0',
-        //        last_price: '63547.0',
-        //        low: '62812.0',
-        //        high: '64480.0',
-        //        volume: '517.25634977',
-        //        timestamp: '1715102384.9849467'
-        //    }
-        //
-        const timestamp = this.safeTimestamp(ticker, 'timestamp');
-        const marketId = this.safeString(ticker, 'pair');
-        market = this.safeMarket(marketId, market);
-        const symbol = market['symbol'];
-        const last = this.safeString(ticker, 'last_price');
-        return this.safeTicker({
-            'symbol': symbol,
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'high': this.safeString(ticker, 'high'),
-            'low': this.safeString(ticker, 'low'),
-            'bid': this.safeString(ticker, 'bid'),
-            'bidVolume': undefined,
-            'ask': this.safeString(ticker, 'ask'),
-            'askVolume': undefined,
-            'vwap': undefined,
-            'open': undefined,
-            'close': last,
-            'last': last,
-            'previousClose': undefined,
-            'change': undefined,
-            'percentage': undefined,
-            'average': this.safeString(ticker, 'mid'),
-            'baseVolume': this.safeString(ticker, 'volume'),
-            'quoteVolume': undefined,
-            'info': ticker,
-        }, market);
-    }
-    parseTrade(trade, market = undefined) {
-        //
-        // fetchTrades (public) v1
-        //
-        //     {
-        //          "timestamp":1637258380,
-        //          "tid":894452833,
-        //          "price":"0.99941",
-        //          "amount":"261.38",
-        //          "exchange":"bitfinex",
-        //          "type":"sell"
-        //     }
-        //
-        // fetchMyTrades (private) v1
-        //
-        //     {
-        //          "price":"0.99941",
-        //          "amount":"261.38",
-        //          "timestamp":"1637258380.0",
-        //          "type":"Sell",
-        //          "fee_currency":"UST",
-        //          "fee_amount":"-0.52245157",
-        //          "tid":894452833,
-        //          "order_id":78819731373
-        //     }
-        //
-        //     {
-        //         "price":"0.99958",
-        //         "amount":"261.90514",
-        //         "timestamp":"1637258238.0",
-        //         "type":"Buy",
-        //         "fee_currency":"UDC",
-        //         "fee_amount":"-0.52381028",
-        //         "tid":894452800,
-        //         "order_id":78819504838
-        //     }
-        //
-        const id = this.safeString(trade, 'tid');
-        const timestamp = this.safeTimestamp(trade, 'timestamp');
-        const type = undefined;
-        const side = this.safeStringLower(trade, 'type');
-        const orderId = this.safeString(trade, 'order_id');
-        const priceString = this.safeString(trade, 'price');
-        const amountString = this.safeString(trade, 'amount');
-        let fee = undefined;
-        if ('fee_amount' in trade) {
-            const feeCostString = _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringNeg(this.safeString(trade, 'fee_amount'));
-            const feeCurrencyId = this.safeString(trade, 'fee_currency');
-            const feeCurrencyCode = this.safeCurrencyCode(feeCurrencyId);
-            fee = {
-                'cost': feeCostString,
-                'currency': feeCurrencyCode,
-            };
-        }
-        return this.safeTrade({
-            'id': id,
-            'info': trade,
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'symbol': market['symbol'],
-            'type': type,
-            'order': orderId,
-            'side': side,
-            'takerOrMaker': undefined,
-            'price': priceString,
-            'amount': amountString,
-            'cost': undefined,
-            'fee': fee,
-        }, market);
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchTrades
-     * @description get the list of most recent trades for a particular symbol
-     * @see https://docs.bitfinex.com/v1/reference/rest-public-trades
-     * @param {string} symbol unified symbol of the market to fetch trades for
-     * @param {int} [since] timestamp in ms of the earliest trade to fetch
-     * @param {int} [limit] the maximum amount of trades to fetch
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {Trade[]} a list of [trade structures]{@link https://docs.ccxt.com/#/?id=public-trades}
-     */
-    async fetchTrades(symbol, since = undefined, limit = 50, params = {}) {
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        const request = {
-            'symbol': market['id'],
-            'limit_trades': limit,
-        };
-        if (since !== undefined) {
-            request['timestamp'] = this.parseToInt(since / 1000);
-        }
-        const response = await this.publicGetTradesSymbol(this.extend(request, params));
-        //
-        //    [
-        //        {
-        //            "timestamp": "1694284565",
-        //            "tid": "1415415034",
-        //            "price": "25862.0",
-        //            "amount": "0.00020685",
-        //            "exchange": "bitfinex",
-        //            "type": "buy"
-        //        },
-        //    ]
-        //
-        return this.parseTrades(response, market, since, limit);
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchMyTrades
-     * @description fetch all trades made by the user
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-past-trades
-     * @param {string} symbol unified market symbol
-     * @param {int} [since] the earliest time in ms to fetch trades for
-     * @param {int} [limit] the maximum number of trades structures to retrieve
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {Trade[]} a list of [trade structures]{@link https://docs.ccxt.com/#/?id=trade-structure}
-     */
-    async fetchMyTrades(symbol = undefined, since = undefined, limit = undefined, params = {}) {
-        if (symbol === undefined) {
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ArgumentsRequired(this.id + ' fetchMyTrades() requires a symbol argument');
-        }
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        const request = {
-            'symbol': market['id'],
-        };
-        if (limit !== undefined) {
-            request['limit_trades'] = limit;
-        }
-        if (since !== undefined) {
-            request['timestamp'] = this.parseToInt(since / 1000);
-        }
-        const response = await this.privatePostMytrades(this.extend(request, params));
-        return this.parseTrades(response, market, since, limit);
-    }
-    /**
-     * @method
-     * @name bitfinex1#createOrder
-     * @description create a trade order
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-new-order
-     * @param {string} symbol unified symbol of the market to create an order in
-     * @param {string} type 'market' or 'limit'
-     * @param {string} side 'buy' or 'sell'
-     * @param {float} amount how much of currency you want to trade in units of base currency
-     * @param {float} [price] the price at which the order is to be fulfilled, in units of the quote currency, ignored in market orders
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} an [order structure]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async createOrder(symbol, type, side, amount, price = undefined, params = {}) {
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        const postOnly = this.safeBool(params, 'postOnly', false);
-        type = type.toLowerCase();
-        params = this.omit(params, ['postOnly']);
-        if (market['spot']) {
-            // although they claim that type needs to be 'exchange limit' or 'exchange market'
-            // in fact that's not the case for swap markets
-            type = this.safeStringLower(this.options['orderTypes'], type, type);
-        }
-        const request = {
-            'symbol': market['id'],
-            'side': side,
-            'amount': this.amountToPrecision(symbol, amount),
-            'type': type,
-            'ocoorder': false,
-            'buy_price_oco': 0,
-            'sell_price_oco': 0,
-        };
-        if (type.indexOf('market') > -1) {
-            request['price'] = this.nonce().toString();
-        }
-        else {
-            request['price'] = this.priceToPrecision(symbol, price);
-        }
-        if (postOnly) {
-            request['is_postonly'] = true;
-        }
-        const response = await this.privatePostOrderNew(this.extend(request, params));
-        return this.parseOrder(response, market);
-    }
-    async editOrder(id, symbol, type, side, amount = undefined, price = undefined, params = {}) {
-        await this.loadMarkets();
-        const order = {
-            'order_id': parseInt(id),
-        };
-        if (price !== undefined) {
-            order['price'] = this.priceToPrecision(symbol, price);
-        }
-        if (amount !== undefined) {
-            order['amount'] = this.numberToString(amount);
-        }
-        if (symbol !== undefined) {
-            order['symbol'] = this.marketId(symbol);
-        }
-        if (side !== undefined) {
-            order['side'] = side;
-        }
-        if (type !== undefined) {
-            order['type'] = this.safeString(this.options['orderTypes'], type, type);
-        }
-        const response = await this.privatePostOrderCancelReplace(this.extend(order, params));
-        return this.parseOrder(response);
-    }
-    /**
-     * @method
-     * @name bitfinex1#cancelOrder
-     * @description cancels an open order
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-cancel-order
-     * @param {string} id order id
-     * @param {string} symbol not used by bitfinex cancelOrder ()
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} An [order structure]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async cancelOrder(id, symbol = undefined, params = {}) {
-        await this.loadMarkets();
-        const request = {
-            'order_id': parseInt(id),
-        };
-        const response = await this.privatePostOrderCancel(this.extend(request, params));
-        //
-        //    {
-        //        id: '161236928925',
-        //        cid: '1720172026812',
-        //        cid_date: '2024-07-05',
-        //        gid: null,
-        //        symbol: 'adaust',
-        //        exchange: 'bitfinex',
-        //        price: '0.33',
-        //        avg_execution_price: '0.0',
-        //        side: 'buy',
-        //        type: 'exchange limit',
-        //        timestamp: '1720172026.813',
-        //        is_live: true,
-        //        is_cancelled: false,
-        //        is_hidden: false,
-        //        oco_order: null,
-        //        was_forced: false,
-        //        original_amount: '10.0',
-        //        remaining_amount: '10.0',
-        //        executed_amount: '0.0',
-        //        src: 'api',
-        //        meta: {}
-        //    }
-        //
-        return this.parseOrder(response);
-    }
-    /**
-     * @method
-     * @name bitfinex1#cancelAllOrders
-     * @description cancel all open orders
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-cancel-all-orders
-     * @param {string} symbol not used by bitfinex cancelAllOrders
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} response from exchange
-     */
-    async cancelAllOrders(symbol = undefined, params = {}) {
-        const response = await this.privatePostOrderCancelAll(params);
-        //
-        //    { result: 'Submitting 1 order cancellations.' }
-        //
-        return [
-            this.safeOrder({
-                'info': response,
-            }),
-        ];
-    }
-    parseOrder(order, market = undefined) {
-        //
-        //     {
-        //           "id": 57334010955,
-        //           "cid": 1611584840966,
-        //           "cid_date": null,
-        //           "gid": null,
-        //           "symbol": "ltcbtc",
-        //           "exchange": null,
-        //           "price": "0.0042125",
-        //           "avg_execution_price": "0.0042097",
-        //           "side": "sell",
-        //           "type": "exchange market",
-        //           "timestamp": "1611584841.0",
-        //           "is_live": false,
-        //           "is_cancelled": false,
-        //           "is_hidden": 0,
-        //           "oco_order": 0,
-        //           "was_forced": false,
-        //           "original_amount": "0.205176",
-        //           "remaining_amount": "0.0",
-        //           "executed_amount": "0.205176",
-        //           "src": "web"
-        //     }
-        //
-        const side = this.safeString(order, 'side');
-        const open = this.safeBool(order, 'is_live');
-        const canceled = this.safeBool(order, 'is_cancelled');
-        let status = undefined;
-        if (open) {
-            status = 'open';
-        }
-        else if (canceled) {
-            status = 'canceled';
-        }
-        else {
-            status = 'closed';
-        }
-        const marketId = this.safeStringUpper(order, 'symbol');
-        const symbol = this.safeSymbol(marketId, market);
-        let orderType = this.safeString(order, 'type', '');
-        const exchange = orderType.indexOf('exchange ') >= 0;
-        if (exchange) {
-            const parts = order['type'].split(' ');
-            orderType = parts[1];
-        }
-        const timestamp = this.safeTimestamp(order, 'timestamp');
-        const id = this.safeString(order, 'id');
-        return this.safeOrder({
-            'info': order,
-            'id': id,
-            'clientOrderId': undefined,
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'lastTradeTimestamp': undefined,
-            'symbol': symbol,
-            'type': orderType,
-            'timeInForce': undefined,
-            'postOnly': undefined,
-            'side': side,
-            'price': this.safeString(order, 'price'),
-            'triggerPrice': undefined,
-            'average': this.safeString(order, 'avg_execution_price'),
-            'amount': this.safeString(order, 'original_amount'),
-            'remaining': this.safeString(order, 'remaining_amount'),
-            'filled': this.safeString(order, 'executed_amount'),
-            'status': status,
-            'fee': undefined,
-            'cost': undefined,
-            'trades': undefined,
-        }, market);
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchOpenOrders
-     * @description fetch all unfilled currently open orders
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-active-orders
-     * @param {string} symbol unified market symbol
-     * @param {int} [since] the earliest time in ms to fetch open orders for
-     * @param {int} [limit] the maximum number of  open orders structures to retrieve
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {Order[]} a list of [order structures]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async fetchOpenOrders(symbol = undefined, since = undefined, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        if (symbol !== undefined) {
-            if (!(symbol in this.markets)) {
-                throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ExchangeError(this.id + ' has no symbol ' + symbol);
-            }
-        }
-        const response = await this.privatePostOrders(params);
-        let orders = this.parseOrders(response, undefined, since, limit);
-        if (symbol !== undefined) {
-            orders = this.filterBy(orders, 'symbol', symbol);
-        }
-        return orders;
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchClosedOrders
-     * @description fetches information on multiple closed orders made by the user
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-orders-history
-     * @param {string} symbol unified market symbol of the market orders were made in
-     * @param {int} [since] the earliest time in ms to fetch orders for
-     * @param {int} [limit] the maximum number of order structures to retrieve
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {Order[]} a list of [order structures]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async fetchClosedOrders(symbol = undefined, since = undefined, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        symbol = this.symbol(symbol);
-        const request = {};
-        if (limit !== undefined) {
-            request['limit'] = limit;
-        }
-        const response = await this.privatePostOrdersHist(this.extend(request, params));
-        let orders = this.parseOrders(response, undefined, since, limit);
-        if (symbol !== undefined) {
-            orders = this.filterBy(orders, 'symbol', symbol);
-        }
-        orders = this.filterByArray(orders, 'status', ['closed', 'canceled'], false);
-        return orders;
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchOrder
-     * @description fetches information on an order made by the user
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-order-status
-     * @param {string} id the order id
-     * @param {string} symbol not used by bitfinex fetchOrder
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} An [order structure]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async fetchOrder(id, symbol = undefined, params = {}) {
-        await this.loadMarkets();
-        const request = {
-            'order_id': parseInt(id),
-        };
-        const response = await this.privatePostOrderStatus(this.extend(request, params));
-        return this.parseOrder(response);
-    }
-    parseOHLCV(ohlcv, market = undefined) {
-        //
-        //     [
-        //         1457539800000,
-        //         0.02594,
-        //         0.02594,
-        //         0.02594,
-        //         0.02594,
-        //         0.1
-        //     ]
-        //
-        return [
-            this.safeInteger(ohlcv, 0),
-            this.safeNumber(ohlcv, 1),
-            this.safeNumber(ohlcv, 3),
-            this.safeNumber(ohlcv, 4),
-            this.safeNumber(ohlcv, 2),
-            this.safeNumber(ohlcv, 5),
-        ];
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchOHLCV
-     * @description fetches historical candlestick data containing the open, high, low, and close price, and the volume of a market
-     * @see https://docs.bitfinex.com/reference/rest-public-candles#aggregate-funding-currency-candles
-     * @param {string} symbol unified symbol of the market to fetch OHLCV data for
-     * @param {string} timeframe the length of time each candle represents
-     * @param {int} [since] timestamp in ms of the earliest candle to fetch
-     * @param {int} [limit] the maximum amount of candles to fetch
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @param {int} [params.until] timestamp in ms of the latest candle to fetch
-     * @returns {int[][]} A list of candles ordered as timestamp, open, high, low, close, volume
-     */
-    async fetchOHLCV(symbol, timeframe = '1m', since = undefined, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        if (limit === undefined) {
-            limit = 100;
-        }
-        else {
-            limit = Math.min(limit, 10000);
-        }
-        const market = this.market(symbol);
-        const v2id = 't' + market['id'];
-        const request = {
-            'symbol': v2id,
-            'timeframe': this.safeString(this.timeframes, timeframe, timeframe),
-            'sort': 1,
-            'limit': limit,
-        };
-        const until = this.safeInteger(params, 'until');
-        if (since !== undefined) {
-            request['start'] = since;
-        }
-        else if (until !== undefined) {
-            const duration = this.parseTimeframe(timeframe);
-            request['start'] = until - ((limit - 1) * duration * 1000);
-        }
-        if (until !== undefined) {
-            request['end'] = until;
-        }
-        params = this.omit(params, 'until');
-        const response = await this.v2GetCandlesTradeTimeframeSymbolHist(this.extend(request, params));
-        //
-        //     [
-        //         [1457539800000,0.02594,0.02594,0.02594,0.02594,0.1],
-        //         [1457547300000,0.02577,0.02577,0.02577,0.02577,0.01],
-        //         [1457550240000,0.0255,0.0253,0.0255,0.0252,3.2640000000000002],
-        //     ]
-        //
-        return this.parseOHLCVs(response, market, timeframe, since, limit);
-    }
-    getCurrencyName(code) {
-        // todo rewrite for https://api-pub.bitfinex.com//v2/conf/pub:map:tx:method
-        if (code in this.options['currencyNames']) {
-            return this.options['currencyNames'][code];
-        }
-        throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.NotSupported(this.id + ' ' + code + ' not supported for withdrawal');
-    }
-    /**
-     * @method
-     * @name bitfinex1#createDepositAddress
-     * @description create a currency deposit address
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-deposit
-     * @param {string} code unified currency code of the currency for the deposit address
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} an [address structure]{@link https://docs.ccxt.com/#/?id=address-structure}
-     */
-    async createDepositAddress(code, params = {}) {
-        await this.loadMarkets();
-        const request = {
-            'renew': 1,
-        };
-        return await this.fetchDepositAddress(code, this.extend(request, params));
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchDepositAddress
-     * @description fetch the deposit address for a currency associated with this account
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-deposit
-     * @param {string} code unified currency code
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} an [address structure]{@link https://docs.ccxt.com/#/?id=address-structure}
-     */
-    async fetchDepositAddress(code, params = {}) {
-        await this.loadMarkets();
-        // todo rewrite for https://api-pub.bitfinex.com//v2/conf/pub:map:tx:method
-        const name = this.getCurrencyName(code);
-        const request = {
-            'method': name,
-            'wallet_name': 'exchange',
-            'renew': 0, // a value of 1 will generate a new address
-        };
-        const response = await this.privatePostDepositNew(this.extend(request, params));
-        let address = this.safeValue(response, 'address');
-        let tag = undefined;
-        if ('address_pool' in response) {
-            tag = address;
-            address = response['address_pool'];
-        }
-        this.checkAddress(address);
-        return {
-            'currency': code,
-            'address': address,
-            'tag': tag,
-            'network': undefined,
-            'info': response,
-        };
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchDepositsWithdrawals
-     * @description fetch history of deposits and withdrawals
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-deposit-withdrawal-history
-     * @param {string} code unified currency code for the currency of the deposit/withdrawals
-     * @param {int} [since] timestamp in ms of the earliest deposit/withdrawal, default is undefined
-     * @param {int} [limit] max number of deposit/withdrawals to return, default is undefined
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a list of [transaction structure]{@link https://docs.ccxt.com/#/?id=transaction-structure}
-     */
-    async fetchDepositsWithdrawals(code = undefined, since = undefined, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        let currencyId = this.safeString(params, 'currency');
-        const query = this.omit(params, 'currency');
-        let currency = undefined;
-        if (currencyId === undefined) {
-            if (code === undefined) {
-                throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ArgumentsRequired(this.id + ' fetchDepositsWithdrawals() requires a currency `code` argument or a `currency` parameter');
-            }
-            else {
-                currency = this.currency(code);
-                currencyId = currency['id'];
-            }
-        }
-        query['currency'] = currencyId;
-        if (since !== undefined) {
-            query['since'] = this.parseToInt(since / 1000);
-        }
-        const response = await this.privatePostHistoryMovements(this.extend(query, params));
-        //
-        //     [
-        //         {
-        //             "id": 581183,
-        //             "txid":  123456,
-        //             "currency": "BTC",
-        //             "method": "BITCOIN",
-        //             "type": "WITHDRAWAL",
-        //             "amount": ".01",
-        //             "description": "3QXYWgRGX2BPYBpUDBssGbeWEa5zq6snBZ, offchain transfer ",
-        //             "address": "3QXYWgRGX2BPYBpUDBssGbeWEa5zq6snBZ",
-        //             "status": "COMPLETED",
-        //             "timestamp": "1443833327.0",
-        //             "timestamp_created":  "1443833327.1",
-        //             "fee":  0.1,
-        //         }
-        //     ]
-        //
-        return this.parseTransactions(response, currency, since, limit);
-    }
-    parseTransaction(transaction, currency = undefined) {
-        //
-        // crypto
-        //
-        //     {
-        //         "id": 12042490,
-        //         "fee": "-0.02",
-        //         "txid": "EA5B5A66000B66855865EFF2494D7C8D1921FCBE996482157EBD749F2C85E13D",
-        //         "type": "DEPOSIT",
-        //         "amount": "2099.849999",
-        //         "method": "RIPPLE",
-        //         "status": "COMPLETED",
-        //         "address": "2505189261",
-        //         "currency": "XRP",
-        //         "timestamp": "1551730524.0",
-        //         "description": "EA5B5A66000B66855865EFF2494D7C8D1921FCBE996482157EBD749F2C85E13D",
-        //         "timestamp_created": "1551730523.0"
-        //     }
-        //
-        // fiat
-        //
-        //     {
-        //         "id": 12725095,
-        //         "fee": "-60.0",
-        //         "txid": null,
-        //         "type": "WITHDRAWAL",
-        //         "amount": "9943.0",
-        //         "method": "WIRE",
-        //         "status": "SENDING",
-        //         "address": null,
-        //         "currency": "EUR",
-        //         "timestamp": "1561802484.0",
-        //         "description": "Name: bob, AccountAddress: some address, Account: someaccountno, Bank: bank address, SWIFT: foo, Country: UK, Details of Payment: withdrawal name, Intermediary Bank Name: , Intermediary Bank Address: , Intermediary Bank City: , Intermediary Bank Country: , Intermediary Bank Account: , Intermediary Bank SWIFT: , Fee: -60.0",
-        //         "timestamp_created": "1561716066.0"
-        //     }
-        //
-        // withdraw
-        //
-        //     {
-        //         "status": "success",
-        //         "message": "Your withdrawal request has been successfully submitted.",
-        //         "withdrawal_id": 586829
-        //     }
-        //
-        const timestamp = this.safeTimestamp(transaction, 'timestamp_created');
-        const currencyId = this.safeString(transaction, 'currency');
-        const code = this.safeCurrencyCode(currencyId, currency);
-        let feeCost = this.safeString(transaction, 'fee');
-        if (feeCost !== undefined) {
-            feeCost = _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringAbs(feeCost);
-        }
-        return {
-            'info': transaction,
-            'id': this.safeString2(transaction, 'id', 'withdrawal_id'),
-            'txid': this.safeString(transaction, 'txid'),
-            'type': this.safeStringLower(transaction, 'type'),
-            'currency': code,
-            'network': undefined,
-            'amount': this.safeNumber(transaction, 'amount'),
-            'status': this.parseTransactionStatus(this.safeString(transaction, 'status')),
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'address': this.safeString(transaction, 'address'),
-            'addressFrom': undefined,
-            'addressTo': undefined,
-            'tag': this.safeString(transaction, 'description'),
-            'tagFrom': undefined,
-            'tagTo': undefined,
-            'updated': this.safeTimestamp(transaction, 'timestamp'),
-            'comment': undefined,
-            'internal': undefined,
-            'fee': {
-                'currency': code,
-                'cost': this.parseNumber(feeCost),
-                'rate': undefined,
-            },
-        };
-    }
-    parseTransactionStatus(status) {
-        const statuses = {
-            'SENDING': 'pending',
-            'CANCELED': 'canceled',
-            'ZEROCONFIRMED': 'failed',
-            'COMPLETED': 'ok',
-        };
-        return this.safeString(statuses, status, status);
-    }
-    /**
-     * @method
-     * @name bitfinex1#withdraw
-     * @description make a withdrawal
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-withdrawal
-     * @param {string} code unified currency code
-     * @param {float} amount the amount to withdraw
-     * @param {string} address the address to withdraw to
-     * @param {string} tag
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a [transaction structure]{@link https://docs.ccxt.com/#/?id=transaction-structure}
-     */
-    async withdraw(code, amount, address, tag = undefined, params = {}) {
-        [tag, params] = this.handleWithdrawTagAndParams(tag, params);
-        this.checkAddress(address);
-        await this.loadMarkets();
-        // todo rewrite for https://api-pub.bitfinex.com//v2/conf/pub:map:tx:method
-        const name = this.getCurrencyName(code);
-        const currency = this.currency(code);
-        const request = {
-            'withdraw_type': name,
-            'walletselected': 'exchange',
-            'amount': this.numberToString(amount),
-            'address': address,
-        };
-        if (tag !== undefined) {
-            request['payment_id'] = tag;
-        }
-        const responses = await this.privatePostWithdraw(this.extend(request, params));
-        //
-        //     [
-        //         {
-        //             "status":"success",
-        //             "message":"Your withdrawal request has been successfully submitted.",
-        //             "withdrawal_id":586829
-        //         }
-        //     ]
-        //
-        const response = this.safeDict(responses, 0, {});
-        const id = this.safeInteger(response, 'withdrawal_id');
-        const message = this.safeString(response, 'message');
-        const errorMessage = this.findBroadlyMatchedKey(this.exceptions['broad'], message);
-        if (id === 0) {
-            if (errorMessage !== undefined) {
-                const ExceptionClass = this.exceptions['broad'][errorMessage];
-                throw new ExceptionClass(this.id + ' ' + message);
-            }
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ExchangeError(this.id + ' withdraw returned an id of zero: ' + this.json(response));
-        }
-        return this.parseTransaction(response, currency);
-    }
-    /**
-     * @method
-     * @name bitfinex1#fetchPositions
-     * @description fetch all open positions
-     * @see https://docs.bitfinex.com/v1/reference/rest-auth-active-positions
-     * @param {string[]|undefined} symbols list of unified market symbols
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object[]} a list of [position structure]{@link https://docs.ccxt.com/#/?id=position-structure}
-     */
-    async fetchPositions(symbols = undefined, params = {}) {
-        await this.loadMarkets();
-        const response = await this.privatePostPositions(params);
-        //
-        //     [
-        //         {
-        //             "id":943715,
-        //             "symbol":"btcusd",
-        //             "status":"ACTIVE",
-        //             "base":"246.94",
-        //             "amount":"1.0",
-        //             "timestamp":"1444141857.0",
-        //             "swap":"0.0",
-        //             "pl":"-2.22042"
-        //         }
-        //     ]
-        //
-        // todo unify parsePosition/parsePositions
-        return response;
-    }
-    nonce() {
-        return this.microseconds();
-    }
-    sign(path, api = 'public', method = 'GET', params = {}, headers = undefined, body = undefined) {
-        let request = '/' + this.implodeParams(path, params);
-        if (api === 'v2') {
-            request = '/' + api + request;
-        }
-        else {
-            request = '/' + this.version + request;
-        }
-        let query = this.omit(params, this.extractParams(path));
-        let url = this.urls['api'][api] + request;
-        if ((api === 'public') || (path.indexOf('/hist') >= 0)) {
-            if (Object.keys(query).length) {
-                const suffix = '?' + this.urlencode(query);
-                url += suffix;
-                request += suffix;
-            }
-        }
-        if (api === 'private') {
-            this.checkRequiredCredentials();
-            const nonce = this.nonce();
-            query = this.extend({
-                'nonce': nonce.toString(),
-                'request': request,
-            }, query);
-            body = this.json(query);
-            const payload = this.stringToBase64(body);
-            const secret = this.encode(this.secret);
-            const signature = this.hmac(this.encode(payload), secret, _static_dependencies_noble_hashes_sha512_js__WEBPACK_IMPORTED_MODULE_4__/* .sha384 */ .qt);
-            headers = {
-                'X-BFX-APIKEY': this.apiKey,
-                'X-BFX-PAYLOAD': payload,
-                'X-BFX-SIGNATURE': signature,
-                'Content-Type': 'application/json',
-            };
-        }
-        return { 'url': url, 'method': method, 'body': body, 'headers': headers };
-    }
-    handleErrors(code, reason, url, method, headers, body, response, requestHeaders, requestBody) {
-        if (response === undefined) {
-            return undefined;
-        }
-        let throwError = false;
-        if (code >= 400) {
-            if (body[0] === '{') {
-                throwError = true;
-            }
-        }
-        else {
-            // json response with error, i.e:
-            // [{"status":"error","message":"Momentary balance check. Please wait few seconds and try the transfer again."}]
-            const responseObject = this.safeDict(response, 0, {});
-            const status = this.safeString(responseObject, 'status', '');
-            if (status === 'error') {
-                throwError = true;
-            }
-        }
-        if (throwError) {
-            const feedback = this.id + ' ' + body;
-            const message = this.safeString2(response, 'message', 'error');
-            this.throwExactlyMatchedException(this.exceptions['exact'], message, feedback);
-            this.throwBroadlyMatchedException(this.exceptions['broad'], message, feedback);
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ExchangeError(feedback); // unknown message
-        }
-        return undefined;
-    }
-}
-
-
-/***/ }),
-
 /***/ 1787:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -54677,11 +53011,7 @@ class bitget extends _abstract_bitget_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
         if (this.options['adjustForTimeDifference']) {
             await this.loadTimeDifference();
         }
-        const sandboxMode = this.safeBool(this.options, 'sandboxMode', false);
-        let types = this.safeValue(this.options, 'fetchMarkets', ['spot', 'swap']);
-        if (sandboxMode) {
-            types = ['swap'];
-        }
+        const types = this.safeValue(this.options, 'fetchMarkets', ['spot', 'swap']);
         const promises = [];
         let fetchMargins = false;
         for (let i = 0; i < types.length; i++) {
@@ -54856,7 +53186,7 @@ class bitget extends _abstract_bitget_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
             const priceDecimals = this.safeInteger(market, 'pricePlace');
             const amountDecimals = this.safeInteger(market, 'volumePlace');
             const priceStep = this.safeString(market, 'priceEndStep');
-            const amountStep = this.safeString(market, 'minTradeNum');
+            const amountStep = this.safeString(market, 'sizeMultiplier');
             const precise = new _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y(priceStep);
             precise.decimals = Math.max(precise.decimals, priceDecimals);
             precise.reduce();
@@ -55379,18 +53709,20 @@ class bitget extends _abstract_bitget_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
         if (paginate) {
             return await this.fetchPaginatedCallCursor('fetchWithdrawals', undefined, since, limit, params, 'idLessThan', 'idLessThan', undefined, 100);
         }
-        if (code === undefined) {
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ArgumentsRequired(this.id + ' fetchWithdrawals() requires a `code` argument');
+        let currency = undefined;
+        if (code !== undefined) {
+            currency = this.currency(code);
         }
-        const currency = this.currency(code);
         if (since === undefined) {
             since = this.milliseconds() - 7776000000; // 90 days
         }
         let request = {
-            'coin': currency['id'],
             'startTime': since,
             'endTime': this.milliseconds(),
         };
+        if (currency !== undefined) {
+            request['coin'] = currency['id'];
+        }
         [request, params] = this.handleUntilOption('endTime', request, params);
         if (limit !== undefined) {
             request['limit'] = limit;
@@ -71975,6 +70307,7 @@ class bitopro extends _abstract_bitopro_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
                 'closeAllPositions': false,
                 'closePosition': false,
                 'createOrder': true,
+                'createReduceOnlyOrder': false,
                 'createStopOrder': true,
                 'createTriggerOrder': true,
                 'editOrder': false,
@@ -73858,6 +72191,7 @@ class bitrue extends _abstract_bitrue_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
                 'createMarketOrderWithCost': false,
                 'createMarketSellOrderWithCost': false,
                 'createOrder': true,
+                'createReduceOnlyOrder': true,
                 'createStopLimitOrder': true,
                 'createStopMarketOrder': true,
                 'createStopOrder': true,
@@ -75065,7 +73399,7 @@ class bitrue extends _abstract_bitrue_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
         //         "time": 1699338305000
         //     }
         //
-        const timestamp = this.safeInteger(response, 'time');
+        const timestamp = this.safeInteger2(response, 'time', 'lastUpdateId');
         const orderbook = this.parseOrderBook(response, symbol, timestamp);
         orderbook['nonce'] = this.safeInteger(response, 'lastUpdateId');
         return orderbook;
@@ -100819,10 +99153,16 @@ class bybit extends _abstract_bybit_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"
      * @param {string} [params.subType] market subType, ['linear', 'inverse']
      * @param {string} [params.baseCoin] Base coin. Supports linear, inverse & option
      * @param {string} [params.settleCoin] Settle coin. Supports linear, inverse & option
+     * @param {boolean} [params.paginate] default false, when true will automatically paginate by calling this endpoint multiple times
      * @returns {object[]} a list of [position structure]{@link https://docs.ccxt.com/#/?id=position-structure}
      */
     async fetchPositions(symbols = undefined, params = {}) {
         await this.loadMarkets();
+        let paginate = false;
+        [paginate, params] = this.handleOptionAndParams(params, 'fetchPositions', 'paginate');
+        if (paginate) {
+            return await this.fetchPaginatedCallCursor('fetchPositions', symbols, undefined, undefined, params, 'nextPageCursor', 'cursor', undefined, 200);
+        }
         let symbol = undefined;
         if ((symbols !== undefined) && Array.isArray(symbols)) {
             const symbolsLength = symbols.length;
@@ -100862,6 +99202,9 @@ class bybit extends _abstract_bybit_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"
                     request['category'] = 'inverse';
                 }
             }
+        }
+        if (this.safeInteger(params, 'limit') === undefined) {
+            request['limit'] = 200; // max limit
         }
         params = this.omit(params, ['type']);
         request['category'] = type;
@@ -103873,6 +102216,7 @@ class cex extends _abstract_cex_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
                 'cancelAllOrders': true,
                 'cancelOrder': true,
                 'createOrder': true,
+                'createReduceOnlyOrder': false,
                 'createStopOrder': true,
                 'createTriggerOrder': true,
                 'fetchAccounts': true,
@@ -104162,6 +102506,7 @@ class cex extends _abstract_cex_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
                 'margin': undefined,
                 'deposit': deposit,
                 'withdraw': withdraw,
+                'active': undefined,
                 'fee': this.safeNumber(rawNetwork, 'withdrawalFee'),
                 'precision': currencyPrecision,
                 'limits': {
@@ -106395,6 +104740,7 @@ class coinbase extends _abstract_coinbase_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             'currency': code,
             'tag': tag,
             'address': address,
+            'network': undefined,
             'info': response,
         };
     }
@@ -107955,7 +106301,7 @@ class coinbase extends _abstract_coinbase_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         //             "ending_before":null,
         //             "starting_after":null,
         //             "previous_ending_before":null,
-        //             "next_starting_after":"6b17acd6-2e68-5eb0-9f45-72d67cef578b",
+        //             "next_starting_after":"6b17acd6-2e68-5eb0-9f45-72d67cef578a",
         //             "limit":100,
         //             "order":"desc",
         //             "previous_uri":null,
@@ -110799,6 +109145,7 @@ class coinbaseexchange extends _abstract_coinbaseexchange_js__WEBPACK_IMPORTED_M
                 'cancelOrder': true,
                 'createDepositAddress': true,
                 'createOrder': true,
+                'createReduceOnlyOrder': false,
                 'createStopLimitOrder': true,
                 'createStopMarketOrder': true,
                 'createStopOrder': true,
@@ -112657,6 +111004,7 @@ class coinbaseexchange extends _abstract_coinbaseexchange_js__WEBPACK_IMPORTED_M
         return {
             'currency': code,
             'address': this.checkAddress(address),
+            'network': undefined,
             'tag': tag,
             'info': response,
         };
@@ -113537,6 +111885,7 @@ class coinbaseinternational extends _abstract_coinbaseinternational_js__WEBPACK_
             'currency': code,
             'tag': tag,
             'address': address,
+            'network': undefined,
             'info': response,
         };
     }
@@ -142305,7 +140654,7 @@ class defx extends _abstract_defx_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] 
             'active': this.safeString(market, 'status', '') === 'active',
             'contract': true,
             'linear': true,
-            'inverse': undefined,
+            'inverse': false,
             'taker': this.safeNumber(fees, 'taker'),
             'maker': this.safeNumber(fees, 'maker'),
             'contractSize': this.parseNumber('1'),
@@ -147500,6 +145849,7 @@ class deribit extends _abstract_deribit_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
                 'cancelOrders': false,
                 'createDepositAddress': true,
                 'createOrder': true,
+                'createReduceOnlyOrder': true,
                 'createStopLimitOrder': true,
                 'createStopMarketOrder': true,
                 'createStopOrder': true,
@@ -148610,6 +146960,7 @@ class deribit extends _abstract_deribit_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
             'currency': code,
             'address': address,
             'tag': undefined,
+            'network': undefined,
             'info': response,
         };
     }
@@ -151825,6 +150176,7 @@ class derive extends _abstract_derive_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
         let swap = false;
         let option = false;
         let linear = undefined;
+        let inverse = undefined;
         const baseId = this.safeString(market, 'base_currency');
         const quoteId = this.safeString(market, 'quote_currency');
         const base = this.safeCurrencyCode(baseId);
@@ -151848,6 +150200,7 @@ class derive extends _abstract_derive_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
             symbol = base + '/' + quote + ':' + settle;
             swap = true;
             linear = true;
+            inverse = false;
             marketType = 'swap';
         }
         else if (type === 'option') {
@@ -151867,6 +150220,8 @@ class derive extends _abstract_derive_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
             else {
                 optionType = 'call';
             }
+            linear = true;
+            inverse = false;
         }
         return this.safeMarketStructure({
             'id': marketId,
@@ -151886,7 +150241,7 @@ class derive extends _abstract_derive_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
             'active': this.safeBool(market, 'is_active'),
             'contract': (swap || option),
             'linear': linear,
-            'inverse': undefined,
+            'inverse': inverse,
             'contractSize': (spot) ? undefined : 1,
             'expiry': expiry,
             'expiryDatetime': this.iso8601(expiry),
@@ -153084,7 +151439,7 @@ class derive extends _abstract_derive_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
         if (order === undefined) {
             order = rawOrder;
         }
-        const timestamp = this.safeInteger(rawOrder, 'nonce');
+        const timestamp = this.safeInteger2(rawOrder, 'creation_timestamp', 'nonce');
         const orderId = this.safeString(order, 'order_id');
         const marketId = this.safeString(order, 'instrument_name');
         if (marketId !== undefined) {
@@ -153625,17 +151980,21 @@ class derive extends _abstract_derive_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
         const result = {
             'info': response,
         };
-        // TODO:
-        // checked multiple subaccounts
-        // checked balance after open orders / positions
         for (let i = 0; i < response.length; i++) {
             const subaccount = response[i];
             const collaterals = this.safeList(subaccount, 'collaterals', []);
             for (let j = 0; j < collaterals.length; j++) {
                 const balance = collaterals[j];
                 const code = this.safeCurrencyCode(this.safeString(balance, 'currency'));
-                const account = this.account();
-                account['total'] = this.safeString(balance, 'amount');
+                let account = this.safeDict(result, code);
+                if (account === undefined) {
+                    account = this.account();
+                    account['total'] = this.safeString(balance, 'amount');
+                }
+                else {
+                    const amount = this.safeString(balance, 'amount');
+                    account['total'] = _ccxt_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringAdd(account['total'], amount);
+                }
                 result[code] = account;
             }
         }
@@ -169943,6 +168302,10 @@ class gate extends _abstract_gate_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] 
             if ((method === 'GET') || (method === 'DELETE') || requiresURLEncoding || (method === 'PATCH')) {
                 if (Object.keys(query).length) {
                     queryString = this.urlencode(query);
+                    // https://github.com/ccxt/ccxt/issues/25570
+                    if (queryString.indexOf('currencies=') >= 0 && queryString.indexOf('%2C') >= 0) {
+                        queryString = queryString.replaceAll('%2', ',');
+                    }
                     url += '?' + queryString;
                 }
                 if (method === 'PATCH') {
@@ -173396,6 +171759,7 @@ class gemini extends _abstract_gemini_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
             'currency': code,
             'address': address,
             'tag': undefined,
+            'network': undefined,
             'info': response,
         };
     }
@@ -175888,8 +174252,10 @@ class hashkey extends _abstract_hashkey_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         if (!market['spot']) {
             throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.NotSupported(this.id + ' createMarketBuyOrderWithCost() is supported for spot markets only');
         }
-        params['cost'] = cost;
-        return await this.createOrder(symbol, 'market', 'buy', cost, undefined, params);
+        const req = {
+            'cost': cost,
+        };
+        return await this.createOrder(symbol, 'market', 'buy', cost, undefined, this.extend(req, params));
     }
     /**
      * @method
@@ -197374,6 +195740,46 @@ class hyperliquid extends _abstract_hyperliquid_js__WEBPACK_IMPORTED_MODULE_0__/
     }
     /**
      * @method
+     * @name hyperliquid#createVault
+     * @description creates a value
+     * @param {string} name The name of the vault
+     * @param {string} description The description of the vault
+     * @param {number} initialUsd The initialUsd of the vault
+     * @param {object} [params] extra parameters specific to the exchange API endpoint
+     * @returns {object} the api result
+     */
+    async createVault(name, description, initialUsd, params = {}) {
+        this.checkRequiredCredentials();
+        await this.loadMarkets();
+        const nonce = this.milliseconds();
+        const request = {
+            'nonce': nonce,
+        };
+        const usd = this.parseToInt(_base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringMul(this.numberToString(initialUsd), '1000000'));
+        const action = {
+            'type': 'createVault',
+            'name': name,
+            'description': description,
+            'initialUsd': usd,
+            'nonce': nonce,
+        };
+        const signature = this.signL1Action(action, nonce);
+        request['action'] = action;
+        request['signature'] = signature;
+        const response = await this.privatePostExchange(this.extend(request, params));
+        //
+        // {
+        //     "status": "ok",
+        //     "response": {
+        //         "type": "createVault",
+        //         "data": "0x04fddcbc9ce80219301bd16f18491bedf2a8c2b8"
+        //     }
+        // }
+        //
+        return response;
+    }
+    /**
+     * @method
      * @name hyperliquid#fetchFundingRateHistory
      * @description fetches historical funding rate prices
      * @see https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals#retrieve-historical-funding-rates
@@ -205121,8 +203527,10 @@ class kraken extends _abstract_kraken_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
     async createMarketOrderWithCost(symbol, side, cost, params = {}) {
         await this.loadMarkets();
         // only buy orders are supported by the endpoint
-        params['cost'] = cost;
-        return await this.createOrder(symbol, 'market', side, cost, undefined, params);
+        const req = {
+            'cost': cost,
+        };
+        return await this.createOrder(symbol, 'market', side, cost, undefined, this.extend(req, params));
     }
     /**
      * @method
@@ -207082,6 +205490,10 @@ class krakenfutures extends _abstract_krakenfutures_js__WEBPACK_IMPORTED_MODULE_
                 'cancelOrders': true,
                 'createMarketOrder': false,
                 'createOrder': true,
+                'createPostOnlyOrder': true,
+                'createReduceOnlyOrder': true,
+                'createStopLimitOrder': true,
+                'createStopMarketOrder': true,
                 'createStopOrder': true,
                 'createTriggerOrder': true,
                 'editOrder': true,
@@ -212234,8 +210646,10 @@ class kucoin extends _abstract_kucoin_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
      */
     async createMarketOrderWithCost(symbol, side, cost, params = {}) {
         await this.loadMarkets();
-        params['cost'] = cost;
-        return await this.createOrder(symbol, 'market', side, cost, undefined, params);
+        const req = {
+            'cost': cost,
+        };
+        return await this.createOrder(symbol, 'market', side, cost, undefined, this.extend(req, params));
     }
     /**
      * @method
@@ -230013,8 +228427,10 @@ class mexc extends _abstract_mexc_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] 
         if (!market['spot']) {
             throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.NotSupported(this.id + ' createMarketBuyOrderWithCost() supports spot orders only');
         }
-        params['cost'] = cost;
-        return await this.createOrder(symbol, 'market', 'buy', 0, undefined, params);
+        const req = {
+            'cost': cost,
+        };
+        return await this.createOrder(symbol, 'market', 'buy', 0, undefined, this.extend(req, params));
     }
     /**
      * @method
@@ -230032,8 +228448,10 @@ class mexc extends _abstract_mexc_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] 
         if (!market['spot']) {
             throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.NotSupported(this.id + ' createMarketBuyOrderWithCost() supports spot orders only');
         }
-        params['cost'] = cost;
-        return await this.createOrder(symbol, 'market', 'sell', 0, undefined, params);
+        const req = {
+            'cost': cost,
+        };
+        return await this.createOrder(symbol, 'market', 'sell', 0, undefined, this.extend(req, params));
     }
     /**
      * @method
@@ -239345,6 +237763,10 @@ class okcoin extends _abstract_okcoin_js__WEBPACK_IMPORTED_MODULE_0__/* ["defaul
                 'createMarketOrderWithCost': false,
                 'createMarketSellOrderWithCost': false,
                 'createOrder': true,
+                'createPostOnlyOrder': true,
+                'createReduceOnlyOrder': true,
+                'createStopLimitOrder': true,
+                'createStopMarketOrder': true,
                 'createStopOrder': true,
                 'createTriggerOrder': true,
                 'fetchBalance': true,
@@ -243532,71 +241954,64 @@ class okx extends _abstract_okx_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
                 'networks': {
                     'BTC': 'Bitcoin',
                     'BTCLN': 'Lightning',
+                    'BTCLIGHTNING': 'Lightning',
                     'BEP20': 'BSC',
+                    'BRC20': 'BRC20',
                     'ERC20': 'ERC20',
                     'TRC20': 'TRC20',
                     'CRC20': 'Crypto',
-                    // sorted
                     'ACA': 'Acala',
                     'ALGO': 'Algorand',
-                    'BHP': 'BHP',
                     'APT': 'Aptos',
+                    'SCROLL': 'Scroll',
                     'ARBONE': 'Arbitrum One',
                     'AVAXC': 'Avalanche C-Chain',
                     'AVAXX': 'Avalanche X-Chain',
-                    'ARK': 'ARK',
+                    'BASE': 'Base',
+                    'SUI': 'SUI',
+                    'ZKSYNCERA': 'zkSync Era',
+                    'LINEA': 'Linea',
                     'AR': 'Arweave',
                     'ASTR': 'Astar',
                     'BCH': 'BitcoinCash',
                     'BSV': 'Bitcoin SV',
-                    'BTM': 'Bytom',
                     'ADA': 'Cardano',
                     'CSPR': 'Casper',
                     'CELO': 'CELO',
                     'XCH': 'Chia',
-                    'CHZ': 'Chiliz',
+                    // 'CHZ': 'Chiliz', TBD: Chiliz 2.0 Chain vs Chiliz Chain
                     'ATOM': 'Cosmos',
-                    'TRUE': 'TrueChain',
-                    'DCR': 'Decred',
                     'DGB': 'Digibyte',
                     'DOGE': 'Dogecoin',
-                    'XEC': 'XEC',
                     'EGLD': 'Elrond',
+                    'CFX': 'Conflux',
                     'EOS': 'EOS',
+                    'CORE': 'CORE',
                     'ETC': 'Ethereum Classic',
                     'ETHW': 'EthereumPow',
-                    'FTM': 'Fantom',
+                    // 'FTM': 'Fantom', 'Sonic' TBD
                     'FIL': 'Filecoin',
-                    'FLOW': 'FLOW',
-                    'FSN': 'Fusion',
                     'ONE': 'Harmony',
                     'HBAR': 'Hedera',
-                    'HNT': 'Helium',
-                    'ZEN': 'Horizen',
                     'ICX': 'ICON',
                     'ICP': 'Dfinity',
                     'IOST': 'IOST',
                     'IOTA': 'MIOTA',
-                    'KDA': 'Kadena',
-                    'KAR': 'KAR',
                     'KLAY': 'Klaytn',
                     'KSM': 'Kusama',
                     'LSK': 'Lisk',
                     'LTC': 'Litecoin',
                     'METIS': 'Metis',
                     'MINA': 'Mina',
-                    'XMR': 'Monero',
                     'GLRM': 'Moonbeam',
                     'MOVR': 'Moonriver',
                     'NANO': 'Nano',
                     'NEAR': 'NEAR',
-                    'NAS': 'Nebulas',
-                    'NEM': 'New Economy Movement',
                     'NULS': 'NULS',
                     'OASYS': 'OASYS',
-                    'OKC': 'OKC',
                     'ONT': 'Ontology',
                     'OPTIMISM': 'Optimism',
+                    // 'OP': 'Optimism', or Optimism (V2), TBD
                     'LAT': 'PlatON',
                     'DOT': 'Polkadot',
                     'MATIC': 'Polygon',
@@ -243609,35 +242024,54 @@ class okx extends _abstract_okx_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
                     'XTZ': 'Tezos',
                     'TON': 'TON',
                     'THETA': 'Theta',
-                    'VSYS': 'VSYSTEMS',
-                    'WAVES': 'WAVES',
                     'WAX': 'Wax',
-                    'ZEC': 'Zcash',
                     'ZIL': 'Zilliqa',
-                    'ZKSYNC': 'ZKSYNC',
-                    'OMNI': 'Omni',
-                    // 'NEON3': 'N3', // tbd
-                    // undetermined : "CELO-TOKEN", "Digital Cash", Khala
-                    // todo: uncomment below after consensus
-                    // 'AELF': 'AELF',
-                    // 'BITCOINDIAMOND': 'Bitcoin Diamond',
-                    // 'BITCOINGOLD': 'BitcoinGold',
-                    // 'YOYOW': 'YOYOW',
-                    // 'QTUM': 'Quantum',
-                    // 'INTCHAIN': 'INTCHAIN',
-                    // 'YOUCHAIN': 'YOUCHAIN',
-                    // 'RONIN': 'Ronin',
-                    // 'OEC': 'OEC',
-                    // 'WAYIKICHAIN': 'WGRT',
-                    // 'MDNA': 'DNA',
-                    // 'STEP': 'Step Network',
-                    // 'EMINER': 'Eminer',
-                    // 'CYBERMILES': 'CyberMiles',
-                    // 'HYPERCASH': 'HyperCash',
-                    // 'CONFLUX': 'Conflux',
-                    // 'CORTEX': 'Cortex',
-                    // 'TERRA': 'Terra',
-                    // 'TERRACLASSIC': 'Terra Classic',
+                    // non-supported known network: CRP. KAVA, TAIKO, BOB, GNO, BLAST, RSK, SEI, MANTLE, HYPE, RUNE, OSMO, XIN, WEMIX, HT, FSN, NEO, TLOS, CANTO, SCRT, AURORA, XMR
+                    // others:
+                    // "OKTC",
+                    // "X Layer",
+                    // "Polygon (Bridged)",
+                    // "BTCK-OKTC",
+                    // "ETHK-OKTC",
+                    // "Starknet",
+                    // "LTCK-OKTC",
+                    // "XRPK-OKTC",
+                    // "BCHK-OKTC",
+                    // "ETCK-OKTC",
+                    // "Endurance Smart Chain",
+                    // "Berachain",
+                    // "CELO-TOKEN",
+                    // "CFX_EVM",
+                    // "Cortex",
+                    // "DAIK-OKTC",
+                    // "Dora Vota Mainnet",
+                    // "DOTK-OKTC",
+                    // "DYDX",
+                    // "AELF",
+                    // "Enjin Relay Chain",
+                    // "FEVM",
+                    // "FILK-OKTC",
+                    // "Flare",
+                    // "Gravity Alpha Mainnet",
+                    // "INJ",
+                    // "Story",
+                    // "LINKK-OKTC",
+                    // "Terra",
+                    // "Terra Classic",
+                    // "Terra Classic (USTC)",
+                    // "MERLIN Network",
+                    // "Layer 3",
+                    // "PI",
+                    // "Ronin",
+                    // "Quantum",
+                    // "SHIBK-OKTC",
+                    // "SUSHIK-OKTC",
+                    // "Celestia",
+                    // "TRXK-OKTC",
+                    // "UNIK-OKTC",
+                    // "Venom",
+                    // "WBTCK-OKTC",
+                    // "ZetaChain",
                 },
                 'fetchOpenInterestHistory': {
                     'timeframes': {
@@ -244146,12 +242580,13 @@ class okx extends _abstract_okx_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
         let optionType = undefined;
         if (contract) {
             symbol = symbol + ':' + settle;
-            expiry = this.safeInteger(market, 'expTime');
             if (future) {
+                expiry = this.safeInteger(market, 'expTime');
                 const ymd = this.yymmdd(expiry);
                 symbol = symbol + '-' + ymd;
             }
             else if (option) {
+                expiry = this.safeInteger(market, 'expTime');
                 strikePrice = this.safeString(market, 'stk');
                 optionType = this.safeString(market, 'optType');
                 const ymd = this.yymmdd(expiry);
@@ -244348,40 +242783,24 @@ class okx extends _abstract_okx_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
             const code = currency['code'];
             const chains = dataByCurrencyId[currencyId];
             const networks = {};
-            let currencyActive = false;
-            let depositEnabled = false;
-            let withdrawEnabled = false;
-            let maxPrecision = undefined;
-            for (let j = 0; j < chains.length; j++) {
+            let type = 'crypto';
+            const chainsLength = chains.length;
+            for (let j = 0; j < chainsLength; j++) {
                 const chain = chains[j];
-                const canDeposit = this.safeBool(chain, 'canDep');
-                depositEnabled = (canDeposit) ? canDeposit : depositEnabled;
-                const canWithdraw = this.safeBool(chain, 'canWd');
-                withdrawEnabled = (canWithdraw) ? canWithdraw : withdrawEnabled;
-                const canInternal = this.safeBool(chain, 'canInternal');
-                const active = (canDeposit && canWithdraw && canInternal) ? true : false;
-                currencyActive = (active) ? active : currencyActive;
-                const networkId = this.safeString(chain, 'chain');
-                if ((networkId !== undefined) && (networkId.indexOf('-') >= 0)) {
+                const networkId = this.safeString(chain, 'chain'); // USDT-BEP20, USDT-Avalance-C, etc
+                if (networkId !== undefined) {
                     const idParts = networkId.split('-');
                     const parts = this.arraySlice(idParts, 1);
                     const chainPart = parts.join('-');
                     const networkCode = this.networkIdToCode(chainPart, currency['code']);
-                    const precision = this.parsePrecision(this.safeString(chain, 'wdTickSz'));
-                    if (maxPrecision === undefined) {
-                        maxPrecision = precision;
-                    }
-                    else {
-                        maxPrecision = _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringMin(maxPrecision, precision);
-                    }
                     networks[networkCode] = {
                         'id': networkId,
                         'network': networkCode,
-                        'active': active,
-                        'deposit': canDeposit,
-                        'withdraw': canWithdraw,
+                        'active': undefined,
+                        'deposit': this.safeBool(chain, 'canDep'),
+                        'withdraw': this.safeBool(chain, 'canWd'),
                         'fee': this.safeNumber(chain, 'fee'),
-                        'precision': this.parseNumber(precision),
+                        'precision': this.parseNumber(this.parsePrecision(this.safeString(chain, 'wdTickSz'))),
                         'limits': {
                             'withdraw': {
                                 'min': this.safeNumber(chain, 'minWd'),
@@ -244391,26 +242810,31 @@ class okx extends _abstract_okx_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
                         'info': chain,
                     };
                 }
+                else {
+                    // only happens for FIAT currency
+                    type = 'fiat';
+                }
             }
             const firstChain = this.safeDict(chains, 0, {});
-            result[code] = {
+            result[code] = this.safeCurrencyStructure({
                 'info': chains,
                 'code': code,
                 'id': currencyId,
                 'name': this.safeString(firstChain, 'name'),
-                'active': currencyActive,
-                'deposit': depositEnabled,
-                'withdraw': withdrawEnabled,
+                'active': undefined,
+                'deposit': undefined,
+                'withdraw': undefined,
                 'fee': undefined,
-                'precision': this.parseNumber(maxPrecision),
+                'precision': undefined,
                 'limits': {
                     'amount': {
                         'min': undefined,
                         'max': undefined,
                     },
                 },
+                'type': type,
                 'networks': networks,
-            };
+            });
         }
         return result;
     }
@@ -257800,6 +256224,57 @@ class paradex extends _abstract_paradex_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         //         "max_tob_spread": "0.2"
         //     }
         //
+        // {
+        //     "symbol":"BTC-USD-96000-C",
+        //     "base_currency":"BTC",
+        //     "quote_currency":"USD",
+        //     "settlement_currency":"USDC",
+        //     "order_size_increment":"0.001",
+        //     "price_tick_size":"0.01",
+        //     "min_notional":"100",
+        //     "open_at":"1736764200000",
+        //     "expiry_at":"0",
+        //     "asset_kind":"PERP_OPTION",
+        //     "market_kind":"cross",
+        //     "position_limit":"10",
+        //     "price_bands_width":"0.05",
+        //     "iv_bands_width":"0.05",
+        //     "max_open_orders":"100",
+        //     "max_funding_rate":"0.02",
+        //     "option_cross_margin_params":{
+        //        "imf":{
+        //           "long_itm":"0.2",
+        //           "short_itm":"0.15",
+        //           "short_otm":"0.1",
+        //           "short_put_cap":"0.5",
+        //           "premium_multiplier":"1"
+        //        },
+        //        "mmf":{
+        //           "long_itm":"0.1",
+        //           "short_itm":"0.075",
+        //           "short_otm":"0.05",
+        //           "short_put_cap":"0.5",
+        //           "premium_multiplier":"0.5"
+        //        }
+        //     },
+        //     "price_feed_id":"GVXRSBjFk6e6J3NbVPXohDJetcTjaeeuykUpbQF8UoMU",
+        //     "oracle_ewma_factor":"0.20000046249626113",
+        //     "max_order_size":"2",
+        //     "max_funding_rate_change":"0.02",
+        //     "max_tob_spread":"0.2",
+        //     "interest_rate":"0.0001",
+        //     "clamp_rate":"0.02",
+        //     "option_type":"CALL",
+        //     "strike_price":"96000",
+        //     "funding_period_hours":"24",
+        //     "tags":[
+        //     ]
+        //  }
+        //
+        const assetKind = this.safeString(market, 'asset_kind');
+        const isOption = (assetKind === 'PERP_OPTION');
+        const type = (isOption) ? 'option' : 'swap';
+        const isSwap = (type === 'swap');
         const marketId = this.safeString(market, 'symbol');
         const quoteId = this.safeString(market, 'quote_currency');
         const baseId = this.safeString(market, 'base_currency');
@@ -257807,8 +256282,17 @@ class paradex extends _abstract_paradex_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
         const base = this.safeCurrencyCode(baseId);
         const settleId = this.safeString(market, 'settlement_currency');
         const settle = this.safeCurrencyCode(settleId);
-        const symbol = base + '/' + quote + ':' + settle;
-        const expiry = this.safeInteger(market, 'expiry_at');
+        let symbol = base + '/' + quote + ':' + settle;
+        let expiry = this.safeInteger(market, 'expiry_at');
+        const optionType = this.safeString(market, 'option_type');
+        const strikePrice = this.safeString(market, 'strike_price');
+        if (isOption) {
+            const optionTypeSuffix = (optionType === 'CALL') ? 'C' : 'P';
+            symbol = symbol + '-' + strikePrice + '-' + optionTypeSuffix;
+        }
+        else {
+            expiry = undefined;
+        }
         const takerFee = this.parseNumber('0.0003');
         const makerFee = this.parseNumber('-0.00005');
         return this.safeMarketStructure({
@@ -257820,23 +256304,23 @@ class paradex extends _abstract_paradex_js__WEBPACK_IMPORTED_MODULE_0__/* ["defa
             'baseId': baseId,
             'quoteId': quoteId,
             'settleId': settleId,
-            'type': 'swap',
+            'type': type,
             'spot': false,
             'margin': undefined,
-            'swap': true,
+            'swap': isSwap,
             'future': false,
-            'option': false,
+            'option': isOption,
             'active': this.safeBool(market, 'enableTrading'),
             'contract': true,
             'linear': true,
-            'inverse': undefined,
+            'inverse': false,
             'taker': takerFee,
             'maker': makerFee,
             'contractSize': this.parseNumber('1'),
-            'expiry': (expiry === 0) ? undefined : expiry,
+            'expiry': expiry,
             'expiryDatetime': (expiry === 0) ? undefined : this.iso8601(expiry),
-            'strike': undefined,
-            'optionType': undefined,
+            'strike': this.parseNumber(strikePrice),
+            'optionType': this.safeStringLower(market, 'option_type'),
             'precision': {
                 'amount': this.safeNumber(market, 'order_size_increment'),
                 'price': this.safeNumber(market, 'price_tick_size'),
@@ -265702,21 +264186,25 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 'CORS': undefined,
                 'spot': true,
                 'margin': undefined,
-                'swap': false,
-                'future': false,
+                'swap': true,
+                'future': true,
                 'option': false,
+                'addMargin': true,
                 'cancelAllOrders': true,
                 'cancelOrder': true,
+                'cancelOrders': undefined,
                 'createDepositAddress': true,
                 'createMarketBuyOrderWithCost': true,
                 'createMarketOrderWithCost': false,
                 'createMarketSellOrderWithCost': false,
                 'createOrder': true,
+                'createOrders': undefined,
                 'createStopOrder': true,
                 'createTriggerOrder': true,
                 'editOrder': true,
                 'fetchBalance': true,
                 'fetchClosedOrder': false,
+                'fetchClosedOrders': true,
                 'fetchCurrencies': true,
                 'fetchDepositAddress': true,
                 'fetchDepositAddresses': false,
@@ -265730,7 +264218,10 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 'fetchFundingIntervals': false,
                 'fetchFundingRate': false,
                 'fetchFundingRateHistory': false,
-                'fetchFundingRates': false,
+                'fetchFundingRates': undefined,
+                'fetchLedger': undefined,
+                'fetchLeverage': true,
+                'fetchLiquidations': undefined,
                 'fetchMarginMode': false,
                 'fetchMarkets': true,
                 'fetchMyTrades': true,
@@ -265743,7 +264234,8 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 'fetchOrderBooks': false,
                 'fetchOrderTrades': true,
                 'fetchPosition': false,
-                'fetchPositionMode': false,
+                'fetchPositionMode': true,
+                'fetchPositions': true,
                 'fetchTicker': true,
                 'fetchTickers': true,
                 'fetchTime': true,
@@ -265754,7 +264246,10 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 'fetchTransfer': false,
                 'fetchTransfers': false,
                 'fetchWithdrawals': true,
+                'reduceMargin': true,
                 'sandbox': true,
+                'setLeverage': true,
+                'setPositionMode': true,
                 'transfer': true,
                 'withdraw': true,
             },
@@ -265772,15 +264267,16 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 '1d': 'DAY_1',
                 '3d': 'DAY_3',
                 '1w': 'WEEK_1',
-                '1M': 'MONTH_1',
+                '1M': 'MONTH_1', // not in swap
             },
             'urls': {
                 'logo': 'https://user-images.githubusercontent.com/1294454/27766817-e9456312-5ee6-11e7-9b3c-b628ca5626a5.jpg',
                 'api': {
-                    'rest': 'https://api.poloniex.com',
+                    'spot': 'https://api.poloniex.com',
+                    'swap': 'https://api.poloniex.com',
                 },
                 'test': {
-                    'rest': 'https://sand-spot-api-gateway.poloniex.com',
+                    'spot': 'https://sand-spot-api-gateway.poloniex.com',
                 },
                 'www': 'https://www.poloniex.com',
                 'doc': 'https://api-docs.poloniex.com/spot/',
@@ -265867,6 +264363,55 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                         'smartorders/{id}': 20,
                     },
                 },
+                'swapPublic': {
+                    'get': {
+                        // 300 calls / second
+                        'v3/market/allInstruments': 2 / 3,
+                        'v3/market/instruments': 2 / 3,
+                        'v3/market/orderBook': 2 / 3,
+                        'v3/market/candles': 10,
+                        'v3/market/indexPriceCandlesticks': 10,
+                        'v3/market/premiumIndexCandlesticks': 10,
+                        'v3/market/markPriceCandlesticks': 10,
+                        'v3/market/trades': 2 / 3,
+                        'v3/market/liquidationOrder': 2 / 3,
+                        'v3/market/tickers': 2 / 3,
+                        'v3/market/markPrice': 2 / 3,
+                        'v3/market/indexPrice': 2 / 3,
+                        'v3/market/indexPriceComponents': 2 / 3,
+                        'v3/market/fundingRate': 2 / 3,
+                        'v3/market/openInterest': 2 / 3,
+                        'v3/market/insurance': 2 / 3,
+                        'v3/market/riskLimit': 2 / 3,
+                    },
+                },
+                'swapPrivate': {
+                    'get': {
+                        'v3/account/balance': 4,
+                        'v3/account/bills': 20,
+                        'v3/trade/order/opens': 20,
+                        'v3/trade/order/trades': 20,
+                        'v3/trade/order/history': 20,
+                        'v3/trade/position/opens': 20,
+                        'v3/trade/position/history': 20,
+                        'v3/position/leverages': 20,
+                        'v3/position/mode': 20,
+                    },
+                    'post': {
+                        'v3/trade/order': 4,
+                        'v3/trade/orders': 40,
+                        'v3/trade/position': 20,
+                        'v3/trade/positionAll': 100,
+                        'v3/position/leverage': 20,
+                        'v3/position/mode': 20,
+                        'v3/trade/position/margin': 20,
+                    },
+                    'delete': {
+                        'v3/trade/order': 2,
+                        'v3/trade/batchOrders': 20,
+                        'v3/trade/allOrders': 20,
+                    },
+                },
             },
             'fees': {
                 'trading': {
@@ -265915,6 +264460,7 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 'UST': 'USTC',
             },
             'options': {
+                'defaultType': 'spot',
                 'createMarketBuyOrderRequiresPrice': true,
                 'networks': {
                     'BEP20': 'BSC',
@@ -265961,7 +264507,7 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                         'timeInForce': {
                             'IOC': true,
                             'FOK': true,
-                            'PO': false,
+                            'PO': true,
                             'GTD': false,
                         },
                         'hedged': false,
@@ -265972,7 +264518,9 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                         'trailing': false,
                         'iceberg': false,
                     },
-                    'createOrders': undefined,
+                    'createOrders': {
+                        'max': 20,
+                    },
                     'fetchMyTrades': {
                         'marginMode': false,
                         'limit': 1000,
@@ -266002,13 +264550,51 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 'spot': {
                     'extends': 'default',
                 },
+                'forContracts': {
+                    'extends': 'default',
+                    'createOrder': {
+                        'marginMode': true,
+                        'triggerPrice': false,
+                        'hedged': true,
+                        'stpMode': true,
+                        'marketBuyByCost': false,
+                    },
+                    'createOrders': {
+                        'max': 10,
+                    },
+                    'fetchOpenOrders': {
+                        'limit': 100,
+                    },
+                    'fetchClosedOrders': {
+                        'marginMode': false,
+                        'limit': 100,
+                        'daysBack': undefined,
+                        'daysBackCanceled': 1 / 6,
+                        'untilDays': undefined,
+                        'trigger': false,
+                        'trailing': false,
+                        'symbolRequired': false,
+                    },
+                    'fetchMyTrades': {
+                        'limit': 100,
+                        'untilDays': 90,
+                    },
+                },
                 'swap': {
-                    'linear': undefined,
-                    'inverse': undefined,
+                    'linear': {
+                        'extends': 'forContracts',
+                    },
+                    'inverse': {
+                        'extends': 'forContracts',
+                    },
                 },
                 'future': {
-                    'linear': undefined,
-                    'inverse': undefined,
+                    'linear': {
+                        'extends': 'forContracts',
+                    },
+                    'inverse': {
+                        'extends': 'forContracts',
+                    },
                 },
             },
             'precisionMode': _base_functions_number_js__WEBPACK_IMPORTED_MODULE_1__/* .TICK_SIZE */ .kb,
@@ -266128,6 +264714,8 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
     }
     parseOHLCV(ohlcv, market = undefined) {
         //
+        // spot:
+        //
         //     [
         //         [
         //             "22814.01",
@@ -266147,6 +264735,32 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         //         ]
         //     ]
         //
+        // contract:
+        //
+        //           [
+        //             "84207.02",
+        //             "84320.85",
+        //             "84207.02",
+        //             "84253.83",
+        //             "3707.5395",
+        //             "44",
+        //             "14",
+        //             "1740770040000",
+        //             "1740770099999",
+        //           ],
+        //
+        const ohlcvLength = ohlcv.length;
+        const isContract = ohlcvLength === 9;
+        if (isContract) {
+            return [
+                this.safeInteger(ohlcv, 7),
+                this.safeNumber(ohlcv, 2),
+                this.safeNumber(ohlcv, 1),
+                this.safeNumber(ohlcv, 0),
+                this.safeNumber(ohlcv, 3),
+                this.safeNumber(ohlcv, 5),
+            ];
+        }
         return [
             this.safeInteger(ohlcv, 12),
             this.safeNumber(ohlcv, 2),
@@ -266161,6 +264775,7 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
      * @name poloniex#fetchOHLCV
      * @description fetches historical candlestick data containing the open, high, low, and close price, and the volume of a market
      * @see https://api-docs.poloniex.com/spot/api/public/market-data#candles
+     * @see https://api-docs.poloniex.com/v3/futures/api/market/get-kline-data
      * @param {string} symbol unified symbol of the market to fetch OHLCV data for
      * @param {string} timeframe the length of time each candle represents
      * @param {int} [since] timestamp in ms of the earliest candle to fetch
@@ -266182,14 +264797,41 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             'symbol': market['id'],
             'interval': this.safeString(this.timeframes, timeframe, timeframe),
         };
+        const keyStart = market['spot'] ? 'startTime' : 'sTime';
+        const keyEnd = market['spot'] ? 'endTime' : 'eTime';
         if (since !== undefined) {
-            request['startTime'] = since;
+            request[keyStart] = since;
         }
         if (limit !== undefined) {
             // limit should in between 100 and 500
             request['limit'] = limit;
         }
-        [request, params] = this.handleUntilOption('endTime', request, params);
+        [request, params] = this.handleUntilOption(keyEnd, request, params);
+        if (market['contract']) {
+            if (this.inArray(timeframe, ['10m', '1M'])) {
+                throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.NotSupported(this.id + ' ' + timeframe + ' ' + market['type'] + ' fetchOHLCV is not supported');
+            }
+            const responseRaw = await this.swapPublicGetV3MarketCandles(this.extend(request, params));
+            //
+            //     {
+            //         code: "200",
+            //         msg: "Success",
+            //         data: [
+            //           [
+            //             "84207.02",
+            //             "84320.85",
+            //             "84207.02",
+            //             "84253.83",
+            //             "3707.5395",
+            //             "44",
+            //             "14",
+            //             "1740770040000",
+            //             "1740770099999",
+            //           ],
+            //
+            const data = this.safeList(responseRaw, 'data');
+            return this.parseOHLCVs(data, market, timeframe, since, limit);
+        }
         const response = await this.publicGetMarketsSymbolCandles(this.extend(request, params));
         //
         //     [
@@ -266226,10 +264868,16 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
      * @name poloniex#fetchMarkets
      * @description retrieves data on all markets for poloniex
      * @see https://api-docs.poloniex.com/spot/api/public/reference-data#symbol-information
+     * @see https://api-docs.poloniex.com/v3/futures/api/market/get-all-product-info
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object[]} an array of objects representing market data
      */
     async fetchMarkets(params = {}) {
+        const promises = [this.fetchSpotMarkets(params), this.fetchSwapMarkets(params)];
+        const results = await Promise.all(promises);
+        return this.arrayConcat(results[0], results[1]);
+    }
+    async fetchSpotMarkets(params = {}) {
         const markets = await this.publicGetMarkets(params);
         //
         //     [
@@ -266256,7 +264904,59 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         //
         return this.parseMarkets(markets);
     }
+    async fetchSwapMarkets(params = {}) {
+        // do similar as spot per https://api-docs.poloniex.com/v3/futures/api/market/get-product-info
+        const response = await this.swapPublicGetV3MarketAllInstruments(params);
+        //
+        //    {
+        //        "code": "200",
+        //        "msg": "Success",
+        //        "data": [
+        //            {
+        //                "symbol": "BNB_USDT_PERP",
+        //                "bAsset": ".PBNBUSDT",
+        //                "bCcy": "BNB",
+        //                "qCcy": "USDT",
+        //                "visibleStartTime": "1620390600000",
+        //                "tradableStartTime": "1620390600000",
+        //                "sCcy": "USDT",
+        //                "tSz": "0.001",
+        //                "pxScale": "0.001,0.01,0.1,1,10",
+        //                "lotSz": "1",
+        //                "minSz": "1",
+        //                "ctVal": "0.1",
+        //                "status": "OPEN",
+        //                "oDate": "1620287590000",
+        //                "maxPx": "1000000",
+        //                "minPx": "0.001",
+        //                "maxQty": "1000000",
+        //                "minQty": "1",
+        //                "maxLever": "50",
+        //                "lever": "10",
+        //                "ctType": "LINEAR",
+        //                "alias": "",
+        //                "iM": "0.02",
+        //                "mM": "0.0115",
+        //                "mR": "2000",
+        //                "buyLmt": "",
+        //                "sellLmt": "",
+        //                "ordPxRange": "0.05",
+        //                "marketMaxQty": "2800",
+        //                "limitMaxQty": "1000000"
+        //            },
+        //
+        const markets = this.safeList(response, 'data');
+        return this.parseMarkets(markets);
+    }
     parseMarket(market) {
+        if ('ctType' in market) {
+            return this.parseSwapMarket(market);
+        }
+        else {
+            return this.parseSpotMarket(market);
+        }
+    }
+    parseSpotMarket(market) {
         const id = this.safeString(market, 'symbol');
         const baseId = this.safeString(market, 'baseCurrencyName');
         const quoteId = this.safeString(market, 'quoteCurrencyName');
@@ -266312,6 +265012,116 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             'info': market,
         };
     }
+    parseSwapMarket(market) {
+        //
+        //            {
+        //                "symbol": "BNB_USDT_PERP",
+        //                "bAsset": ".PBNBUSDT",
+        //                "bCcy": "BNB",
+        //                "qCcy": "USDT",
+        //                "visibleStartTime": "1620390600000",
+        //                "tradableStartTime": "1620390600000",
+        //                "sCcy": "USDT",
+        //                "tSz": "0.001",
+        //                "pxScale": "0.001,0.01,0.1,1,10",
+        //                "lotSz": "1",
+        //                "minSz": "1",
+        //                "ctVal": "0.1",
+        //                "status": "OPEN",
+        //                "oDate": "1620287590000",
+        //                "maxPx": "1000000",
+        //                "minPx": "0.001",
+        //                "maxQty": "1000000",
+        //                "minQty": "1",
+        //                "maxLever": "50",
+        //                "lever": "10",
+        //                "ctType": "LINEAR",
+        //                "alias": "",
+        //                "iM": "0.02",
+        //                "mM": "0.0115",
+        //                "mR": "2000",
+        //                "buyLmt": "",
+        //                "sellLmt": "",
+        //                "ordPxRange": "0.05",
+        //                "marketMaxQty": "2800",
+        //                "limitMaxQty": "1000000"
+        //            },
+        //
+        const id = this.safeString(market, 'symbol');
+        const baseId = this.safeString(market, 'bCcy');
+        const quoteId = this.safeString(market, 'qCcy');
+        const settleId = this.safeString(market, 'sCcy');
+        const base = this.safeCurrencyCode(baseId);
+        const quote = this.safeCurrencyCode(quoteId);
+        const settle = this.safeCurrencyCode(settleId);
+        const status = this.safeString(market, 'status');
+        const active = status === 'OPEN';
+        const linear = market['ctType'] === 'LINEAR';
+        let symbol = base + '/' + quote;
+        if (linear) {
+            symbol += ':' + settle;
+        }
+        else {
+            // actually, exchange does not have any inverse future now
+            symbol += ':' + base;
+        }
+        const alias = this.safeString(market, 'alias');
+        let type = 'swap';
+        if (alias !== undefined) {
+            type = 'future';
+        }
+        return {
+            'id': id,
+            'symbol': symbol,
+            'base': base,
+            'quote': quote,
+            'settle': settle,
+            'baseId': baseId,
+            'quoteId': quoteId,
+            'settleId': settleId,
+            'type': (type === 'future') ? 'future' : 'swap',
+            'spot': false,
+            'margin': false,
+            'swap': type === 'swap',
+            'future': type === 'future',
+            'option': false,
+            'active': active,
+            'contract': true,
+            'linear': linear,
+            'inverse': !linear,
+            'contractSize': this.safeNumber(market, 'ctVal'),
+            'expiry': undefined,
+            'expiryDatetime': undefined,
+            'strike': undefined,
+            'optionType': undefined,
+            'taker': this.safeNumber(market, 'tFee'),
+            'maker': this.safeNumber(market, 'mFee'),
+            'precision': {
+                'amount': this.safeNumber(market, 'lotSz'),
+                'price': this.safeNumber(market, 'tSz'),
+            },
+            'limits': {
+                'amount': {
+                    'min': this.safeNumber(market, 'minSz'),
+                    'max': this.safeNumber(market, 'limitMaxQty'),
+                },
+                'price': {
+                    'min': this.safeNumber(market, 'minPx'),
+                    'max': this.safeNumber(market, 'maxPx'),
+                },
+                'cost': {
+                    'min': undefined,
+                    'max': undefined,
+                },
+                'leverage': {
+                    'max': this.safeNumber(market, 'maxLever'),
+                    'min': undefined,
+                },
+            },
+            'created': this.safeInteger(market, 'oDate'),
+            'info': market,
+        };
+    }
     /**
      * @method
      * @name poloniex#fetchTime
@@ -266325,6 +265135,8 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         return this.safeInteger(response, 'serverTime');
     }
     parseTicker(ticker, market = undefined) {
+        //
+        //  spot:
         //
         //     {
         //         "symbol" : "BTC_USDT",
@@ -266347,36 +265159,56 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         //         "markPrice" : "26444.11"
         //     }
         //
-        const timestamp = this.safeInteger(ticker, 'ts');
-        const marketId = this.safeString(ticker, 'symbol');
+        //  swap:
+        //
+        //            {
+        //                "s": "XRP_USDT_PERP",
+        //                "o": "2.0503",
+        //                "l": "2.0066",
+        //                "h": "2.216",
+        //                "c": "2.1798",
+        //                "qty": "21090",
+        //                "amt": "451339.65",
+        //                "tC": "3267",
+        //                "sT": "1740736380000",
+        //                "cT": "1740822777559",
+        //                "dN": "XRP/USDT/PERP",
+        //                "dC": "0.0632",
+        //                "bPx": "2.175",
+        //                "bSz": "3",
+        //                "aPx": "2.1831",
+        //                "aSz": "111",
+        //                "mPx": "2.1798",
+        //                "iPx": "2.1834"
+        //            },
+        //
+        const timestamp = this.safeInteger2(ticker, 'ts', 'cT');
+        const marketId = this.safeString2(ticker, 'symbol', 's');
         market = this.safeMarket(marketId);
-        const close = this.safeString(ticker, 'close');
-        const relativeChange = this.safeString(ticker, 'dailyChange');
+        const relativeChange = this.safeString2(ticker, 'dailyChange', 'dc');
         const percentage = _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringMul(relativeChange, '100');
-        const bidVolume = this.safeString(ticker, 'bidQuantity');
-        const askVolume = this.safeString(ticker, 'askQuantity');
         return this.safeTicker({
             'id': marketId,
             'symbol': market['symbol'],
             'timestamp': timestamp,
             'datetime': this.iso8601(timestamp),
-            'high': this.safeString(ticker, 'high'),
-            'low': this.safeString(ticker, 'low'),
-            'bid': this.safeString(ticker, 'bid'),
-            'bidVolume': bidVolume,
-            'ask': this.safeString(ticker, 'ask'),
-            'askVolume': askVolume,
+            'high': this.safeString2(ticker, 'high', 'h'),
+            'low': this.safeString2(ticker, 'low', 'l'),
+            'bid': this.safeString2(ticker, 'bid', 'bPx'),
+            'bidVolume': this.safeString2(ticker, 'bidQuantity', 'bSz'),
+            'ask': this.safeString2(ticker, 'ask', 'aPx'),
+            'askVolume': this.safeString2(ticker, 'askQuantity', 'aSz'),
             'vwap': undefined,
-            'open': this.safeString(ticker, 'open'),
-            'close': close,
-            'last': close,
+            'open': this.safeString2(ticker, 'open', 'o'),
+            'close': this.safeString2(ticker, 'close', 'c'),
             'previousClose': undefined,
             'change': undefined,
             'percentage': percentage,
             'average': undefined,
-            'baseVolume': this.safeString(ticker, 'quantity'),
-            'quoteVolume': this.safeString(ticker, 'amount'),
-            'markPrice': this.safeString(ticker, 'markPrice'),
+            'baseVolume': this.safeString2(ticker, 'quantity', 'qty'),
+            'quoteVolume': this.safeString2(ticker, 'amount', 'amt'),
+            'markPrice': this.safeString2(ticker, 'markPrice', 'mPx'),
+            'indexPrice': this.safeString(ticker, 'iPx'),
             'info': ticker,
         }, market);
     }
@@ -266385,13 +265217,58 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
      * @name poloniex#fetchTickers
      * @description fetches price tickers for multiple markets, statistical information calculated over the past 24 hours for each market
      * @see https://api-docs.poloniex.com/spot/api/public/market-data#ticker
+     * @see https://api-docs.poloniex.com/v3/futures/api/market/get-market-info
      * @param {string[]|undefined} symbols unified symbols of the markets to fetch the ticker for, all market tickers are returned if not assigned
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object} a dictionary of [ticker structures]{@link https://docs.ccxt.com/#/?id=ticker-structure}
      */
     async fetchTickers(symbols = undefined, params = {}) {
         await this.loadMarkets();
-        symbols = this.marketSymbols(symbols);
+        let market = undefined;
+        const request = {};
+        if (symbols !== undefined) {
+            symbols = this.marketSymbols(symbols, undefined, true, true, false);
+            const symbolsLength = symbols.length;
+            if (symbolsLength > 0) {
+                market = this.market(symbols[0]);
+                if (symbolsLength === 1) {
+                    request['symbol'] = market['id'];
+                }
+            }
+        }
+        let marketType = undefined;
+        [marketType, params] = this.handleMarketTypeAndParams('fetchTickers', market, params);
+        if (marketType === 'swap') {
+            const responseRaw = await this.swapPublicGetV3MarketTickers(this.extend(request, params));
+            //
+            //    {
+            //        "code": "200",
+            //        "msg": "Success",
+            //        "data": [
+            //            {
+            //                "s": "XRP_USDT_PERP",
+            //                "o": "2.0503",
+            //                "l": "2.0066",
+            //                "h": "2.216",
+            //                "c": "2.1798",
+            //                "qty": "21090",
+            //                "amt": "451339.65",
+            //                "tC": "3267",
+            //                "sT": "1740736380000",
+            //                "cT": "1740822777559",
+            //                "dN": "XRP/USDT/PERP",
+            //                "dC": "0.0632",
+            //                "bPx": "2.175",
+            //                "bSz": "3",
+            //                "aPx": "2.1831",
+            //                "aSz": "111",
+            //                "mPx": "2.1798",
+            //                "iPx": "2.1834"
+            //            },
+            //
+            const data = this.safeList(responseRaw, 'data');
+            return this.parseTickers(data, symbols);
+        }
         const response = await this.publicGetMarketsTicker24h(params);
         //
         //     [
@@ -266562,6 +265439,7 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
      * @name poloniex#fetchTicker
      * @description fetches a price ticker, a statistical calculation with the information calculated over the past 24 hours for a specific market
      * @see https://api-docs.poloniex.com/spot/api/public/market-data#ticker
+     * @see https://api-docs.poloniex.com/v3/futures/api/market/get-market-info
      * @param {string} symbol unified symbol of the market to fetch the ticker for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object} a [ticker structure]{@link https://docs.ccxt.com/#/?id=ticker-structure}
@@ -266572,6 +265450,10 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         const request = {
             'symbol': market['id'],
         };
+        if (market['contract']) {
+            const tickers = await this.fetchTickers([market['symbol']], params);
+            return this.safeDict(tickers, symbol);
+        }
         const response = await this.publicGetMarketsSymbolTicker24h(this.extend(request, params));
         //
         //     {
@@ -266601,6 +265483,8 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         //
         // fetchTrades
         //
+        //  spot:
+        //
         //     {
         //         "id" : "60014521",
         //         "price" : "23162.94",
@@ -266611,7 +265495,20 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         //         "createTime" : 1659684602036
         //     }
         //
+        //   swap:
+        //
+        //     {
+        //         "id": "105807376",
+        //         "side": "buy",
+        //         "px": "84410.57",
+        //         "qty": "1",
+        //         "amt": "84.41057",
+        //         "cT": "1740777563557",
+        //     }
+        //
         // fetchMyTrades
+        //
+        //  spot:
         //
         //     {
         //         "id": "32164924331503616",
@@ -266630,6 +265527,34 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         //         "pageId": "32164924331503616",
         //         "clientOrderId": "myOwnId-321"
         //     }
+        //
+        //  swap:
+        //
+        //     {
+        //         "symbol": "BTC_USDT_PERP",
+        //         "trdId": "105813553",
+        //         "side": "SELL",
+        //         "type": "TRADE",
+        //         "mgnMode": "CROSS",
+        //         "ordType": "MARKET",
+        //         "clOrdId": "polo418912106147315112",
+        //         "role": "TAKER",
+        //         "px": "84704.9",
+        //         "qty": "1",
+        //         "cTime": "1740842829430",
+        //         "uTime": "1740842829450",
+        //         "feeCcy": "USDT",
+        //         "feeAmt": "0.04235245",
+        //         "deductCcy": "",
+        //         "deductAmt": "0",
+        //         "feeRate": "0.0005",
+        //         "id": "418912106342654592",
+        //         "posSide": "BOTH",
+        //         "ordId": "418912106147315112",
+        //         "qCcy": "USDT",
+        //         "value": "84.7049",
+        //         "actType": "TRADING"
+        //     },
         //
         // fetchOrderTrades (taker trades)
         //
@@ -266651,20 +265576,19 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         //         "clientOrderId": ""
         //     }
         //
-        //
-        const id = this.safeString2(trade, 'id', 'tradeID');
-        const orderId = this.safeString(trade, 'orderId');
-        const timestamp = this.safeInteger2(trade, 'ts', 'createTime');
+        const id = this.safeStringN(trade, ['id', 'tradeID', 'trdId']);
+        const orderId = this.safeString2(trade, 'orderId', 'ordId');
+        const timestamp = this.safeIntegerN(trade, ['ts', 'createTime', 'cT', 'cTime']);
         const marketId = this.safeString(trade, 'symbol');
         market = this.safeMarket(marketId, market, '_');
         const symbol = market['symbol'];
         const side = this.safeStringLower2(trade, 'side', 'takerSide');
         let fee = undefined;
-        const priceString = this.safeString(trade, 'price');
-        const amountString = this.safeString(trade, 'quantity');
-        const costString = this.safeString(trade, 'amount');
-        const feeCurrencyId = this.safeString(trade, 'feeCurrency');
-        const feeCostString = this.safeString(trade, 'feeAmount');
+        const priceString = this.safeString2(trade, 'price', 'px');
+        const amountString = this.safeString2(trade, 'quantity', 'qty');
+        const costString = this.safeString2(trade, 'amount', 'amt');
+        const feeCurrencyId = this.safeString2(trade, 'feeCurrency', 'feeCcy');
+        const feeCostString = this.safeString2(trade, 'feeAmount', 'feeAmt');
         if (feeCostString !== undefined) {
             const feeCurrencyCode = this.safeCurrencyCode(feeCurrencyId);
             fee = {
@@ -266679,9 +265603,9 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             'datetime': this.iso8601(timestamp),
             'symbol': symbol,
             'order': orderId,
-            'type': this.safeStringLower(trade, 'type'),
+            'type': this.safeStringLower2(trade, 'ordType', 'type'),
             'side': side,
-            'takerOrMaker': this.safeStringLower(trade, 'matchRole'),
+            'takerOrMaker': this.safeStringLower2(trade, 'matchRole', 'role'),
             'price': priceString,
             'amount': amountString,
             'cost': costString,
@@ -266693,6 +265617,7 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
      * @name poloniex#fetchTrades
      * @description get the list of most recent trades for a particular symbol
      * @see https://api-docs.poloniex.com/spot/api/public/market-data#trades
+     * @see https://api-docs.poloniex.com/v3/futures/api/market/get-execution-info
      * @param {string} symbol unified symbol of the market to fetch trades for
      * @param {int} [since] timestamp in ms of the earliest trade to fetch
      * @param {int} [limit] the maximum amount of trades to fetch
@@ -266706,7 +265631,26 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             'symbol': market['id'],
         };
         if (limit !== undefined) {
-            request['limit'] = limit;
+            request['limit'] = limit; // max 1000, for spot & swap
+        }
+        if (market['contract']) {
+            const response = await this.swapPublicGetV3MarketTrades(this.extend(request, params));
+            //
+            //     {
+            //         code: "200",
+            //         msg: "Success",
+            //         data: [
+            //         {
+            //             id: "105807320", // descending order
+            //             side: "sell",
+            //             px: "84383.93",
+            //             qty: "1",
+            //             amt: "84.38393",
+            //             cT: "1740777074704",
+            //         },
+            //
+            const tradesList = this.safeList(response, 'data');
+            return this.parseTrades(tradesList, market, since, limit);
         }
         const trades = await this.publicGetMarketsSymbolTrades(this.extend(request, params));
         //
@@ -266729,6 +265673,7 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
      * @name poloniex#fetchMyTrades
      * @description fetch all trades made by the user
      * @see https://api-docs.poloniex.com/spot/api/private/trade#trade-history
+     * @see https://api-docs.poloniex.com/v3/futures/api/trade/get-execution-details
      * @param {string} symbol unified market symbol
      * @param {int} [since] the earliest time in ms to fetch trades for
      * @param {int} [limit] the maximum number of trades structures to retrieve
@@ -266748,17 +265693,61 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         if (symbol !== undefined) {
             market = this.market(symbol);
         }
+        let marketType = undefined;
+        [marketType, params] = this.handleMarketTypeAndParams('fetchMyTrades', market, params);
+        const isContract = this.inArray(marketType, ['swap', 'future']);
         let request = {
         // 'from': 12345678, // A 'trade Id'. The query begins at ‘from'.
         // 'direction': 'PRE', // PRE, NEXT The direction before or after ‘from'.
         };
+        const startKey = isContract ? 'sTime' : 'startTime';
+        const endKey = isContract ? 'eTime' : 'endTime';
         if (since !== undefined) {
-            request['startTime'] = since;
+            request[startKey] = since;
         }
         if (limit !== undefined) {
             request['limit'] = limit;
         }
-        [request, params] = this.handleUntilOption('endTime', request, params);
+        if (isContract && symbol !== undefined) {
+            request['symbol'] = market['id'];
+        }
+        [request, params] = this.handleUntilOption(endKey, request, params);
+        if (isContract) {
+            const raw = await this.swapPrivateGetV3TradeOrderTrades(this.extend(request, params));
+            //
+            //    {
+            //        "code": "200",
+            //        "msg": "",
+            //        "data": [
+            //            {
+            //                "symbol": "BTC_USDT_PERP",
+            //                "trdId": "105813553",
+            //                "side": "SELL",
+            //                "type": "TRADE",
+            //                "mgnMode": "CROSS",
+            //                "ordType": "MARKET",
+            //                "clOrdId": "polo418912106147315112",
+            //                "role": "TAKER",
+            //                "px": "84704.9",
+            //                "qty": "1",
+            //                "cTime": "1740842829430",
+            //                "uTime": "1740842829450",
+            //                "feeCcy": "USDT",
+            //                "feeAmt": "0.04235245",
+            //                "deductCcy": "",
+            //                "deductAmt": "0",
+            //                "feeRate": "0.0005",
+            //                "id": "418912106342654592",
+            //                "posSide": "BOTH",
+            //                "ordId": "418912106147315112",
+            //                "qCcy": "USDT",
+            //                "value": "84.7049",
+            //                "actType": "TRADING"
+            //            },
+            //
+            const data = this.safeList(raw, 'data');
+            return this.parseTrades(data, market, since, limit);
+        }
         const response = await this.privateGetTrades(this.extend(request, params));
         //
         //     [
@@ -266819,7 +265808,9 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         //         "updateTime" : 16xxxxxxxxx36
         //     }
         //
-        // fetchOpenOrders
+        // fetchOpenOrders (and fetchClosedOrders same for contracts)
+        //
+        //  spot:
         //
         //     {
         //         "id": "24993088082542592",
@@ -266840,14 +265831,60 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         //         "updateTime": 1646925216548
         //     }
         //
+        //  contract:
+        //
+        //     {
+        //         "symbol": "BTC_USDT_PERP",
+        //         "side": "BUY",
+        //         "type": "LIMIT",
+        //         "ordId": "418890767248232148",
+        //         "clOrdId": "polo418890767248232148",
+        //         "mgnMode": "CROSS",
+        //         "px": "81130.13",
+        //         "reduceOnly": false,
+        //         "lever": "20",
+        //         "state": "NEW",
+        //         "source": "WEB",
+        //         "timeInForce": "GTC",
+        //         "tpTrgPx": "",
+        //         "tpPx": "",
+        //         "tpTrgPxType": "",
+        //         "slTrgPx": "",
+        //         "slPx": "",
+        //         "slTrgPxType": "",
+        //         "avgPx": "0",
+        //         "execQty": "0",
+        //         "execAmt": "0",
+        //         "feeCcy": "",
+        //         "feeAmt": "0",
+        //         "deductCcy": "0",
+        //         "deductAmt": "0",
+        //         "stpMode": "NONE", // todo: selfTradePrevention
+        //         "cTime": "1740837741523",
+        //         "uTime": "1740840846882",
+        //         "sz": "1",
+        //         "posSide": "BOTH",
+        //         "qCcy": "USDT"
+        //         "cancelReason": "", // this field can only be in closed orders
+        //     },
+        //
         // createOrder, editOrder
+        //
+        //  spot:
         //
         //     {
         //         "id": "29772698821328896",
         //         "clientOrderId": "1234Abc"
         //     }
         //
-        let timestamp = this.safeInteger2(order, 'timestamp', 'createTime');
+        //  contract:
+        //
+        //    {
+        //        "ordId":"418876147745775616",
+        //        "clOrdId":"polo418876147745775616"
+        //    }
+        //
+        let timestamp = this.safeIntegerN(order, ['timestamp', 'createTime', 'cTime']);
         if (timestamp === undefined) {
             timestamp = this.parse8601(this.safeString(order, 'date'));
         }
@@ -266860,16 +265897,16 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 resultingTrades = this.safeValue(resultingTrades, this.safeString(market, 'id', marketId));
             }
         }
-        const price = this.safeString2(order, 'price', 'rate');
-        const amount = this.safeString(order, 'quantity');
-        const filled = this.safeString(order, 'filledQuantity');
+        const price = this.safeStringN(order, ['price', 'rate', 'px']);
+        const amount = this.safeString2(order, 'quantity', 'sz');
+        const filled = this.safeString2(order, 'filledQuantity', 'execQty');
         const status = this.parseOrderStatus(this.safeString(order, 'state'));
         const side = this.safeStringLower(order, 'side');
         const rawType = this.safeString(order, 'type');
         const type = this.parseOrderType(rawType);
-        const id = this.safeStringN(order, ['orderNumber', 'id', 'orderId']);
+        const id = this.safeStringN(order, ['orderNumber', 'id', 'orderId', 'ordId']);
         let fee = undefined;
-        const feeCurrency = this.safeString(order, 'tokenFeeCurrency');
+        const feeCurrency = this.safeString2(order, 'tokenFeeCurrency', 'feeCcy');
         let feeCost = undefined;
         let feeCurrencyCode = undefined;
         const rate = this.safeString(order, 'fee');
@@ -266879,7 +265916,7 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         else {
             // poloniex accepts a 30% discount to pay fees in TRX
             feeCurrencyCode = this.safeCurrencyCode(feeCurrency);
-            feeCost = this.safeString(order, 'tokenFee');
+            feeCost = this.safeString2(order, 'tokenFee', 'feeAmt');
         }
         if (feeCost !== undefined) {
             fee = {
@@ -266888,7 +265925,11 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 'currency': feeCurrencyCode,
             };
         }
-        const clientOrderId = this.safeString(order, 'clientOrderId');
+        const clientOrderId = this.safeString2(order, 'clientOrderId', 'clOrdId');
+        const marginMode = this.safeStringLower(order, 'mgnMode');
+        const reduceOnly = this.safeBool(order, 'reduceOnly');
+        const leverage = this.safeInteger(order, 'lever');
+        const hedged = this.safeString(order, 'posSide') !== 'BOTH';
         return this.safeOrder({
             'info': order,
             'id': id,
@@ -266900,23 +265941,28 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             'symbol': symbol,
             'type': type,
             'timeInForce': this.safeString(order, 'timeInForce'),
-            'postOnly': undefined,
+            'postOnly': rawType === 'LIMIT_MAKER',
             'side': side,
             'price': price,
             'triggerPrice': this.safeString2(order, 'triggerPrice', 'stopPrice'),
-            'cost': undefined,
-            'average': this.safeString(order, 'avgPrice'),
+            'cost': this.safeString(order, 'execAmt'),
+            'average': this.safeString2(order, 'avgPrice', 'avgPx'),
             'amount': amount,
             'filled': filled,
             'remaining': undefined,
             'trades': resultingTrades,
             'fee': fee,
+            'marginMode': marginMode,
+            'reduceOnly': reduceOnly,
+            'leverage': leverage,
+            'hedged': hedged,
         }, market);
     }
     parseOrderType(status) {
         const statuses = {
             'MARKET': 'market',
             'LIMIT': 'limit',
+            'LIMIT_MAKER': 'limit',
             'STOP-LIMIT': 'limit',
             'STOP-MARKET': 'market',
         };
@@ -266941,6 +265987,7 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
      * @description fetch all unfilled currently open orders
      * @see https://api-docs.poloniex.com/spot/api/private/order#open-orders
      * @see https://api-docs.poloniex.com/spot/api/private/smart-order#open-orders  // trigger orders
+     * @see https://api-docs.poloniex.com/v3/futures/api/trade/get-current-orders
      * @param {string} symbol unified market symbol
      * @param {int} [since] the earliest time in ms to fetch open orders for
      * @param {int} [limit] the maximum number of  open orders structures to retrieve
@@ -266956,13 +266003,59 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             market = this.market(symbol);
             request['symbol'] = market['id'];
         }
+        let marketType = undefined;
+        [marketType, params] = this.handleMarketTypeAndParams('fetchOpenOrders', market, params);
         if (limit !== undefined) {
-            request['limit'] = limit;
+            const max = (marketType === 'spot') ? 2000 : 100;
+            request['limit'] = Math.max(limit, max);
         }
         const isTrigger = this.safeValue2(params, 'trigger', 'stop');
         params = this.omit(params, ['trigger', 'stop']);
         let response = undefined;
-        if (isTrigger) {
+        if (!market['spot']) {
+            const raw = await this.swapPrivateGetV3TradeOrderOpens(this.extend(request, params));
+            //
+            //    {
+            //        "code": "200",
+            //        "msg": "",
+            //        "data": [
+            //            {
+            //                "symbol": "BTC_USDT_PERP",
+            //                "side": "BUY",
+            //                "type": "LIMIT",
+            //                "ordId": "418890767248232148",
+            //                "clOrdId": "polo418890767248232148",
+            //                "mgnMode": "CROSS",
+            //                "px": "81130.13",
+            //                "reduceOnly": false,
+            //                "lever": "20",
+            //                "state": "NEW",
+            //                "source": "WEB",
+            //                "timeInForce": "GTC",
+            //                "tpTrgPx": "",
+            //                "tpPx": "",
+            //                "tpTrgPxType": "",
+            //                "slTrgPx": "",
+            //                "slPx": "",
+            //                "slTrgPxType": "",
+            //                "avgPx": "0",
+            //                "execQty": "0",
+            //                "execAmt": "0",
+            //                "feeCcy": "",
+            //                "feeAmt": "0",
+            //                "deductCcy": "0",
+            //                "deductAmt": "0",
+            //                "stpMode": "NONE",
+            //                "cTime": "1740837741523",
+            //                "uTime": "1740840846882",
+            //                "sz": "1",
+            //                "posSide": "BOTH",
+            //                "qCcy": "USDT"
+            //            },
+            //
+            response = this.safeList(raw, 'data');
+        }
+        else if (isTrigger) {
             response = await this.privateGetSmartorders(this.extend(request, params));
         }
         else {
@@ -266996,6 +266089,82 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
     }
     /**
      * @method
+     * @name poloniex#fetchClosedOrders
+     * @see https://api-docs.poloniex.com/v3/futures/api/trade/get-order-history
+     * @description fetches information on multiple closed orders made by the user
+     * @param {string} symbol unified market symbol of the market orders were made in
+     * @param {int} [since] the earliest time in ms to fetch orders for
+     * @param {int} [limit] the maximum number of order structures to retrieve
+     * @param {object} [params] extra parameters specific to the exchange API endpoint
+     * @param {int} [params.until] timestamp in ms of the latest entry
+     * @returns {Order[]} a list of [order structures]{@link https://docs.ccxt.com/#/?id=order-structure}
+     */
+    async fetchClosedOrders(symbol = undefined, since = undefined, limit = undefined, params = {}) {
+        await this.loadMarkets();
+        let market = undefined;
+        let request = {};
+        if (symbol !== undefined) {
+            market = this.market(symbol);
+            request['symbol'] = market['id'];
+        }
+        let marketType = undefined;
+        [marketType, params] = this.handleMarketTypeAndParams('fetchClosedOrders', market, params, 'swap');
+        if (marketType === 'spot') {
+            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.NotSupported(this.id + ' fetchClosedOrders() is not supported for spot markets yet');
+        }
+        if (limit !== undefined) {
+            request['limit'] = Math.min(200, limit);
+        }
+        if (since !== undefined) {
+            request['sTime'] = since;
+        }
+        [request, params] = this.handleUntilOption('eTime', request, params);
+        const response = await this.swapPrivateGetV3TradeOrderHistory(this.extend(request, params));
+        //
+        //    {
+        //        "code": "200",
+        //        "msg": "",
+        //        "data": [
+        //            {
+        //                "symbol": "BTC_USDT_PERP",
+        //                "side": "SELL",
+        //                "type": "MARKET",
+        //                "ordId": "418912106147315712",
+        //                "clOrdId": "polo418912106147315712",
+        //                "mgnMode": "CROSS",
+        //                "px": "0",
+        //                "sz": "2",
+        //                "lever": "20",
+        //                "state": "FILLED",
+        //                "cancelReason": "",
+        //                "source": "WEB",
+        //                "reduceOnly": "true",
+        //                "timeInForce": "GTC",
+        //                "tpTrgPx": "",
+        //                "tpPx": "",
+        //                "tpTrgPxType": "",
+        //                "slTrgPx": "",
+        //                "slPx": "",
+        //                "slTrgPxType": "",
+        //                "avgPx": "84705.56",
+        //                "execQty": "2",
+        //                "execAmt": "169.41112",
+        //                "feeCcy": "USDT",
+        //                "feeAmt": "0.08470556",
+        //                "deductCcy": "0",
+        //                "deductAmt": "0",
+        //                "stpMode": "NONE",
+        //                "cTime": "1740842829116",
+        //                "uTime": "1740842829130",
+        //                "posSide": "BOTH",
+        //                "qCcy": "USDT"
+        //            },
+        //
+        const data = this.safeList(response, 'data', []);
+        return this.parseOrders(data, market, since, limit);
+    }
+    /**
+     * @method
      * @name poloniex#createOrder
      * @description create a trade order
      * @see https://api-docs.poloniex.com/spot/api/private/order#create-order
@@ -267013,20 +266182,24 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
     async createOrder(symbol, type, side, amount, price = undefined, params = {}) {
         await this.loadMarkets();
         const market = this.market(symbol);
-        if (!market['spot']) {
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.NotSupported(this.id + ' createOrder() does not support ' + market['type'] + ' orders, only spot orders are accepted');
-        }
         let request = {
             'symbol': market['id'],
-            'side': side,
-            // 'timeInForce': timeInForce,
+            'side': side.toUpperCase(), // uppercase, both for spot & swap
+            // 'timeInForce': timeInForce, // matches unified values
             // 'accountType': 'SPOT',
             // 'amount': amount,
         };
         const triggerPrice = this.safeNumber2(params, 'stopPrice', 'triggerPrice');
         [request, params] = this.orderRequest(symbol, type, side, amount, request, price, params);
         let response = undefined;
-        if (triggerPrice !== undefined) {
+        if (market['swap'] || market['future']) {
+            const responseInitial = await this.swapPrivatePostV3TradeOrder(this.extend(request, params));
+            //
+            // {"code":200,"msg":"Success","data":{"ordId":"418876147745775616","clOrdId":"polo418876147745775616"}}
+            //
+            response = this.safeDict(responseInitial, 'data');
+        }
+        else if (triggerPrice !== undefined) {
             response = await this.privatePostSmartorders(this.extend(request, params));
         }
         else {
@@ -267038,19 +266211,37 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         //         "clientOrderId" : ""
         //     }
         //
-        response = this.extend(response, {
-            'type': type,
-            'side': side,
-        });
         return this.parseOrder(response, market);
     }
     orderRequest(symbol, type, side, amount, request, price = undefined, params = {}) {
+        const triggerPrice = this.safeNumber2(params, 'stopPrice', 'triggerPrice');
+        const market = this.market(symbol);
+        if (market['contract']) {
+            let marginMode = undefined;
+            [marginMode, params] = this.handleParamString(params, 'marginMode');
+            if (marginMode !== undefined) {
+                this.checkRequiredArgument('createOrder', marginMode, 'marginMode', ['cross', 'isolated']);
+                request['mgnMode'] = marginMode.toUpperCase();
+            }
+            let hedged = undefined;
+            [hedged, params] = this.handleParamString(params, 'hedged');
+            if (hedged) {
+                if (marginMode === undefined) {
+                    throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ArgumentsRequired(this.id + ' createOrder() requires a marginMode parameter "cross" or "isolated" for hedged orders');
+                }
+                if (!('posSide' in params)) {
+                    throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ArgumentsRequired(this.id + ' createOrder() requires a posSide parameter "LONG" or "SHORT" for hedged orders');
+                }
+            }
+        }
         let upperCaseType = type.toUpperCase();
         const isMarket = upperCaseType === 'MARKET';
         const isPostOnly = this.isPostOnly(isMarket, upperCaseType === 'LIMIT_MAKER', params);
-        const triggerPrice = this.safeNumber2(params, 'stopPrice', 'triggerPrice');
         params = this.omit(params, ['postOnly', 'triggerPrice', 'stopPrice']);
         if (triggerPrice !== undefined) {
+            if (!market['spot']) {
+                throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.InvalidOrder(this.id + ' createOrder() does not support trigger orders for ' + market['type'] + ' markets');
+            }
             upperCaseType = (price === undefined) ? 'STOP' : 'STOP_LIMIT';
             request['stopPrice'] = triggerPrice;
         }
@@ -267068,7 +266259,7 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 if (cost !== undefined) {
                     quoteAmount = this.costToPrecision(symbol, cost);
                 }
-                else if (createMarketBuyOrderRequiresPrice) {
+                else if (createMarketBuyOrderRequiresPrice && market['spot']) {
                     if (price === undefined) {
                         throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.InvalidOrder(this.id + ' createOrder() requires the price argument for market buy orders to calculate the total cost to spend (amount * price), alternatively set the createMarketBuyOrderRequiresPrice option or param to false and pass the cost to spend (quote quantity) in the amount argument');
                     }
@@ -267082,15 +266273,19 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 else {
                     quoteAmount = this.costToPrecision(symbol, amount);
                 }
-                request['amount'] = quoteAmount;
+                const amountKey = market['spot'] ? 'amount' : 'sz';
+                request[amountKey] = quoteAmount;
             }
             else {
-                request['quantity'] = this.amountToPrecision(symbol, amount);
+                const amountKey = market['spot'] ? 'quantity' : 'sz';
+                request[amountKey] = this.amountToPrecision(symbol, amount);
             }
         }
         else {
-            request['quantity'] = this.amountToPrecision(symbol, amount);
-            request['price'] = this.priceToPrecision(symbol, price);
+            const amountKey = market['spot'] ? 'quantity' : 'sz';
+            request[amountKey] = this.amountToPrecision(symbol, amount);
+            const priceKey = market['spot'] ? 'price' : 'px';
+            request[priceKey] = this.priceToPrecision(symbol, price);
         }
         const clientOrderId = this.safeString(params, 'clientOrderId');
         if (clientOrderId !== undefined) {
@@ -267161,7 +266356,27 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         // @returns {object} An [order structure]{@link https://docs.ccxt.com/#/?id=order-structure}
         //
         await this.loadMarkets();
+        if (symbol === undefined) {
+            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ArgumentsRequired(this.id + ' cancelOrder() requires a symbol argument');
+        }
+        const market = this.market(symbol);
         const request = {};
+        if (!market['spot']) {
+            request['symbol'] = market['id'];
+            request['ordId'] = id;
+            const raw = await this.swapPrivateDeleteV3TradeOrder(this.extend(request, params));
+            //
+            //    {
+            //        "code": "200",
+            //        "msg": "Success",
+            //        "data": {
+            //            "ordId": "418886099910612040",
+            //            "clOrdId": "polo418886099910612040"
+            //        }
+            //    }
+            //
+            return this.parseOrder(this.safeDict(raw, 'data'));
+        }
         const clientOrderId = this.safeValue(params, 'clientOrderId');
         if (clientOrderId !== undefined) {
             id = clientOrderId;
@@ -267193,6 +266408,7 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
      * @description cancel all open orders
      * @see https://api-docs.poloniex.com/spot/api/private/order#cancel-all-orders
      * @see https://api-docs.poloniex.com/spot/api/private/smart-order#cancel-all-orders  // trigger orders
+     * @see https://api-docs.poloniex.com/v3/futures/api/trade/cancel-all-orders - contract markets
      * @param {string} symbol unified market symbol, only orders in the market of this symbol are cancelled when symbol is not undefined
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {boolean} [params.trigger] true if canceling trigger orders
@@ -267211,9 +266427,30 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 market['id'],
             ];
         }
+        let response = undefined;
+        let marketType = undefined;
+        [marketType, params] = this.handleMarketTypeAndParams('cancelAllOrders', market, params);
+        if (marketType === 'swap' || marketType === 'future') {
+            const raw = await this.swapPrivateDeleteV3TradeAllOrders(this.extend(request, params));
+            //
+            //    {
+            //        "code": "200",
+            //        "msg": "Success",
+            //        "data": [
+            //            {
+            //                "code": "200",
+            //                "msg": "Success",
+            //                "ordId": "418885787866388511",
+            //                "clOrdId": "polo418885787866388511"
+            //            }
+            //        ]
+            //    }
+            //
+            response = this.safeList(raw, 'data');
+            return this.parseOrders(response, market);
+        }
         const isTrigger = this.safeValue2(params, 'trigger', 'stop');
         params = this.omit(params, ['trigger', 'stop']);
-        let response = undefined;
         if (isTrigger) {
             response = await this.privateDeleteSmartorders(this.extend(request, params));
         }
@@ -267257,6 +266494,16 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         const request = {
             'id': id,
         };
+        let market = undefined;
+        if (symbol !== undefined) {
+            market = this.market(symbol);
+            request['symbol'] = market['id'];
+        }
+        let marketType = undefined;
+        [marketType, params] = this.handleMarketTypeAndParams('fetchOrder', market, params);
+        if (marketType !== 'spot') {
+            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.NotSupported(this.id + ' fetchOrder() is not supported for ' + marketType + ' markets yet');
+        }
         const isTrigger = this.safeValue2(params, 'trigger', 'stop');
         params = this.omit(params, ['trigger', 'stop']);
         let response = undefined;
@@ -267345,6 +266592,24 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             'timestamp': undefined,
             'datetime': undefined,
         };
+        // for swap
+        if (!Array.isArray(response)) {
+            const ts = this.safeInteger(response, 'uTime');
+            result['timestamp'] = ts;
+            result['datetime'] = this.iso8601(ts);
+            const details = this.safeList(response, 'details', []);
+            for (let i = 0; i < details.length; i++) {
+                const balance = details[i];
+                const currencyId = this.safeString(balance, 'ccy');
+                const code = this.safeCurrencyCode(currencyId);
+                const account = this.account();
+                account['total'] = this.safeString(balance, 'avail');
+                account['used'] = this.safeString(balance, 'im');
+                result[code] = account;
+            }
+            return this.safeBalance(result);
+        }
+        // for spot
         for (let i = 0; i < response.length; i++) {
             const account = this.safeValue(response, i, {});
             const balances = this.safeValue(account, 'balances');
@@ -267365,11 +266630,56 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
      * @name poloniex#fetchBalance
      * @description query for balance and get the amount of funds available for trading or funds locked in orders
      * @see https://api-docs.poloniex.com/spot/api/private/account#all-account-balances
+     * @see https://api-docs.poloniex.com/v3/futures/api/account/balance
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object} a [balance structure]{@link https://docs.ccxt.com/#/?id=balance-structure}
      */
     async fetchBalance(params = {}) {
         await this.loadMarkets();
+        let marketType = undefined;
+        [marketType, params] = this.handleMarketTypeAndParams('fetchBalance', undefined, params);
+        if (marketType !== 'spot') {
+            const responseRaw = await this.swapPrivateGetV3AccountBalance(params);
+            //
+            //    {
+            //        "code": "200",
+            //        "msg": "",
+            //        "data": {
+            //            "state": "NORMAL",
+            //            "eq": "9.98571622",
+            //            "isoEq": "0",
+            //            "im": "0",
+            //            "mm": "0",
+            //            "mmr": "0",
+            //            "upl": "0",
+            //            "availMgn": "9.98571622",
+            //            "cTime": "1738093601775",
+            //            "uTime": "1740829116236",
+            //            "details": [
+            //                {
+            //                    "ccy": "USDT",
+            //                    "eq": "9.98571622",
+            //                    "isoEq": "0",
+            //                    "avail": "9.98571622",
+            //                    "trdHold": "0",
+            //                    "upl": "0",
+            //                    "isoAvail": "0",
+            //                    "isoHold": "0",
+            //                    "isoUpl": "0",
+            //                    "im": "0",
+            //                    "mm": "0",
+            //                    "mmr": "0",
+            //                    "imr": "0",
+            //                    "cTime": "1740829116236",
+            //                    "uTime": "1740829116236"
+            //                }
+            //            ]
+            //        }
+            //    }
+            //
+            const data = this.safeDict(responseRaw, 'data', {});
+            return this.parseBalance(data);
+        }
         const request = {
             'accountType': 'SPOT',
         };
@@ -267430,6 +266740,7 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
      * @name poloniex#fetchOrderBook
      * @description fetches information on open orders with bid (buy) and ask (sell) prices, volumes and other data
      * @see https://api-docs.poloniex.com/spot/api/public/market-data#order-book
+     * @see https://api-docs.poloniex.com/v3/futures/api/market/get-order-book
      * @param {string} symbol unified symbol of the market to fetch the order book for
      * @param {int} [limit] the maximum amount of order book entries to return
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -267443,6 +266754,27 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
         };
         if (limit !== undefined) {
             request['limit'] = limit; // The default value of limit is 10. Valid limit values are: 5, 10, 20, 50, 100, 150.
+            if (market['contract']) {
+                request['limit'] = this.findNearestCeiling([5, 10, 20, 100, 150], limit);
+            }
+        }
+        if (market['contract']) {
+            const responseRaw = await this.swapPublicGetV3MarketOrderBook(this.extend(request, params));
+            //
+            //    {
+            //       "code": 200,
+            //       "data": {
+            //         "asks": [ ["58700", "9934"], ..],
+            //         "bids": [ ["58600", "9952"], ..],
+            //         "s": "100",
+            //         "ts": 1719974138333
+            //       },
+            //       "msg": "Success"
+            //    }
+            //
+            const data = this.safeDict(responseRaw, 'data', {});
+            const ts = this.safeInteger(data, 'ts');
+            return this.parseOrderBook(data, symbol, ts);
         }
         const response = await this.publicGetMarketsSymbolOrderBook(this.extend(request, params));
         //
@@ -268042,14 +267374,397 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             },
         };
     }
+    /**
+     * @method
+     * @name poloniex#setLeverage
+     * @description set the level of leverage for a market
+     * @see https://api-docs.poloniex.com/v3/futures/api/positions/set-leverage
+     * @param {int} leverage the rate of leverage
+     * @param {string} symbol unified market symbol
+     * @param {object} [params] extra parameters specific to the exchange API endpoint
+     * @param {string} [params.marginMode] 'cross' or 'isolated'
+     * @returns {object} response from the exchange
+     */
+    async setLeverage(leverage, symbol = undefined, params = {}) {
+        if (symbol === undefined) {
+            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ArgumentsRequired(this.id + ' setLeverage() requires a symbol argument');
+        }
+        await this.loadMarkets();
+        const market = this.market(symbol);
+        let marginMode = undefined;
+        [marginMode, params] = this.handleMarginModeAndParams('setLeverage', params);
+        if (marginMode === undefined) {
+            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ArgumentsRequired(this.id + ' setLeverage() requires a marginMode parameter "cross" or "isolated"');
+        }
+        let hedged = undefined;
+        [hedged, params] = this.handleParamBool(params, 'hedged', false);
+        if (hedged) {
+            if (!('posSide' in params)) {
+                throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ArgumentsRequired(this.id + ' setLeverage() requires a posSide parameter for hedged mode: "LONG" or "SHORT"');
+            }
+        }
+        const request = {
+            'lever': leverage,
+            'mgnMode': marginMode.toUpperCase(),
+            'symbol': market['id'],
+        };
+        const response = await this.swapPrivatePostV3PositionLeverage(this.extend(request, params));
+        return response;
+    }
+    /**
+     * @method
+     * @name poloniex#fetchLeverage
+     * @description fetch the set leverage for a market
+     * @see https://api-docs.poloniex.com/v3/futures/api/positions/get-leverages
+     * @param {string} symbol unified market symbol
+     * @param {object} [params] extra parameters specific to the exchange API endpoint
+     * @returns {object} a [leverage structure]{@link https://docs.ccxt.com/#/?id=leverage-structure}
+     */
+    async fetchLeverage(symbol, params = {}) {
+        await this.loadMarkets();
+        const market = this.market(symbol);
+        const request = {
+            'symbol': market['id'],
+        };
+        let marginMode = undefined;
+        [marginMode, params] = this.handleMarginModeAndParams('fetchLeverage', params);
+        if (marginMode === undefined) {
+            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ArgumentsRequired(this.id + ' fetchLeverage() requires a marginMode parameter "cross" or "isolated"');
+        }
+        request['mgnMode'] = marginMode.toUpperCase();
+        const response = await this.swapPrivateGetV3PositionLeverages(this.extend(request, params));
+        //
+        //  for one-way mode:
+        //
+        //    {
+        //        "code": "200",
+        //        "msg": "",
+        //        "data": [
+        //            {
+        //                "symbol": "BTC_USDT_PERP",
+        //                "lever": "10",
+        //                "mgnMode": "CROSS",
+        //                "posSide": "BOTH"
+        //            }
+        //        ]
+        //    }
+        //
+        //  for hedge:
+        //
+        //    {
+        //        "code": "200",
+        //        "msg": "",
+        //        "data": [
+        //            {
+        //                "symbol": "BTC_USDT_PERP",
+        //                "lever": "20",
+        //                "mgnMode": "CROSS",
+        //                "posSide": "SHORT"
+        //            },
+        //            {
+        //                "symbol": "BTC_USDT_PERP",
+        //                "lever": "20",
+        //                "mgnMode": "CROSS",
+        //                "posSide": "LONG"
+        //            }
+        //        ]
+        //    }
+        //
+        return this.parseLeverage(response, market);
+    }
+    parseLeverage(leverage, market = undefined) {
+        let shortLeverage = undefined;
+        let longLeverage = undefined;
+        let marketId = undefined;
+        let marginMode = undefined;
+        const data = this.safeList(leverage, 'data');
+        for (let i = 0; i < data.length; i++) {
+            const entry = data[i];
+            marketId = this.safeString(entry, 'symbol');
+            marginMode = this.safeString(entry, 'mgnMode');
+            const lever = this.safeInteger(entry, 'lever');
+            const posSide = this.safeString(entry, 'posSide');
+            if (posSide === 'LONG') {
+                longLeverage = lever;
+            }
+            else if (posSide === 'SHORT') {
+                shortLeverage = lever;
+            }
+            else {
+                longLeverage = lever;
+                shortLeverage = lever;
+            }
+        }
+        return {
+            'info': leverage,
+            'symbol': this.safeSymbol(marketId, market),
+            'marginMode': marginMode,
+            'longLeverage': longLeverage,
+            'shortLeverage': shortLeverage,
+        };
+    }
+    /**
+     * @method
+     * @name poloniex#fetchPositionMode
+     * @description fetchs the position mode, hedged or one way, hedged for binance is set identically for all linear markets or all inverse markets
+     * @see https://api-docs.poloniex.com/v3/futures/api/positions/position-mode-switch
+     * @param {string} symbol unified symbol of the market to fetch the order book for
+     * @param {object} [params] extra parameters specific to the exchange API endpoint
+     * @returns {object} an object detailing whether the market is in hedged or one-way mode
+     */
+    async fetchPositionMode(symbol = undefined, params = {}) {
+        const response = await this.swapPrivateGetV3PositionMode(params);
+        //
+        //    {
+        //        "code": "200",
+        //        "msg": "Success",
+        //        "data": {
+        //            "posMode": "ONE_WAY"
+        //        }
+        //    }
+        //
+        const data = this.safeDict(response, 'data', {});
+        const posMode = this.safeString(data, 'posMode');
+        const hedged = posMode === 'HEDGE';
+        return {
+            'info': response,
+            'hedged': hedged,
+        };
+    }
+    /**
+     * @method
+     * @name poloniex#setPositionMode
+     * @description set hedged to true or false for a market
+     * @see https://api-docs.poloniex.com/v3/futures/api/positions/position-mode-switch
+     * @param {bool} hedged set to true to use dualSidePosition
+     * @param {string} symbol not used by binance setPositionMode ()
+     * @param {object} [params] extra parameters specific to the exchange API endpoint
+     * @returns {object} response from the exchange
+     */
+    async setPositionMode(hedged, symbol = undefined, params = {}) {
+        const mode = hedged ? 'HEDGE' : 'ONE_WAY';
+        const request = {
+            'posMode': mode,
+        };
+        const response = await this.swapPrivatePostV3PositionMode(this.extend(request, params));
+        //
+        //    {
+        //        "code": "200",
+        //        "msg": "Success",
+        //        "data": {}
+        //    }
+        //
+        return response;
+    }
+    /**
+     * @method
+     * @name poloniex#fetchPositions
+     * @description fetch all open positions
+     * @see https://api-docs.poloniex.com/v3/futures/api/positions/get-current-position
+     * @param {string[]|undefined} symbols list of unified market symbols
+     * @param {object} [params] extra parameters specific to the exchange API endpoint
+     * @param {boolean} [params.standard] whether to fetch standard contract positions
+     * @returns {object[]} a list of [position structures]{@link https://docs.ccxt.com/#/?id=position-structure}
+     */
+    async fetchPositions(symbols = undefined, params = {}) {
+        await this.loadMarkets();
+        symbols = this.marketSymbols(symbols);
+        const response = await this.swapPrivateGetV3TradePositionOpens(params);
+        //
+        //    {
+        //        "code": "200",
+        //        "msg": "",
+        //        "data": [
+        //            {
+        //                "symbol": "BTC_USDT_PERP",
+        //                "posSide": "LONG",
+        //                "side": "BUY",
+        //                "mgnMode": "CROSS",
+        //                "openAvgPx": "94193.42",
+        //                "qty": "1",
+        //                "availQty": "1",
+        //                "lever": "20",
+        //                "adl": "0.3007",
+        //                "liqPx": "84918.201844064386317906",
+        //                "im": "4.7047795",
+        //                "mm": "0.56457354",
+        //                "upl": "-0.09783",
+        //                "uplRatio": "-0.0207",
+        //                "pnl": "0",
+        //                "markPx": "94095.59",
+        //                "mgnRatio": "0.0582",
+        //                "state": "NORMAL",
+        //                "cTime": "1740950344401",
+        //                "uTime": "1740950344401",
+        //                "mgn": "4.7047795",
+        //                "actType": "TRADING",
+        //                "maxWAmt": "0",
+        //                "tpTrgPx": "",
+        //                "slTrgPx": ""
+        //            }
+        //        ]
+        //    }
+        //
+        const positions = this.safeList(response, 'data', []);
+        return this.parsePositions(positions, symbols);
+    }
+    parsePosition(position, market = undefined) {
+        //
+        //            {
+        //                "symbol": "BTC_USDT_PERP",
+        //                "posSide": "LONG",
+        //                "side": "BUY",
+        //                "mgnMode": "CROSS",
+        //                "openAvgPx": "94193.42",
+        //                "qty": "1",
+        //                "availQty": "1",
+        //                "lever": "20",
+        //                "adl": "0.3007",
+        //                "liqPx": "84918.201844064386317906",
+        //                "im": "4.7047795",
+        //                "mm": "0.56457354",
+        //                "upl": "-0.09783",
+        //                "uplRatio": "-0.0207",
+        //                "pnl": "0",
+        //                "markPx": "94095.59",
+        //                "mgnRatio": "0.0582",
+        //                "state": "NORMAL",
+        //                "cTime": "1740950344401",
+        //                "uTime": "1740950344401",
+        //                "mgn": "4.7047795",
+        //                "actType": "TRADING",
+        //                "maxWAmt": "0",
+        //                "tpTrgPx": "",
+        //                "slTrgPx": ""
+        //            }
+        //
+        const marketId = this.safeString(position, 'symbol');
+        market = this.safeMarket(marketId, market);
+        const timestamp = this.safeInteger(position, 'cTime');
+        const marginMode = this.safeStringLower(position, 'mgnMode');
+        const leverage = this.safeString(position, 'lever');
+        const initialMargin = this.safeString(position, 'im');
+        const notional = _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringMul(leverage, initialMargin);
+        const qty = this.safeString(position, 'qty');
+        const avgPrice = this.safeString(position, 'openAvgPx');
+        const collateral = _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringMul(qty, avgPrice);
+        // todo: some more fields
+        return this.safePosition({
+            'info': position,
+            'id': undefined,
+            'symbol': market['symbol'],
+            'notional': notional,
+            'marginMode': marginMode,
+            'liquidationPrice': this.safeNumber(position, 'liqPx'),
+            'entryPrice': this.safeNumber(position, 'openAvgPx'),
+            'unrealizedPnl': this.safeNumber(position, 'upl'),
+            'percentage': undefined,
+            'contracts': this.safeNumber(position, 'qty'),
+            'contractSize': undefined,
+            'markPrice': this.safeNumber(position, 'markPx'),
+            'lastPrice': undefined,
+            'side': this.safeStringLower(position, 'posSide'),
+            'hedged': undefined,
+            'timestamp': timestamp,
+            'datetime': this.iso8601(timestamp),
+            'lastUpdateTimestamp': undefined,
+            'maintenanceMargin': this.safeNumber(position, 'mm'),
+            'maintenanceMarginPercentage': undefined,
+            'collateral': collateral,
+            'initialMargin': initialMargin,
+            'initialMarginPercentage': undefined,
+            'leverage': parseInt(leverage),
+            'marginRatio': this.safeNumber(position, 'mgnRatio'),
+            'stopLossPrice': this.safeNumber(position, 'slTrgPx'),
+            'takeProfitPrice': this.safeNumber(position, 'tpTrgPx'),
+        });
+    }
+    async modifyMarginHelper(symbol, amount, type, params = {}) {
+        await this.loadMarkets();
+        const market = this.market(symbol);
+        amount = this.amountToPrecision(symbol, amount);
+        const request = {
+            'symbol': market['id'],
+            'amt': _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringAbs(amount),
+            'type': type.toUpperCase(), // 'ADD' or 'REDUCE'
+        };
+        // todo: hedged handling, tricky
+        if (!('posMode' in params)) {
+            request['posMode'] = 'BOTH';
+        }
+        const response = await this.swapPrivatePostV3TradePositionMargin(this.extend(request, params));
+        //
+        // {
+        //     "code": 200,
+        //     "data": {
+        //       "amt": "50",
+        //       "lever": "20",
+        //       "symbol": "DOT_USDT_PERP",
+        //       "posSide": "BOTH",
+        //       "type": "ADD"
+        //     },
+        //     "msg": "Success"
+        // }
+        //
+        if (type === 'reduce') {
+            amount = _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringAbs(amount);
+        }
+        const data = this.safeDict(response, 'data');
+        return this.parseMarginModification(data, market);
+    }
+    parseMarginModification(data, market = undefined) {
+        const marketId = this.safeString(data, 'symbol');
+        market = this.safeMarket(marketId, market);
+        const rawType = this.safeString(data, 'type');
+        const type = (rawType === 'ADD') ? 'add' : 'reduce';
+        return {
+            'info': data,
+            'symbol': market['symbol'],
+            'type': type,
+            'marginMode': undefined,
+            'amount': this.safeNumber(data, 'amt'),
+            'total': undefined,
+            'code': undefined,
+            'status': 'ok',
+            'timestamp': undefined,
+            'datetime': undefined,
+        };
+    }
+    /**
+     * @method
+     * @name poloniex#reduceMargin
+     * @description remove margin from a position
+     * @param {string} symbol unified market symbol
+     * @param {float} amount the amount of margin to remove
+     * @param {object} [params] extra parameters specific to the exchange API endpoint
+     * @returns {object} a [margin structure]{@link https://docs.ccxt.com/#/?id=reduce-margin-structure}
+     */
+    async reduceMargin(symbol, amount, params = {}) {
+        return await this.modifyMarginHelper(symbol, -amount, 'reduce', params);
+    }
+    /**
+     * @method
+     * @name poloniex#addMargin
+     * @description add margin
+     * @param {string} symbol unified market symbol
+     * @param {float} amount amount of margin to add
+     * @param {object} [params] extra parameters specific to the exchange API endpoint
+     * @returns {object} a [margin structure]{@link https://docs.ccxt.com/#/?id=add-margin-structure}
+     */
+    async addMargin(symbol, amount, params = {}) {
+        return await this.modifyMarginHelper(symbol, amount, 'add', params);
+    }
     nonce() {
         return this.milliseconds();
     }
     sign(path, api = 'public', method = 'GET', params = {}, headers = undefined, body = undefined) {
-        let url = this.urls['api']['rest'];
+        let url = this.urls['api']['spot'];
+        if (this.inArray(api, ['swapPublic', 'swapPrivate'])) {
+            url = this.urls['api']['swap'];
+        }
         const query = this.omit(params, this.extractParams(path));
         const implodedPath = this.implodeParams(path, params);
-        if (api === 'public') {
+        if (api === 'public' || api === 'swapPublic') {
             url += '/' + implodedPath;
             if (Object.keys(query).length) {
                 url += '?' + this.urlencode(query);
@@ -268106,1956 +267821,6 @@ class poloniex extends _abstract_poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             this.throwBroadlyMatchedException(this.exceptions['broad'], message, feedback);
             throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ExchangeError(feedback); // unknown message
         }
-        return undefined;
-    }
-}
-
-
-/***/ }),
-
-/***/ 6826:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ poloniexfutures)
-/* harmony export */ });
-/* harmony import */ var _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5147);
-/* harmony import */ var _abstract_poloniexfutures_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4025);
-/* harmony import */ var _base_functions_number_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1579);
-/* harmony import */ var _base_errors_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2079);
-/* harmony import */ var _static_dependencies_noble_hashes_sha256_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4852);
-//  ---------------------------------------------------------------------------
-
-
-
-
-
-//  ---------------------------------------------------------------------------
-/**
- * @class poloniexfutures
- * @augments Exchange
- */
-class poloniexfutures extends _abstract_poloniexfutures_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A {
-    describe() {
-        return this.deepExtend(super.describe(), {
-            'id': 'poloniexfutures',
-            'name': 'Poloniex Futures',
-            'countries': ['US'],
-            // 30 requests per second
-            'rateLimit': 33.3,
-            'certified': false,
-            'pro': true,
-            'version': 'v1',
-            'has': {
-                'CORS': undefined,
-                'spot': false,
-                'margin': true,
-                'swap': true,
-                'future': false,
-                'option': undefined,
-                'createOrder': true,
-                'createStopOrder': true,
-                'createTriggerOrder': true,
-                'fetchBalance': true,
-                'fetchClosedOrders': true,
-                'fetchCurrencies': false,
-                'fetchDepositAddress': false,
-                'fetchDepositAddresses': false,
-                'fetchDepositAddressesByNetwork': false,
-                'fetchFundingInterval': true,
-                'fetchFundingIntervals': false,
-                'fetchFundingRate': true,
-                'fetchFundingRateHistory': false,
-                'fetchL3OrderBook': true,
-                'fetchMarkets': true,
-                'fetchMyTrades': true,
-                'fetchOHLCV': true,
-                'fetchOpenOrders': true,
-                'fetchOrder': true,
-                'fetchOrderBook': true,
-                'fetchOrdersByStatus': true,
-                'fetchPositions': true,
-                'fetchTicker': true,
-                'fetchTickers': true,
-                'fetchTime': true,
-                'fetchTrades': true,
-                'setMarginMode': true,
-            },
-            'timeframes': {
-                '1m': 1,
-                '5m': 5,
-                '15m': 15,
-                '30m': 30,
-                '1h': 60,
-                '2h': 120,
-                '4h': 480,
-                '12h': 720,
-                '1d': 1440,
-                '1w': 10080,
-            },
-            'urls': {
-                'logo': 'https://user-images.githubusercontent.com/1294454/27766817-e9456312-5ee6-11e7-9b3c-b628ca5626a5.jpg',
-                'api': {
-                    'public': 'https://futures-api.poloniex.com',
-                    'private': 'https://futures-api.poloniex.com',
-                },
-                'www': 'https://www.poloniex.com',
-                'doc': 'https://api-docs.poloniex.com/futures/',
-                'fees': 'https://poloniex.com/fee-schedule',
-                'referral': 'https://poloniex.com/signup?c=UBFZJRPJ',
-            },
-            'api': {
-                'public': {
-                    'get': {
-                        'contracts/active': 10,
-                        'contracts/{symbol}': 10,
-                        'ticker': 10,
-                        'tickers': 10,
-                        'level2/snapshot': 180.002,
-                        'level2/depth': 180.002,
-                        'level2/message/query': 180.002,
-                        'level3/snapshot': 180.002,
-                        'trade/history': 10,
-                        'interest/query': 10,
-                        'index/query': 10,
-                        'mark-price/{symbol}/current': 10,
-                        'premium/query': 10,
-                        'funding-rate/{symbol}/current': 10,
-                        'timestamp': 10,
-                        'status': 10,
-                        'kline/query': 10,
-                    },
-                    'post': {
-                        'bullet-public': 10,
-                    },
-                },
-                'private': {
-                    'get': {
-                        'account-overview': 1,
-                        'transaction-history': 1,
-                        'maxActiveOrders': 1,
-                        'maxRiskLimit': 1,
-                        'userFeeRate': 1,
-                        'marginType/query': 1,
-                        'orders': 1,
-                        'stopOrders': 1,
-                        'recentDoneOrders': 1,
-                        'orders/{order-id}': 1,
-                        'clientOrderId/{clientOid}': 1,
-                        'fills': 1,
-                        'openOrderStatistics': 1,
-                        'position': 1.5,
-                        'positions': 1.5,
-                        'funding-history': 1,
-                    },
-                    'post': {
-                        'orders': 1.5,
-                        'batchOrders': 1.5,
-                        'position/margin/auto-deposit-status': 1.5,
-                        'position/margin/deposit-margin': 1.5,
-                        'position/margin/withdraw-margin': 1.5,
-                        'bullet-private': 1,
-                        'marginType/change': 1,
-                    },
-                    'delete': {
-                        'orders/{order-id}': 1.5,
-                        'orders': 150.016,
-                        'stopOrders': 150.016,
-                    },
-                },
-            },
-            'precisionMode': _base_functions_number_js__WEBPACK_IMPORTED_MODULE_1__/* .TICK_SIZE */ .kb,
-            'fees': {
-                'trading': {
-                    'tierBased': false,
-                    'percentage': true,
-                    'taker': this.parseNumber('0.00075'),
-                    'maker': this.parseNumber('0.0001'),
-                },
-                'funding': {
-                    'tierBased': false,
-                    'percentage': false,
-                    'withdraw': {},
-                    'deposit': {},
-                },
-            },
-            'commonCurrencies': {},
-            'requiredCredentials': {
-                'apiKey': true,
-                'secret': true,
-                'password': true,
-            },
-            'options': {
-                'networks': {
-                    'OMNI': 'omni',
-                    'ERC20': 'eth',
-                    'TRC20': 'trx',
-                },
-                'versions': {
-                    'public': {
-                        'GET': {
-                            'ticker': 'v2',
-                            'tickers': 'v2',
-                            'level3/snapshot': 'v2',
-                        },
-                    },
-                },
-            },
-            'features': {
-                'default': {
-                    'sandbox': false,
-                    'createOrder': {
-                        'marginMode': false,
-                        'triggerPrice': true,
-                        // todo implementation
-                        'triggerPriceType': {
-                            'last': true,
-                            'mark': true,
-                            'index': true,
-                        },
-                        'triggerDirection': true,
-                        'stopLossPrice': false,
-                        'takeProfitPrice': false,
-                        'attachedStopLossTakeProfit': undefined,
-                        'timeInForce': {
-                            'IOC': true,
-                            'FOK': false,
-                            'PO': true,
-                            'GTD': false,
-                        },
-                        'hedged': false,
-                        'leverage': true,
-                        'marketBuyByCost': true,
-                        'marketBuyRequiresPrice': false,
-                        'selfTradePrevention': false,
-                        'trailing': false,
-                        'iceberg': true, // deprecated?
-                    },
-                    'createOrders': undefined,
-                    'fetchMyTrades': {
-                        'marginMode': false,
-                        'limit': undefined,
-                        'daysBack': 100000,
-                        'untilDays': 7,
-                        'symbolRequired': false,
-                    },
-                    'fetchOrder': {
-                        'marginMode': false,
-                        'trigger': false,
-                        'trailing': false,
-                        'symbolRequired': false,
-                    },
-                    'fetchOpenOrders': {
-                        'marginMode': true,
-                        'limit': undefined,
-                        'trigger': false,
-                        'trailing': false,
-                        'symbolRequired': false,
-                    },
-                    'fetchOrders': undefined,
-                    'fetchClosedOrders': {
-                        'marginMode': false,
-                        'limit': 100,
-                        'daysBack': 100000,
-                        'daysBackCanceled': 1,
-                        'untilDays': 100000,
-                        'trigger': false,
-                        'trailing': false,
-                        'symbolRequired': false,
-                    },
-                    'fetchOHLCV': {
-                        'limit': 200, // todo implement
-                    },
-                },
-                'spot': undefined,
-                'swap': {
-                    'linear': {
-                        'extends': 'default',
-                    },
-                    'inverse': undefined,
-                },
-                'future': {
-                    'linear': undefined,
-                    'inverse': undefined,
-                },
-            },
-            'exceptions': {
-                'exact': {
-                    '400': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.BadRequest,
-                    '401': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.AuthenticationError,
-                    '403': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.NotSupported,
-                    '404': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.NotSupported,
-                    '405': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.NotSupported,
-                    '415': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.BadRequest,
-                    '429': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.RateLimitExceeded,
-                    '500': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ExchangeNotAvailable,
-                    '503': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ExchangeNotAvailable,
-                    '400001': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.AuthenticationError,
-                    '400002': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.InvalidNonce,
-                    '400003': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.AuthenticationError,
-                    '400004': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.AuthenticationError,
-                    '400005': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.AuthenticationError,
-                    '400006': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.AuthenticationError,
-                    '400007': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.AuthenticationError,
-                    '404000': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.NotSupported,
-                    '400100': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.BadRequest,
-                    '411100': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.AccountSuspended,
-                    '500000': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ExchangeNotAvailable, // Internal Server Error -- We had a problem with our server. Try again later.
-                },
-                'broad': {
-                    'Position does not exist': _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.OrderNotFound, // { "code":"200000", "msg":"Position does not exist" }
-                },
-            },
-        });
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchMarkets
-     * @description retrieves data on all markets for poloniexfutures
-     * @see https://api-docs.poloniex.com/futures/api/symbol
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object[]} an array of objects representing market data
-     */
-    async fetchMarkets(params = {}) {
-        const response = await this.publicGetContractsActive(params);
-        //
-        // {
-        //  "code": "200000",
-        //  "data": [
-        //     {
-        //       "symbol": "APTUSDTPERP",
-        //       "takerFixFee": "0E-10",
-        //       "nextFundingRateTime": "20145603",
-        //       "makerFixFee": "0E-10",
-        //       "type": "FFWCSX",
-        //       "predictedFundingFeeRate": "0.000000",
-        //       "turnoverOf24h": "386037.46704292",
-        //       "initialMargin": "0.05",
-        //       "isDeleverage": true,
-        //       "createdAt": "1666681959000",
-        //       "fundingBaseSymbol": ".APTINT8H",
-        //       "lowPriceOf24h": "4.34499979019165",
-        //       "lastTradePrice": "4.4090000000",
-        //       "indexPriceTickSize": "0.001",
-        //       "fairMethod": "FundingRate",
-        //       "takerFeeRate": "0.00040",
-        //       "order": "102",
-        //       "updatedAt": "1671076377000",
-        //       "displaySettleCurrency": "USDT",
-        //       "indexPrice": "4.418",
-        //       "multiplier": "1.0",
-        //       "maxLeverage": "20",
-        //       "fundingQuoteSymbol": ".USDTINT8H",
-        //       "quoteCurrency": "USDT",
-        //       "maxOrderQty": "1000000",
-        //       "maxPrice": "1000000.0000000000",
-        //       "maintainMargin": "0.025",
-        //       "status": "Open",
-        //       "displayNameMap": [Object],
-        //       "openInterest": "2367",
-        //       "highPriceOf24h": "4.763999938964844",
-        //       "fundingFeeRate": "0.000000",
-        //       "volumeOf24h": "83540.00000000",
-        //       "riskStep": "500000",
-        //       "isQuanto": true,
-        //       "maxRiskLimit": "20000",
-        //       "rootSymbol": "USDT",
-        //       "baseCurrency": "APT",
-        //       "firstOpenDate": "1666701000000",
-        //       "tickSize": "0.001",
-        //       "markMethod": "FairPrice",
-        //       "indexSymbol": ".PAPTUSDT",
-        //       "markPrice": "4.418",
-        //       "minRiskLimit": "1000000",
-        //       "settlementFixFee": "0E-10",
-        //       "settlementSymbol": '',
-        //       "priceChgPctOf24h": "-0.0704",
-        //       "fundingRateSymbol": ".APTUSDTPERPFPI8H",
-        //       "makerFeeRate": "0.00010",
-        //       "isInverse": false,
-        //       "lotSize": "1",
-        //       "settleCurrency": "USDT",
-        //       "settlementFeeRate": "0.0"
-        //     },
-        //   ]
-        // }
-        //
-        const data = this.safeValue(response, 'data', []);
-        return this.parseMarkets(data);
-    }
-    parseMarket(market) {
-        const id = this.safeString(market, 'symbol');
-        const baseId = this.safeString(market, 'baseCurrency');
-        const quoteId = this.safeString(market, 'quoteCurrency');
-        const settleId = this.safeString(market, 'rootSymbol');
-        const base = this.safeCurrencyCode(baseId);
-        const quote = this.safeCurrencyCode(quoteId);
-        const settle = this.safeCurrencyCode(settleId);
-        const symbol = base + '/' + quote + ':' + settle;
-        const inverse = this.safeValue(market, 'isInverse');
-        const status = this.safeString(market, 'status');
-        const multiplier = this.safeString(market, 'multiplier');
-        const tickSize = this.safeNumber(market, 'indexPriceTickSize');
-        const lotSize = this.safeNumber(market, 'lotSize');
-        const limitAmountMax = this.safeNumber(market, 'maxOrderQty');
-        const limitPriceMax = this.safeNumber(market, 'maxPrice');
-        return {
-            'id': id,
-            'symbol': symbol,
-            'base': base,
-            'quote': quote,
-            'settle': settle,
-            'baseId': baseId,
-            'quoteId': quoteId,
-            'settleId': settleId,
-            'type': 'swap',
-            'spot': false,
-            'margin': false,
-            'swap': true,
-            'future': false,
-            'option': false,
-            'active': (status === 'Open'),
-            'contract': true,
-            'linear': !inverse,
-            'inverse': inverse,
-            'taker': this.safeNumber(market, 'takerFeeRate'),
-            'maker': this.safeNumber(market, 'makerFeeRate'),
-            'contractSize': this.parseNumber(_base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringAbs(multiplier)),
-            'expiry': undefined,
-            'expiryDatetime': undefined,
-            'strike': undefined,
-            'optionType': undefined,
-            'precision': {
-                'amount': lotSize,
-                'price': tickSize,
-            },
-            'limits': {
-                'leverage': {
-                    'min': this.parseNumber('1'),
-                    'max': this.safeNumber(market, 'maxLeverage'),
-                },
-                'amount': {
-                    'min': lotSize,
-                    'max': limitAmountMax,
-                },
-                'price': {
-                    'min': tickSize,
-                    'max': limitPriceMax,
-                },
-                'cost': {
-                    'min': undefined,
-                    'max': undefined,
-                },
-            },
-            'created': this.safeInteger(market, 'firstOpenDate'),
-            'info': market,
-        };
-    }
-    parseTicker(ticker, market = undefined) {
-        //
-        //    {
-        //        "symbol": "BTCUSDTPERP",                   // Market of the symbol
-        //        "sequence": 45,                            // Sequence number which is used to judge the continuity of the pushed messages
-        //        "side": "sell",                            // Transaction side of the last traded taker order
-        //        "price": 3600.00,                          // Filled price
-        //        "size": 16,                                // Filled quantity
-        //        "tradeId": "5c9dcf4170744d6f5a3d32fb",     // Order ID
-        //        "bestBidSize": 795,                        // Best bid size
-        //        "bestBidPrice": 3200.00,                   // Best bid
-        //        "bestAskPrice": 3600.00,                   // Best ask size
-        //        "bestAskSize": 284,                        // Best ask
-        //        "ts": 1553846081210004941                  // Filled time - nanosecond
-        //    }
-        //
-        //    {
-        //        "volume": 30449670,            //24h Volume
-        //        "turnover": 845169919063,      //24h Turnover
-        //        "lastPrice": 3551,           //Last price
-        //        "priceChgPct": 0.0043,         //24h Change
-        //        "ts": 1547697294838004923      //Snapshot time (nanosecond)
-        //    }
-        //
-        const marketId = this.safeString(ticker, 'symbol');
-        const symbol = this.safeSymbol(marketId, market);
-        const timestampString = this.safeString(ticker, 'ts');
-        let multiplier = undefined;
-        if (timestampString.length === 16) {
-            // 16 digits: https://app.travis-ci.com/github/ccxt/ccxt/builds/270587157#L5454
-            multiplier = 0.001;
-        }
-        else if (timestampString.length === 17) {
-            // 17 digits: https://app.travis-ci.com/github/ccxt/ccxt/builds/269959181#L4011
-            multiplier = 0.0001;
-        }
-        else if (timestampString.length === 18) {
-            multiplier = 0.00001;
-        }
-        else {
-            // 19 length default
-            multiplier = 0.000001;
-        }
-        const timestamp = this.safeIntegerProduct(ticker, 'ts', multiplier);
-        const last = this.safeString2(ticker, 'price', 'lastPrice');
-        const percentage = _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringMul(this.safeString(ticker, 'priceChgPct'), '100');
-        return this.safeTicker({
-            'symbol': symbol,
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'high': undefined,
-            'low': undefined,
-            'bid': this.safeString(ticker, 'bestBidPrice'),
-            'bidVolume': this.safeString(ticker, 'bestBidSize'),
-            'ask': this.safeString(ticker, 'bestAskPrice'),
-            'askVolume': this.safeString(ticker, 'bestAskSize'),
-            'vwap': undefined,
-            'open': undefined,
-            'close': last,
-            'last': last,
-            'previousClose': undefined,
-            'change': undefined,
-            'percentage': percentage,
-            'average': undefined,
-            'baseVolume': this.safeString2(ticker, 'size', 'volume'),
-            'quoteVolume': this.safeString(ticker, 'turnover'),
-            'info': ticker,
-        }, market);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchTicker
-     * @description fetches a price ticker, a statistical calculation with the information calculated over the past 24 hours for a specific market
-     * @see https://api-docs.poloniex.com/futures/api/ticker#get-real-time-ticker-20
-     * @param {string} symbol unified symbol of the market to fetch the ticker for
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a [ticker structure]{@link https://docs.ccxt.com/#/?id=ticker-structure}
-     */
-    async fetchTicker(symbol, params = {}) {
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        const request = {
-            'symbol': market['id'],
-        };
-        const response = await this.publicGetTicker(this.extend(request, params));
-        //
-        // {
-        //     "code": "200000",
-        //     "data": {
-        //       "sequence": "11574719",
-        //       "symbol": "BTCUSDTPERP",
-        //       "side": "sell",
-        //       "size": "1",
-        //       "price": "16990.1",
-        //       "bestBidSize": "3",
-        //       "bestBidPrice": "16990.1",
-        //       "bestAskPrice": "16991.0",
-        //       "tradeId": "639c8a529fd7cf0001af4157",
-        //       "bestAskSize": "505",
-        //       "ts": "1671203410721232337"
-        //     }
-        // }
-        //
-        return this.parseTicker(this.safeValue(response, 'data', {}), market);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchTickers
-     * @description fetches price tickers for multiple markets, statistical information calculated over the past 24 hours for each market
-     * @see https://api-docs.poloniex.com/futures/api/ticker#get-real-time-ticker-of-all-symbols
-     * @param {string[]|undefined} symbols unified symbols of the markets to fetch the ticker for, all market tickers are returned if not assigned
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a dictionary of [ticker structures]{@link https://docs.ccxt.com/#/?id=ticker-structure}
-     */
-    async fetchTickers(symbols = undefined, params = {}) {
-        await this.loadMarkets();
-        const response = await this.publicGetTickers(params);
-        const data = this.safeList(response, 'data', []);
-        return this.parseTickers(data, symbols);
-    }
-    /**
-     * @method
-     * @name poloniexfuturesfutures#fetchOrderBook
-     * @description fetches information on open orders with bid (buy) and ask (sell) prices, volumes and other data
-     * @see https://api-docs.poloniex.com/futures/api/orderbook#get-full-order-book---level-2
-     * @see https://api-docs.poloniex.com/futures/api/orderbook#get-full-order-book--level-3
-     * @param {string} symbol unified symbol of the market to fetch the order book for
-     * @param {int} [limit] the maximum amount of order book entries to return
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} A dictionary of [order book structures]{@link https://docs.ccxt.com/#/?id=order-book-structure} indexed by market symbols
-     */
-    async fetchOrderBook(symbol, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        const level = this.safeNumber(params, 'level');
-        params = this.omit(params, 'level');
-        if (level !== undefined && level !== 2 && level !== 3) {
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.BadRequest(this.id + ' fetchOrderBook() can only return level 2 & 3');
-        }
-        const market = this.market(symbol);
-        const request = {
-            'symbol': market['id'],
-        };
-        let response = undefined;
-        if (level === 3) {
-            response = await this.publicGetLevel3Snapshot(this.extend(request, params));
-        }
-        else {
-            response = await this.publicGetLevel2Snapshot(this.extend(request, params));
-        }
-        // L2
-        //
-        // {
-        //     "code": "200000",
-        //     "data": {
-        //     "symbol": "BTCUSDTPERP",
-        //     "sequence": 1669149851334,
-        //     "asks": [
-        //         [
-        //             16952,
-        //             12
-        //         ],
-        //     ],
-        //     "bids": [
-        //         [
-        //             16951.9,
-        //             13
-        //         ],
-        //     ],
-        // }
-        //
-        // L3
-        //
-        // {
-        //     "code": "200000",
-        //     "data": {
-        //     "symbol": "BTCUSDTPERP",
-        //     "sequence": 1669149851334,
-        //     "asks": [
-        //         [
-        //             "639c95388cba5100084eabce",
-        //             "16952.0",
-        //             "1",
-        //             1671206200542484700
-        //         ],
-        //     ],
-        //     "bids": [
-        //         [
-        //             "626659d83385c200072e690b",
-        //             "17.0",
-        //             "1000",
-        //             1650874840161291000
-        //         ],
-        //     ],
-        // }
-        //
-        const data = this.safeValue(response, 'data', {});
-        const timestamp = this.safeIntegerProduct(data, 'ts', 0.000001);
-        let orderbook = undefined;
-        if (level === 3) {
-            orderbook = this.parseOrderBook(data, market['symbol'], timestamp, 'bids', 'asks', 1, 2);
-        }
-        else {
-            orderbook = this.parseOrderBook(data, market['symbol'], timestamp, 'bids', 'asks', 0, 1);
-        }
-        orderbook['nonce'] = this.safeInteger(data, 'sequence');
-        return orderbook;
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchL3OrderBook
-     * @description fetches level 3 information on open orders with bid (buy) and ask (sell) prices, volumes and other data
-     * @see https://api-docs.poloniex.com/futures/api/orderbook#get-full-order-book--level-3
-     * @param {string} symbol unified market symbol
-     * @param {int} [limit] max number of orders to return, default is undefined
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} an [order book structure]{@link https://docs.ccxt.com/#/?id=order-book-structure}
-     */
-    async fetchL3OrderBook(symbol, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        return this.fetchOrderBook(market['id'], undefined, { 'level': 3 });
-    }
-    parseTrade(trade, market = undefined) {
-        //
-        // fetchTrades (public)
-        //
-        //     {
-        //         "sequence": 11827985,
-        //         "side": "buy",
-        //         "size": 101,
-        //         "price": "16864.0000000000",
-        //         "takerOrderId": "639c986f0ac2470007be75ee",
-        //         "makerOrderId": "639c986fa69d280007b76111",
-        //         "tradeId": "639c986f9fd7cf0001afd7ee",
-        //         "ts": 1671207023485924400
-        //     }
-        //
-        // fetchMyTrades
-        //
-        //   {
-        //       "symbol": "BTCUSDTPERP",  //Ticker symbol of the contract
-        //       "tradeId": "5ce24c1f0c19fc3c58edc47c",  //Trade ID
-        //       "orderId": "5ce24c16b210233c36ee321d",  // Order ID
-        //       "side": "sell",  //Transaction side
-        //       "liquidity": "taker",  //Liquidity- taker or maker
-        //       "price": "8302",  //Filled price
-        //       "size": 10,  //Filled amount
-        //       "value": "0.001204529",  //Order value
-        //       "feeRate": "0.0005",  //Floating fees
-        //       "fixFee": "0.00000006",  //Fixed fees
-        //       "feeCurrency": "XBT",  //Charging currency
-        //       "stop": "",  //A mark to the stop order type
-        //       "fee": "0.0000012022",  //Transaction fee
-        //       "orderType": "limit",  //Order type
-        //       "tradeType": "trade",  //Trade type (trade, liquidation, ADL or settlement)
-        //       "createdAt": 1558334496000,  //Time the order created
-        //       "settleCurrency": "XBT", //settlement currency
-        //       "tradeTime": 1558334496000000000 //trade time in nanosecond
-        //   }
-        //
-        const marketId = this.safeString(trade, 'symbol');
-        market = this.safeMarket(marketId, market, '-');
-        const id = this.safeString(trade, 'tradeId');
-        const orderId = this.safeString(trade, 'orderId');
-        const takerOrMaker = this.safeString(trade, 'liquidity');
-        let timestamp = this.safeInteger(trade, 'ts');
-        if (timestamp !== undefined) {
-            timestamp = this.parseToInt(timestamp / 1000000);
-        }
-        else {
-            timestamp = this.safeInteger(trade, 'createdAt');
-            // if it's a historical v1 trade, the exchange returns timestamp in seconds
-            if (('dealValue' in trade) && (timestamp !== undefined)) {
-                timestamp = timestamp * 1000;
-            }
-        }
-        const priceString = this.safeString(trade, 'price');
-        const amountString = this.safeString(trade, 'size');
-        const side = this.safeString(trade, 'side');
-        let fee = undefined;
-        const feeCostString = this.safeString(trade, 'fee');
-        if (feeCostString !== undefined) {
-            const feeCurrencyId = this.safeString(trade, 'feeCurrency');
-            let feeCurrency = this.safeCurrencyCode(feeCurrencyId);
-            if (feeCurrency === undefined) {
-                feeCurrency = (side === 'sell') ? market['quote'] : market['base'];
-            }
-            fee = {
-                'cost': feeCostString,
-                'currency': feeCurrency,
-                'rate': this.safeString(trade, 'feeRate'),
-            };
-        }
-        let type = this.safeString(trade, 'orderType');
-        if (type === 'match') {
-            type = undefined;
-        }
-        const costString = this.safeString(trade, 'value');
-        return this.safeTrade({
-            'info': trade,
-            'id': id,
-            'order': orderId,
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'symbol': market['symbol'],
-            'type': type,
-            'takerOrMaker': takerOrMaker,
-            'side': side,
-            'price': priceString,
-            'amount': amountString,
-            'cost': costString,
-            'fee': fee,
-        }, market);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchTrades
-     * @description get the list of most recent trades for a particular symbol
-     * @see https://api-docs.poloniex.com/futures/api/historical#transaction-history
-     * @param {string} symbol unified symbol of the market to fetch trades for
-     * @param {int} [since] timestamp in ms of the earliest trade to fetch
-     * @param {int} [limit] the maximum amount of trades to fetch
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {Trade[]} a list of [trade structures]{@link https://docs.ccxt.com/#/?id=public-trades}
-     */
-    async fetchTrades(symbol, since = undefined, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        const request = {
-            'symbol': market['id'],
-        };
-        const response = await this.publicGetTradeHistory(this.extend(request, params));
-        //
-        //    {
-        //        "code": "200000",
-        //        "data": [
-        //        {
-        //          "sequence": 11827985,
-        //          "side": "buy",
-        //          "size": 101,
-        //          "price": "16864.0000000000",
-        //          "takerOrderId": "639c986f0ac2470007be75ee",
-        //          "makerOrderId": "639c986fa69d280007b76111",
-        //          "tradeId": "639c986f9fd7cf0001afd7ee",
-        //          "ts": 1671207023485924400
-        //        },
-        //    }
-        //
-        const trades = this.safeList(response, 'data', []);
-        return this.parseTrades(trades, market, since, limit);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchTime
-     * @description fetches the current integer timestamp in milliseconds from the poloniexfutures server
-     * @see https://api-docs.poloniex.com/futures/api/time#server-time
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {int} the current integer timestamp in milliseconds from the poloniexfutures server
-     */
-    async fetchTime(params = {}) {
-        const response = await this.publicGetTimestamp(params);
-        //
-        // {
-        //     "code":"200000",
-        //     "msg":"success",
-        //     "data":1546837113087
-        // }
-        //
-        return this.safeInteger(response, 'data');
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchOHLCV
-     * @description fetches historical candlestick data containing the open, high, low, and close price, and the volume of a market
-     * @see https://api-docs.poloniex.com/futures/api/kline#get-k-line-data-of-contract
-     * @param {string} symbol unified symbol of the market to fetch OHLCV data for
-     * @param {string} timeframe the length of time each candle represents
-     * @param {int} [since] timestamp in ms of the earliest candle to fetch
-     * @param {int} [limit] the maximum amount of candles to fetch
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {int[][]} A list of candles ordered as timestamp, open, high, low, close, volume
-     */
-    async fetchOHLCV(symbol, timeframe = '1m', since = undefined, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        const marketId = market['id'];
-        const parsedTimeframe = this.safeInteger(this.timeframes, timeframe);
-        const request = {
-            'symbol': marketId,
-        };
-        if (parsedTimeframe !== undefined) {
-            request['granularity'] = parsedTimeframe;
-        }
-        else {
-            request['granularity'] = timeframe;
-        }
-        const duration = this.parseTimeframe(timeframe) * 1000;
-        let endAt = this.milliseconds();
-        if (since !== undefined) {
-            request['from'] = since;
-            if (limit === undefined) {
-                limit = this.safeInteger(this.options, 'fetchOHLCVLimit', 200);
-            }
-            endAt = this.sum(since, limit * duration);
-            request['to'] = endAt;
-        }
-        else if (limit !== undefined) {
-            since = endAt - limit * duration;
-            request['from'] = since;
-        }
-        const response = await this.publicGetKlineQuery(this.extend(request, params));
-        //
-        //    {
-        //        "code": "200000",
-        //        "data": [
-        //            [1636459200000, 4779.3, 4792.1, 4768.7, 4770.3, 78051],
-        //            [1636460100000, 4770.25, 4778.55, 4757.55, 4777.25, 80164],
-        //            [1636461000000, 4777.25, 4791.45, 4774.5, 4791.3, 51555]
-        //        ]
-        //    }
-        //
-        const data = this.safeList(response, 'data', []);
-        return this.parseOHLCVs(data, market, timeframe, since, limit);
-    }
-    parseBalance(response) {
-        const result = {
-            'info': response,
-            'timestamp': undefined,
-            'datetime': undefined,
-        };
-        const data = this.safeValue(response, 'data');
-        const currencyId = this.safeString(data, 'currency');
-        const code = this.safeCurrencyCode(currencyId);
-        const account = this.account();
-        account['free'] = this.safeString(data, 'availableBalance');
-        account['total'] = this.safeString(data, 'accountEquity');
-        result[code] = account;
-        return this.safeBalance(result);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchBalance
-     * @description query for balance and get the amount of funds available for trading or funds locked in orders
-     * @see https://api-docs.poloniex.com/futures/api/account#get-account-overview
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a [balance structure]{@link https://docs.ccxt.com/#/?id=balance-structure}
-     */
-    async fetchBalance(params = {}) {
-        await this.loadMarkets();
-        const currencyId = this.safeString(params, 'currency');
-        let request = {};
-        if (currencyId !== undefined) {
-            const currency = this.currency(currencyId);
-            request = {
-                'currency': currency['id'],
-            };
-        }
-        const response = await this.privateGetAccountOverview(this.extend(request, params));
-        //
-        //     {
-        //         "code": "200000",
-        //         "data": {
-        //             "accountEquity": 0.00005,
-        //             "unrealisedPNL": 0,
-        //             "marginBalance": 0.00005,
-        //             "positionMargin": 0,
-        //             "orderMargin": 0,
-        //             "frozenFunds": 0,
-        //             "availableBalance": 0.00005,
-        //             "currency": "XBT"
-        //         }
-        //     }
-        //
-        return this.parseBalance(response);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#createOrder
-     * @description Create an order on the exchange
-     * @see https://api-docs.poloniex.com/futures/api/orders#place-an-order
-     * @param {string} symbol Unified CCXT market symbol
-     * @param {string} type 'limit' or 'market'
-     * @param {string} side 'buy' or 'sell'
-     * @param {float} amount the amount of currency to trade
-     * @param {float} [price] the price at which the order is to be fulfilled, in units of the quote currency, ignored in market orders
-     * @param {object} [params]  extra parameters specific to the exchange API endpoint
-     * @param {float} [params.leverage] Leverage size of the order
-     * @param {float} [params.triggerPrice] The price at which a trigger order is triggered at
-     * @param {bool} [params.reduceOnly] A mark to reduce the position size only. Set to false by default. Need to set the position size when reduceOnly is true.
-     * @param {string} [params.timeInForce] GTC, GTT, IOC, or FOK, default is GTC, limit orders only
-     * @param {string} [params.postOnly] Post only flag, invalid when timeInForce is IOC or FOK
-     * @param {string} [params.clientOid] client order id, defaults to uuid if not passed
-     * @param {string} [params.remark] remark for the order, length cannot exceed 100 utf8 characters
-     * @param {string} [params.stop] 'up' or 'down', defaults to 'up' if side is sell and 'down' if side is buy, requires stopPrice
-     * @param {string} [params.stopPriceType]  TP, IP or MP, defaults to TP
-     * @param {bool} [params.closeOrder] set to true to close position
-     * @param {bool} [params.forceHold] A mark to forcely hold the funds for an order, even though it's an order to reduce the position size. This helps the order stay on the order book and not get canceled when the position size changes. Set to false by default.
-     * @returns {object} an [order structure]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async createOrder(symbol, type, side, amount, price = undefined, params = {}) {
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        // required param, cannot be used twice
-        const clientOrderId = this.safeString2(params, 'clientOid', 'clientOrderId', this.uuid());
-        params = this.omit(params, ['clientOid', 'clientOrderId']);
-        if (amount < 1) {
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.InvalidOrder(this.id + ' createOrder() minimum contract order amount is 1');
-        }
-        const preciseAmount = parseInt(this.amountToPrecision(symbol, amount));
-        const request = {
-            'clientOid': clientOrderId,
-            'side': side,
-            'symbol': market['id'],
-            'type': type,
-            'size': preciseAmount,
-            'leverage': 1,
-        };
-        const triggerPrice = this.safeValue2(params, 'triggerPrice', 'stopPrice');
-        if (triggerPrice) {
-            request['stop'] = (side === 'buy') ? 'up' : 'down';
-            const stopPriceType = this.safeString(params, 'stopPriceType', 'TP');
-            request['stopPriceType'] = stopPriceType;
-            request['stopPrice'] = this.priceToPrecision(symbol, triggerPrice);
-        }
-        const timeInForce = this.safeStringUpper(params, 'timeInForce');
-        if (type === 'limit') {
-            if (price === undefined) {
-                throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ArgumentsRequired(this.id + ' createOrder() requires a price argument for limit orders');
-            }
-            else {
-                request['price'] = this.priceToPrecision(symbol, price);
-            }
-            if (timeInForce !== undefined) {
-                request['timeInForce'] = timeInForce;
-            }
-        }
-        const postOnly = this.safeBool(params, 'postOnly', false);
-        const hidden = this.safeValue(params, 'hidden');
-        if (postOnly && (hidden !== undefined)) {
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.BadRequest(this.id + ' createOrder() does not support the postOnly parameter together with a hidden parameter');
-        }
-        const iceberg = this.safeValue(params, 'iceberg');
-        if (iceberg) {
-            const visibleSize = this.safeValue(params, 'visibleSize');
-            if (visibleSize === undefined) {
-                throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ArgumentsRequired(this.id + ' createOrder() requires a visibleSize parameter for iceberg orders');
-            }
-        }
-        params = this.omit(params, ['timeInForce', 'stopPrice', 'triggerPrice']); // Time in force only valid for limit orders, exchange error when gtc for market orders
-        const response = await this.privatePostOrders(this.extend(request, params));
-        //
-        //    {
-        //        "code": "200000",
-        //        "data": {
-        //            "orderId": "619717484f1d010001510cde",
-        //        },
-        //    }
-        //
-        const data = this.safeValue(response, 'data', {});
-        return this.safeOrder({
-            'id': this.safeString(data, 'orderId'),
-            'clientOrderId': undefined,
-            'timestamp': undefined,
-            'datetime': undefined,
-            'lastTradeTimestamp': undefined,
-            'symbol': undefined,
-            'type': undefined,
-            'side': undefined,
-            'price': undefined,
-            'amount': undefined,
-            'cost': undefined,
-            'average': undefined,
-            'filled': undefined,
-            'remaining': undefined,
-            'status': undefined,
-            'fee': undefined,
-            'trades': undefined,
-            'timeInForce': undefined,
-            'postOnly': undefined,
-            'triggerPrice': undefined,
-            'info': response,
-        }, market);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#cancelOrder
-     * @description cancels an open order
-     * @see https://api-docs.poloniex.com/futures/api/orders#cancel-an-order
-     * @param {string} id order id
-     * @param {string} symbol unified symbol of the market the order was made in
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} An [order structure]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async cancelOrder(id, symbol = undefined, params = {}) {
-        await this.loadMarkets();
-        const request = {
-            'order-id': id,
-        };
-        const response = await this.privateDeleteOrdersOrderId(this.extend(request, params));
-        //
-        //    {
-        //        "code": "200000",
-        //        "data": {
-        //            "cancelledOrderIds": [
-        //                "619714b8b6353000014c505a",
-        //            ],
-        //            "cancelFailedOrders": [
-        //                {
-        //                    "orderId": "63a9c5c2b9e7d70007eb0cd5",
-        //                    "orderState": "2"
-        //                }
-        //            ],
-        //        },
-        //    }
-        //
-        const data = this.safeValue(response, 'data');
-        const cancelledOrderIds = this.safeValue(data, 'cancelledOrderIds');
-        const cancelledOrderIdsLength = cancelledOrderIds.length;
-        if (cancelledOrderIdsLength === 0) {
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.InvalidOrder(this.id + ' cancelOrder() order already cancelled');
-        }
-        return this.parseOrder(data);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchPositions
-     * @description fetch all open positions
-     * @see https://api-docs.poloniex.com/futures/api/positions#get-position-list
-     * @param {string[]|undefined} symbols list of unified market symbols
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object[]} a list of [position structure]{@link https://docs.ccxt.com/#/?id=position-structure}
-     */
-    async fetchPositions(symbols = undefined, params = {}) {
-        await this.loadMarkets();
-        const response = await this.privateGetPositions(params);
-        //
-        //    {
-        //        "code": "200000",
-        //        "data": [
-        //            {
-        //                "id": "615ba79f83a3410001cde321",
-        //                "symbol": "ETHUSDTM",
-        //                "autoDeposit": false,
-        //                "maintMarginReq": 0.005,
-        //                "riskLimit": 1000000,
-        //                "realLeverage": 18.61,
-        //                "crossMode": false,
-        //                "delevPercentage": 0.86,
-        //                "openingTimestamp": 1638563515618,
-        //                "currentTimestamp": 1638576872774,
-        //                "currentQty": 2,
-        //                "currentCost": 83.64200000,
-        //                "currentComm": 0.05018520,
-        //                "unrealisedCost": 83.64200000,
-        //                "realisedGrossCost": 0.00000000,
-        //                "realisedCost": 0.05018520,
-        //                "isOpen": true,
-        //                "markPrice": 4225.01,
-        //                "markValue": 84.50020000,
-        //                "posCost": 83.64200000,
-        //                "posCross": 0.0000000000,
-        //                "posInit": 3.63660870,
-        //                "posComm": 0.05236717,
-        //                "posLoss": 0.00000000,
-        //                "posMargin": 3.68897586,
-        //                "posMaint": 0.50637594,
-        //                "maintMargin": 4.54717586,
-        //                "realisedGrossPnl": 0.00000000,
-        //                "realisedPnl": -0.05018520,
-        //                "unrealisedPnl": 0.85820000,
-        //                "unrealisedPnlPcnt": 0.0103,
-        //                "unrealisedRoePcnt": 0.2360,
-        //                "avgEntryPrice": 4182.10,
-        //                "liquidationPrice": 4023.00,
-        //                "bankruptPrice": 4000.25,
-        //                "settleCurrency": "USDT",
-        //                "isInverse": false
-        //            }
-        //        ]
-        //    }
-        //
-        const data = this.safeList(response, 'data');
-        return this.parsePositions(data, symbols);
-    }
-    parsePosition(position, market = undefined) {
-        //
-        //    {
-        //        "code": "200000",
-        //        "data": [
-        //            {
-        //                "id": "615ba79f83a3410001cde321",         // Position ID
-        //                "symbol": "ETHUSDTM",                     // Symbol
-        //                "autoDeposit": false,                     // Auto deposit margin or not
-        //                "maintMarginReq": 0.005,                  // Maintenance margin requirement
-        //                "riskLimit": 1000000,                     // Risk limit
-        //                "realLeverage": 25.92,                    // Leverage of the order
-        //                "crossMode": false,                       // Cross mode or not
-        //                "delevPercentage": 0.76,                  // ADL ranking percentile
-        //                "openingTimestamp": 1638578546031,        // Open time
-        //                "currentTimestamp": 1638578563580,        // Current timestamp
-        //                "currentQty": 2,                          // Current postion quantity
-        //                "currentCost": 83.787,                    // Current postion value
-        //                "currentComm": 0.0167574,                 // Current commission
-        //                "unrealisedCost": 83.787,                 // Unrealised value
-        //                "realisedGrossCost": 0.0,                 // Accumulated realised gross profit value
-        //                "realisedCost": 0.0167574,                // Current realised position value
-        //                "isOpen": true,                           // Opened position or not
-        //                "markPrice": 4183.38,                     // Mark price
-        //                "markValue": 83.6676,                     // Mark value
-        //                "posCost": 83.787,                        // Position value
-        //                "posCross": 0.0,                          // added margin
-        //                "posInit": 3.35148,                       // Leverage margin
-        //                "posComm": 0.05228309,                    // Bankruptcy cost
-        //                "posLoss": 0.0,                           // Funding fees paid out
-        //                "posMargin": 3.40376309,                  // Position margin
-        //                "posMaint": 0.50707892,                   // Maintenance margin
-        //                "maintMargin": 3.28436309,                // Position margin
-        //                "realisedGrossPnl": 0.0,                  // Accumulated realised gross profit value
-        //                "realisedPnl": -0.0167574,                // Realised profit and loss
-        //                "unrealisedPnl": -0.1194,                 // Unrealised profit and loss
-        //                "unrealisedPnlPcnt": -0.0014,             // Profit-loss ratio of the position
-        //                "unrealisedRoePcnt": -0.0356,             // Rate of return on investment
-        //                "avgEntryPrice": 4189.35,                 // Average entry price
-        //                "liquidationPrice": 4044.55,              // Liquidation price
-        //                "bankruptPrice": 4021.75,                 // Bankruptcy price
-        //                "settleCurrency": "USDT",                 // Currency used to clear and settle the trades
-        //                "isInverse": false
-        //            }
-        //        ]
-        //    }
-        //
-        const symbol = this.safeString(position, 'symbol');
-        market = this.safeMarket(symbol, market);
-        const timestamp = this.safeInteger(position, 'currentTimestamp');
-        const size = this.safeString(position, 'currentQty');
-        let side;
-        if (_base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringGt(size, '0')) {
-            side = 'long';
-        }
-        else if (_base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringLt(size, '0')) {
-            side = 'short';
-        }
-        const notional = _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringAbs(this.safeString(position, 'posCost'));
-        const initialMargin = this.safeString(position, 'posInit');
-        const initialMarginPercentage = _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringDiv(initialMargin, notional);
-        // const marginRatio = Precise.stringDiv (maintenanceRate, collateral);
-        const unrealisedPnl = this.safeString(position, 'unrealisedPnl');
-        const crossMode = this.safeValue(position, 'crossMode');
-        // currently crossMode is always set to false and only isolated positions are supported
-        const marginMode = crossMode ? 'cross' : 'isolated';
-        return {
-            'info': position,
-            'id': undefined,
-            'symbol': this.safeString(market, 'symbol'),
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'initialMargin': this.parseNumber(initialMargin),
-            'initialMarginPercentage': this.parseNumber(initialMarginPercentage),
-            'maintenanceMargin': this.safeNumber(position, 'posMaint'),
-            'maintenanceMarginPercentage': this.safeNumber(position, 'maintMarginReq'),
-            'entryPrice': this.safeNumber(position, 'avgEntryPrice'),
-            'notional': this.parseNumber(notional),
-            'leverage': this.safeNumber(position, 'realLeverage'),
-            'unrealizedPnl': this.parseNumber(unrealisedPnl),
-            'contracts': this.parseNumber(_base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringAbs(size)),
-            'contractSize': this.safeValue(market, 'contractSize'),
-            'marginRatio': undefined,
-            'liquidationPrice': this.safeNumber(position, 'liquidationPrice'),
-            'markPrice': this.safeNumber(position, 'markPrice'),
-            'collateral': this.safeNumber(position, 'maintMargin'),
-            'marginMode': marginMode,
-            'side': side,
-            'percentage': this.parseNumber(_base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringDiv(unrealisedPnl, initialMargin)),
-            'stopLossPrice': undefined,
-            'takeProfitPrice': undefined,
-        };
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchFundingHistory
-     * @description fetch the history of funding payments paid and received on this account
-     * @see https://api-docs.poloniex.com/futures/api/funding-fees#get-funding-history
-     * @param {string} symbol unified market symbol
-     * @param {int} [since] the earliest time in ms to fetch funding history for
-     * @param {int} [limit] the maximum number of funding history structures to retrieve
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a [funding history structure]{@link https://docs.ccxt.com/#/?id=funding-history-structure}
-     */
-    async fetchFundingHistory(symbol = undefined, since = undefined, limit = undefined, params = {}) {
-        if (symbol === undefined) {
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ArgumentsRequired(this.id + ' fetchFundingHistory() requires a symbol argument');
-        }
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        const request = {
-            'symbol': market['id'],
-        };
-        if (since !== undefined) {
-            request['startAt'] = since;
-        }
-        if (limit !== undefined) {
-            // * Since is ignored if limit is defined
-            request['maxCount'] = limit;
-        }
-        const response = await this.privateGetFundingHistory(this.extend(request, params));
-        //
-        //    {
-        //        "code": "200000",
-        //        "data": {
-        //            "dataList": [
-        //                {
-        //                    "id": 239471298749817,
-        //                    "symbol": "ETHUSDTM",
-        //                    "timePoint": 1638532800000,
-        //                    "fundingRate": 0.000100,
-        //                    "markPrice": 4612.8300000000,
-        //                    "positionQty": 12,
-        //                    "positionCost": 553.5396000000,
-        //                    "funding": -0.0553539600,
-        //                    "settleCurrency": "USDT"
-        //                },
-        //                ...
-        //            ],
-        //            "hasMore": true
-        //        }
-        //    }
-        //
-        const data = this.safeValue(response, 'data');
-        const dataList = this.safeValue(data, 'dataList', []);
-        const dataListLength = dataList.length;
-        const fees = [];
-        for (let i = 0; i < dataListLength; i++) {
-            const listItem = dataList[i];
-            const timestamp = this.safeInteger(listItem, 'timePoint');
-            fees.push({
-                'info': listItem,
-                'symbol': symbol,
-                'code': this.safeCurrencyCode(this.safeString(listItem, 'settleCurrency')),
-                'timestamp': timestamp,
-                'datetime': this.iso8601(timestamp),
-                'id': this.safeNumber(listItem, 'id'),
-                'amount': this.safeNumber(listItem, 'funding'),
-                'fundingRate': this.safeNumber(listItem, 'fundingRate'),
-                'markPrice': this.safeNumber(listItem, 'markPrice'),
-                'positionQty': this.safeNumber(listItem, 'positionQty'),
-                'positionCost': this.safeNumber(listItem, 'positionCost'),
-            });
-        }
-        return fees;
-    }
-    /**
-     * @method
-     * @name poloniexfutures#cancelAllOrders
-     * @description cancel all open orders
-     * @param {string} symbol unified market symbol, only orders in the market of this symbol are cancelled when symbol is not undefined
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @param {object} [params.trigger] When true, all the trigger orders will be cancelled
-     * @returns {object[]} a list of [order structures]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async cancelAllOrders(symbol = undefined, params = {}) {
-        await this.loadMarkets();
-        const request = {};
-        if (symbol !== undefined) {
-            request['symbol'] = this.marketId(symbol);
-        }
-        const trigger = this.safeValue2(params, 'stop', 'trigger');
-        params = this.omit(params, ['stop', 'trigger']);
-        let response = undefined;
-        if (trigger) {
-            response = await this.privateDeleteStopOrders(this.extend(request, params));
-        }
-        else {
-            response = await this.privateDeleteOrders(this.extend(request, params));
-        }
-        //
-        //   {
-        //       "code": "200000",
-        //       "data": {
-        //           "cancelledOrderIds": [
-        //                "619714b8b6353000014c505a",
-        //           ],
-        //       },
-        //   }
-        //
-        const data = this.safeValue(response, 'data');
-        const result = [];
-        const cancelledOrderIds = this.safeValue(data, 'cancelledOrderIds');
-        const cancelledOrderIdsLength = cancelledOrderIds.length;
-        for (let i = 0; i < cancelledOrderIdsLength; i++) {
-            const cancelledOrderId = this.safeString(cancelledOrderIds, i);
-            result.push(this.safeOrder({
-                'id': cancelledOrderId,
-                'clientOrderId': undefined,
-                'timestamp': undefined,
-                'datetime': undefined,
-                'lastTradeTimestamp': undefined,
-                'symbol': undefined,
-                'type': undefined,
-                'side': undefined,
-                'price': undefined,
-                'amount': undefined,
-                'cost': undefined,
-                'average': undefined,
-                'filled': undefined,
-                'remaining': undefined,
-                'status': undefined,
-                'fee': undefined,
-                'trades': undefined,
-                'timeInForce': undefined,
-                'postOnly': undefined,
-                'triggerPrice': undefined,
-                'info': response,
-            }));
-        }
-        return result;
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchOrdersByStatus
-     * @description fetches a list of orders placed on the exchange
-     * @see https://api-docs.poloniex.com/futures/api/orders#get-order-listdeprecated
-     * @see https://api-docs.poloniex.com/futures/api/orders#get-untriggered-stop-order-list
-     * @param {string} status 'active' or 'closed', only 'active' is valid for stop orders
-     * @param {string} symbol unified symbol for the market to retrieve orders from
-     * @param {int} [since] timestamp in ms of the earliest order to retrieve
-     * @param {int} [limit] The maximum number of orders to retrieve
-     * @param {object} [params] exchange specific parameters
-     * @param {bool} [params.stop] set to true to retrieve untriggered stop orders
-     * @param {int} [params.until] End time in ms
-     * @param {string} [params.side] buy or sell
-     * @param {string} [params.type] limit or market
-     * @returns An [array of order structures]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async fetchOrdersByStatus(status, symbol = undefined, since = undefined, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        const trigger = this.safeValue2(params, 'stop', 'trigger');
-        const until = this.safeInteger(params, 'until');
-        params = this.omit(params, ['trigger', 'stop', 'until']);
-        if (status === 'closed') {
-            status = 'done';
-        }
-        const request = {};
-        if (!trigger) {
-            request['status'] = (status === 'open') ? 'active' : 'done';
-        }
-        else if (status !== 'open') {
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.BadRequest(this.id + ' fetchOrdersByStatus() can only fetch untriggered stop orders');
-        }
-        let market = undefined;
-        if (symbol !== undefined) {
-            market = this.market(symbol);
-            request['symbol'] = market['id'];
-        }
-        if (since !== undefined) {
-            request['startAt'] = since;
-        }
-        if (until !== undefined) {
-            request['endAt'] = until;
-        }
-        let response = undefined;
-        if (trigger) {
-            response = await this.privateGetStopOrders(this.extend(request, params));
-        }
-        else {
-            response = await this.privateGetOrders(this.extend(request, params));
-        }
-        //
-        //    {
-        //        "code": "200000",
-        //        "data": {
-        //            "totalNum": 1,
-        //            "totalPage": 1,
-        //            "pageSize": 50,
-        //            "currentPage": 1,
-        //            "items": [
-        //                {
-        //                    "symbol": "ADAUSDTPERP",
-        //                    "leverage": "1",
-        //                    "hidden": false,
-        //                    "forceHold": false,
-        //                    "closeOrder": false,
-        //                    "type": "limit",
-        //                    "isActive": true,
-        //                    "createdAt": 1678936920000,
-        //                    "orderTime": 1678936920480905922,
-        //                    "price": "0.3",
-        //                    "iceberg": false,
-        //                    "stopTriggered": false,
-        //                    "id": "64128b582cc0710007a3c840",
-        //                    "value": "3",
-        //                    "timeInForce": "GTC",
-        //                    "updatedAt": 1678936920000,
-        //                    "side": "buy",
-        //                    "stopPriceType": "",
-        //                    "dealValue": "0",
-        //                    "dealSize": 0,
-        //                    "settleCurrency": "USDT",
-        //                    "stp": "",
-        //                    "filledValue": "0",
-        //                    "postOnly": false,
-        //                    "size": 1,
-        //                    "stop": "",
-        //                    "filledSize": 0,
-        //                    "reduceOnly": false,
-        //                    "marginType": 1,
-        //                    "cancelExist": false,
-        //                    "clientOid": "ba669f39-dfcc-4664-9801-a42d06e59c2e",
-        //                    "status": "open"
-        //                }
-        //            ]
-        //        }
-        //    }
-        //
-        const responseData = this.safeValue(response, 'data', {});
-        const orders = this.safeValue(responseData, 'items', []);
-        const ordersLength = orders.length;
-        const result = [];
-        for (let i = 0; i < ordersLength; i++) {
-            const order = orders[i];
-            const orderStatus = this.safeString(order, 'status');
-            if (status === orderStatus) {
-                result.push(orders[i]);
-            }
-        }
-        return this.parseOrders(result, market, since, limit);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchOpenOrders
-     * @description fetch all unfilled currently open orders
-     * @see https://api-docs.poloniex.com/futures/api/orders#get-order-listdeprecated
-     * @see https://api-docs.poloniex.com/futures/api/orders#get-untriggered-stop-order-list
-     * @param {string} symbol unified market symbol
-     * @param {int} [since] the earliest time in ms to fetch open orders for
-     * @param {int} [limit] the maximum number of  open orders structures to retrieve
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @param {int} [params.until] end time in ms
-     * @param {string} [params.side] buy or sell
-     * @param {string} [params.type] limit, or market
-     * @returns {Order[]} a list of [order structures]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async fetchOpenOrders(symbol = undefined, since = undefined, limit = undefined, params = {}) {
-        return await this.fetchOrdersByStatus('open', symbol, since, limit, params);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchClosedOrders
-     * @description fetches information on multiple closed orders made by the user
-     * @see https://api-docs.poloniex.com/futures/api/orders#get-order-listdeprecated
-     * @see https://api-docs.poloniex.com/futures/api/orders#get-untriggered-stop-order-list
-     * @param {string} symbol unified market symbol of the market orders were made in
-     * @param {int} [since] the earliest time in ms to fetch orders for
-     * @param {int} [limit] the maximum number of order structures to retrieve
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @param {int} [params.until] end time in ms
-     * @param {string} [params.side] buy or sell
-     * @param {string} [params.type] limit, or market
-     * @returns {Order[]} a list of [order structures]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async fetchClosedOrders(symbol = undefined, since = undefined, limit = undefined, params = {}) {
-        return await this.fetchOrdersByStatus('closed', symbol, since, limit, params);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchOrder
-     * @description fetches information on an order made by the user
-     * @see https://api-docs.poloniex.com/futures/api/orders#get-details-of-a-single-order
-     * @see https://api-docs.poloniex.com/futures/api/orders#get-single-order-by-clientoid
-     * @param {string} id the order id
-     * @param {string} symbol unified symbol of the market the order was made in
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} An [order structure]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async fetchOrder(id, symbol = undefined, params = {}) {
-        await this.loadMarkets();
-        const request = {};
-        let response = undefined;
-        if (id === undefined) {
-            const clientOrderId = this.safeString2(params, 'clientOid', 'clientOrderId');
-            if (clientOrderId === undefined) {
-                throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.InvalidOrder(this.id + ' fetchOrder() requires parameter id or params.clientOid');
-            }
-            request['clientOid'] = clientOrderId;
-            params = this.omit(params, ['clientOid', 'clientOrderId']);
-            response = await this.privateGetClientOrderIdClientOid(this.extend(request, params));
-        }
-        else {
-            request['order-id'] = id;
-            response = await this.privateGetOrdersOrderId(this.extend(request, params));
-        }
-        //
-        //    {
-        //        "code": "200000",
-        //        "data": {
-        //            "symbol": "ADAUSDTPERP",
-        //            "leverage": "1",
-        //            "hidden": false,
-        //            "forceHold": false,
-        //            "closeOrder": false,
-        //            "type": "market",
-        //            "isActive": false,
-        //            "createdAt": 1678929587000,
-        //            "orderTime": 1678929587248115582,
-        //            "iceberg": false,
-        //            "stopTriggered": false,
-        //            "id": "64126eb38c6919000737dcdc",
-        //            "value": "3.1783",
-        //            "timeInForce": "GTC",
-        //            "updatedAt": 1678929587000,
-        //            "side": "buy",
-        //            "stopPriceType": "",
-        //            "dealValue": "3.1783",
-        //            "dealSize": 1,
-        //            "settleCurrency": "USDT",
-        //            "trades": [
-        //                {
-        //                    "feePay": "0.00158915",
-        //                    "tradeId": "64126eb36803eb0001ff99bc"
-        //                }
-        //            ],
-        //            "endAt": 1678929587000,
-        //            "stp": "",
-        //            "filledValue": "3.1783",
-        //            "postOnly": false,
-        //            "size": 1,
-        //            "stop": "",
-        //            "filledSize": 1,
-        //            "reduceOnly": false,
-        //            "marginType": 1,
-        //            "cancelExist": false,
-        //            "clientOid": "d19e8fcb-2df4-44bc-afd4-67dd42048246",
-        //            "status": "done"
-        //        }
-        //    }
-        //
-        const market = (symbol !== undefined) ? this.market(symbol) : undefined;
-        const responseData = this.safeDict(response, 'data');
-        return this.parseOrder(responseData, market);
-    }
-    parseOrder(order, market = undefined) {
-        //
-        // createOrder
-        //
-        //    {
-        //        "code": "200000",
-        //        "data": {
-        //            "orderId": "619717484f1d010001510cde",
-        //        },
-        //    }
-        //
-        // fetchOrder
-        //
-        //    {
-        //        "symbol": "ADAUSDTPERP",
-        //        "leverage": "1",
-        //        "hidden": false,
-        //        "forceHold": false,
-        //        "closeOrder": false,
-        //        "type": "market",
-        //        "isActive": false,
-        //        "createdAt": 1678929587000,
-        //        "orderTime": 1678929587248115582,
-        //        "iceberg": false,
-        //        "stopTriggered": false,
-        //        "id": "64126eb38c6919000737dcdc",
-        //        "value": "3.1783",
-        //        "timeInForce": "GTC",
-        //        "updatedAt": 1678929587000,
-        //        "side": "buy",
-        //        "stopPriceType": "",
-        //        "dealValue": "3.1783",
-        //        "dealSize": 1,
-        //        "settleCurrency": "USDT",
-        //        "trades": [
-        //            {
-        //                "feePay": "0.00158915",
-        //                "tradeId": "64126eb36803eb0001ff99bc"
-        //            }
-        //        ],
-        //        "endAt": 1678929587000,
-        //        "stp": "",
-        //        "filledValue": "3.1783",
-        //        "postOnly": false,
-        //        "size": 1,
-        //        "stop": "",
-        //        "filledSize": 1,
-        //        "reduceOnly": false,
-        //        "marginType": 1,
-        //        "cancelExist": false,
-        //        "clientOid": "d19e8fcb-2df4-44bc-afd4-67dd42048246",
-        //        "status": "done"
-        //    }
-        //
-        // cancelOrder
-        //
-        //    {
-        //        "cancelledOrderIds": [
-        //            "619714b8b6353000014c505a",
-        //        ],
-        //        "cancelFailedOrders": [
-        //            {
-        //                "orderId": "63a9c5c2b9e7d70007eb0cd5",
-        //                "orderState": "2"
-        //            }
-        //        ],
-        //    },
-        //
-        const marketId = this.safeString(order, 'symbol');
-        market = this.safeMarket(marketId, market);
-        const timestamp = this.safeInteger(order, 'createdAt');
-        // price is zero for market order
-        // omitZero is called in safeOrder2
-        const feeCurrencyId = this.safeString(order, 'feeCurrency');
-        const filled = this.safeString(order, 'dealSize');
-        const rawCost = this.safeString2(order, 'dealFunds', 'filledValue');
-        let average = undefined;
-        if (_base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringGt(filled, '0')) {
-            const contractSize = this.safeString(market, 'contractSize');
-            if (market['linear']) {
-                average = _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringDiv(rawCost, _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringMul(contractSize, filled));
-            }
-            else {
-                average = _base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringDiv(_base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringMul(contractSize, filled), rawCost);
-            }
-        }
-        // precision reported by their api is 8 d.p.
-        // const average = Precise.stringDiv (rawCost, Precise.stringMul (filled, market['contractSize']));
-        // bool
-        const isActive = this.safeBool(order, 'isActive', false);
-        const cancelExist = this.safeBool(order, 'cancelExist', false);
-        const status = isActive ? 'open' : 'closed';
-        let id = this.safeString(order, 'id');
-        if ('cancelledOrderIds' in order) {
-            const cancelledOrderIds = this.safeValue(order, 'cancelledOrderIds');
-            id = this.safeString(cancelledOrderIds, 0);
-        }
-        return this.safeOrder({
-            'info': order,
-            'id': id,
-            'clientOrderId': this.safeString(order, 'clientOid'),
-            'symbol': this.safeString(market, 'symbol'),
-            'type': this.safeString(order, 'type'),
-            'timeInForce': this.safeString(order, 'timeInForce'),
-            'postOnly': this.safeValue(order, 'postOnly'),
-            'side': this.safeString(order, 'side'),
-            'amount': this.safeString(order, 'size'),
-            'price': this.safeString(order, 'price'),
-            'triggerPrice': this.safeString(order, 'stopPrice'),
-            'cost': this.safeString(order, 'dealValue'),
-            'filled': filled,
-            'remaining': undefined,
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'fee': {
-                'currency': this.safeCurrencyCode(feeCurrencyId),
-                'cost': this.safeString(order, 'fee'),
-            },
-            'status': cancelExist ? 'canceled' : status,
-            'lastTradeTimestamp': undefined,
-            'average': average,
-            'trades': undefined,
-        }, market);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchFundingRate
-     * @description fetch the current funding rate
-     * @see https://api-docs.poloniex.com/futures/api/futures-index#get-premium-index
-     * @param {string} symbol unified market symbol
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a [funding rate structure]{@link https://docs.ccxt.com/#/?id=funding-rate-structure}
-     */
-    async fetchFundingRate(symbol, params = {}) {
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        const request = {
-            'symbol': market['id'],
-        };
-        const response = await this.publicGetFundingRateSymbolCurrent(this.extend(request, params));
-        //
-        //    {
-        //        "symbol": ".BTCUSDTPERPFPI8H",
-        //        "granularity": 28800000,
-        //        "timePoint": 1558000800000,
-        //        "value": 0.00375,
-        //        "predictedValue": 0.00375
-        //    }
-        //
-        const data = this.safeDict(response, 'data', {});
-        return this.parseFundingRate(data, market);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchFundingInterval
-     * @description fetch the current funding rate interval
-     * @see https://api-docs.poloniex.com/futures/api/futures-index#get-premium-index
-     * @param {string} symbol unified market symbol
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a [funding rate structure]{@link https://docs.ccxt.com/#/?id=funding-rate-structure}
-     */
-    async fetchFundingInterval(symbol, params = {}) {
-        return await this.fetchFundingRate(symbol, params);
-    }
-    parseFundingRate(data, market = undefined) {
-        //
-        //     {
-        //         "symbol": ".ETHUSDTMFPI8H",
-        //         "granularity": 28800000,
-        //         "timePoint": 1637380800000,
-        //         "value": 0.0001,
-        //         "predictedValue": 0.0001,
-        //     }
-        //
-        const fundingTimestamp = this.safeInteger(data, 'timePoint');
-        const marketId = this.safeString(data, 'symbol');
-        return {
-            'info': data,
-            'symbol': this.safeSymbol(marketId, market, undefined, 'contract'),
-            'markPrice': undefined,
-            'indexPrice': undefined,
-            'interestRate': undefined,
-            'estimatedSettlePrice': undefined,
-            'timestamp': undefined,
-            'datetime': undefined,
-            'fundingRate': this.safeNumber(data, 'value'),
-            'fundingTimestamp': fundingTimestamp,
-            'fundingDatetime': this.iso8601(fundingTimestamp),
-            'nextFundingRate': this.safeNumber(data, 'predictedValue'),
-            'nextFundingTimestamp': undefined,
-            'nextFundingDatetime': undefined,
-            'previousFundingRate': undefined,
-            'previousFundingTimestamp': undefined,
-            'previousFundingDatetime': undefined,
-            'interval': this.parseFundingInterval(this.safeString(data, 'granularity')),
-        };
-    }
-    parseFundingInterval(interval) {
-        const intervals = {
-            '3600000': '1h',
-            '14400000': '4h',
-            '28800000': '8h',
-            '57600000': '16h',
-            '86400000': '24h',
-        };
-        return this.safeString(intervals, interval, interval);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#fetchMyTrades
-     * @description fetch all trades made by the user
-     * @see https://api-docs.poloniex.com/futures/api/fills#get-fillsdeprecated
-     * @param {string} symbol unified market symbol
-     * @param {int} [since] the earliest time in ms to fetch trades for
-     * @param {int} [limit] the maximum number of trades structures to retrieve
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @param {string} [params.orderIdFills] filles for a specific order (other parameters can be ignored if specified)
-     * @param {string} [params.side] buy or sell
-     * @param {string} [params.type]  limit, market, limit_stop or market_stop
-     * @param {int} [params.endAt] end time (milisecond)
-     * @returns {Trade[]} a list of [trade structures]{@link https://docs.ccxt.com/#/?id=trade-structure}
-     */
-    async fetchMyTrades(symbol = undefined, since = undefined, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        const request = {};
-        let market = undefined;
-        if (symbol !== undefined) {
-            market = this.market(symbol);
-            request['symbol'] = market['id'];
-        }
-        if (since !== undefined) {
-            request['startAt'] = since;
-        }
-        const response = await this.privateGetFills(this.extend(request, params));
-        //
-        //    {
-        //        "code": "200000",
-        //        "data": {
-        //          "currentPage":1,
-        //          "pageSize":1,
-        //          "totalNum":251915,
-        //          "totalPage":251915,
-        //          "items":[
-        //              {
-        //                "symbol": "BTCUSDTPERP",  //Ticker symbol of the contract
-        //                "tradeId": "5ce24c1f0c19fc3c58edc47c",  //Trade ID
-        //                "orderId": "5ce24c16b210233c36ee321d",  // Order ID
-        //                "side": "sell",  //Transaction side
-        //                "liquidity": "taker",  //Liquidity- taker or maker
-        //                "price": "8302",  //Filled price
-        //                "size": 10,  //Filled amount
-        //                "value": "0.001204529",  //Order value
-        //                "feeRate": "0.0005",  //Floating fees
-        //                "fixFee": "0.00000006",  //Fixed fees
-        //                "feeCurrency": "XBT",  //Charging currency
-        //                "stop": "",  //A mark to the stop order type
-        //                "fee": "0.0000012022",  //Transaction fee
-        //                "orderType": "limit",  //Order type
-        //                "tradeType": "trade",  //Trade type (trade, liquidation, ADL or settlement)
-        //                "createdAt": 1558334496000,  //Time the order created
-        //                "settleCurrency": "XBT", //settlement currency
-        //                "tradeTime": 1558334496000000000 //trade time in nanosecond
-        //              }
-        //          ]
-        //        }
-        //    }
-        //
-        const data = this.safeValue(response, 'data', {});
-        const trades = this.safeList(data, 'items', []);
-        return this.parseTrades(trades, market, since, limit);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#setMarginMode
-     * @description set margin mode to 'cross' or 'isolated'
-     * @see https://api-docs.poloniex.com/futures/api/margin-mode#change-margin-mode
-     * @param {string} marginMode "0" (isolated) or "1" (cross)
-     * @param {string} symbol unified market symbol
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} response from the exchange
-     */
-    async setMarginMode(marginMode, symbol = undefined, params = {}) {
-        if (symbol === undefined) {
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ArgumentsRequired(this.id + ' setMarginMode() requires a symbol argument');
-        }
-        if ((marginMode !== '0') && (marginMode !== '1') && (marginMode !== 'isolated') && (marginMode !== 'cross')) {
-            throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_2__.ArgumentsRequired(this.id + ' setMarginMode() marginMode must be 0/isolated or 1/cross');
-        }
-        await this.loadMarkets();
-        if (marginMode === 'isolated') {
-            marginMode = '0';
-        }
-        if (marginMode === 'cross') {
-            marginMode = '1';
-        }
-        const market = this.market(symbol);
-        const request = {
-            'symbol': market['id'],
-            'marginType': this.parseToInt(marginMode),
-        };
-        return await this.privatePostMarginTypeChange(request);
-    }
-    sign(path, api = 'public', method = 'GET', params = {}, headers = undefined, body = undefined) {
-        let url = this.urls['api'][api];
-        const versions = this.safeValue(this.options, 'versions', {});
-        const apiVersions = this.safeValue(versions, api, {});
-        const methodVersions = this.safeValue(apiVersions, method, {});
-        const defaultVersion = this.safeString(methodVersions, path, this.version);
-        const version = this.safeString(params, 'version', defaultVersion);
-        const tail = '/api/' + version + '/' + this.implodeParams(path, params);
-        url += tail;
-        const query = this.omit(params, this.extractParams(path));
-        const queryLength = Object.keys(query).length;
-        if (api === 'public') {
-            if (queryLength) {
-                url += '?' + this.urlencode(query);
-            }
-        }
-        else {
-            this.checkRequiredCredentials();
-            let endpoint = '/api/v1/' + this.implodeParams(path, params);
-            const bodyEncoded = this.urlencode(query);
-            if (method !== 'GET' && method !== 'HEAD') {
-                body = query;
-            }
-            else {
-                if (queryLength && bodyEncoded !== '') {
-                    url += '?' + bodyEncoded;
-                    endpoint += '?' + bodyEncoded;
-                }
-            }
-            const now = this.milliseconds().toString();
-            let endpart = '';
-            if (body !== undefined) {
-                body = this.json(query);
-                endpart = body;
-            }
-            const payload = now + method + endpoint + endpart;
-            const signature = this.hmac(this.encode(payload), this.encode(this.secret), _static_dependencies_noble_hashes_sha256_js__WEBPACK_IMPORTED_MODULE_4__/* .sha256 */ .s, 'base64');
-            headers = {
-                'PF-API-SIGN': signature,
-                'PF-API-TIMESTAMP': now,
-                'PF-API-KEY': this.apiKey,
-                'PF-API-PASSPHRASE': this.password,
-            };
-            headers['Content-Type'] = 'application/json';
-        }
-        return { 'url': url, 'method': method, 'body': body, 'headers': headers };
-    }
-    handleErrors(code, reason, url, method, headers, body, response, requestHeaders, requestBody) {
-        if (!response) {
-            this.throwBroadlyMatchedException(this.exceptions['broad'], body, body);
-            return undefined;
-        }
-        //
-        // bad
-        //     { "code": "400100", "msg": "validation.createOrder.clientOidIsRequired" }
-        // good
-        //     { code: "200000", data: { ... }}
-        //
-        const errorCode = this.safeString(response, 'code');
-        const message = this.safeString(response, 'msg', '');
-        const feedback = this.id + ' ' + message;
-        this.throwExactlyMatchedException(this.exceptions['exact'], message, feedback);
-        this.throwExactlyMatchedException(this.exceptions['exact'], errorCode, feedback);
-        this.throwBroadlyMatchedException(this.exceptions['broad'], body, feedback);
         return undefined;
     }
 }
@@ -272419,13 +270184,13 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
     /**
      * @method
      * @name binance#watchOrderBook
-     * @see https://binance-docs.github.io/apidocs/spot/en/#partial-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/spot/en/#diff-depth-stream
-     * @see https://binance-docs.github.io/apidocs/futures/en/#partial-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/futures/en/#diff-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#partial-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#diff-book-depth-streams
      * @description watches information on open orders with bid (buy) and ask (sell) prices, volumes and other data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#partial-book-depth-streams
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#diff-depth-stream
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams
      * @param {string} symbol unified symbol of the market to fetch the order book for
      * @param {int} [limit] the maximum amount of order book entries to return
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -272474,13 +270239,13 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
     /**
      * @method
      * @name binance#watchOrderBookForSymbols
-     * @see https://binance-docs.github.io/apidocs/spot/en/#partial-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/spot/en/#diff-depth-stream
-     * @see https://binance-docs.github.io/apidocs/futures/en/#partial-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/futures/en/#diff-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#partial-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#diff-book-depth-streams
      * @description watches information on open orders with bid (buy) and ask (sell) prices, volumes and other data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#partial-book-depth-streams
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#diff-depth-stream
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams
      * @param {string[]} symbols unified array of symbols
      * @param {int} [limit] the maximum amount of order book entries to return
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -272537,13 +270302,13 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
     /**
      * @method
      * @name binance#unWatchOrderBookForSymbols
-     * @see https://binance-docs.github.io/apidocs/spot/en/#partial-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/spot/en/#diff-depth-stream
-     * @see https://binance-docs.github.io/apidocs/futures/en/#partial-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/futures/en/#diff-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#partial-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#diff-book-depth-streams
      * @description unWatches information on open orders with bid (buy) and ask (sell) prices, volumes and other data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#partial-book-depth-streams
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#diff-depth-stream
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams
      * @param {string[]} symbols unified array of symbols
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object} A dictionary of [order book structures]{@link https://docs.ccxt.com/#/?id=order-book-structure} indexed by market symbols
@@ -272595,13 +270360,13 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
     /**
      * @method
      * @name binance#unWatchOrderBook
-     * @see https://binance-docs.github.io/apidocs/spot/en/#partial-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/spot/en/#diff-depth-stream
-     * @see https://binance-docs.github.io/apidocs/futures/en/#partial-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/futures/en/#diff-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#partial-book-depth-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#diff-book-depth-streams
      * @description unWatches information on open orders with bid (buy) and ask (sell) prices, volumes and other data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#partial-book-depth-streams
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#diff-depth-stream
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Partial-Book-Depth-Streams
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Diff-Book-Depth-Streams
      * @param {string} symbol unified array of symbols
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object} A dictionary of [order book structures]{@link https://docs.ccxt.com/#/?id=order-book-structure} indexed by market symbols
@@ -272613,7 +270378,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#fetchOrderBookWs
      * @description fetches information on open orders with bid (buy) and ask (sell) prices, volumes and other data
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#order-book
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#order-book
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/websocket-api/Order-Book
      * @param {string} symbol unified symbol of the market to fetch the order book for
      * @param {int} [limit] the maximum amount of order book entries to return
@@ -272916,10 +270681,10 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#watchTradesForSymbols
      * @description get the list of most recent trades for a list of symbols
-     * @see https://binance-docs.github.io/apidocs/spot/en/#aggregate-trade-streams
-     * @see https://binance-docs.github.io/apidocs/spot/en/#trade-streams
-     * @see https://binance-docs.github.io/apidocs/futures/en/#aggregate-trade-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#aggregate-trade-streams
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#aggregate-trades
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#recent-trades
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Aggregate-Trade-Streams
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Aggregate-Trade-Streams
      * @param {string[]} symbols unified symbol of the market to fetch trades for
      * @param {int} [since] timestamp in ms of the earliest trade to fetch
      * @param {int} [limit] the maximum amount of trades to fetch
@@ -272979,10 +270744,10 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#unWatchTradesForSymbols
      * @description unsubscribes from the trades channel
-     * @see https://binance-docs.github.io/apidocs/spot/en/#aggregate-trade-streams
-     * @see https://binance-docs.github.io/apidocs/spot/en/#trade-streams
-     * @see https://binance-docs.github.io/apidocs/futures/en/#aggregate-trade-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#aggregate-trade-streams
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#aggregate-trades
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#recent-trades
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Aggregate-Trade-Streams
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Aggregate-Trade-Streams
      * @param {string[]} symbols unified symbol of the market to fetch trades for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.name] the name of the method to call, 'trade' or 'aggTrade', default is 'trade'
@@ -273041,10 +270806,10 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#unWatchTrades
      * @description unsubscribes from the trades channel
-     * @see https://binance-docs.github.io/apidocs/spot/en/#aggregate-trade-streams
-     * @see https://binance-docs.github.io/apidocs/spot/en/#trade-streams
-     * @see https://binance-docs.github.io/apidocs/futures/en/#aggregate-trade-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#aggregate-trade-streams
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#aggregate-trades
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#recent-trades
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Aggregate-Trade-Streams
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Aggregate-Trade-Streams
      * @param {string} symbol unified symbol of the market to fetch trades for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.name] the name of the method to call, 'trade' or 'aggTrade', default is 'trade'
@@ -273058,10 +270823,10 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#watchTrades
      * @description get the list of most recent trades for a particular symbol
-     * @see https://binance-docs.github.io/apidocs/spot/en/#aggregate-trade-streams
-     * @see https://binance-docs.github.io/apidocs/spot/en/#trade-streams
-     * @see https://binance-docs.github.io/apidocs/futures/en/#aggregate-trade-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#aggregate-trade-streams
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#aggregate-trades
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#recent-trades
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Aggregate-Trade-Streams
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Aggregate-Trade-Streams
      * @param {string} symbol unified symbol of the market to fetch trades for
      * @param {int} [since] timestamp in ms of the earliest trade to fetch
      * @param {int} [limit] the maximum amount of trades to fetch
@@ -273258,9 +271023,9 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#watchOHLCV
      * @description watches historical candlestick data containing the open, high, low, and close price, and the volume of a market
-     * @see https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data
-     * @see https://binance-docs.github.io/apidocs/futures/en/#kline-candlestick-data
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#kline-candlestick-data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#klines
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Kline-Candlestick-Streams
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Kline-Candlestick-Streams
      * @param {string} symbol unified symbol of the market to fetch OHLCV data for
      * @param {string} timeframe the length of time each candle represents
      * @param {int} [since] timestamp in ms of the earliest candle to fetch
@@ -273281,9 +271046,9 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#watchOHLCVForSymbols
      * @description watches historical candlestick data containing the open, high, low, and close price, and the volume of a market
-     * @see https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data
-     * @see https://binance-docs.github.io/apidocs/futures/en/#kline-candlestick-data
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#kline-candlestick-data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#klines
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Kline-Candlestick-Streams
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Kline-Candlestick-Streams
      * @param {string[][]} symbolsAndTimeframes array of arrays containing unified symbols and timeframes to fetch OHLCV data for, example [['BTC/USDT', '1m'], ['LTC/USDT', '5m']]
      * @param {int} [since] timestamp in ms of the earliest candle to fetch
      * @param {int} [limit] the maximum amount of candles to fetch
@@ -273347,9 +271112,9 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#unWatchOHLCVForSymbols
      * @description unWatches historical candlestick data containing the open, high, low, and close price, and the volume of a market
-     * @see https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data
-     * @see https://binance-docs.github.io/apidocs/futures/en/#kline-candlestick-data
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#kline-candlestick-data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#klines
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Kline-Candlestick-Streams
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Kline-Candlestick-Streams
      * @param {string[][]} symbolsAndTimeframes array of arrays containing unified symbols and timeframes to fetch OHLCV data for, example [['BTC/USDT', '1m'], ['LTC/USDT', '5m']]
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {object} [params.timezone] if provided, kline intervals are interpreted in that timezone instead of UTC, example '+08:00'
@@ -273414,9 +271179,9 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#unWatchOHLCV
      * @description unWatches historical candlestick data containing the open, high, low, and close price, and the volume of a market
-     * @see https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data
-     * @see https://binance-docs.github.io/apidocs/futures/en/#kline-candlestick-data
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#kline-candlestick-data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#klines
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Kline-Candlestick-Streams
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Kline-Candlestick-Streams
      * @param {string} symbol unified symbol of the market to fetch OHLCV data for
      * @param {string} timeframe the length of time each candle represents
      * @param {object} [params] extra parameters specific to the exchange API endpoint
@@ -273539,7 +271304,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#fetchOHLCVWs
      * @description query historical candlestick data containing the open, high, low, and close price, and the volume of a market
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#klines
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#klines
      * @param {string} symbol unified symbol of the market to query OHLCV data for
      * @param {string} timeframe the length of time each candle represents
      * @param {int} since timestamp in ms of the earliest candle to fetch
@@ -273630,13 +271395,13 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
     /**
      * @method
      * @name binance#watchTicker
-     * @see https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-mini-ticker-stream
-     * @see https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-ticker-streams
-     * @see https://binance-docs.github.io/apidocs/futures/en/#all-market-mini-tickers-stream
-     * @see https://binance-docs.github.io/apidocs/futures/en/#individual-symbol-ticker-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#all-market-mini-tickers-stream
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#individual-symbol-ticker-streams
      * @description watches a price ticker, a statistical calculation with the information calculated over the past 24 hours for a specific market
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#individual-symbol-mini-ticker-stream
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#all-market-mini-tickers-stream
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams
      * @param {string} symbol unified symbol of the market to fetch the ticker for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string} [params.name] stream to use can be ticker or miniTicker
@@ -273651,8 +271416,8 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
     /**
      * @method
      * @name binance#watchMarkPrice
-     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Mark-Price-Stream
      * @description watches a mark price for a specific market
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Mark-Price-Stream
      * @param {string} symbol unified symbol of the market to fetch the ticker for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {boolean} [params.use1sFreq] *default is true* if set to true, the mark price will be updated every second, otherwise every 3 seconds
@@ -273667,8 +271432,8 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
     /**
      * @method
      * @name binance#watchMarkPrices
-     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Mark-Price-Stream-for-All-market
      * @description watches the mark price for all markets
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Mark-Price-Stream-for-All-market
      * @param {string[]} symbols unified symbol of the market to fetch the ticker for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {boolean} [params.use1sFreq] *default is true* if set to true, the mark price will be updated every second, otherwise every 3 seconds
@@ -273689,13 +271454,13 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
     /**
      * @method
      * @name binance#watchTickers
-     * @see https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-mini-ticker-stream
-     * @see https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-ticker-streams
-     * @see https://binance-docs.github.io/apidocs/futures/en/#all-market-mini-tickers-stream
-     * @see https://binance-docs.github.io/apidocs/futures/en/#individual-symbol-ticker-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#all-market-mini-tickers-stream
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#individual-symbol-ticker-streams
      * @description watches a price ticker, a statistical calculation with the information calculated over the past 24 hours for all markets of a specific list
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#individual-symbol-mini-ticker-stream
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#all-market-mini-tickers-stream
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams
      * @param {string[]} symbols unified symbol of the market to fetch the ticker for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object} a [ticker structure]{@link https://docs.ccxt.com/#/?id=ticker-structure}
@@ -273715,13 +271480,13 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
     /**
      * @method
      * @name binance#unWatchTickers
-     * @see https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-mini-ticker-stream
-     * @see https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-ticker-streams
-     * @see https://binance-docs.github.io/apidocs/futures/en/#all-market-mini-tickers-stream
-     * @see https://binance-docs.github.io/apidocs/futures/en/#individual-symbol-ticker-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#all-market-mini-tickers-stream
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#individual-symbol-ticker-streams
      * @description unWatches a price ticker, a statistical calculation with the information calculated over the past 24 hours for all markets of a specific list
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#individual-symbol-mini-ticker-stream
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#all-market-mini-tickers-stream
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams
      * @param {string[]} symbols unified symbol of the market to fetch the ticker for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object} a [ticker structure]{@link https://docs.ccxt.com/#/?id=ticker-structure}
@@ -273807,13 +271572,13 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
     /**
      * @method
      * @name binance#unWatchTicker
-     * @see https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-mini-ticker-stream
-     * @see https://binance-docs.github.io/apidocs/spot/en/#individual-symbol-ticker-streams
-     * @see https://binance-docs.github.io/apidocs/futures/en/#all-market-mini-tickers-stream
-     * @see https://binance-docs.github.io/apidocs/futures/en/#individual-symbol-ticker-streams
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#all-market-mini-tickers-stream
-     * @see https://binance-docs.github.io/apidocs/delivery/en/#individual-symbol-ticker-streams
      * @description unWatches a price ticker, a statistical calculation with the information calculated over the past 24 hours for all markets of a specific list
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#individual-symbol-mini-ticker-stream
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#all-market-mini-tickers-stream
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream
+     * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/Individual-Symbol-Ticker-Streams
      * @param {string} symbol unified symbol of the market to fetch the ticker for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object} a [ticker structure]{@link https://docs.ccxt.com/#/?id=ticker-structure}
@@ -273825,9 +271590,9 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#watchBidsAsks
      * @description watches best bid & ask for symbols
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#symbol-order-book-ticker
-     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/All-Book-Tickers-Stream
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#symbol-order-book-ticker
      * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/websocket-market-streams/All-Book-Tickers-Stream
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/websocket-market-streams/All-Book-Tickers-Stream
      * @param {string[]} symbols unified symbol of the market to fetch the ticker for
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object} a [ticker structure]{@link https://docs.ccxt.com/#/?id=ticker-structure}
@@ -274384,7 +272149,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @name binance#fetchBalanceWs
      * @description fetch balance and get the amount of funds available for trading or funds locked in orders
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/account/websocket-api/Futures-Account-Balance
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#account-information-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/account-requests#account-information-user_data
      * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/account/websocket-api
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {string|undefined} [params.type] 'future', 'delivery', 'savings', 'funding', or 'spot'
@@ -274491,8 +272256,8 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
     /**
      * @method
      * @name binance#fetchPositionWs
-     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/websocket-api/Position-Information
      * @description fetch data on an open position
+     * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/websocket-api/Position-Information
      * @param {string} symbol unified market symbol of the market the position is held in
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object} a [position structure]{@link https://docs.ccxt.com/#/?id=position-structure}
@@ -274754,7 +272519,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#createOrderWs
      * @description create a trade order
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#place-new-order-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/trading-requests#place-new-order-trade
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/websocket-api/New-Order
      * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/websocket-api
      * @param {string} symbol unified symbol of the market to create an order in
@@ -274903,7 +272668,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#editOrderWs
      * @description edit a trade order
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#cancel-and-replace-order-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/trading-requests#cancel-and-replace-order-trade
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/websocket-api/Modify-Order
      * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/websocket-api/Modify-Order
      * @param {string} id order id
@@ -275061,7 +272826,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#cancelOrderWs
      * @description cancel multiple orders
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#cancel-order-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/trading-requests#cancel-order-trade
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/websocket-api/Cancel-Order
      * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/websocket-api/Cancel-Order
      * @param {string} id order id
@@ -275108,7 +272873,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#cancelAllOrdersWs
      * @description cancel all open orders in a market
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#cancel-open-orders-trade
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/trading-requests#cancel-open-orders-trade
      * @param {string} [symbol] unified market symbol of the market to cancel orders in
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @returns {object[]} a list of [order structures]{@link https://docs.ccxt.com/#/?id=order-structure}
@@ -275143,7 +272908,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#fetchOrderWs
      * @description fetches information on an order made by the user
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#query-order-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/trading-requests#query-order-user_data
      * @see https://developers.binance.com/docs/derivatives/usds-margined-futures/trade/websocket-api/Query-Order
      * @see https://developers.binance.com/docs/derivatives/coin-margined-futures/trade/websocket-api/Query-Order
      * @param {string} id order id
@@ -275191,7 +272956,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#fetchOrdersWs
      * @description fetches information on multiple orders made by the user
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#query-order-list-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/trading-requests#order-lists
      * @param {string} symbol unified market symbol of the market orders were made in
      * @param {int|undefined} [since] the earliest time in ms to fetch orders for
      * @param {int|undefined} [limit] the maximum number of order structures to retrieve
@@ -275236,7 +273001,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#fetchClosedOrdersWs
      * @description fetch closed orders
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#query-order-list-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/trading-requests#order-lists
      * @param {string} symbol unified market symbol
      * @param {int} [since] the earliest time in ms to fetch open orders for
      * @param {int} [limit] the maximum number of open orders structures to retrieve
@@ -275258,7 +273023,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#fetchOpenOrdersWs
      * @description fetch all unfilled currently open orders
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#current-open-orders-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/trading-requests#current-open-orders-user_data
      * @param {string} symbol unified market symbol
      * @param {int|undefined} [since] the earliest time in ms to fetch open orders for
      * @param {int|undefined} [limit] the maximum number of open orders structures to retrieve
@@ -275821,7 +273586,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#fetchMyTradesWs
      * @description fetch all trades made by the user
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#account-trade-history-user_data
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/account-requests#account-trade-history-user_data
      * @param {string} symbol unified market symbol
      * @param {int|undefined} [since] the earliest time in ms to fetch trades for
      * @param {int|undefined} [limit] the maximum number of trades structures to retrieve
@@ -275874,7 +273639,7 @@ class binance extends _binance_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
      * @method
      * @name binance#fetchTradesWs
      * @description fetch all trades made by the user
-     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api#recent-trades
+     * @see https://developers.binance.com/docs/binance-spot-api-docs/web-socket-api/market-data-requests#recent-trades
      * @param {string} symbol unified market symbol
      * @param {int} [since] the earliest time in ms to fetch trades for
      * @param {int} [limit] the maximum number of trades structures to retrieve, default=500, max=1000
@@ -277072,60 +274837,67 @@ class bingx extends _bingx_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A {
         //
         // spot
         //
-        //    {
-        //        "code": 0,
-        //        "dataType": "BTC-USDT@depth20",
-        //        "data": {
-        //          "bids": [
-        //            [ '28852.9', "34.2621" ],
-        //            ...
-        //          ],
-        //          "asks": [
-        //            [ '28864.9', "23.4079" ],
-        //            ...
-        //          ]
-        //        },
-        //        "dataType": "BTC-USDT@depth20",
-        //        "success": true
-        //    }
+        //     {
+        //         "code":0,
+        //         "data":
+        //         {
+        //             "asks":[
+        //                 ["84119.73","0.000011"],
+        //                 ["84116.52","0.000014"],
+        //                 ["84116.40","0.000039"]
+        //             ],
+        //             "bids":[
+        //                 ["83656.98","2.570805"],
+        //                 ["83655.51","0.000347"],
+        //                 ["83654.59","0.000082"]
+        //             ],
+        //             "lastUpdateId":13565694850
+        //         },
+        //         "dataType":"BTC-USDT@depth100",
+        //         "success":true,
+        //         "timestamp":1743241379958
+        //     }
         //
         // linear swap
         //
-        //    {
-        //        "code": 0,
-        //        "dataType": "BTC-USDT@depth20@100ms", //or "all@depth20@100ms"
-        //        "data": {
-        //          "bids": [
-        //            [ '28852.9', "34.2621" ],
-        //            ...
-        //          ],
-        //          "asks": [
-        //            [ '28864.9', "23.4079" ],
-        //            ...
-        //          ],
-        //          "symbol": "BTC-USDT", // this key exists only in "all" subscription
-        //        }
-        //    }
+        //     {
+        //         "code":0,
+        //         "dataType":"BTC-USDT@depth100@500ms",
+        //         "ts":1743241563651,
+        //         "data":
+        //         {
+        //             "bids":[
+        //                 ["83363.2","0.1908"],
+        //                 ["83360.0","0.0003"],
+        //                 ["83356.5","0.0245"],
+        //             ],
+        //             "asks":[
+        //                 ["83495.0","0.0024"],
+        //                 ["83490.0","0.0001"],
+        //                 ["83488.0","0.0004"],
+        //             ]
+        //         }
+        //     }
         //
         // inverse swap
         //
         //     {
-        //         "code": 0,
-        //         "dataType": "BTC-USD@depth100",
-        //         "data": {
-        //             {
-        //                 "symbol": "BTC-USD",
-        //                 "bids": [
-        //                     { "p": "58074.2", "a": "1.422318", "v": "826.0" },
-        //                     ...
-        //                 ],
-        //                 "asks": [
-        //                     { "p": "62878.0", "a": "0.001590", "v": "1.0" },
-        //                     ...
-        //                 ],
-        //                 "aggPrecision": "0.1",
-        //                 "timestamp": 1723705093529
-        //             }
+        //         "code":0,
+        //         "dataType":"BTC-USD@depth100",
+        //         "data":{
+        //             "symbol":"BTC-USD",
+        //             "bids":[
+        //                 {"p":"83411.2","a":"2.979216","v":"2485.0"},
+        //                 {"p":"83411.1","a":"1.592114","v":"1328.0"},
+        //                 {"p":"83410.8","a":"2.656730","v":"2216.0"},
+        //             ],
+        //             "asks":[
+        //                 {"p":"88200.0","a":"0.344671","v":"304.0"},
+        //                 {"p":"88023.8","a":"0.045442","v":"40.0"},
+        //                 {"p":"88001.0","a":"0.003409","v":"3.0"},
+        //             ],
+        //             "aggPrecision":"0.1",
+        //             "timestamp":1743242290710
         //         }
         //     }
         //
@@ -277139,23 +274911,27 @@ class bingx extends _bingx_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A {
         const marketType = isSwap ? 'swap' : 'spot';
         const market = this.safeMarket(marketId, undefined, undefined, marketType);
         const symbol = market['symbol'];
-        if (this.safeValue(this.orderbooks, symbol) === undefined) {
+        let orderbook = this.safeValue(this.orderbooks, symbol);
+        if (orderbook === undefined) {
             // const limit = [ 5, 10, 20, 50, 100 ]
             const subscriptionHash = dataType;
             const subscription = client.subscriptions[subscriptionHash];
             const limit = this.safeInteger(subscription, 'limit');
             this.orderbooks[symbol] = this.orderBook({}, limit);
         }
-        const orderbook = this.orderbooks[symbol];
+        orderbook = this.orderbooks[symbol];
         let snapshot = undefined;
+        let timestamp = this.safeInteger2(message, 'timestamp', 'ts');
+        timestamp = this.safeInteger2(data, 'timestamp', 'ts', timestamp);
         if (market['inverse']) {
-            snapshot = this.parseOrderBook(data, symbol, undefined, 'bids', 'asks', 'p', 'a');
+            snapshot = this.parseOrderBook(data, symbol, timestamp, 'bids', 'asks', 'p', 'a');
         }
         else {
-            snapshot = this.parseOrderBook(data, symbol, undefined, 'bids', 'asks', 0, 1);
+            snapshot = this.parseOrderBook(data, symbol, timestamp, 'bids', 'asks', 0, 1);
         }
+        const nonce = this.safeInteger(data, 'lastUpdateId');
+        snapshot['nonce'] = nonce;
         orderbook.reset(snapshot);
-        this.orderbooks[symbol] = orderbook;
         const messageHash = this.getMessageHash('orderbook', symbol);
         client.resolve(orderbook, messageHash);
         // resolve for "all"
@@ -279154,691 +276930,6 @@ class bitfinex extends _bitfinex_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] *
 
 /***/ }),
 
-/***/ 3322:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ bitfinex1)
-/* harmony export */ });
-/* harmony import */ var _bitfinex1_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7674);
-/* harmony import */ var _base_errors_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2079);
-/* harmony import */ var _base_ws_Cache_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2931);
-/* harmony import */ var _base_Precise_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5147);
-/* harmony import */ var _static_dependencies_noble_hashes_sha512_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7481);
-//  ---------------------------------------------------------------------------
-
-
-
-
-
-//  ---------------------------------------------------------------------------
-class bitfinex1 extends _bitfinex1_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A {
-    describe() {
-        return this.deepExtend(super.describe(), {
-            'has': {
-                'ws': true,
-                'watchTicker': true,
-                'watchTickers': false,
-                'watchOrderBook': true,
-                'watchTrades': true,
-                'watchTradesForSymbols': false,
-                'watchBalance': false,
-                'watchOHLCV': false, // missing on the exchange side in v1
-            },
-            'urls': {
-                'api': {
-                    'ws': {
-                        'public': 'wss://api-pub.bitfinex.com/ws/1',
-                        'private': 'wss://api.bitfinex.com/ws/1',
-                    },
-                },
-            },
-            'options': {
-                'watchOrderBook': {
-                    'prec': 'P0',
-                    'freq': 'F0',
-                },
-                'ordersLimit': 1000,
-            },
-        });
-    }
-    async subscribe(channel, symbol, params = {}) {
-        await this.loadMarkets();
-        const market = this.market(symbol);
-        const marketId = market['id'];
-        const url = this.urls['api']['ws']['public'];
-        const messageHash = channel + ':' + marketId;
-        // const channel = 'trades';
-        const request = {
-            'event': 'subscribe',
-            'channel': channel,
-            'symbol': marketId,
-            'messageHash': messageHash,
-        };
-        return await this.watch(url, messageHash, this.deepExtend(request, params), messageHash);
-    }
-    /**
-     * @method
-     * @name bitfinex1#watchTrades
-     * @description get the list of most recent trades for a particular symbol
-     * @see https://docs.bitfinex.com/v1/reference/ws-public-trades
-     * @param {string} symbol unified symbol of the market to fetch trades for
-     * @param {int} [since] timestamp in ms of the earliest trade to fetch
-     * @param {int} [limit] the maximum amount of trades to fetch
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object[]} a list of [trade structures]{@link https://docs.ccxt.com/#/?id=public-trades}
-     */
-    async watchTrades(symbol, since = undefined, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        symbol = this.symbol(symbol);
-        const trades = await this.subscribe('trades', symbol, params);
-        if (this.newUpdates) {
-            limit = trades.getLimit(symbol, limit);
-        }
-        return this.filterBySinceLimit(trades, since, limit, 'timestamp', true);
-    }
-    /**
-     * @method
-     * @name bitfinex1#watchTicker
-     * @description watches a price ticker, a statistical calculation with the information calculated over the past 24 hours for a specific market
-     * @see https://docs.bitfinex.com/v1/reference/ws-public-ticker
-     * @param {string} symbol unified symbol of the market to fetch the ticker for
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a [ticker structure]{@link https://docs.ccxt.com/#/?id=ticker-structure}
-     */
-    async watchTicker(symbol, params = {}) {
-        return await this.subscribe('ticker', symbol, params);
-    }
-    handleTrades(client, message, subscription) {
-        //
-        // initial snapshot
-        //
-        //     [
-        //         2,
-        //         [
-        //             [ null, 1580565020, 9374.9, 0.005 ],
-        //             [ null, 1580565004, 9374.9, 0.005 ],
-        //             [ null, 1580565003, 9374.9, 0.005 ],
-        //         ]
-        //     ]
-        //
-        // when a trade does not have an id yet
-        //
-        //     // channel id, update type, seq, time, price, amount
-        //     [ 2, "te", "28462857-BTCUSD", 1580565041, 9374.9, 0.005 ],
-        //
-        // when a trade already has an id
-        //
-        //     // channel id, update type, seq, trade id, time, price, amount
-        //     [ 2, "tu", "28462857-BTCUSD", 413357662, 1580565041, 9374.9, 0.005 ]
-        //
-        const channel = this.safeValue(subscription, 'channel');
-        const marketId = this.safeString(subscription, 'pair');
-        const messageHash = channel + ':' + marketId;
-        const tradesLimit = this.safeInteger(this.options, 'tradesLimit', 1000);
-        const market = this.safeMarket(marketId);
-        const symbol = market['symbol'];
-        const data = this.safeValue(message, 1);
-        let stored = this.safeValue(this.trades, symbol);
-        if (stored === undefined) {
-            stored = new _base_ws_Cache_js__WEBPACK_IMPORTED_MODULE_1__/* .ArrayCache */ .I3(tradesLimit);
-            this.trades[symbol] = stored;
-        }
-        if (Array.isArray(data)) {
-            const trades = this.parseTrades(data, market);
-            for (let i = 0; i < trades.length; i++) {
-                stored.append(trades[i]);
-            }
-        }
-        else {
-            const second = this.safeString(message, 1);
-            if (second !== 'tu') {
-                return;
-            }
-            const trade = this.parseTrade(message, market);
-            stored.append(trade);
-        }
-        client.resolve(stored, messageHash);
-    }
-    parseTrade(trade, market = undefined) {
-        //
-        // snapshot trade
-        //
-        //     // null, time, price, amount
-        //     [ null, 1580565020, 9374.9, 0.005 ],
-        //
-        // when a trade does not have an id yet
-        //
-        //     // channel id, update type, seq, time, price, amount
-        //     [ 2, "te", "28462857-BTCUSD", 1580565041, 9374.9, 0.005 ],
-        //
-        // when a trade already has an id
-        //
-        //     // channel id, update type, seq, trade id, time, price, amount
-        //     [ 2, "tu", "28462857-BTCUSD", 413357662, 1580565041, 9374.9, 0.005 ]
-        //
-        if (!Array.isArray(trade)) {
-            return super.parseTrade(trade, market);
-        }
-        const tradeLength = trade.length;
-        const event = this.safeString(trade, 1);
-        let id = undefined;
-        if (event === 'tu') {
-            id = this.safeString(trade, tradeLength - 4);
-        }
-        const timestamp = this.safeTimestamp(trade, tradeLength - 3);
-        const price = this.safeString(trade, tradeLength - 2);
-        let amount = this.safeString(trade, tradeLength - 1);
-        let side = undefined;
-        if (amount !== undefined) {
-            side = _base_Precise_js__WEBPACK_IMPORTED_MODULE_2__/* .Precise */ .Y.stringGt(amount, '0') ? 'buy' : 'sell';
-            amount = _base_Precise_js__WEBPACK_IMPORTED_MODULE_2__/* .Precise */ .Y.stringAbs(amount);
-        }
-        const seq = this.safeString(trade, 2);
-        const parts = seq.split('-');
-        let marketId = this.safeString(parts, 1);
-        if (marketId !== undefined) {
-            marketId = marketId.replace('t', '');
-        }
-        const symbol = this.safeSymbol(marketId, market);
-        const takerOrMaker = undefined;
-        const orderId = undefined;
-        return this.safeTrade({
-            'info': trade,
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'symbol': symbol,
-            'id': id,
-            'order': orderId,
-            'type': undefined,
-            'takerOrMaker': takerOrMaker,
-            'side': side,
-            'price': price,
-            'amount': amount,
-            'cost': undefined,
-            'fee': undefined,
-        });
-    }
-    handleTicker(client, message, subscription) {
-        //
-        //     [
-        //         2,             // 0 CHANNEL_ID integer Channel ID
-        //         236.62,        // 1 BID float Price of last highest bid
-        //         9.0029,        // 2 BID_SIZE float Size of the last highest bid
-        //         236.88,        // 3 ASK float Price of last lowest ask
-        //         7.1138,        // 4 ASK_SIZE float Size of the last lowest ask
-        //         -1.02,         // 5 DAILY_CHANGE float Amount that the last price has changed since yesterday
-        //         0,             // 6 DAILY_CHANGE_PERC float Amount that the price has changed expressed in percentage terms
-        //         236.52,        // 7 LAST_PRICE float Price of the last trade.
-        //         5191.36754297, // 8 VOLUME float Daily volume
-        //         250.01,        // 9 HIGH float Daily high
-        //         220.05,        // 10 LOW float Daily low
-        //     ]
-        //
-        const marketId = this.safeString(subscription, 'pair');
-        const symbol = this.safeSymbol(marketId);
-        const channel = 'ticker';
-        const messageHash = channel + ':' + marketId;
-        const last = this.safeString(message, 7);
-        const change = this.safeString(message, 5);
-        let open = undefined;
-        if ((last !== undefined) && (change !== undefined)) {
-            open = _base_Precise_js__WEBPACK_IMPORTED_MODULE_2__/* .Precise */ .Y.stringSub(last, change);
-        }
-        const result = this.safeTicker({
-            'symbol': symbol,
-            'timestamp': undefined,
-            'datetime': undefined,
-            'high': this.safeString(message, 9),
-            'low': this.safeString(message, 10),
-            'bid': this.safeString(message, 1),
-            'bidVolume': undefined,
-            'ask': this.safeString(message, 3),
-            'askVolume': undefined,
-            'vwap': undefined,
-            'open': this.parseNumber(open),
-            'close': this.parseNumber(last),
-            'last': this.parseNumber(last),
-            'previousClose': undefined,
-            'change': this.parseNumber(change),
-            'percentage': this.safeString(message, 6),
-            'average': undefined,
-            'baseVolume': this.safeString(message, 8),
-            'quoteVolume': undefined,
-            'info': message,
-        });
-        this.tickers[symbol] = result;
-        client.resolve(result, messageHash);
-    }
-    /**
-     * @method
-     * @name bitfinex1#watchOrderBook
-     * @description watches information on open orders with bid (buy) and ask (sell) prices, volumes and other data
-     * @see https://docs.bitfinex.com/v1/reference/ws-public-order-books
-     * @param {string} symbol unified symbol of the market to fetch the order book for
-     * @param {int} [limit] the maximum amount of order book entries to return
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} A dictionary of [order book structures]{@link https://docs.ccxt.com/#/?id=order-book-structure} indexed by market symbols
-     */
-    async watchOrderBook(symbol, limit = undefined, params = {}) {
-        if (limit !== undefined) {
-            if ((limit !== 25) && (limit !== 100)) {
-                throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_3__.ExchangeError(this.id + ' watchOrderBook limit argument must be undefined, 25 or 100');
-            }
-        }
-        const options = this.safeValue(this.options, 'watchOrderBook', {});
-        const prec = this.safeString(options, 'prec', 'P0');
-        const freq = this.safeString(options, 'freq', 'F0');
-        const request = {
-            // "event": "subscribe", // added in subscribe()
-            // "channel": channel, // added in subscribe()
-            // "symbol": marketId, // added in subscribe()
-            'prec': prec,
-            'freq': freq,
-            'len': limit, // string, number of price points, '25', '100', default = '25'
-        };
-        const orderbook = await this.subscribe('book', symbol, this.deepExtend(request, params));
-        return orderbook.limit();
-    }
-    handleOrderBook(client, message, subscription) {
-        //
-        // first message (snapshot)
-        //
-        //     [
-        //         18691, // channel id
-        //         [
-        //             [ 7364.8, 10, 4.354802 ], // price, count, size > 0 = bid
-        //             [ 7364.7, 1, 0.00288831 ],
-        //             [ 7364.3, 12, 0.048 ],
-        //             [ 7364.9, 3, -0.42028976 ], // price, count, size < 0 = ask
-        //             [ 7365, 1, -0.25 ],
-        //             [ 7365.5, 1, -0.00371937 ],
-        //         ]
-        //     ]
-        //
-        // subsequent updates
-        //
-        //     [
-        //         30,     // channel id
-        //         9339.9, // price
-        //         0,      // count
-        //         -1,     // size > 0 = bid, size < 0 = ask
-        //     ]
-        //
-        const marketId = this.safeString(subscription, 'pair');
-        const symbol = this.safeSymbol(marketId);
-        const channel = 'book';
-        const messageHash = channel + ':' + marketId;
-        const prec = this.safeString(subscription, 'prec', 'P0');
-        const isRaw = (prec === 'R0');
-        // if it is an initial snapshot
-        if (Array.isArray(message[1])) {
-            const limit = this.safeInteger(subscription, 'len');
-            if (isRaw) {
-                // raw order books
-                this.orderbooks[symbol] = this.indexedOrderBook({}, limit);
-            }
-            else {
-                // P0, P1, P2, P3, P4
-                this.orderbooks[symbol] = this.countedOrderBook({}, limit);
-            }
-            const orderbook = this.orderbooks[symbol];
-            if (isRaw) {
-                const deltas = message[1];
-                for (let i = 0; i < deltas.length; i++) {
-                    const delta = deltas[i];
-                    const id = this.safeString(delta, 0);
-                    const price = this.safeFloat(delta, 1);
-                    const delta2Value = delta[2];
-                    const size = (delta2Value < 0) ? -delta2Value : delta2Value;
-                    const side = (delta2Value < 0) ? 'asks' : 'bids';
-                    const bookside = orderbook[side];
-                    bookside.storeArray([price, size, id]);
-                }
-            }
-            else {
-                const deltas = message[1];
-                for (let i = 0; i < deltas.length; i++) {
-                    const delta = deltas[i];
-                    const delta2 = delta[2];
-                    const size = (delta2 < 0) ? -delta2 : delta2;
-                    const side = (delta2 < 0) ? 'asks' : 'bids';
-                    const countedBookSide = orderbook[side];
-                    countedBookSide.storeArray([delta[0], size, delta[1]]);
-                }
-            }
-            client.resolve(orderbook, messageHash);
-        }
-        else {
-            const orderbook = this.orderbooks[symbol];
-            if (isRaw) {
-                const id = this.safeString(message, 1);
-                const price = this.safeString(message, 2);
-                const message3 = message[3];
-                const size = (message3 < 0) ? -message3 : message3;
-                const side = (message3 < 0) ? 'asks' : 'bids';
-                const bookside = orderbook[side];
-                // price = 0 means that you have to remove the order from your book
-                const amount = _base_Precise_js__WEBPACK_IMPORTED_MODULE_2__/* .Precise */ .Y.stringGt(price, '0') ? size : '0';
-                bookside.storeArray([this.parseNumber(price), this.parseNumber(amount), id]);
-            }
-            else {
-                const message3Value = message[3];
-                const size = (message3Value < 0) ? -message3Value : message3Value;
-                const side = (message3Value < 0) ? 'asks' : 'bids';
-                const countedBookSide = orderbook[side];
-                countedBookSide.storeArray([message[1], size, message[2]]);
-            }
-            client.resolve(orderbook, messageHash);
-        }
-    }
-    handleHeartbeat(client, message) {
-        //
-        // every second (approx) if no other updates are sent
-        //
-        //     { "event": "heartbeat" }
-        //
-        const event = this.safeString(message, 'event');
-        client.resolve(message, event);
-    }
-    handleSystemStatus(client, message) {
-        //
-        // todo: answer the question whether handleSystemStatus should be renamed
-        // and unified as handleStatus for any usage pattern that
-        // involves system status and maintenance updates
-        //
-        //     {
-        //         "event": "info",
-        //         "version": 2,
-        //         "serverId": "e293377e-7bb7-427e-b28c-5db045b2c1d1",
-        //         "platform": { status: 1 }, // 1 for operative, 0 for maintenance
-        //     }
-        //
-        return message;
-    }
-    handleSubscriptionStatus(client, message) {
-        //
-        //     {
-        //         "event": "subscribed",
-        //         "channel": "book",
-        //         "chanId": 67473,
-        //         "symbol": "tBTCUSD",
-        //         "prec": "P0",
-        //         "freq": "F0",
-        //         "len": "25",
-        //         "pair": "BTCUSD"
-        //     }
-        //
-        const channelId = this.safeString(message, 'chanId');
-        client.subscriptions[channelId] = message;
-        return message;
-    }
-    async authenticate(params = {}) {
-        const url = this.urls['api']['ws']['private'];
-        const client = this.client(url);
-        const future = client.future('authenticated');
-        const method = 'auth';
-        const authenticated = this.safeValue(client.subscriptions, method);
-        if (authenticated === undefined) {
-            const nonce = this.milliseconds();
-            const payload = 'AUTH' + nonce.toString();
-            const signature = this.hmac(this.encode(payload), this.encode(this.secret), _static_dependencies_noble_hashes_sha512_js__WEBPACK_IMPORTED_MODULE_4__/* .sha384 */ .qt, 'hex');
-            const request = {
-                'apiKey': this.apiKey,
-                'authSig': signature,
-                'authNonce': nonce,
-                'authPayload': payload,
-                'event': method,
-                'filter': [
-                    'trading',
-                    'wallet',
-                ],
-            };
-            this.spawn(this.watch, url, method, request, 1);
-        }
-        return await future;
-    }
-    handleAuthenticationMessage(client, message) {
-        const status = this.safeString(message, 'status');
-        if (status === 'OK') {
-            // we resolve the future here permanently so authentication only happens once
-            const future = this.safeValue(client.futures, 'authenticated');
-            future.resolve(true);
-        }
-        else {
-            const error = new _base_errors_js__WEBPACK_IMPORTED_MODULE_3__.AuthenticationError(this.json(message));
-            client.reject(error, 'authenticated');
-            // allows further authentication attempts
-            const method = this.safeString(message, 'event');
-            if (method in client.subscriptions) {
-                delete client.subscriptions[method];
-            }
-        }
-    }
-    async watchOrder(id, symbol = undefined, params = {}) {
-        await this.loadMarkets();
-        const url = this.urls['api']['ws']['private'];
-        await this.authenticate();
-        return await this.watch(url, id, undefined, 1);
-    }
-    /**
-     * @method
-     * @name bitfinex1#watchOrders
-     * @description watches information on multiple orders made by the user
-     * @see https://docs.bitfinex.com/v1/reference/ws-auth-order-updates
-     * @see https://docs.bitfinex.com/v1/reference/ws-auth-order-snapshots
-     * @param {string} symbol unified market symbol of the market orders were made in
-     * @param {int} [since] the earliest time in ms to fetch orders for
-     * @param {int} [limit] the maximum number of order structures to retrieve
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object[]} a list of [order structures]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async watchOrders(symbol = undefined, since = undefined, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        await this.authenticate();
-        if (symbol !== undefined) {
-            symbol = this.symbol(symbol);
-        }
-        const url = this.urls['api']['ws']['private'];
-        const orders = await this.watch(url, 'os', undefined, 1);
-        if (this.newUpdates) {
-            limit = orders.getLimit(symbol, limit);
-        }
-        return this.filterBySymbolSinceLimit(orders, symbol, since, limit, true);
-    }
-    handleOrders(client, message, subscription) {
-        //
-        // order snapshot
-        //
-        //     [
-        //         0,
-        //         "os",
-        //         [
-        //             [
-        //                 45287766631,
-        //                 "ETHUST",
-        //                 -0.07,
-        //                 -0.07,
-        //                 "EXCHANGE LIMIT",
-        //                 "ACTIVE",
-        //                 210,
-        //                 0,
-        //                 "2020-05-16T13:17:46Z",
-        //                 0,
-        //                 0,
-        //                 0
-        //             ]
-        //         ]
-        //     ]
-        //
-        // order cancel
-        //
-        //     [
-        //         0,
-        //         "oc",
-        //         [
-        //             45287766631,
-        //             "ETHUST",
-        //             -0.07,
-        //             -0.07,
-        //             "EXCHANGE LIMIT",
-        //             "CANCELED",
-        //             210,
-        //             0,
-        //             "2020-05-16T13:17:46Z",
-        //             0,
-        //             0,
-        //             0,
-        //         ]
-        //     ]
-        //
-        const data = this.safeValue(message, 2, []);
-        const messageType = this.safeString(message, 1);
-        if (messageType === 'os') {
-            for (let i = 0; i < data.length; i++) {
-                const value = data[i];
-                this.handleOrder(client, value);
-            }
-        }
-        else {
-            this.handleOrder(client, data);
-        }
-        if (this.orders !== undefined) {
-            client.resolve(this.orders, 'os');
-        }
-    }
-    parseWsOrderStatus(status) {
-        const statuses = {
-            'ACTIVE': 'open',
-            'CANCELED': 'canceled',
-        };
-        return this.safeString(statuses, status, status);
-    }
-    handleOrder(client, order) {
-        // [ 45287766631,
-        //     "ETHUST",
-        //     -0.07,
-        //     -0.07,
-        //     "EXCHANGE LIMIT",
-        //     "CANCELED",
-        //     210,
-        //     0,
-        //     "2020-05-16T13:17:46Z",
-        //     0,
-        //     0,
-        //     0 ]
-        const id = this.safeString(order, 0);
-        const marketId = this.safeString(order, 1);
-        const symbol = this.safeSymbol(marketId);
-        let amount = this.safeString(order, 2);
-        let remaining = this.safeString(order, 3);
-        let side = 'buy';
-        if (_base_Precise_js__WEBPACK_IMPORTED_MODULE_2__/* .Precise */ .Y.stringLt(amount, '0')) {
-            amount = _base_Precise_js__WEBPACK_IMPORTED_MODULE_2__/* .Precise */ .Y.stringAbs(amount);
-            remaining = _base_Precise_js__WEBPACK_IMPORTED_MODULE_2__/* .Precise */ .Y.stringAbs(remaining);
-            side = 'sell';
-        }
-        let type = this.safeString(order, 4);
-        if (type.indexOf('LIMIT') > -1) {
-            type = 'limit';
-        }
-        else if (type.indexOf('MARKET') > -1) {
-            type = 'market';
-        }
-        const status = this.parseWsOrderStatus(this.safeString(order, 5));
-        const price = this.safeString(order, 6);
-        const rawDatetime = this.safeString(order, 8);
-        const timestamp = this.parse8601(rawDatetime);
-        const parsed = this.safeOrder({
-            'info': order,
-            'id': id,
-            'clientOrderId': undefined,
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'lastTradeTimestamp': undefined,
-            'symbol': symbol,
-            'type': type,
-            'side': side,
-            'price': price,
-            'stopPrice': undefined,
-            'triggerPrice': undefined,
-            'average': undefined,
-            'amount': amount,
-            'remaining': remaining,
-            'filled': undefined,
-            'status': status,
-            'fee': undefined,
-            'cost': undefined,
-            'trades': undefined,
-        });
-        if (this.orders === undefined) {
-            const limit = this.safeInteger(this.options, 'ordersLimit', 1000);
-            this.orders = new _base_ws_Cache_js__WEBPACK_IMPORTED_MODULE_1__/* .ArrayCacheBySymbolById */ .Pt(limit);
-        }
-        const orders = this.orders;
-        orders.append(parsed);
-        client.resolve(parsed, id);
-        return parsed;
-    }
-    handleMessage(client, message) {
-        if (Array.isArray(message)) {
-            const channelId = this.safeString(message, 0);
-            //
-            //     [
-            //         1231,
-            //         "hb",
-            //     ]
-            //
-            if (message[1] === 'hb') {
-                return; // skip heartbeats within subscription channels for now
-            }
-            const subscription = this.safeValue(client.subscriptions, channelId, {});
-            const channel = this.safeString(subscription, 'channel');
-            const name = this.safeString(message, 1);
-            const methods = {
-                'book': this.handleOrderBook,
-                // 'ohlc': this.handleOHLCV,
-                'ticker': this.handleTicker,
-                'trades': this.handleTrades,
-                'os': this.handleOrders,
-                'on': this.handleOrders,
-                'oc': this.handleOrders,
-            };
-            const method = this.safeValue2(methods, channel, name);
-            if (method !== undefined) {
-                method.call(this, client, message, subscription);
-            }
-        }
-        else {
-            // todo add bitfinex handleErrorMessage
-            //
-            //     {
-            //         "event": "info",
-            //         "version": 2,
-            //         "serverId": "e293377e-7bb7-427e-b28c-5db045b2c1d1",
-            //         "platform": { status: 1 }, // 1 for operative, 0 for maintenance
-            //     }
-            //
-            const event = this.safeString(message, 'event');
-            if (event !== undefined) {
-                const methods = {
-                    'info': this.handleSystemStatus,
-                    // 'book': 'handleOrderBook',
-                    'subscribed': this.handleSubscriptionStatus,
-                    'auth': this.handleAuthenticationMessage,
-                };
-                const method = this.safeValue(methods, event);
-                if (method !== undefined) {
-                    method.call(this, client, message);
-                }
-            }
-        }
-    }
-}
-
-
-/***/ }),
-
 /***/ 205:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -279860,7 +276951,7 @@ class bitfinex1 extends _bitfinex1_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"]
 /**
  * @class bitget
  * @augments Exchange
- * @description watching delivery future markets is not yet implemented (perpertual future / swap is implemented)
+ * @description watching delivery future markets is not yet implemented (perpertual future & swap is implemented)
  */
 class bitget extends _bitget_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A {
     describe() {
@@ -283332,15 +280423,12 @@ class bitmart extends _bitmart_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
         //        "data":[
         //           {
         //              "trade_id":6798697637,
-        //              "contract_id":1,
         //              "symbol":"BTCUSDT",
         //              "deal_price":"39735.8",
         //              "deal_vol":"2",
-        //              "type":0,
         //              "way":1,
-        //              "create_time":1701618503,
-        //              "create_time_mill":1701618503517,
-        //              "created_at":"2023-12-03T15:48:23.517518538Z"
+        //              "created_at":"2023-12-03T15:48:23.517518538Z",
+        //              "m": true,
         //           }
         //        ]
         //    }
@@ -283379,6 +280467,7 @@ class bitmart extends _bitmart_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
         return symbol;
     }
     parseWsTrade(trade, market = undefined) {
+        //
         // spot
         //     {
         //         "ms_t": 1740320841473,
@@ -283411,6 +280500,20 @@ class bitmart extends _bitmart_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
         else {
             datetime = this.iso8601(timestamp);
         }
+        let takerOrMaker = undefined; // true for public trades
+        let side = this.safeString(trade, 'side');
+        const buyerMaker = this.safeBool(trade, 'm');
+        if (buyerMaker !== undefined) {
+            if (side === undefined) {
+                if (buyerMaker) {
+                    side = 'sell';
+                }
+                else {
+                    side = 'buy';
+                }
+            }
+            takerOrMaker = 'taker';
+        }
         return this.safeTrade({
             'info': trade,
             'id': this.safeString(trade, 'trade_id'),
@@ -283419,11 +280522,11 @@ class bitmart extends _bitmart_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ 
             'datetime': datetime,
             'symbol': market['symbol'],
             'type': undefined,
-            'side': this.safeString(trade, 'side'),
+            'side': side,
             'price': this.safeString2(trade, 'price', 'deal_price'),
             'amount': this.safeString2(trade, 'size', 'deal_vol'),
             'cost': undefined,
-            'takerOrMaker': undefined,
+            'takerOrMaker': takerOrMaker,
             'fee': undefined,
         }, market);
     }
@@ -304560,12 +301663,12 @@ class derive extends _derive_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A
             const requestId = this.requestId(url);
             const now = this.milliseconds().toString();
             const signature = this.signMessage(now, this.privateKey);
-            const contractWalletAddress = this.safeString(this.options, 'contractWalletAddress');
+            const deriveWalletAddress = this.safeString(this.options, 'deriveWalletAddress');
             const request = {
                 'id': requestId,
                 'method': 'public/login',
                 'params': {
-                    'wallet': contractWalletAddress,
+                    'wallet': deriveWalletAddress,
                     'timestamp': now,
                     'signature': signature,
                 },
@@ -318927,7 +316030,7 @@ class krakenfutures extends _krakenfutures_js__WEBPACK_IMPORTED_MODULE_0__/* ["d
         //            {
         //                "feed": "trade",
         //                "product_id": "PI_XBTUSD",
-        //                "uid": "caa9c653-420b-4c24-a9f1-462a054d86f1",
+        //                "uid": "caa9c653-420b-4c24-a9f2-462a054d86f1",
         //                "side": "sell",
         //                "type": "fill",
         //                "seq": 655508,
@@ -335659,1055 +332762,6 @@ class poloniex extends _poloniex_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] *
         return {
             'event': 'ping',
         };
-    }
-}
-
-
-/***/ }),
-
-/***/ 5850:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ poloniexfutures)
-/* harmony export */ });
-/* harmony import */ var _poloniexfutures_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6826);
-/* harmony import */ var _base_errors_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2079);
-/* harmony import */ var _base_ws_Cache_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2931);
-//  ---------------------------------------------------------------------------
-
-
-
-//  ---------------------------------------------------------------------------
-class poloniexfutures extends _poloniexfutures_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A {
-    describe() {
-        return this.deepExtend(super.describe(), {
-            'has': {
-                'ws': true,
-                'cancelAllOrdersWs': false,
-                'cancelOrdersWs': false,
-                'cancelOrderWs': false,
-                'createOrderWs': false,
-                'editOrderWs': false,
-                'fetchBalanceWs': false,
-                'fetchOpenOrdersWs': false,
-                'fetchOrderWs': false,
-                'fetchTradesWs': false,
-                'watchOHLCV': false,
-                'watchOrderBook': true,
-                'watchTicker': true,
-                'watchTickers': false,
-                'watchTrades': true,
-                'watchTradesForSymbols': false,
-                'watchBalance': true,
-                'watchOrders': true,
-                'watchMyTrades': false,
-                'watchPosition': undefined,
-                'watchPositions': false,
-            },
-            'urls': {
-                'api': {
-                    'ws': 'wss://futures-apiws.poloniex.com/endpoint',
-                },
-            },
-            'options': {
-                'tradesLimit': 1000,
-                'ordersLimit': 1000,
-                'watchTicker': {
-                    'method': '/contractMarket/ticker', // can also be /contractMarket/snapshot
-                },
-                'watchOrders': {
-                    'method': '/contractMarket/tradeOrders', // can also be /contractMarket/advancedOrders
-                },
-                'watchOrderBook': {
-                    'method': '/contractMarket/level2',
-                    'snapshotDelay': 5,
-                    'snapshotMaxRetries': 3,
-                    'checksum': true,
-                },
-                'streamLimit': 5,
-                'streamBySubscriptionsHash': {},
-                'streamIndex': -1,
-            },
-            'streaming': {
-                'keepAlive': 30000,
-                'maxPingPongMisses': 2.0,
-            },
-        });
-    }
-    async negotiate(privateChannel, params = {}) {
-        const connectId = privateChannel ? 'private' : 'public';
-        const urls = this.safeValue(this.options, 'urls', {});
-        if (connectId in urls) {
-            // return urls[connectId];
-            const storedFuture = urls[connectId];
-            return await storedFuture;
-        }
-        // we store an awaitable to the url
-        // so that multiple calls don't asynchronously
-        // fetch different urls and overwrite each other
-        urls[connectId] = this.spawn(this.negotiateHelper, privateChannel, params);
-        this.options['urls'] = urls;
-        const future = urls[connectId];
-        return await future;
-    }
-    async negotiateHelper(privateChannel, params = {}) {
-        let response = undefined;
-        const connectId = privateChannel ? 'private' : 'public';
-        try {
-            if (privateChannel) {
-                response = await this.privatePostBulletPrivate(params);
-                //
-                //     {
-                //         "code": "200000",
-                //         "data": {
-                //             "instanceServers": [
-                //                 {
-                //                     "pingInterval":  50000,
-                //                     "endpoint": "wss://push-private.kucoin.com/endpoint",
-                //                     "protocol": "websocket",
-                //                     "encrypt": true,
-                //                     "pingTimeout": 10000
-                //                 }
-                //             ],
-                //             "token": "2neAiuYvAU61ZDXANAGAsiL4-iAExhsBXZxftpOeh_55i3Ysy2q2LEsEWU64mdzUOPusi34M_wGoSf7iNyEWJ1UQy47YbpY4zVdzilNP-Bj3iXzrjjGlWtiYB9J6i9GjsxUuhPw3BlrzazF6ghq4Lzf7scStOz3KkxjwpsOBCH4=.WNQmhZQeUKIkh97KYgU0Lg=="
-                //         }
-                //     }
-                //
-            }
-            else {
-                response = await this.publicPostBulletPublic(params);
-            }
-            const data = this.safeValue(response, 'data', {});
-            const instanceServers = this.safeValue(data, 'instanceServers', []);
-            const firstInstanceServer = this.safeValue(instanceServers, 0);
-            const pingInterval = this.safeInteger(firstInstanceServer, 'pingInterval');
-            const endpoint = this.safeString(firstInstanceServer, 'endpoint');
-            const token = this.safeString(data, 'token');
-            const result = endpoint + '?' + this.urlencode({
-                'token': token,
-                'privateChannel': privateChannel,
-                'connectId': connectId,
-            });
-            const client = this.client(result);
-            client.keepAlive = pingInterval;
-            return result;
-        }
-        catch (e) {
-            const future = this.safeValue(this.options['urls'], connectId);
-            future.reject(e);
-            delete this.options['urls'][connectId];
-        }
-        return undefined;
-    }
-    requestId() {
-        const requestId = this.sum(this.safeInteger(this.options, 'requestId', 0), 1);
-        this.options['requestId'] = requestId;
-        return requestId;
-    }
-    /**
-     * @ignore
-     * @method
-     * @description Connects to a websocket channel
-     * @param {string} name name of the channel and suscriptionHash
-     * @param {bool} isPrivate true for the authenticated url, false for the public url
-     * @param {string} symbol is required for all public channels, not required for private channels (except position)
-     * @param {object} subscription subscription parameters
-     * @param {object} [params] extra parameters specific to the poloniex api
-     * @returns {object} data from the websocket stream
-     */
-    async subscribe(name, isPrivate, symbol = undefined, subscription = undefined, params = {}) {
-        const url = await this.negotiate(isPrivate);
-        if (symbol !== undefined) {
-            const market = this.market(symbol);
-            const marketId = market['id'];
-            name += ':' + marketId;
-        }
-        const messageHash = name;
-        const tunnelId = await this.stream(url, messageHash);
-        const requestId = this.requestId();
-        const subscribe = {
-            'id': requestId,
-            'type': 'subscribe',
-            'topic': name,
-            'privateChannel': isPrivate,
-            'response': true,
-            'tunnelId': tunnelId,
-        };
-        const subscriptionRequest = {
-            'id': requestId,
-        };
-        if (subscription === undefined) {
-            subscription = subscriptionRequest;
-        }
-        else {
-            subscription = this.extend(subscriptionRequest, subscription);
-        }
-        const request = this.extend(subscribe, params);
-        return await this.watch(url, messageHash, request, name, subscriptionRequest);
-    }
-    onClose(client, error) {
-        this.options['streamBySubscriptionsHash'] = {};
-        super.onClose(client, error);
-    }
-    async stream(url, subscriptionHash) {
-        const streamBySubscriptionsHash = this.safeValue(this.options, 'streamBySubscriptionsHash', {});
-        let stream = this.safeString(streamBySubscriptionsHash, subscriptionHash);
-        if (stream === undefined) {
-            let streamIndex = this.safeInteger(this.options, 'streamIndex', -1);
-            const streamLimit = this.safeValue(this.options, 'streamLimit');
-            streamIndex = streamIndex + 1;
-            const normalizedIndex = streamIndex % streamLimit;
-            this.options['streamIndex'] = streamIndex;
-            const streamIndexString = this.numberToString(normalizedIndex);
-            stream = 'stream-' + streamIndexString;
-            this.options['streamBySubscriptionsHash'][subscriptionHash] = stream;
-            const messageHash = 'tunnel:' + stream;
-            const request = {
-                'id': messageHash,
-                'type': 'openTunnel',
-                'newTunnelId': stream,
-                'response': true,
-            };
-            const subscription = {
-                'id': messageHash,
-                'method': this.handleNewStream,
-            };
-            await this.watch(url, messageHash, request, messageHash, subscription);
-        }
-        return stream;
-    }
-    handleOrderBookSubscription(client, message, subscription) {
-        const symbol = this.safeString(subscription, 'symbol');
-        const limit = this.safeInteger(subscription, 'limit');
-        this.orderbooks[symbol] = this.orderBook({}, limit);
-    }
-    handleSubscriptionStatus(client, message) {
-        //
-        //     {
-        //         "id": "1578090438322",
-        //         "type": "ack"
-        //     }
-        //
-        const id = this.safeString(message, 'id');
-        const subscriptionsById = this.indexBy(client.subscriptions, 'id');
-        const subscription = this.safeValue(subscriptionsById, id, {});
-        const method = this.safeValue(subscription, 'method');
-        if (method !== undefined) {
-            method.call(this, client, message, subscription);
-        }
-        return message;
-    }
-    handleNewStream(client, message, subscription) {
-        //
-        //    {
-        //        "id": "1545910840805",
-        //        "type": "ack"
-        //    }
-        //
-        const messageHash = this.safeString(message, 'id');
-        client.resolve(message, messageHash);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#watchTicker
-     * @description watches a price ticker, a statistical calculation with the information calculated over the past 24 hours for a specific market
-     * @see https://api-docs.poloniex.com/futures/websocket/public#get-real-time-symbol-ticker
-     * @param {string} symbol unified symbol of the market to fetch the ticker for
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a [ticker structure]{@link https://docs.ccxt.com/#/?id=ticker-structure}
-     */
-    async watchTicker(symbol, params = {}) {
-        await this.loadMarkets();
-        symbol = this.symbol(symbol);
-        const name = '/contractMarket/ticker';
-        return await this.subscribe(name, false, symbol, undefined, params);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#watchTrades
-     * @description get the list of most recent trades for a particular symbol
-     * @see https://api-docs.poloniex.com/futures/websocket/public#full-matching-engine-datalevel-3
-     * @param {string} symbol unified symbol of the market to fetch trades for
-     * @param {int} [since] timestamp in ms of the earliest trade to fetch
-     * @param {int} [limit] the maximum amount of trades to fetch
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object[]} a list of [trade structures]{@link https://docs.ccxt.com/#/?id=public-trades}
-     */
-    async watchTrades(symbol, since = undefined, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        const options = this.safeValue(this.options, 'watchTrades');
-        let name = this.safeString(options, 'method', '/contractMarket/execution'); // can also be /contractMarket/snapshot
-        [name, params] = this.handleOptionAndParams(params, 'method', 'name', name);
-        symbol = this.symbol(symbol);
-        const trades = await this.subscribe(name, false, symbol, undefined, params);
-        if (this.newUpdates) {
-            limit = trades.getLimit(symbol, limit);
-        }
-        return this.filterBySinceLimit(trades, since, limit, 'timestamp', true);
-    }
-    /**
-     * @method
-     * @name poloniexfutures#watchOrderBook
-     * @description watches information on open orders with bid (buy) and ask (sell) prices, volumes and other data
-     * @see https://api-docs.poloniex.com/futures/websocket/public#level-2-market-data
-     * @param {string} symbol unified symbol of the market to fetch the order book for
-     * @param {int} [limit] not used by poloniexfutures watchOrderBook
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @param {string} [params.method] the method to use. Defaults to /contractMarket/level2 can also be /contractMarket/level3v2 to receive the raw stream of orders
-     * @returns {object} A dictionary of [order book structures]{@link https://docs.ccxt.com/#/?id=order-book-structure} indexed by market symbols
-     */
-    async watchOrderBook(symbol, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        const options = this.safeValue(this.options, 'watchOrderBook');
-        let name = this.safeString(options, 'method', '/contractMarket/level2'); // can also be /contractMarket/level2, /contractMarket/level2Depth5:{symbol}, /contractMarket/level2Depth50:{symbol}
-        [name, params] = this.handleOptionAndParams(params, 'method', 'name', name);
-        if (name === '/contractMarket/level2' && limit !== undefined) {
-            if (limit !== 5 && limit !== 50) {
-                throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.BadRequest(this.id + ' watchOrderBook limit argument must be none, 5 or 50 if using method /contractMarket/level2');
-            }
-            name += 'Depth' + this.numberToString(limit);
-        }
-        const subscription = {
-            'symbol': symbol,
-            'limit': limit,
-            'method': this.handleOrderBookSubscription,
-        };
-        const orderbook = await this.subscribe(name, false, symbol, subscription, params);
-        return orderbook.limit();
-    }
-    /**
-     * @method
-     * @name poloniexfutures#watchOrders
-     * @description watches information on multiple orders made by the user
-     * @see https://api-docs.poloniex.com/futures/websocket/user-messages#private-messages
-     * @param {string} symbol filter by unified market symbol of the market orders were made in
-     * @param {int} [since] the earliest time in ms to fetch orders for
-     * @param {int} [limit] the maximum number of order structures to retrieve
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @param {string} [params.method] the method to use will default to /contractMarket/tradeOrders. Set to /contractMarket/advancedOrders to watch stop orders
-     * @returns {object[]} a list of [order structures]{@link https://docs.ccxt.com/#/?id=order-structure}
-     */
-    async watchOrders(symbol = undefined, since = undefined, limit = undefined, params = {}) {
-        await this.loadMarkets();
-        const options = this.safeValue(this.options, 'watchOrders');
-        const name = this.safeString(options, 'method', '/contractMarket/tradeOrders');
-        let orders = await this.subscribe(name, true, undefined, undefined, params);
-        if (this.newUpdates) {
-            limit = orders.getLimit(symbol, limit);
-        }
-        orders = this.filterBySymbolSinceLimit(orders, symbol, since, limit);
-        const length = orders.length;
-        if (length === 0) {
-            return await this.watchOrders(symbol, since, limit, params);
-        }
-        return orders;
-    }
-    /**
-     * @method
-     * @name poloniexfutures#watchBalance
-     * @description watch balance and get the amount of funds available for trading or funds locked in orders
-     * @see https://api-docs.poloniex.com/futures/websocket/user-messages#account-balance-events
-     * @param {object} [params] extra parameters specific to the exchange API endpoint
-     * @returns {object} a [balance structure]{@link https://docs.ccxt.com/#/?id=balance-structure}
-     */
-    async watchBalance(params = {}) {
-        await this.loadMarkets();
-        const name = '/contractAccount/wallet';
-        return await this.subscribe(name, true, undefined, undefined, params);
-    }
-    handleTrade(client, message) {
-        //
-        //    {
-        //        "data": {
-        //            "makerUserId": "1410336",
-        //            "symbol": "BTCUSDTPERP",
-        //            "sequence": 267913,
-        //            "side": "buy",
-        //            "size": 2,
-        //            "price": 28409.5,
-        //            "takerOrderId": "6426f9f15782c8000776995f",
-        //            "makerOrderId": "6426f9f141406b0008df976e",
-        //            "takerUserId": "1410880",
-        //            "tradeId": "6426f9f1de029f0001e334dd",
-        //            "ts": 1680275953739092500,
-        //        },
-        //        "subject": "match",
-        //        "topic": "/contractMarket/execution:BTCUSDTPERP",
-        //        "type": "message",
-        //    }
-        //
-        const data = this.safeValue(message, 'data', {});
-        const marketId = this.safeString(data, 'symbol');
-        if (marketId !== undefined) {
-            const trade = this.parseWsTrade(data);
-            const symbol = trade['symbol'];
-            const messageHash = '/contractMarket/execution:' + marketId;
-            let stored = this.safeValue(this.trades, symbol);
-            if (stored === undefined) {
-                const tradesLimit = this.safeInteger(this.options, 'tradesLimit', 1000);
-                stored = new _base_ws_Cache_js__WEBPACK_IMPORTED_MODULE_2__/* .ArrayCache */ .I3(tradesLimit);
-                this.trades[symbol] = stored;
-            }
-            stored.append(trade);
-            client.resolve(stored, messageHash);
-        }
-        return message;
-    }
-    parseWsTrade(trade, market = undefined) {
-        //
-        // handleTrade
-        //
-        //    {
-        //        "makerUserId": "1410880",
-        //        "symbol": "BTCUSDTPERP",
-        //        "sequence": 731390,
-        //        "side": "sell",
-        //        "size": 2,
-        //        "price": 29372.4,
-        //        "takerOrderId": "644ef0fdd64748000759218a",
-        //        "makerOrderId": "644ef0fd25f4a50007f12fc5",
-        //        "takerUserId": "1410880",
-        //        "tradeId": "644ef0fdde029f0001eec346",
-        //        "ts": 1682895101923194000
-        //    }
-        //
-        const marketId = this.safeString(trade, 'symbol');
-        market = this.safeMarket(marketId, market);
-        const timestamp = this.safeIntegerProduct(trade, 'ts', 0.000001);
-        return this.safeTrade({
-            'info': trade,
-            'id': this.safeString(trade, 'tradeId'),
-            'symbol': this.safeString(market, 'symbol'),
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'order': this.safeString2(trade, 'takerOrderId', 'makerOrderId'),
-            'type': undefined,
-            'side': this.safeString(trade, 'side'),
-            'takerOrMaker': undefined,
-            'price': this.safeString(trade, 'price'),
-            'amount': this.safeString2(trade, 'matchSize', 'size'),
-            'cost': undefined,
-            'fee': undefined,
-        }, market);
-    }
-    parseWsOrderTrade(trade, market = undefined) {
-        //
-        //    {
-        //        "symbol": "BTC_USDT",
-        //        "type": "LIMIT",
-        //        "quantity": "1",
-        //        "orderId": "32471407854219264",
-        //        "tradeFee": "0",
-        //        "clientOrderId": "",
-        //        "accountType": "SPOT",
-        //        "feeCurrency": "",
-        //        "eventType": "place",
-        //        "source": "API",
-        //        "side": "BUY",
-        //        "filledQuantity": "0",
-        //        "filledAmount": "0",
-        //        "matchRole": "MAKER",
-        //        "state": "NEW",
-        //        "tradeTime": 0,
-        //        "tradeAmount": "0",
-        //        "orderAmount": "0",
-        //        "createTime": 1648708186922,
-        //        "price": "47112.1",
-        //        "tradeQty": "0",
-        //        "tradePrice": "0",
-        //        "tradeId": "0",
-        //        "ts": 1648708187469
-        //    }
-        //
-        const timestamp = this.safeInteger(trade, 'tradeTime');
-        const marketId = this.safeString(trade, 'symbol');
-        return this.safeTrade({
-            'info': trade,
-            'id': this.safeString(trade, 'tradeId'),
-            'symbol': this.safeSymbol(marketId, market),
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'order': this.safeString(trade, 'orderId'),
-            'type': this.safeStringLower(trade, 'type'),
-            'side': this.safeString(trade, 'side'),
-            'takerOrMaker': this.safeStringLower(trade, 'matchRole'),
-            'price': this.safeString(trade, 'price'),
-            'amount': this.safeString(trade, 'tradeAmount'),
-            'cost': undefined,
-            'fee': {
-                'rate': undefined,
-                'cost': this.safeString(trade, 'tradeFee'),
-                'currency': this.safeString(trade, 'feeCurrency'),
-            },
-        }, market);
-    }
-    handleOrder(client, message) {
-        //
-        //    {
-        //        "data": {
-        //          "symbol": "ADAUSDTPERP",
-        //          "orderType": "limit",
-        //          "side": "buy",
-        //          "canceledSize": "1",
-        //          "orderId": "642b4d4c0494cd0007c76813",
-        //          "type": "canceled",
-        //          "orderTime": "1680559436101909048",
-        //          "size": "1",
-        //          "filledSize": "0",
-        //          "marginType": 1,
-        //          "price": "0.25",
-        //          "remainSize": "0",
-        //          "clientOid": "112cbbf1-95a3-4917-957c-d3a87d81f853",
-        //          "status": "done",
-        //          "ts": 1680559677560686600
-        //        },
-        //        "subject": "orderChange",
-        //        "topic": "/contractMarket/tradeOrders",
-        //        "channelType": "private",
-        //        "type": "message",
-        //        "userId": "1139790"
-        //    }
-        // stop order
-        //    {
-        //        "data": {
-        //            "orderType": "stop",
-        //            "symbol": "BTCUSDTPERP",
-        //            "side": "buy",
-        //            "stopPriceType": "TP",
-        //            "orderId": "64514fe1850d2100074378f6",
-        //            "type": "open",
-        //            "createdAt": 1683050465847,
-        //            "stopPrice": "29000",
-        //            "size": 2,
-        //            "stop": "up",
-        //            "marginType": 0,
-        //            "orderPrice": "28552.9",
-        //            "ts": 1683050465847597300
-        //        },
-        //        "subject": "stopOrder",
-        //        "topic": "/contractMarket/advancedOrders",
-        //        "channelType": "private",
-        //        "id": "64514fe1850d2100074378fa",
-        //        "type": "message",
-        //        "userId": "1160396"
-        //    }
-        //
-        const data = this.safeValue(message, 'data', {});
-        let orders = this.orders;
-        if (orders === undefined) {
-            const limit = this.safeInteger(this.options, 'ordersLimit');
-            orders = new _base_ws_Cache_js__WEBPACK_IMPORTED_MODULE_2__/* .ArrayCacheBySymbolById */ .Pt(limit);
-            this.orders = orders;
-        }
-        const messageHash = '/contractMarket/tradeOrders';
-        const parsed = this.parseWsOrder(data);
-        orders.append(parsed);
-        client.resolve(orders, messageHash);
-        return message;
-    }
-    parseOrderStatus(status, type) {
-        /**
-         * @ignore
-         * @method
-         * @param {string} status "match", "open", "done"
-         * @param {string} type "open", "match", "filled", "canceled", "update"
-         * @returns {string}
-         */
-        const types = {
-            'canceled': 'canceled',
-            'cancel': 'canceled',
-            'filled': 'closed',
-        };
-        let parsedStatus = this.safeString(types, type);
-        if (parsedStatus === undefined) {
-            const statuses = {
-                'open': 'open',
-                'match': 'open',
-                'done': 'closed',
-            };
-            parsedStatus = this.safeString(statuses, status, status);
-        }
-        return parsedStatus;
-    }
-    parseWsOrder(order, market = undefined) {
-        //
-        //    {
-        //        "symbol": "ADAUSDTPERP",
-        //        "orderType": "limit",
-        //        "side": "buy",
-        //        "canceledSize": "1",
-        //        "orderId": "642b4d4c0494cd0007c76813",
-        //        "type": "canceled",
-        //        "orderTime": "1680559436101909048",
-        //        "size": "1",
-        //        "filledSize": "0",
-        //        "marginType": 1,
-        //        "price": "0.25",
-        //        "remainSize": "0",
-        //        "clientOid": "112cbbf1-95a3-4917-957c-d3a87d81f853",
-        //        "status": "done",
-        //        "ts": 1680559677560686600
-        //    }
-        // stop
-        //    {
-        //        "orderType": "stop",
-        //        "symbol": "BTCUSDTPERP",
-        //        "side": "buy",
-        //        "stopPriceType": "TP",
-        //        "orderId": "64514fe1850d2100074378f6",
-        //        "type": "open",
-        //        "createdAt": 1683050465847,
-        //        "stopPrice": "29000",
-        //        "size": 2,
-        //        "stop": "up",
-        //        "marginType": 0,
-        //        "orderPrice": "28552.9",
-        //        "ts": 1683050465847597300
-        //    }
-        //
-        const id = this.safeString(order, 'orderId');
-        const clientOrderId = this.safeString(order, 'clientOid');
-        const marketId = this.safeString(order, 'symbol');
-        const timestamp = this.safeIntegerProduct2(order, 'orderTime', 'ts', 0.000001);
-        const status = this.safeString(order, 'status');
-        const messageType = this.safeString(order, 'type');
-        return this.safeOrder({
-            'info': order,
-            'symbol': this.safeSymbol(marketId, market),
-            'id': id,
-            'clientOrderId': clientOrderId,
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-            'lastTradeTimestamp': undefined,
-            'type': this.safeString(order, 'orderType'),
-            'timeInForce': undefined,
-            'postOnly': undefined,
-            'side': this.safeString(order, 'side'),
-            'price': this.safeString2(order, 'price', 'orderPrice'),
-            'stopPrice': this.safeString(order, 'stopPrice'),
-            'triggerPrice': undefined,
-            'amount': this.safeString(order, 'size'),
-            'cost': undefined,
-            'average': undefined,
-            'filled': this.safeString(order, 'filledSize'),
-            'remaining': this.safeString(order, 'remainSize'),
-            'status': this.parseOrderStatus(status, messageType),
-            'fee': undefined,
-            'trades': undefined,
-        });
-    }
-    handleTicker(client, message) {
-        //
-        //    {
-        //        "subject": "ticker",
-        //        "topic": "/contractMarket/ticker:BTCUSDTPERP",
-        //        "data": {
-        //            "symbol": "BTCUSDTPERP",                   // Market of the symbol
-        //            "sequence": 45,                            // Sequence number which is used to judge the continuity of the pushed messages
-        //            "side": "sell",                            // Transaction side of the last traded taker order
-        //            "price": 3600.00,                          // Filled price
-        //            "size": 16,                                // Filled quantity
-        //            "tradeId": "5c9dcf4170744d6f5a3d32fb",     // Order ID
-        //            "bestBidSize": 795,                        // Best bid size
-        //            "bestBidPrice": 3200.00,                   // Best bid
-        //            "bestAskPrice": 3600.00,                   // Best ask size
-        //            "bestAskSize": 284,                        // Best ask
-        //            "ts": 1553846081210004941                  // Filled time - nanosecond
-        //        },
-        //        "type": "message",
-        //    }
-        //
-        //    {
-        //        "topic": "/contractMarket/snapshot:BTCUSDTPERP",
-        //        "subject": "snapshot.24h",
-        //        "data": {
-        //            "volume": 30449670,            //24h Volume
-        //            "turnover": 845169919063,      //24h Turnover
-        //            "lastPrice": 3551,           //Last price
-        //            "priceChgPct": 0.0043,         //24h Change
-        //            "ts": 1547697294838004923      //Snapshot time (nanosecond)
-        //        }
-        //    }
-        //
-        const data = this.safeValue(message, 'data', {});
-        const messageHash = this.safeString(message, 'topic');
-        const symbol = this.getSymbolFromTopic(messageHash);
-        if (symbol !== undefined) {
-            const ticker = this.parseTicker(data);
-            this.tickers[symbol] = ticker;
-            client.resolve(ticker, messageHash);
-        }
-        return message;
-    }
-    handleL3OrderBook(client, message) {
-        //
-        //    {
-        //        "data": {
-        //            "symbol": "BTCUSDTPERP",
-        //            "sequence": 1679593048010,
-        //            "orderId": "6426fec8586b9500089d64d8",
-        //            "clientOid": "14e6ee8e-8757-462c-84db-ed12c2b62f55",
-        //            "ts": 1680277192127513900
-        //        },
-        //        "subject": "received",
-        //        "topic": "/contractMarket/level3v2:BTCUSDTPERP",
-        //        "type": "message"
-        //    }
-        //
-        //    {
-        //        "data": {
-        //            "symbol": "BTCUSDTPERP",
-        //            "sequence": 1679593047982,
-        //            "side": "sell",
-        //            "orderTime": "1680277191900131371",
-        //            "size": "1",
-        //            "orderId": "6426fec7d32b6e000790268b",
-        //            "price": "28376.4",
-        //            "ts": 1680277191939042300
-        //        },
-        //        "subject": "open",
-        //        "topic": "/contractMarket/level3v2:BTCUSDTPERP",
-        //        "type": "message"
-        //    }
-        //
-        //    {
-        //        "data": {
-        //            "symbol": "BTCUSDTPERP",
-        //            "reason": "canceled",   // or "filled"
-        //            "sequence": 1679593047983,
-        //            "orderId": "6426fec74026fa0008e7046f",
-        //            "ts": 1680277191949842000
-        //        },
-        //        "subject": "done",
-        //        "topic": "/contractMarket/level3v2:BTCUSDTPERP",
-        //        "type": "message"
-        //    }
-        //
-        const messageHash = this.safeString(message, 'topic');
-        const subject = this.safeString(message, 'subject');
-        if (subject === 'received') {
-            return;
-        }
-        // At the time of writting this, there is no implementation to easily convert each order into the orderbook so raw messages are returned
-        client.resolve(message, messageHash);
-    }
-    handleLevel2(client, message) {
-        //    {
-        //        "subject": "level2",
-        //        "topic": "/contractMarket/level2:BTCUSDTPERP",
-        //        "type": "message",
-        //        "data": {
-        //            "sequence": 18,                   // Sequence number which is used to judge the continuity of pushed messages
-        //            "change": "5000.0,sell,83"        // Price, side, quantity
-        //            "timestamp": 1551770400000
-        //        }
-        //    }
-        const topic = this.safeString(message, 'topic');
-        const isSnapshot = topic.indexOf('Depth') >= 0;
-        if (isSnapshot) {
-            this.handeL2Snapshot(client, message);
-            return;
-        }
-        this.handleL2OrderBook(client, message);
-    }
-    handleL2OrderBook(client, message) {
-        //
-        //    {
-        //        "id": 1545910660740,
-        //        "type": "subscribe",
-        //        "topic": "/contractMarket/level2:BTCUSDTPERP",
-        //        "response": true
-        //    }
-        //
-        //    {
-        //        "subject": "level2",
-        //        "topic": "/contractMarket/level2:BTCUSDTPERP",
-        //        "type": "message",
-        //        "data": {
-        //            "sequence": 18,                   // Sequence number which is used to judge the continuity of pushed messages
-        //            "change": "5000.0,sell,83"        // Price, side, quantity
-        //            "timestamp": 1551770400000
-        //        }
-        //    }
-        //
-        const data = this.safeValue(message, 'data', {});
-        const messageHash = this.safeString(message, 'topic', '');
-        const symbol = this.getSymbolFromTopic(messageHash);
-        let orderBook = this.safeValue(this.orderbooks, symbol);
-        if (orderBook === undefined) {
-            this.orderbooks[symbol] = this.orderBook({});
-            orderBook = this.orderbooks[symbol];
-            orderBook['symbol'] = symbol;
-        }
-        const nonce = this.safeInteger(orderBook, 'nonce');
-        if (nonce === undefined) {
-            const cacheLength = orderBook.cache.length;
-            const snapshotDelay = this.handleOption('watchOrderBook', 'snapshotDelay', 5);
-            if (cacheLength === snapshotDelay) {
-                const limit = 0;
-                this.spawn(this.loadOrderBook, client, messageHash, symbol, limit, {});
-            }
-            orderBook.cache.push(data);
-            return;
-        }
-        try {
-            this.handleDelta(orderBook, data);
-            client.resolve(orderBook, messageHash);
-        }
-        catch (e) {
-            delete this.orderbooks[symbol];
-            client.reject(e, messageHash);
-        }
-    }
-    handeL2Snapshot(client, message) {
-        //
-        //    {
-        //        "type": "message",
-        //        "topic": "/contractMarket/level2Depth5:BTCUSDTPERP",
-        //        "subject": "level2",
-        //        "data": {
-        //            "asks": [
-        //                ["9993", "3"],
-        //                ["9992", "3"],
-        //                ["9991", "47"],
-        //                ["9990", "32"],
-        //                ["9989", "8"]
-        //            ],
-        //            "bids": [
-        //                ["9988", "56"],
-        //                ["9987", "15"],
-        //                ["9986", "100"],
-        //                ["9985", "10"],
-        //                ["9984", "10"]
-        //            ],
-        //            "timestamp": 1682993050531,
-        //        }
-        //    }
-        //
-        const data = this.safeValue(message, 'data', {});
-        const messageHash = this.safeString(message, 'topic', '');
-        const symbol = this.getSymbolFromTopic(messageHash);
-        const timestamp = this.safeInteger(data, 'timestamp');
-        const snapshot = this.parseOrderBook(data, symbol, timestamp, 'bids', 'asks');
-        const orderbook = this.orderBook(snapshot);
-        this.orderbooks[symbol] = orderbook;
-        client.resolve(orderbook, messageHash);
-    }
-    getSymbolFromTopic(topic) {
-        const splitTopic = topic.split(':');
-        const marketId = this.safeString(splitTopic, 1);
-        return this.safeSymbol(marketId);
-    }
-    getCacheIndex(orderbook, cache) {
-        const firstDelta = this.safeValue(cache, 0);
-        const nonce = this.safeInteger(orderbook, 'nonce');
-        const firstDeltaSequence = this.safeInteger(firstDelta, 'sequence');
-        if (firstDeltaSequence > nonce + 1) {
-            return -1;
-        }
-        for (let i = 0; i < cache.length; i++) {
-            const delta = cache[i];
-            const sequence = this.safeInteger(delta, 'sequence');
-            if (nonce === sequence - 1) {
-                return i;
-            }
-        }
-        return cache.length;
-    }
-    handleDelta(orderbook, delta) {
-        //
-        //    {
-        //      sequence: 123677914,
-        //      lastSequence: 123677913,
-        //      change: '80.36,buy,4924',
-        //      changes: [ '80.19,buy,0',"80.15,buy,10794" ],
-        //      timestamp: 1715643483528
-        //    },
-        //
-        const sequence = this.safeInteger(delta, 'sequence');
-        const lastSequence = this.safeInteger(delta, 'lastSequence');
-        const nonce = this.safeInteger(orderbook, 'nonce');
-        if (nonce > sequence) {
-            return;
-        }
-        if (nonce !== lastSequence) {
-            const checksum = this.handleOption('watchOrderBook', 'checksum', true);
-            if (checksum) {
-                throw new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.ChecksumError(this.id + ' ' + this.orderbookChecksumMessage(''));
-            }
-        }
-        const changes = this.safeList(delta, 'changes');
-        for (let i = 0; i < changes.length; i++) {
-            const change = changes[i];
-            const splitChange = change.split(',');
-            const price = this.safeNumber(splitChange, 0);
-            const side = this.safeString(splitChange, 1);
-            const size = this.safeNumber(splitChange, 2);
-            const orderBookSide = (side === 'buy') ? orderbook['bids'] : orderbook['asks'];
-            orderBookSide.store(price, size);
-        }
-        const timestamp = this.safeInteger(delta, 'timestamp');
-        orderbook['timestamp'] = timestamp;
-        orderbook['datetime'] = this.iso8601(timestamp);
-        orderbook['nonce'] = sequence;
-    }
-    handleBalance(client, message) {
-        //
-        //    {
-        //        "data": {
-        //          "currency": "USDT",
-        //          "availableBalance": "4.0000000000",
-        //          "timestamp": "1680557568670"
-        //        },
-        //        "subject": "availableBalance.change",
-        //        "topic": "/contractAccount/wallet",
-        //        "channelType": "private",
-        //        "id": "642b4600cae86800074b5ab7",
-        //        "type": "message",
-        //        "userId": "1139790"
-        //    }
-        //
-        //    {
-        //        "data": {
-        //          "currency": "USDT",
-        //          "orderMargin": "0.0000000000",
-        //          "timestamp": "1680558743307"
-        //        },
-        //        "subject": "orderMargin.change",
-        //        "topic": "/contractAccount/wallet",
-        //        "channelType": "private",
-        //        "id": "642b4a97b58e360007c3a237",
-        //        "type": "message",
-        //        "userId": "1139790"
-        //    }
-        //
-        const data = this.safeValue(message, 'data', []);
-        const messageHash = '/contractAccount/wallet';
-        const currencyId = this.safeString(data, 'currency');
-        const currency = this.currency(currencyId);
-        const code = currency['code'];
-        this.balance[code] = this.parseWsBalance(data);
-        client.resolve(this.balance[code], messageHash);
-        return message;
-    }
-    parseWsBalance(response) {
-        //
-        //    {
-        //        "currency": "USDT",
-        //        "availableBalance": "4.0000000000",
-        //        "timestamp": "1680557568670"
-        //    }
-        //
-        //    {
-        //        "currency": "USDT",
-        //        "orderMargin": "0.0000000000",
-        //        "timestamp": "1680558743307"
-        //    }
-        //
-        const timestamp = this.safeInteger(response, 'timestamp');
-        const result = {
-            'info': response,
-            'timestamp': timestamp,
-            'datetime': this.iso8601(timestamp),
-        };
-        const currencyId = this.safeString(response, 'currency');
-        const code = this.safeCurrencyCode(currencyId);
-        const newAccount = this.account();
-        newAccount['free'] = this.safeString(response, 'availableBalance');
-        result[code] = newAccount;
-        return this.safeBalance(result);
-    }
-    handleSystemStatus(client, message) {
-        //
-        //     {
-        //         "id": "1578090234088", // connectId
-        //         "type": "welcome",
-        //     }
-        //
-        return message;
-    }
-    handleSubject(client, message) {
-        const subject = this.safeString(message, 'subject');
-        const methods = {
-            'auth': this.handleAuthenticate,
-            'received': this.handleL3OrderBook,
-            'open': this.handleL3OrderBook,
-            'update': this.handleL3OrderBook,
-            'done': this.handleL3OrderBook,
-            'level2': this.handleLevel2,
-            'ticker': this.handleTicker,
-            'snapshot.24h': this.handleTicker,
-            'match': this.handleTrade,
-            'orderChange': this.handleOrder,
-            'stopOrder': this.handleOrder,
-            'availableBalance.change': this.handleBalance,
-            'orderMargin.change': this.handleBalance,
-        };
-        const method = this.safeValue(methods, subject);
-        if (method !== undefined) {
-            method.call(this, client, message);
-        }
-    }
-    ping(client) {
-        const id = this.requestId().toString();
-        return {
-            'id': id,
-            'type': 'ping',
-        };
-    }
-    handlePong(client, message) {
-        client.lastPong = this.milliseconds();
-        return message;
-    }
-    handleErrorMessage(client, message) {
-        //
-        //    {
-        //        "code": 404,
-        //        "data": "tunnel stream-0 is not exist",
-        //        "id": "3",
-        //        "type": "error"
-        //    }
-        //
-        client.reject(message);
-    }
-    handleMessage(client, message) {
-        const type = this.safeString(message, 'type');
-        const methods = {
-            'welcome': this.handleSystemStatus,
-            'ack': this.handleSubscriptionStatus,
-            'message': this.handleSubject,
-            'pong': this.handlePong,
-            'error': this.handleErrorMessage,
-        };
-        const method = this.safeValue(methods, type);
-        if (method !== undefined) {
-            method.call(this, client, message);
-        }
-    }
-    handleAuthenticate(client, message) {
-        //
-        //    {
-        //        "success": true,
-        //        "ret_msg": '',
-        //        "op": "auth",
-        //        "conn_id": "ce3dpomvha7dha97tvp0-2xh"
-        //    }
-        //
-        const data = this.safeValue(message, 'data');
-        const success = this.safeValue(data, 'success');
-        const messageHash = 'authenticated';
-        if (success) {
-            client.resolve(message, messageHash);
-        }
-        else {
-            const error = new _base_errors_js__WEBPACK_IMPORTED_MODULE_1__.AuthenticationError(this.id + ' ' + this.json(message));
-            client.reject(error, messageHash);
-            if (messageHash in client.subscriptions) {
-                delete client.subscriptions[messageHash];
-            }
-        }
-        return message;
     }
 }
 
@@ -379197,13 +375251,16 @@ class whitebit extends _abstract_whitebit_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 'cancelOrder': true,
                 'cancelOrders': false,
                 'createConvertTrade': true,
+                'createDepositAddress': true,
                 'createMarketBuyOrderWithCost': true,
                 'createMarketOrderWithCost': false,
                 'createMarketSellOrderWithCost': false,
                 'createOrder': true,
+                'createPostOnlyOrder': true,
                 'createStopLimitOrder': true,
                 'createStopMarketOrder': true,
                 'createStopOrder': true,
+                'createTriggerOrder': true,
                 'editOrder': false,
                 'fetchBalance': true,
                 'fetchBorrowRateHistories': false,
@@ -379212,7 +375269,7 @@ class whitebit extends _abstract_whitebit_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
                 'fetchConvertQuote': true,
                 'fetchConvertTrade': false,
                 'fetchConvertTradeHistory': true,
-                'fetchCrossBorrowRate': false,
+                'fetchCrossBorrowRate': true,
                 'fetchCrossBorrowRates': false,
                 'fetchCurrencies': true,
                 'fetchDeposit': true,
@@ -380521,9 +376578,11 @@ class whitebit extends _abstract_whitebit_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
      * @returns {object} an [order structure]{@link https://docs.ccxt.com/#/?id=order-structure}
      */
     async createMarketOrderWithCost(symbol, side, cost, params = {}) {
-        params['cost'] = cost;
+        const req = {
+            'cost': cost,
+        };
         // only buy side is supported
-        return await this.createOrder(symbol, 'market', side, 0, undefined, params);
+        return await this.createOrder(symbol, 'market', side, 0, undefined, this.extend(req, params));
     }
     /**
      * @method
@@ -380553,6 +376612,10 @@ class whitebit extends _abstract_whitebit_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
      * @param {float} [price] the price at which the order is to be fulfilled, in units of the quote currency, ignored in market orders
      * @param {object} [params] extra parameters specific to the exchange API endpoint
      * @param {float} [params.cost] *market orders only* the cost of the order in units of the base currency
+     * @param {float} [params.triggerPrice] The price at which a trigger order is triggered at
+     * @param {bool} [params.postOnly] If true, the order will only be posted to the order book and not executed immediately
+     * @param {string} [params.clientOrderId] a unique id for the order
+     * @param {string} [params.marginMode] 'cross' or 'isolated', for margin trading, uses this.options.defaultMarginMode if not passed, defaults to undefined/None/null
      * @returns {object} an [order structure]{@link https://docs.ccxt.com/#/?id=order-structure}
      */
     async createOrder(symbol, type, side, amount, price = undefined, params = {}) {
@@ -381244,6 +377307,60 @@ class whitebit extends _abstract_whitebit_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             'network': undefined,
             'address': address,
             'tag': tag,
+        };
+    }
+    /**
+     * @method
+     * @name whitebit#createDepositAddress
+     * @description create a currency deposit address
+     * @see https://docs.whitebit.com/private/http-main-v4/#create-new-address-for-deposit
+     * @param {string} code unified currency code of the currency for the deposit address
+     * @param {object} [params] extra parameters specific to the exchange API endpoint
+     * @param {string} [params.network] the blockchain network to create a deposit address on
+     * @param {string} [params.type] address type, available for specific currencies
+     * @returns {object} an [address structure]{@link https://docs.ccxt.com/#/?id=address-structure}
+     */
+    async createDepositAddress(code, params = {}) {
+        await this.loadMarkets();
+        const currency = this.currency(code);
+        const request = {
+            'ticker': currency['id'],
+        };
+        const response = await this.v4PrivatePostMainAccountCreateNewAddress(this.extend(request, params));
+        //
+        //     {
+        //         "account": {
+        //             "address": "GDTSOI56XNVAKJNJBLJGRNZIVOCIZJRBIDKTWSCYEYNFAZEMBLN75RMN",
+        //             "memo": "48565488244493"
+        //         },
+        //         "required": {
+        //             "maxAmount": "0",
+        //             "minAmount": "1",
+        //             "fixedFee": "0",
+        //             "flexFee": {
+        //                 "maxFee": "0",
+        //                 "minFee": "0",
+        //                 "percent": "0"
+        //             }
+        //         }
+        //     }
+        //
+        const data = this.safeDict(response, 'account', {});
+        return this.parseDepositAddress(data, currency);
+    }
+    parseDepositAddress(depositAddress, currency = undefined) {
+        //
+        //     {
+        //         "address": "GDTSOI56XNVAKJNJBLJGRNZIVOCIZJRBIDKTWSCYEYNFAZEMBLN75RMN",
+        //         "memo": "48565488244493"
+        //     },
+        //
+        return {
+            'info': depositAddress,
+            'currency': this.safeCurrencyCode(undefined, currency),
+            'network': undefined,
+            'address': this.safeString(depositAddress, 'address'),
+            'tag': this.safeString(depositAddress, 'memo'),
         };
     }
     /**
@@ -382335,6 +378452,41 @@ class whitebit extends _abstract_whitebit_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             'takeProfitPrice': this.safeNumber(tpsl, 'takeProfit'),
         });
     }
+    /**
+     * @method
+     * @name whitebit#fetchCrossBorrowRate
+     * @description fetch the rate of interest to borrow a currency for margin trading
+     * @see https://docs.whitebit.com/private/http-main-v4/#get-plans
+     * @param {string} code unified currency code
+     * @param {object} [params] extra parameters specific to the exchange API endpoint
+     * @returns {object} a [borrow rate structure]{@link https://docs.ccxt.com/#/?id=borrow-rate-structure}
+     */
+    async fetchCrossBorrowRate(code, params = {}) {
+        await this.loadMarkets();
+        const currency = this.currency(code);
+        const request = {
+            'ticker': currency['id'],
+        };
+        const response = await this.v4PrivatePostMainAccountSmartPlans(this.extend(request, params));
+        //
+        //
+        const data = this.safeList(response, 0, []);
+        return this.parseBorrowRate(data, currency);
+    }
+    parseBorrowRate(info, currency = undefined) {
+        //
+        //
+        const currencyId = this.safeString(info, 'ticker');
+        const percent = this.safeString(info, 'percent');
+        return {
+            'currency': this.safeCurrencyCode(currencyId, currency),
+            'rate': this.parseNumber(_base_Precise_js__WEBPACK_IMPORTED_MODULE_3__/* .Precise */ .Y.stringDiv(percent, '100')),
+            'period': this.safeInteger(info, 'duration'),
+            'timestamp': undefined,
+            'datetime': undefined,
+            'info': info,
+        };
+    }
     isFiat(currency) {
         const fiatCurrencies = this.safeValue(this.options, 'fiatCurrencies', []);
         return this.inArray(currency, fiatCurrencies);
@@ -382986,6 +379138,7 @@ class woo extends _abstract_woo_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
         let symbol = base + '/' + quote;
         let contractSize = undefined;
         let linear = undefined;
+        let inverse = undefined;
         let margin = true;
         const contract = swap;
         if (contract) {
@@ -382995,6 +379148,7 @@ class woo extends _abstract_woo_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
             symbol = base + '/' + quote + ':' + settle;
             contractSize = this.parseNumber('1');
             linear = true;
+            inverse = false;
         }
         return {
             'id': marketId,
@@ -383014,7 +379168,7 @@ class woo extends _abstract_woo_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */
             'active': this.safeString(market, 'is_trading') === '1',
             'contract': contract,
             'linear': linear,
-            'inverse': undefined,
+            'inverse': inverse,
             'contractSize': contractSize,
             'expiry': undefined,
             'expiryDatetime': undefined,
@@ -386751,7 +382905,7 @@ class woofipro extends _abstract_woofipro_js__WEBPACK_IMPORTED_MODULE_0__/* ["de
             'active': undefined,
             'contract': true,
             'linear': true,
-            'inverse': undefined,
+            'inverse': false,
             'contractSize': this.parseNumber('1'),
             'expiry': undefined,
             'expiryDatetime': undefined,
@@ -395392,6 +391546,7 @@ class yobit extends _abstract_yobit_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"
             'currency': code,
             'address': address,
             'tag': undefined,
+            'network': undefined,
             'info': response['info'],
         };
     }
@@ -402533,48 +398688,48 @@ YAHOO.lang = {
 var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   AccountNotEnabled: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.AccountNotEnabled),
-/* harmony export */   AccountSuspended: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.AccountSuspended),
-/* harmony export */   AddressPending: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.AddressPending),
-/* harmony export */   ArgumentsRequired: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.ArgumentsRequired),
-/* harmony export */   AuthenticationError: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.AuthenticationError),
-/* harmony export */   BadRequest: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.BadRequest),
-/* harmony export */   BadResponse: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.BadResponse),
-/* harmony export */   BadSymbol: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.BadSymbol),
-/* harmony export */   BaseError: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.BaseError),
-/* harmony export */   CancelPending: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.CancelPending),
-/* harmony export */   ChecksumError: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.ChecksumError),
-/* harmony export */   ContractUnavailable: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.ContractUnavailable),
-/* harmony export */   DDoSProtection: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.DDoSProtection),
-/* harmony export */   DuplicateOrderId: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.DuplicateOrderId),
+/* harmony export */   AccountNotEnabled: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.AccountNotEnabled),
+/* harmony export */   AccountSuspended: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.AccountSuspended),
+/* harmony export */   AddressPending: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.AddressPending),
+/* harmony export */   ArgumentsRequired: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.ArgumentsRequired),
+/* harmony export */   AuthenticationError: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.AuthenticationError),
+/* harmony export */   BadRequest: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.BadRequest),
+/* harmony export */   BadResponse: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.BadResponse),
+/* harmony export */   BadSymbol: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.BadSymbol),
+/* harmony export */   BaseError: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.BaseError),
+/* harmony export */   CancelPending: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.CancelPending),
+/* harmony export */   ChecksumError: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.ChecksumError),
+/* harmony export */   ContractUnavailable: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.ContractUnavailable),
+/* harmony export */   DDoSProtection: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.DDoSProtection),
+/* harmony export */   DuplicateOrderId: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.DuplicateOrderId),
 /* harmony export */   Exchange: () => (/* reexport safe */ ccxt_src_base_Exchange_js_WEBPACK_IMPORTED_MODULE_0_.k),
-/* harmony export */   ExchangeClosedByUser: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.ExchangeClosedByUser),
-/* harmony export */   ExchangeError: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.ExchangeError),
-/* harmony export */   ExchangeNotAvailable: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.ExchangeNotAvailable),
-/* harmony export */   InsufficientFunds: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.InsufficientFunds),
-/* harmony export */   InvalidAddress: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.InvalidAddress),
-/* harmony export */   InvalidNonce: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.InvalidNonce),
-/* harmony export */   InvalidOrder: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.InvalidOrder),
-/* harmony export */   InvalidProxySettings: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.InvalidProxySettings),
-/* harmony export */   ManualInteractionNeeded: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.ManualInteractionNeeded),
-/* harmony export */   MarginModeAlreadySet: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.MarginModeAlreadySet),
-/* harmony export */   MarketClosed: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.MarketClosed),
-/* harmony export */   NetworkError: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.NetworkError),
-/* harmony export */   NoChange: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.NoChange),
-/* harmony export */   NotSupported: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.NotSupported),
-/* harmony export */   NullResponse: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.NullResponse),
-/* harmony export */   OnMaintenance: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.OnMaintenance),
-/* harmony export */   OperationFailed: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.OperationFailed),
-/* harmony export */   OperationRejected: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.OperationRejected),
-/* harmony export */   OrderImmediatelyFillable: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.OrderImmediatelyFillable),
-/* harmony export */   OrderNotCached: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.OrderNotCached),
-/* harmony export */   OrderNotFillable: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.OrderNotFillable),
-/* harmony export */   OrderNotFound: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.OrderNotFound),
-/* harmony export */   PermissionDenied: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.PermissionDenied),
-/* harmony export */   Precise: () => (/* reexport safe */ ccxt_src_base_Precise_js_WEBPACK_IMPORTED_MODULE_186_.Y),
-/* harmony export */   RateLimitExceeded: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.RateLimitExceeded),
-/* harmony export */   RequestTimeout: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.RequestTimeout),
-/* harmony export */   UnsubscribeError: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_.UnsubscribeError),
+/* harmony export */   ExchangeClosedByUser: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.ExchangeClosedByUser),
+/* harmony export */   ExchangeError: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.ExchangeError),
+/* harmony export */   ExchangeNotAvailable: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.ExchangeNotAvailable),
+/* harmony export */   InsufficientFunds: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.InsufficientFunds),
+/* harmony export */   InvalidAddress: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.InvalidAddress),
+/* harmony export */   InvalidNonce: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.InvalidNonce),
+/* harmony export */   InvalidOrder: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.InvalidOrder),
+/* harmony export */   InvalidProxySettings: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.InvalidProxySettings),
+/* harmony export */   ManualInteractionNeeded: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.ManualInteractionNeeded),
+/* harmony export */   MarginModeAlreadySet: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.MarginModeAlreadySet),
+/* harmony export */   MarketClosed: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.MarketClosed),
+/* harmony export */   NetworkError: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.NetworkError),
+/* harmony export */   NoChange: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.NoChange),
+/* harmony export */   NotSupported: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.NotSupported),
+/* harmony export */   NullResponse: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.NullResponse),
+/* harmony export */   OnMaintenance: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.OnMaintenance),
+/* harmony export */   OperationFailed: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.OperationFailed),
+/* harmony export */   OperationRejected: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.OperationRejected),
+/* harmony export */   OrderImmediatelyFillable: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.OrderImmediatelyFillable),
+/* harmony export */   OrderNotCached: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.OrderNotCached),
+/* harmony export */   OrderNotFillable: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.OrderNotFillable),
+/* harmony export */   OrderNotFound: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.OrderNotFound),
+/* harmony export */   PermissionDenied: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.PermissionDenied),
+/* harmony export */   Precise: () => (/* reexport safe */ ccxt_src_base_Precise_js_WEBPACK_IMPORTED_MODULE_182_.Y),
+/* harmony export */   RateLimitExceeded: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.RateLimitExceeded),
+/* harmony export */   RequestTimeout: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.RequestTimeout),
+/* harmony export */   UnsubscribeError: () => (/* reexport safe */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_.UnsubscribeError),
 /* harmony export */   ace: () => (/* reexport safe */ ccxt_src_ace_js_WEBPACK_IMPORTED_MODULE_1_.A),
 /* harmony export */   alpaca: () => (/* reexport safe */ ccxt_src_alpaca_js_WEBPACK_IMPORTED_MODULE_2_.A),
 /* harmony export */   ascendex: () => (/* reexport safe */ ccxt_src_ascendex_js_WEBPACK_IMPORTED_MODULE_3_.A),
@@ -402590,113 +398745,111 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   bitbns: () => (/* reexport safe */ ccxt_src_bitbns_js_WEBPACK_IMPORTED_MODULE_13_.A),
 /* harmony export */   bitcoincom: () => (/* reexport safe */ ccxt_src_bitcoincom_js_WEBPACK_IMPORTED_MODULE_14_.A),
 /* harmony export */   bitfinex: () => (/* reexport safe */ ccxt_src_bitfinex_js_WEBPACK_IMPORTED_MODULE_15_.A),
-/* harmony export */   bitfinex1: () => (/* reexport safe */ ccxt_src_bitfinex1_js_WEBPACK_IMPORTED_MODULE_16_.A),
-/* harmony export */   bitflyer: () => (/* reexport safe */ ccxt_src_bitflyer_js_WEBPACK_IMPORTED_MODULE_17_.A),
-/* harmony export */   bitget: () => (/* reexport safe */ ccxt_src_bitget_js_WEBPACK_IMPORTED_MODULE_18_.A),
-/* harmony export */   bithumb: () => (/* reexport safe */ ccxt_src_bithumb_js_WEBPACK_IMPORTED_MODULE_19_.A),
-/* harmony export */   bitmart: () => (/* reexport safe */ ccxt_src_bitmart_js_WEBPACK_IMPORTED_MODULE_20_.A),
-/* harmony export */   bitmex: () => (/* reexport safe */ ccxt_src_bitmex_js_WEBPACK_IMPORTED_MODULE_21_.A),
-/* harmony export */   bitopro: () => (/* reexport safe */ ccxt_src_bitopro_js_WEBPACK_IMPORTED_MODULE_22_.A),
-/* harmony export */   bitpanda: () => (/* reexport safe */ ccxt_src_bitpanda_js_WEBPACK_IMPORTED_MODULE_23_.A),
-/* harmony export */   bitrue: () => (/* reexport safe */ ccxt_src_bitrue_js_WEBPACK_IMPORTED_MODULE_24_.A),
-/* harmony export */   bitso: () => (/* reexport safe */ ccxt_src_bitso_js_WEBPACK_IMPORTED_MODULE_25_.A),
-/* harmony export */   bitstamp: () => (/* reexport safe */ ccxt_src_bitstamp_js_WEBPACK_IMPORTED_MODULE_26_.A),
-/* harmony export */   bitteam: () => (/* reexport safe */ ccxt_src_bitteam_js_WEBPACK_IMPORTED_MODULE_27_.A),
-/* harmony export */   bitvavo: () => (/* reexport safe */ ccxt_src_bitvavo_js_WEBPACK_IMPORTED_MODULE_28_.A),
-/* harmony export */   bl3p: () => (/* reexport safe */ ccxt_src_bl3p_js_WEBPACK_IMPORTED_MODULE_29_.A),
-/* harmony export */   blockchaincom: () => (/* reexport safe */ ccxt_src_blockchaincom_js_WEBPACK_IMPORTED_MODULE_30_.A),
-/* harmony export */   blofin: () => (/* reexport safe */ ccxt_src_blofin_js_WEBPACK_IMPORTED_MODULE_31_.A),
-/* harmony export */   btcalpha: () => (/* reexport safe */ ccxt_src_btcalpha_js_WEBPACK_IMPORTED_MODULE_32_.A),
-/* harmony export */   btcbox: () => (/* reexport safe */ ccxt_src_btcbox_js_WEBPACK_IMPORTED_MODULE_33_.A),
-/* harmony export */   btcmarkets: () => (/* reexport safe */ ccxt_src_btcmarkets_js_WEBPACK_IMPORTED_MODULE_34_.A),
-/* harmony export */   btcturk: () => (/* reexport safe */ ccxt_src_btcturk_js_WEBPACK_IMPORTED_MODULE_35_.A),
-/* harmony export */   bybit: () => (/* reexport safe */ ccxt_src_bybit_js_WEBPACK_IMPORTED_MODULE_36_.A),
-/* harmony export */   cex: () => (/* reexport safe */ ccxt_src_cex_js_WEBPACK_IMPORTED_MODULE_37_.A),
-/* harmony export */   coinbase: () => (/* reexport safe */ ccxt_src_coinbase_js_WEBPACK_IMPORTED_MODULE_38_.A),
-/* harmony export */   coinbaseadvanced: () => (/* reexport safe */ ccxt_src_coinbaseadvanced_js_WEBPACK_IMPORTED_MODULE_39_.A),
-/* harmony export */   coinbaseexchange: () => (/* reexport safe */ ccxt_src_coinbaseexchange_js_WEBPACK_IMPORTED_MODULE_40_.A),
-/* harmony export */   coinbaseinternational: () => (/* reexport safe */ ccxt_src_coinbaseinternational_js_WEBPACK_IMPORTED_MODULE_41_.A),
-/* harmony export */   coincatch: () => (/* reexport safe */ ccxt_src_coincatch_js_WEBPACK_IMPORTED_MODULE_42_.A),
-/* harmony export */   coincheck: () => (/* reexport safe */ ccxt_src_coincheck_js_WEBPACK_IMPORTED_MODULE_43_.A),
-/* harmony export */   coinex: () => (/* reexport safe */ ccxt_src_coinex_js_WEBPACK_IMPORTED_MODULE_44_.A),
-/* harmony export */   coinlist: () => (/* reexport safe */ ccxt_src_coinlist_js_WEBPACK_IMPORTED_MODULE_45_.A),
-/* harmony export */   coinmate: () => (/* reexport safe */ ccxt_src_coinmate_js_WEBPACK_IMPORTED_MODULE_46_.A),
-/* harmony export */   coinmetro: () => (/* reexport safe */ ccxt_src_coinmetro_js_WEBPACK_IMPORTED_MODULE_47_.A),
-/* harmony export */   coinone: () => (/* reexport safe */ ccxt_src_coinone_js_WEBPACK_IMPORTED_MODULE_48_.A),
-/* harmony export */   coinsph: () => (/* reexport safe */ ccxt_src_coinsph_js_WEBPACK_IMPORTED_MODULE_49_.A),
-/* harmony export */   coinspot: () => (/* reexport safe */ ccxt_src_coinspot_js_WEBPACK_IMPORTED_MODULE_50_.A),
-/* harmony export */   cryptocom: () => (/* reexport safe */ ccxt_src_cryptocom_js_WEBPACK_IMPORTED_MODULE_51_.A),
-/* harmony export */   cryptomus: () => (/* reexport safe */ ccxt_src_cryptomus_js_WEBPACK_IMPORTED_MODULE_52_.A),
+/* harmony export */   bitflyer: () => (/* reexport safe */ ccxt_src_bitflyer_js_WEBPACK_IMPORTED_MODULE_16_.A),
+/* harmony export */   bitget: () => (/* reexport safe */ ccxt_src_bitget_js_WEBPACK_IMPORTED_MODULE_17_.A),
+/* harmony export */   bithumb: () => (/* reexport safe */ ccxt_src_bithumb_js_WEBPACK_IMPORTED_MODULE_18_.A),
+/* harmony export */   bitmart: () => (/* reexport safe */ ccxt_src_bitmart_js_WEBPACK_IMPORTED_MODULE_19_.A),
+/* harmony export */   bitmex: () => (/* reexport safe */ ccxt_src_bitmex_js_WEBPACK_IMPORTED_MODULE_20_.A),
+/* harmony export */   bitopro: () => (/* reexport safe */ ccxt_src_bitopro_js_WEBPACK_IMPORTED_MODULE_21_.A),
+/* harmony export */   bitpanda: () => (/* reexport safe */ ccxt_src_bitpanda_js_WEBPACK_IMPORTED_MODULE_22_.A),
+/* harmony export */   bitrue: () => (/* reexport safe */ ccxt_src_bitrue_js_WEBPACK_IMPORTED_MODULE_23_.A),
+/* harmony export */   bitso: () => (/* reexport safe */ ccxt_src_bitso_js_WEBPACK_IMPORTED_MODULE_24_.A),
+/* harmony export */   bitstamp: () => (/* reexport safe */ ccxt_src_bitstamp_js_WEBPACK_IMPORTED_MODULE_25_.A),
+/* harmony export */   bitteam: () => (/* reexport safe */ ccxt_src_bitteam_js_WEBPACK_IMPORTED_MODULE_26_.A),
+/* harmony export */   bitvavo: () => (/* reexport safe */ ccxt_src_bitvavo_js_WEBPACK_IMPORTED_MODULE_27_.A),
+/* harmony export */   bl3p: () => (/* reexport safe */ ccxt_src_bl3p_js_WEBPACK_IMPORTED_MODULE_28_.A),
+/* harmony export */   blockchaincom: () => (/* reexport safe */ ccxt_src_blockchaincom_js_WEBPACK_IMPORTED_MODULE_29_.A),
+/* harmony export */   blofin: () => (/* reexport safe */ ccxt_src_blofin_js_WEBPACK_IMPORTED_MODULE_30_.A),
+/* harmony export */   btcalpha: () => (/* reexport safe */ ccxt_src_btcalpha_js_WEBPACK_IMPORTED_MODULE_31_.A),
+/* harmony export */   btcbox: () => (/* reexport safe */ ccxt_src_btcbox_js_WEBPACK_IMPORTED_MODULE_32_.A),
+/* harmony export */   btcmarkets: () => (/* reexport safe */ ccxt_src_btcmarkets_js_WEBPACK_IMPORTED_MODULE_33_.A),
+/* harmony export */   btcturk: () => (/* reexport safe */ ccxt_src_btcturk_js_WEBPACK_IMPORTED_MODULE_34_.A),
+/* harmony export */   bybit: () => (/* reexport safe */ ccxt_src_bybit_js_WEBPACK_IMPORTED_MODULE_35_.A),
+/* harmony export */   cex: () => (/* reexport safe */ ccxt_src_cex_js_WEBPACK_IMPORTED_MODULE_36_.A),
+/* harmony export */   coinbase: () => (/* reexport safe */ ccxt_src_coinbase_js_WEBPACK_IMPORTED_MODULE_37_.A),
+/* harmony export */   coinbaseadvanced: () => (/* reexport safe */ ccxt_src_coinbaseadvanced_js_WEBPACK_IMPORTED_MODULE_38_.A),
+/* harmony export */   coinbaseexchange: () => (/* reexport safe */ ccxt_src_coinbaseexchange_js_WEBPACK_IMPORTED_MODULE_39_.A),
+/* harmony export */   coinbaseinternational: () => (/* reexport safe */ ccxt_src_coinbaseinternational_js_WEBPACK_IMPORTED_MODULE_40_.A),
+/* harmony export */   coincatch: () => (/* reexport safe */ ccxt_src_coincatch_js_WEBPACK_IMPORTED_MODULE_41_.A),
+/* harmony export */   coincheck: () => (/* reexport safe */ ccxt_src_coincheck_js_WEBPACK_IMPORTED_MODULE_42_.A),
+/* harmony export */   coinex: () => (/* reexport safe */ ccxt_src_coinex_js_WEBPACK_IMPORTED_MODULE_43_.A),
+/* harmony export */   coinlist: () => (/* reexport safe */ ccxt_src_coinlist_js_WEBPACK_IMPORTED_MODULE_44_.A),
+/* harmony export */   coinmate: () => (/* reexport safe */ ccxt_src_coinmate_js_WEBPACK_IMPORTED_MODULE_45_.A),
+/* harmony export */   coinmetro: () => (/* reexport safe */ ccxt_src_coinmetro_js_WEBPACK_IMPORTED_MODULE_46_.A),
+/* harmony export */   coinone: () => (/* reexport safe */ ccxt_src_coinone_js_WEBPACK_IMPORTED_MODULE_47_.A),
+/* harmony export */   coinsph: () => (/* reexport safe */ ccxt_src_coinsph_js_WEBPACK_IMPORTED_MODULE_48_.A),
+/* harmony export */   coinspot: () => (/* reexport safe */ ccxt_src_coinspot_js_WEBPACK_IMPORTED_MODULE_49_.A),
+/* harmony export */   cryptocom: () => (/* reexport safe */ ccxt_src_cryptocom_js_WEBPACK_IMPORTED_MODULE_50_.A),
+/* harmony export */   cryptomus: () => (/* reexport safe */ ccxt_src_cryptomus_js_WEBPACK_IMPORTED_MODULE_51_.A),
 /* harmony export */   "default": () => (ts_ccxt),
-/* harmony export */   defx: () => (/* reexport safe */ ccxt_src_defx_js_WEBPACK_IMPORTED_MODULE_53_.A),
-/* harmony export */   delta: () => (/* reexport safe */ ccxt_src_delta_js_WEBPACK_IMPORTED_MODULE_54_.A),
-/* harmony export */   deribit: () => (/* reexport safe */ ccxt_src_deribit_js_WEBPACK_IMPORTED_MODULE_55_.A),
-/* harmony export */   derive: () => (/* reexport safe */ ccxt_src_derive_js_WEBPACK_IMPORTED_MODULE_56_.A),
-/* harmony export */   digifinex: () => (/* reexport safe */ ccxt_src_digifinex_js_WEBPACK_IMPORTED_MODULE_57_.A),
-/* harmony export */   ellipx: () => (/* reexport safe */ ccxt_src_ellipx_js_WEBPACK_IMPORTED_MODULE_58_.A),
-/* harmony export */   errors: () => (/* reexport module object */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_),
+/* harmony export */   defx: () => (/* reexport safe */ ccxt_src_defx_js_WEBPACK_IMPORTED_MODULE_52_.A),
+/* harmony export */   delta: () => (/* reexport safe */ ccxt_src_delta_js_WEBPACK_IMPORTED_MODULE_53_.A),
+/* harmony export */   deribit: () => (/* reexport safe */ ccxt_src_deribit_js_WEBPACK_IMPORTED_MODULE_54_.A),
+/* harmony export */   derive: () => (/* reexport safe */ ccxt_src_derive_js_WEBPACK_IMPORTED_MODULE_55_.A),
+/* harmony export */   digifinex: () => (/* reexport safe */ ccxt_src_digifinex_js_WEBPACK_IMPORTED_MODULE_56_.A),
+/* harmony export */   ellipx: () => (/* reexport safe */ ccxt_src_ellipx_js_WEBPACK_IMPORTED_MODULE_57_.A),
+/* harmony export */   errors: () => (/* reexport module object */ ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_),
 /* harmony export */   exchanges: () => (/* binding */ ccxt_exchanges),
-/* harmony export */   exmo: () => (/* reexport safe */ ccxt_src_exmo_js_WEBPACK_IMPORTED_MODULE_59_.A),
-/* harmony export */   fmfwio: () => (/* reexport safe */ ccxt_src_fmfwio_js_WEBPACK_IMPORTED_MODULE_60_.A),
-/* harmony export */   functions: () => (/* reexport module object */ ccxt_src_base_functions_js_WEBPACK_IMPORTED_MODULE_187_),
-/* harmony export */   gate: () => (/* reexport safe */ ccxt_src_gate_js_WEBPACK_IMPORTED_MODULE_61_.A),
-/* harmony export */   gateio: () => (/* reexport safe */ ccxt_src_gateio_js_WEBPACK_IMPORTED_MODULE_62_.A),
-/* harmony export */   gemini: () => (/* reexport safe */ ccxt_src_gemini_js_WEBPACK_IMPORTED_MODULE_63_.A),
-/* harmony export */   hashkey: () => (/* reexport safe */ ccxt_src_hashkey_js_WEBPACK_IMPORTED_MODULE_64_.A),
-/* harmony export */   hitbtc: () => (/* reexport safe */ ccxt_src_hitbtc_js_WEBPACK_IMPORTED_MODULE_65_.A),
-/* harmony export */   hollaex: () => (/* reexport safe */ ccxt_src_hollaex_js_WEBPACK_IMPORTED_MODULE_66_.A),
-/* harmony export */   htx: () => (/* reexport safe */ ccxt_src_htx_js_WEBPACK_IMPORTED_MODULE_67_.A),
-/* harmony export */   huobi: () => (/* reexport safe */ ccxt_src_huobi_js_WEBPACK_IMPORTED_MODULE_68_.A),
-/* harmony export */   huobijp: () => (/* reexport safe */ ccxt_src_huobijp_js_WEBPACK_IMPORTED_MODULE_69_.A),
-/* harmony export */   hyperliquid: () => (/* reexport safe */ ccxt_src_hyperliquid_js_WEBPACK_IMPORTED_MODULE_70_.A),
-/* harmony export */   idex: () => (/* reexport safe */ ccxt_src_idex_js_WEBPACK_IMPORTED_MODULE_71_.A),
-/* harmony export */   independentreserve: () => (/* reexport safe */ ccxt_src_independentreserve_js_WEBPACK_IMPORTED_MODULE_72_.A),
-/* harmony export */   indodax: () => (/* reexport safe */ ccxt_src_indodax_js_WEBPACK_IMPORTED_MODULE_73_.A),
-/* harmony export */   kraken: () => (/* reexport safe */ ccxt_src_kraken_js_WEBPACK_IMPORTED_MODULE_74_.A),
-/* harmony export */   krakenfutures: () => (/* reexport safe */ ccxt_src_krakenfutures_js_WEBPACK_IMPORTED_MODULE_75_.A),
-/* harmony export */   kucoin: () => (/* reexport safe */ ccxt_src_kucoin_js_WEBPACK_IMPORTED_MODULE_76_.A),
-/* harmony export */   kucoinfutures: () => (/* reexport safe */ ccxt_src_kucoinfutures_js_WEBPACK_IMPORTED_MODULE_77_.A),
-/* harmony export */   kuna: () => (/* reexport safe */ ccxt_src_kuna_js_WEBPACK_IMPORTED_MODULE_78_.A),
-/* harmony export */   latoken: () => (/* reexport safe */ ccxt_src_latoken_js_WEBPACK_IMPORTED_MODULE_79_.A),
-/* harmony export */   lbank: () => (/* reexport safe */ ccxt_src_lbank_js_WEBPACK_IMPORTED_MODULE_80_.A),
-/* harmony export */   luno: () => (/* reexport safe */ ccxt_src_luno_js_WEBPACK_IMPORTED_MODULE_81_.A),
-/* harmony export */   mercado: () => (/* reexport safe */ ccxt_src_mercado_js_WEBPACK_IMPORTED_MODULE_82_.A),
-/* harmony export */   mexc: () => (/* reexport safe */ ccxt_src_mexc_js_WEBPACK_IMPORTED_MODULE_83_.A),
-/* harmony export */   myokx: () => (/* reexport safe */ ccxt_src_myokx_js_WEBPACK_IMPORTED_MODULE_84_.A),
-/* harmony export */   ndax: () => (/* reexport safe */ ccxt_src_ndax_js_WEBPACK_IMPORTED_MODULE_85_.A),
-/* harmony export */   novadax: () => (/* reexport safe */ ccxt_src_novadax_js_WEBPACK_IMPORTED_MODULE_86_.A),
-/* harmony export */   oceanex: () => (/* reexport safe */ ccxt_src_oceanex_js_WEBPACK_IMPORTED_MODULE_87_.A),
-/* harmony export */   okcoin: () => (/* reexport safe */ ccxt_src_okcoin_js_WEBPACK_IMPORTED_MODULE_88_.A),
-/* harmony export */   okx: () => (/* reexport safe */ ccxt_src_okx_js_WEBPACK_IMPORTED_MODULE_89_.A),
-/* harmony export */   onetrading: () => (/* reexport safe */ ccxt_src_onetrading_js_WEBPACK_IMPORTED_MODULE_90_.A),
-/* harmony export */   oxfun: () => (/* reexport safe */ ccxt_src_oxfun_js_WEBPACK_IMPORTED_MODULE_91_.A),
-/* harmony export */   p2b: () => (/* reexport safe */ ccxt_src_p2b_js_WEBPACK_IMPORTED_MODULE_92_.A),
-/* harmony export */   paradex: () => (/* reexport safe */ ccxt_src_paradex_js_WEBPACK_IMPORTED_MODULE_93_.A),
-/* harmony export */   paymium: () => (/* reexport safe */ ccxt_src_paymium_js_WEBPACK_IMPORTED_MODULE_94_.A),
-/* harmony export */   phemex: () => (/* reexport safe */ ccxt_src_phemex_js_WEBPACK_IMPORTED_MODULE_95_.A),
-/* harmony export */   poloniex: () => (/* reexport safe */ ccxt_src_poloniex_js_WEBPACK_IMPORTED_MODULE_96_.A),
-/* harmony export */   poloniexfutures: () => (/* reexport safe */ ccxt_src_poloniexfutures_js_WEBPACK_IMPORTED_MODULE_97_.A),
+/* harmony export */   exmo: () => (/* reexport safe */ ccxt_src_exmo_js_WEBPACK_IMPORTED_MODULE_58_.A),
+/* harmony export */   fmfwio: () => (/* reexport safe */ ccxt_src_fmfwio_js_WEBPACK_IMPORTED_MODULE_59_.A),
+/* harmony export */   functions: () => (/* reexport module object */ ccxt_src_base_functions_js_WEBPACK_IMPORTED_MODULE_183_),
+/* harmony export */   gate: () => (/* reexport safe */ ccxt_src_gate_js_WEBPACK_IMPORTED_MODULE_60_.A),
+/* harmony export */   gateio: () => (/* reexport safe */ ccxt_src_gateio_js_WEBPACK_IMPORTED_MODULE_61_.A),
+/* harmony export */   gemini: () => (/* reexport safe */ ccxt_src_gemini_js_WEBPACK_IMPORTED_MODULE_62_.A),
+/* harmony export */   hashkey: () => (/* reexport safe */ ccxt_src_hashkey_js_WEBPACK_IMPORTED_MODULE_63_.A),
+/* harmony export */   hitbtc: () => (/* reexport safe */ ccxt_src_hitbtc_js_WEBPACK_IMPORTED_MODULE_64_.A),
+/* harmony export */   hollaex: () => (/* reexport safe */ ccxt_src_hollaex_js_WEBPACK_IMPORTED_MODULE_65_.A),
+/* harmony export */   htx: () => (/* reexport safe */ ccxt_src_htx_js_WEBPACK_IMPORTED_MODULE_66_.A),
+/* harmony export */   huobi: () => (/* reexport safe */ ccxt_src_huobi_js_WEBPACK_IMPORTED_MODULE_67_.A),
+/* harmony export */   huobijp: () => (/* reexport safe */ ccxt_src_huobijp_js_WEBPACK_IMPORTED_MODULE_68_.A),
+/* harmony export */   hyperliquid: () => (/* reexport safe */ ccxt_src_hyperliquid_js_WEBPACK_IMPORTED_MODULE_69_.A),
+/* harmony export */   idex: () => (/* reexport safe */ ccxt_src_idex_js_WEBPACK_IMPORTED_MODULE_70_.A),
+/* harmony export */   independentreserve: () => (/* reexport safe */ ccxt_src_independentreserve_js_WEBPACK_IMPORTED_MODULE_71_.A),
+/* harmony export */   indodax: () => (/* reexport safe */ ccxt_src_indodax_js_WEBPACK_IMPORTED_MODULE_72_.A),
+/* harmony export */   kraken: () => (/* reexport safe */ ccxt_src_kraken_js_WEBPACK_IMPORTED_MODULE_73_.A),
+/* harmony export */   krakenfutures: () => (/* reexport safe */ ccxt_src_krakenfutures_js_WEBPACK_IMPORTED_MODULE_74_.A),
+/* harmony export */   kucoin: () => (/* reexport safe */ ccxt_src_kucoin_js_WEBPACK_IMPORTED_MODULE_75_.A),
+/* harmony export */   kucoinfutures: () => (/* reexport safe */ ccxt_src_kucoinfutures_js_WEBPACK_IMPORTED_MODULE_76_.A),
+/* harmony export */   kuna: () => (/* reexport safe */ ccxt_src_kuna_js_WEBPACK_IMPORTED_MODULE_77_.A),
+/* harmony export */   latoken: () => (/* reexport safe */ ccxt_src_latoken_js_WEBPACK_IMPORTED_MODULE_78_.A),
+/* harmony export */   lbank: () => (/* reexport safe */ ccxt_src_lbank_js_WEBPACK_IMPORTED_MODULE_79_.A),
+/* harmony export */   luno: () => (/* reexport safe */ ccxt_src_luno_js_WEBPACK_IMPORTED_MODULE_80_.A),
+/* harmony export */   mercado: () => (/* reexport safe */ ccxt_src_mercado_js_WEBPACK_IMPORTED_MODULE_81_.A),
+/* harmony export */   mexc: () => (/* reexport safe */ ccxt_src_mexc_js_WEBPACK_IMPORTED_MODULE_82_.A),
+/* harmony export */   myokx: () => (/* reexport safe */ ccxt_src_myokx_js_WEBPACK_IMPORTED_MODULE_83_.A),
+/* harmony export */   ndax: () => (/* reexport safe */ ccxt_src_ndax_js_WEBPACK_IMPORTED_MODULE_84_.A),
+/* harmony export */   novadax: () => (/* reexport safe */ ccxt_src_novadax_js_WEBPACK_IMPORTED_MODULE_85_.A),
+/* harmony export */   oceanex: () => (/* reexport safe */ ccxt_src_oceanex_js_WEBPACK_IMPORTED_MODULE_86_.A),
+/* harmony export */   okcoin: () => (/* reexport safe */ ccxt_src_okcoin_js_WEBPACK_IMPORTED_MODULE_87_.A),
+/* harmony export */   okx: () => (/* reexport safe */ ccxt_src_okx_js_WEBPACK_IMPORTED_MODULE_88_.A),
+/* harmony export */   onetrading: () => (/* reexport safe */ ccxt_src_onetrading_js_WEBPACK_IMPORTED_MODULE_89_.A),
+/* harmony export */   oxfun: () => (/* reexport safe */ ccxt_src_oxfun_js_WEBPACK_IMPORTED_MODULE_90_.A),
+/* harmony export */   p2b: () => (/* reexport safe */ ccxt_src_p2b_js_WEBPACK_IMPORTED_MODULE_91_.A),
+/* harmony export */   paradex: () => (/* reexport safe */ ccxt_src_paradex_js_WEBPACK_IMPORTED_MODULE_92_.A),
+/* harmony export */   paymium: () => (/* reexport safe */ ccxt_src_paymium_js_WEBPACK_IMPORTED_MODULE_93_.A),
+/* harmony export */   phemex: () => (/* reexport safe */ ccxt_src_phemex_js_WEBPACK_IMPORTED_MODULE_94_.A),
+/* harmony export */   poloniex: () => (/* reexport safe */ ccxt_src_poloniex_js_WEBPACK_IMPORTED_MODULE_95_.A),
 /* harmony export */   pro: () => (/* binding */ ccxt_pro),
-/* harmony export */   probit: () => (/* reexport safe */ ccxt_src_probit_js_WEBPACK_IMPORTED_MODULE_98_.A),
-/* harmony export */   timex: () => (/* reexport safe */ ccxt_src_timex_js_WEBPACK_IMPORTED_MODULE_99_.A),
-/* harmony export */   tokocrypto: () => (/* reexport safe */ ccxt_src_tokocrypto_js_WEBPACK_IMPORTED_MODULE_100_.A),
-/* harmony export */   tradeogre: () => (/* reexport safe */ ccxt_src_tradeogre_js_WEBPACK_IMPORTED_MODULE_101_.A),
-/* harmony export */   upbit: () => (/* reexport safe */ ccxt_src_upbit_js_WEBPACK_IMPORTED_MODULE_102_.A),
+/* harmony export */   probit: () => (/* reexport safe */ ccxt_src_probit_js_WEBPACK_IMPORTED_MODULE_96_.A),
+/* harmony export */   timex: () => (/* reexport safe */ ccxt_src_timex_js_WEBPACK_IMPORTED_MODULE_97_.A),
+/* harmony export */   tokocrypto: () => (/* reexport safe */ ccxt_src_tokocrypto_js_WEBPACK_IMPORTED_MODULE_98_.A),
+/* harmony export */   tradeogre: () => (/* reexport safe */ ccxt_src_tradeogre_js_WEBPACK_IMPORTED_MODULE_99_.A),
+/* harmony export */   upbit: () => (/* reexport safe */ ccxt_src_upbit_js_WEBPACK_IMPORTED_MODULE_100_.A),
 /* harmony export */   version: () => (/* binding */ ccxt_version),
-/* harmony export */   vertex: () => (/* reexport safe */ ccxt_src_vertex_js_WEBPACK_IMPORTED_MODULE_103_.A),
-/* harmony export */   wavesexchange: () => (/* reexport safe */ ccxt_src_wavesexchange_js_WEBPACK_IMPORTED_MODULE_104_.A),
-/* harmony export */   whitebit: () => (/* reexport safe */ ccxt_src_whitebit_js_WEBPACK_IMPORTED_MODULE_105_.A),
-/* harmony export */   woo: () => (/* reexport safe */ ccxt_src_woo_js_WEBPACK_IMPORTED_MODULE_106_.A),
-/* harmony export */   woofipro: () => (/* reexport safe */ ccxt_src_woofipro_js_WEBPACK_IMPORTED_MODULE_107_.A),
-/* harmony export */   xt: () => (/* reexport safe */ ccxt_src_xt_js_WEBPACK_IMPORTED_MODULE_108_.A),
-/* harmony export */   yobit: () => (/* reexport safe */ ccxt_src_yobit_js_WEBPACK_IMPORTED_MODULE_109_.A),
-/* harmony export */   zaif: () => (/* reexport safe */ ccxt_src_zaif_js_WEBPACK_IMPORTED_MODULE_110_.A),
-/* harmony export */   zonda: () => (/* reexport safe */ ccxt_src_zonda_js_WEBPACK_IMPORTED_MODULE_111_.A)
+/* harmony export */   vertex: () => (/* reexport safe */ ccxt_src_vertex_js_WEBPACK_IMPORTED_MODULE_101_.A),
+/* harmony export */   wavesexchange: () => (/* reexport safe */ ccxt_src_wavesexchange_js_WEBPACK_IMPORTED_MODULE_102_.A),
+/* harmony export */   whitebit: () => (/* reexport safe */ ccxt_src_whitebit_js_WEBPACK_IMPORTED_MODULE_103_.A),
+/* harmony export */   woo: () => (/* reexport safe */ ccxt_src_woo_js_WEBPACK_IMPORTED_MODULE_104_.A),
+/* harmony export */   woofipro: () => (/* reexport safe */ ccxt_src_woofipro_js_WEBPACK_IMPORTED_MODULE_105_.A),
+/* harmony export */   xt: () => (/* reexport safe */ ccxt_src_xt_js_WEBPACK_IMPORTED_MODULE_106_.A),
+/* harmony export */   yobit: () => (/* reexport safe */ ccxt_src_yobit_js_WEBPACK_IMPORTED_MODULE_107_.A),
+/* harmony export */   zaif: () => (/* reexport safe */ ccxt_src_zaif_js_WEBPACK_IMPORTED_MODULE_108_.A),
+/* harmony export */   zonda: () => (/* reexport safe */ ccxt_src_zonda_js_WEBPACK_IMPORTED_MODULE_109_.A)
 /* harmony export */ });
 /* harmony import */ var ccxt_src_base_Exchange_js_WEBPACK_IMPORTED_MODULE_0_ = __webpack_require__(2961);
-/* harmony import */ var ccxt_src_base_Precise_js_WEBPACK_IMPORTED_MODULE_186_ = __webpack_require__(5147);
-/* harmony import */ var ccxt_src_base_functions_js_WEBPACK_IMPORTED_MODULE_187_ = __webpack_require__(5095);
-/* harmony import */ var ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_ = __webpack_require__(2079);
+/* harmony import */ var ccxt_src_base_Precise_js_WEBPACK_IMPORTED_MODULE_182_ = __webpack_require__(5147);
+/* harmony import */ var ccxt_src_base_functions_js_WEBPACK_IMPORTED_MODULE_183_ = __webpack_require__(5095);
+/* harmony import */ var ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_ = __webpack_require__(2079);
 /* harmony import */ var ccxt_src_ace_js_WEBPACK_IMPORTED_MODULE_1_ = __webpack_require__(6729);
 /* harmony import */ var ccxt_src_alpaca_js_WEBPACK_IMPORTED_MODULE_2_ = __webpack_require__(7930);
 /* harmony import */ var ccxt_src_ascendex_js_WEBPACK_IMPORTED_MODULE_3_ = __webpack_require__(1411);
@@ -402712,176 +398865,172 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ccxt_src_bitbns_js_WEBPACK_IMPORTED_MODULE_13_ = __webpack_require__(6328);
 /* harmony import */ var ccxt_src_bitcoincom_js_WEBPACK_IMPORTED_MODULE_14_ = __webpack_require__(8959);
 /* harmony import */ var ccxt_src_bitfinex_js_WEBPACK_IMPORTED_MODULE_15_ = __webpack_require__(8657);
-/* harmony import */ var ccxt_src_bitfinex1_js_WEBPACK_IMPORTED_MODULE_16_ = __webpack_require__(7674);
-/* harmony import */ var ccxt_src_bitflyer_js_WEBPACK_IMPORTED_MODULE_17_ = __webpack_require__(1787);
-/* harmony import */ var ccxt_src_bitget_js_WEBPACK_IMPORTED_MODULE_18_ = __webpack_require__(7757);
-/* harmony import */ var ccxt_src_bithumb_js_WEBPACK_IMPORTED_MODULE_19_ = __webpack_require__(357);
-/* harmony import */ var ccxt_src_bitmart_js_WEBPACK_IMPORTED_MODULE_20_ = __webpack_require__(1837);
-/* harmony import */ var ccxt_src_bitmex_js_WEBPACK_IMPORTED_MODULE_21_ = __webpack_require__(9523);
-/* harmony import */ var ccxt_src_bitopro_js_WEBPACK_IMPORTED_MODULE_22_ = __webpack_require__(2753);
-/* harmony import */ var ccxt_src_bitpanda_js_WEBPACK_IMPORTED_MODULE_23_ = __webpack_require__(9110);
-/* harmony import */ var ccxt_src_bitrue_js_WEBPACK_IMPORTED_MODULE_24_ = __webpack_require__(9061);
-/* harmony import */ var ccxt_src_bitso_js_WEBPACK_IMPORTED_MODULE_25_ = __webpack_require__(3019);
-/* harmony import */ var ccxt_src_bitstamp_js_WEBPACK_IMPORTED_MODULE_26_ = __webpack_require__(382);
-/* harmony import */ var ccxt_src_bitteam_js_WEBPACK_IMPORTED_MODULE_27_ = __webpack_require__(112);
-/* harmony import */ var ccxt_src_bitvavo_js_WEBPACK_IMPORTED_MODULE_28_ = __webpack_require__(3727);
-/* harmony import */ var ccxt_src_bl3p_js_WEBPACK_IMPORTED_MODULE_29_ = __webpack_require__(5257);
-/* harmony import */ var ccxt_src_blockchaincom_js_WEBPACK_IMPORTED_MODULE_30_ = __webpack_require__(3205);
-/* harmony import */ var ccxt_src_blofin_js_WEBPACK_IMPORTED_MODULE_31_ = __webpack_require__(2520);
-/* harmony import */ var ccxt_src_btcalpha_js_WEBPACK_IMPORTED_MODULE_32_ = __webpack_require__(3413);
-/* harmony import */ var ccxt_src_btcbox_js_WEBPACK_IMPORTED_MODULE_33_ = __webpack_require__(5376);
-/* harmony import */ var ccxt_src_btcmarkets_js_WEBPACK_IMPORTED_MODULE_34_ = __webpack_require__(4936);
-/* harmony import */ var ccxt_src_btcturk_js_WEBPACK_IMPORTED_MODULE_35_ = __webpack_require__(9265);
-/* harmony import */ var ccxt_src_bybit_js_WEBPACK_IMPORTED_MODULE_36_ = __webpack_require__(5462);
-/* harmony import */ var ccxt_src_cex_js_WEBPACK_IMPORTED_MODULE_37_ = __webpack_require__(8846);
-/* harmony import */ var ccxt_src_coinbase_js_WEBPACK_IMPORTED_MODULE_38_ = __webpack_require__(7504);
-/* harmony import */ var ccxt_src_coinbaseadvanced_js_WEBPACK_IMPORTED_MODULE_39_ = __webpack_require__(3278);
-/* harmony import */ var ccxt_src_coinbaseexchange_js_WEBPACK_IMPORTED_MODULE_40_ = __webpack_require__(4293);
-/* harmony import */ var ccxt_src_coinbaseinternational_js_WEBPACK_IMPORTED_MODULE_41_ = __webpack_require__(1558);
-/* harmony import */ var ccxt_src_coincatch_js_WEBPACK_IMPORTED_MODULE_42_ = __webpack_require__(570);
-/* harmony import */ var ccxt_src_coincheck_js_WEBPACK_IMPORTED_MODULE_43_ = __webpack_require__(2741);
-/* harmony import */ var ccxt_src_coinex_js_WEBPACK_IMPORTED_MODULE_44_ = __webpack_require__(9344);
-/* harmony import */ var ccxt_src_coinlist_js_WEBPACK_IMPORTED_MODULE_45_ = __webpack_require__(7477);
-/* harmony import */ var ccxt_src_coinmate_js_WEBPACK_IMPORTED_MODULE_46_ = __webpack_require__(6016);
-/* harmony import */ var ccxt_src_coinmetro_js_WEBPACK_IMPORTED_MODULE_47_ = __webpack_require__(8692);
-/* harmony import */ var ccxt_src_coinone_js_WEBPACK_IMPORTED_MODULE_48_ = __webpack_require__(5377);
-/* harmony import */ var ccxt_src_coinsph_js_WEBPACK_IMPORTED_MODULE_49_ = __webpack_require__(2692);
-/* harmony import */ var ccxt_src_coinspot_js_WEBPACK_IMPORTED_MODULE_50_ = __webpack_require__(1669);
-/* harmony import */ var ccxt_src_cryptocom_js_WEBPACK_IMPORTED_MODULE_51_ = __webpack_require__(6068);
-/* harmony import */ var ccxt_src_cryptomus_js_WEBPACK_IMPORTED_MODULE_52_ = __webpack_require__(870);
-/* harmony import */ var ccxt_src_defx_js_WEBPACK_IMPORTED_MODULE_53_ = __webpack_require__(6077);
-/* harmony import */ var ccxt_src_delta_js_WEBPACK_IMPORTED_MODULE_54_ = __webpack_require__(1080);
-/* harmony import */ var ccxt_src_deribit_js_WEBPACK_IMPORTED_MODULE_55_ = __webpack_require__(2591);
-/* harmony import */ var ccxt_src_derive_js_WEBPACK_IMPORTED_MODULE_56_ = __webpack_require__(1839);
-/* harmony import */ var ccxt_src_digifinex_js_WEBPACK_IMPORTED_MODULE_57_ = __webpack_require__(779);
-/* harmony import */ var ccxt_src_ellipx_js_WEBPACK_IMPORTED_MODULE_58_ = __webpack_require__(1962);
-/* harmony import */ var ccxt_src_exmo_js_WEBPACK_IMPORTED_MODULE_59_ = __webpack_require__(7057);
-/* harmony import */ var ccxt_src_fmfwio_js_WEBPACK_IMPORTED_MODULE_60_ = __webpack_require__(3042);
-/* harmony import */ var ccxt_src_gate_js_WEBPACK_IMPORTED_MODULE_61_ = __webpack_require__(9403);
-/* harmony import */ var ccxt_src_gateio_js_WEBPACK_IMPORTED_MODULE_62_ = __webpack_require__(784);
-/* harmony import */ var ccxt_src_gemini_js_WEBPACK_IMPORTED_MODULE_63_ = __webpack_require__(8823);
-/* harmony import */ var ccxt_src_hashkey_js_WEBPACK_IMPORTED_MODULE_64_ = __webpack_require__(2937);
-/* harmony import */ var ccxt_src_hitbtc_js_WEBPACK_IMPORTED_MODULE_65_ = __webpack_require__(7996);
-/* harmony import */ var ccxt_src_hollaex_js_WEBPACK_IMPORTED_MODULE_66_ = __webpack_require__(4455);
-/* harmony import */ var ccxt_src_htx_js_WEBPACK_IMPORTED_MODULE_67_ = __webpack_require__(9946);
-/* harmony import */ var ccxt_src_huobi_js_WEBPACK_IMPORTED_MODULE_68_ = __webpack_require__(63);
-/* harmony import */ var ccxt_src_huobijp_js_WEBPACK_IMPORTED_MODULE_69_ = __webpack_require__(1325);
-/* harmony import */ var ccxt_src_hyperliquid_js_WEBPACK_IMPORTED_MODULE_70_ = __webpack_require__(1936);
-/* harmony import */ var ccxt_src_idex_js_WEBPACK_IMPORTED_MODULE_71_ = __webpack_require__(636);
-/* harmony import */ var ccxt_src_independentreserve_js_WEBPACK_IMPORTED_MODULE_72_ = __webpack_require__(4162);
-/* harmony import */ var ccxt_src_indodax_js_WEBPACK_IMPORTED_MODULE_73_ = __webpack_require__(7325);
-/* harmony import */ var ccxt_src_kraken_js_WEBPACK_IMPORTED_MODULE_74_ = __webpack_require__(8042);
-/* harmony import */ var ccxt_src_krakenfutures_js_WEBPACK_IMPORTED_MODULE_75_ = __webpack_require__(2300);
-/* harmony import */ var ccxt_src_kucoin_js_WEBPACK_IMPORTED_MODULE_76_ = __webpack_require__(1397);
-/* harmony import */ var ccxt_src_kucoinfutures_js_WEBPACK_IMPORTED_MODULE_77_ = __webpack_require__(6217);
-/* harmony import */ var ccxt_src_kuna_js_WEBPACK_IMPORTED_MODULE_78_ = __webpack_require__(5193);
-/* harmony import */ var ccxt_src_latoken_js_WEBPACK_IMPORTED_MODULE_79_ = __webpack_require__(8146);
-/* harmony import */ var ccxt_src_lbank_js_WEBPACK_IMPORTED_MODULE_80_ = __webpack_require__(3144);
-/* harmony import */ var ccxt_src_luno_js_WEBPACK_IMPORTED_MODULE_81_ = __webpack_require__(9248);
-/* harmony import */ var ccxt_src_mercado_js_WEBPACK_IMPORTED_MODULE_82_ = __webpack_require__(6419);
-/* harmony import */ var ccxt_src_mexc_js_WEBPACK_IMPORTED_MODULE_83_ = __webpack_require__(2403);
-/* harmony import */ var ccxt_src_myokx_js_WEBPACK_IMPORTED_MODULE_84_ = __webpack_require__(8982);
-/* harmony import */ var ccxt_src_ndax_js_WEBPACK_IMPORTED_MODULE_85_ = __webpack_require__(4460);
-/* harmony import */ var ccxt_src_novadax_js_WEBPACK_IMPORTED_MODULE_86_ = __webpack_require__(8473);
-/* harmony import */ var ccxt_src_oceanex_js_WEBPACK_IMPORTED_MODULE_87_ = __webpack_require__(3805);
-/* harmony import */ var ccxt_src_okcoin_js_WEBPACK_IMPORTED_MODULE_88_ = __webpack_require__(7915);
-/* harmony import */ var ccxt_src_okx_js_WEBPACK_IMPORTED_MODULE_89_ = __webpack_require__(3660);
-/* harmony import */ var ccxt_src_onetrading_js_WEBPACK_IMPORTED_MODULE_90_ = __webpack_require__(3573);
-/* harmony import */ var ccxt_src_oxfun_js_WEBPACK_IMPORTED_MODULE_91_ = __webpack_require__(6358);
-/* harmony import */ var ccxt_src_p2b_js_WEBPACK_IMPORTED_MODULE_92_ = __webpack_require__(4998);
-/* harmony import */ var ccxt_src_paradex_js_WEBPACK_IMPORTED_MODULE_93_ = __webpack_require__(6993);
-/* harmony import */ var ccxt_src_paymium_js_WEBPACK_IMPORTED_MODULE_94_ = __webpack_require__(3280);
-/* harmony import */ var ccxt_src_phemex_js_WEBPACK_IMPORTED_MODULE_95_ = __webpack_require__(9075);
-/* harmony import */ var ccxt_src_poloniex_js_WEBPACK_IMPORTED_MODULE_96_ = __webpack_require__(288);
-/* harmony import */ var ccxt_src_poloniexfutures_js_WEBPACK_IMPORTED_MODULE_97_ = __webpack_require__(6826);
-/* harmony import */ var ccxt_src_probit_js_WEBPACK_IMPORTED_MODULE_98_ = __webpack_require__(5037);
-/* harmony import */ var ccxt_src_timex_js_WEBPACK_IMPORTED_MODULE_99_ = __webpack_require__(6213);
-/* harmony import */ var ccxt_src_tokocrypto_js_WEBPACK_IMPORTED_MODULE_100_ = __webpack_require__(2490);
-/* harmony import */ var ccxt_src_tradeogre_js_WEBPACK_IMPORTED_MODULE_101_ = __webpack_require__(5887);
-/* harmony import */ var ccxt_src_upbit_js_WEBPACK_IMPORTED_MODULE_102_ = __webpack_require__(930);
-/* harmony import */ var ccxt_src_vertex_js_WEBPACK_IMPORTED_MODULE_103_ = __webpack_require__(4910);
-/* harmony import */ var ccxt_src_wavesexchange_js_WEBPACK_IMPORTED_MODULE_104_ = __webpack_require__(7073);
-/* harmony import */ var ccxt_src_whitebit_js_WEBPACK_IMPORTED_MODULE_105_ = __webpack_require__(5336);
-/* harmony import */ var ccxt_src_woo_js_WEBPACK_IMPORTED_MODULE_106_ = __webpack_require__(669);
-/* harmony import */ var ccxt_src_woofipro_js_WEBPACK_IMPORTED_MODULE_107_ = __webpack_require__(9641);
-/* harmony import */ var ccxt_src_xt_js_WEBPACK_IMPORTED_MODULE_108_ = __webpack_require__(5344);
-/* harmony import */ var ccxt_src_yobit_js_WEBPACK_IMPORTED_MODULE_109_ = __webpack_require__(7469);
-/* harmony import */ var ccxt_src_zaif_js_WEBPACK_IMPORTED_MODULE_110_ = __webpack_require__(1530);
-/* harmony import */ var ccxt_src_zonda_js_WEBPACK_IMPORTED_MODULE_111_ = __webpack_require__(6022);
-/* harmony import */ var ccxt_src_pro_alpaca_js_WEBPACK_IMPORTED_MODULE_112_ = __webpack_require__(6810);
-/* harmony import */ var ccxt_src_pro_ascendex_js_WEBPACK_IMPORTED_MODULE_113_ = __webpack_require__(1657);
-/* harmony import */ var ccxt_src_pro_bequant_js_WEBPACK_IMPORTED_MODULE_114_ = __webpack_require__(9338);
-/* harmony import */ var ccxt_src_pro_binance_js_WEBPACK_IMPORTED_MODULE_115_ = __webpack_require__(9544);
-/* harmony import */ var ccxt_src_pro_binancecoinm_js_WEBPACK_IMPORTED_MODULE_116_ = __webpack_require__(902);
-/* harmony import */ var ccxt_src_pro_binanceus_js_WEBPACK_IMPORTED_MODULE_117_ = __webpack_require__(8788);
-/* harmony import */ var ccxt_src_pro_binanceusdm_js_WEBPACK_IMPORTED_MODULE_118_ = __webpack_require__(8251);
-/* harmony import */ var ccxt_src_pro_bingx_js_WEBPACK_IMPORTED_MODULE_119_ = __webpack_require__(9456);
-/* harmony import */ var ccxt_src_pro_bitcoincom_js_WEBPACK_IMPORTED_MODULE_120_ = __webpack_require__(5343);
-/* harmony import */ var ccxt_src_pro_bitfinex_js_WEBPACK_IMPORTED_MODULE_121_ = __webpack_require__(1038);
-/* harmony import */ var ccxt_src_pro_bitfinex1_js_WEBPACK_IMPORTED_MODULE_122_ = __webpack_require__(3322);
-/* harmony import */ var ccxt_src_pro_bitget_js_WEBPACK_IMPORTED_MODULE_123_ = __webpack_require__(205);
-/* harmony import */ var ccxt_src_pro_bithumb_js_WEBPACK_IMPORTED_MODULE_124_ = __webpack_require__(6181);
-/* harmony import */ var ccxt_src_pro_bitmart_js_WEBPACK_IMPORTED_MODULE_125_ = __webpack_require__(3069);
-/* harmony import */ var ccxt_src_pro_bitmex_js_WEBPACK_IMPORTED_MODULE_126_ = __webpack_require__(3731);
-/* harmony import */ var ccxt_src_pro_bitopro_js_WEBPACK_IMPORTED_MODULE_127_ = __webpack_require__(4401);
-/* harmony import */ var ccxt_src_pro_bitpanda_js_WEBPACK_IMPORTED_MODULE_128_ = __webpack_require__(8265);
-/* harmony import */ var ccxt_src_pro_bitrue_js_WEBPACK_IMPORTED_MODULE_129_ = __webpack_require__(3333);
-/* harmony import */ var ccxt_src_pro_bitstamp_js_WEBPACK_IMPORTED_MODULE_130_ = __webpack_require__(3326);
-/* harmony import */ var ccxt_src_pro_bitvavo_js_WEBPACK_IMPORTED_MODULE_131_ = __webpack_require__(1327);
-/* harmony import */ var ccxt_src_pro_blockchaincom_js_WEBPACK_IMPORTED_MODULE_132_ = __webpack_require__(8693);
-/* harmony import */ var ccxt_src_pro_blofin_js_WEBPACK_IMPORTED_MODULE_133_ = __webpack_require__(1672);
-/* harmony import */ var ccxt_src_pro_bybit_js_WEBPACK_IMPORTED_MODULE_134_ = __webpack_require__(8518);
-/* harmony import */ var ccxt_src_pro_cex_js_WEBPACK_IMPORTED_MODULE_135_ = __webpack_require__(3774);
-/* harmony import */ var ccxt_src_pro_coinbase_js_WEBPACK_IMPORTED_MODULE_136_ = __webpack_require__(8160);
-/* harmony import */ var ccxt_src_pro_coinbaseadvanced_js_WEBPACK_IMPORTED_MODULE_137_ = __webpack_require__(5918);
-/* harmony import */ var ccxt_src_pro_coinbaseexchange_js_WEBPACK_IMPORTED_MODULE_138_ = __webpack_require__(1925);
-/* harmony import */ var ccxt_src_pro_coinbaseinternational_js_WEBPACK_IMPORTED_MODULE_139_ = __webpack_require__(998);
-/* harmony import */ var ccxt_src_pro_coincatch_js_WEBPACK_IMPORTED_MODULE_140_ = __webpack_require__(3242);
-/* harmony import */ var ccxt_src_pro_coincheck_js_WEBPACK_IMPORTED_MODULE_141_ = __webpack_require__(5317);
-/* harmony import */ var ccxt_src_pro_coinex_js_WEBPACK_IMPORTED_MODULE_142_ = __webpack_require__(9088);
-/* harmony import */ var ccxt_src_pro_coinone_js_WEBPACK_IMPORTED_MODULE_143_ = __webpack_require__(8673);
-/* harmony import */ var ccxt_src_pro_cryptocom_js_WEBPACK_IMPORTED_MODULE_144_ = __webpack_require__(6292);
-/* harmony import */ var ccxt_src_pro_defx_js_WEBPACK_IMPORTED_MODULE_145_ = __webpack_require__(8717);
-/* harmony import */ var ccxt_src_pro_deribit_js_WEBPACK_IMPORTED_MODULE_146_ = __webpack_require__(7791);
-/* harmony import */ var ccxt_src_pro_derive_js_WEBPACK_IMPORTED_MODULE_147_ = __webpack_require__(2127);
-/* harmony import */ var ccxt_src_pro_exmo_js_WEBPACK_IMPORTED_MODULE_148_ = __webpack_require__(5233);
-/* harmony import */ var ccxt_src_pro_gate_js_WEBPACK_IMPORTED_MODULE_149_ = __webpack_require__(9195);
-/* harmony import */ var ccxt_src_pro_gateio_js_WEBPACK_IMPORTED_MODULE_150_ = __webpack_require__(5843);
-/* harmony import */ var ccxt_src_pro_gemini_js_WEBPACK_IMPORTED_MODULE_151_ = __webpack_require__(375);
-/* harmony import */ var ccxt_src_pro_hashkey_js_WEBPACK_IMPORTED_MODULE_152_ = __webpack_require__(1481);
-/* harmony import */ var ccxt_src_pro_hitbtc_js_WEBPACK_IMPORTED_MODULE_153_ = __webpack_require__(4524);
-/* harmony import */ var ccxt_src_pro_hollaex_js_WEBPACK_IMPORTED_MODULE_154_ = __webpack_require__(8247);
-/* harmony import */ var ccxt_src_pro_htx_js_WEBPACK_IMPORTED_MODULE_155_ = __webpack_require__(3898);
-/* harmony import */ var ccxt_src_pro_huobi_js_WEBPACK_IMPORTED_MODULE_156_ = __webpack_require__(6335);
-/* harmony import */ var ccxt_src_pro_huobijp_js_WEBPACK_IMPORTED_MODULE_157_ = __webpack_require__(6973);
-/* harmony import */ var ccxt_src_pro_hyperliquid_js_WEBPACK_IMPORTED_MODULE_158_ = __webpack_require__(3984);
-/* harmony import */ var ccxt_src_pro_idex_js_WEBPACK_IMPORTED_MODULE_159_ = __webpack_require__(460);
-/* harmony import */ var ccxt_src_pro_independentreserve_js_WEBPACK_IMPORTED_MODULE_160_ = __webpack_require__(98);
-/* harmony import */ var ccxt_src_pro_kraken_js_WEBPACK_IMPORTED_MODULE_161_ = __webpack_require__(9050);
-/* harmony import */ var ccxt_src_pro_krakenfutures_js_WEBPACK_IMPORTED_MODULE_162_ = __webpack_require__(6396);
-/* harmony import */ var ccxt_src_pro_kucoin_js_WEBPACK_IMPORTED_MODULE_163_ = __webpack_require__(4965);
-/* harmony import */ var ccxt_src_pro_kucoinfutures_js_WEBPACK_IMPORTED_MODULE_164_ = __webpack_require__(905);
-/* harmony import */ var ccxt_src_pro_lbank_js_WEBPACK_IMPORTED_MODULE_165_ = __webpack_require__(1736);
-/* harmony import */ var ccxt_src_pro_luno_js_WEBPACK_IMPORTED_MODULE_166_ = __webpack_require__(2208);
-/* harmony import */ var ccxt_src_pro_mexc_js_WEBPACK_IMPORTED_MODULE_167_ = __webpack_require__(9219);
-/* harmony import */ var ccxt_src_pro_myokx_js_WEBPACK_IMPORTED_MODULE_168_ = __webpack_require__(3062);
-/* harmony import */ var ccxt_src_pro_ndax_js_WEBPACK_IMPORTED_MODULE_169_ = __webpack_require__(3887);
-/* harmony import */ var ccxt_src_pro_okcoin_js_WEBPACK_IMPORTED_MODULE_170_ = __webpack_require__(6187);
-/* harmony import */ var ccxt_src_pro_okx_js_WEBPACK_IMPORTED_MODULE_171_ = __webpack_require__(8588);
-/* harmony import */ var ccxt_src_pro_onetrading_js_WEBPACK_IMPORTED_MODULE_172_ = __webpack_require__(4357);
-/* harmony import */ var ccxt_src_pro_oxfun_js_WEBPACK_IMPORTED_MODULE_173_ = __webpack_require__(550);
-/* harmony import */ var ccxt_src_pro_p2b_js_WEBPACK_IMPORTED_MODULE_174_ = __webpack_require__(4934);
-/* harmony import */ var ccxt_src_pro_paradex_js_WEBPACK_IMPORTED_MODULE_175_ = __webpack_require__(1057);
-/* harmony import */ var ccxt_src_pro_phemex_js_WEBPACK_IMPORTED_MODULE_176_ = __webpack_require__(1619);
-/* harmony import */ var ccxt_src_pro_poloniex_js_WEBPACK_IMPORTED_MODULE_177_ = __webpack_require__(3456);
-/* harmony import */ var ccxt_src_pro_poloniexfutures_js_WEBPACK_IMPORTED_MODULE_178_ = __webpack_require__(5850);
-/* harmony import */ var ccxt_src_pro_probit_js_WEBPACK_IMPORTED_MODULE_179_ = __webpack_require__(5738);
-/* harmony import */ var ccxt_src_pro_upbit_js_WEBPACK_IMPORTED_MODULE_180_ = __webpack_require__(5794);
-/* harmony import */ var ccxt_src_pro_vertex_js_WEBPACK_IMPORTED_MODULE_181_ = __webpack_require__(910);
-/* harmony import */ var ccxt_src_pro_whitebit_js_WEBPACK_IMPORTED_MODULE_182_ = __webpack_require__(4712);
-/* harmony import */ var ccxt_src_pro_woo_js_WEBPACK_IMPORTED_MODULE_183_ = __webpack_require__(5869);
-/* harmony import */ var ccxt_src_pro_woofipro_js_WEBPACK_IMPORTED_MODULE_184_ = __webpack_require__(8713);
-/* harmony import */ var ccxt_src_pro_xt_js_WEBPACK_IMPORTED_MODULE_185_ = __webpack_require__(2368);
+/* harmony import */ var ccxt_src_bitflyer_js_WEBPACK_IMPORTED_MODULE_16_ = __webpack_require__(1787);
+/* harmony import */ var ccxt_src_bitget_js_WEBPACK_IMPORTED_MODULE_17_ = __webpack_require__(7757);
+/* harmony import */ var ccxt_src_bithumb_js_WEBPACK_IMPORTED_MODULE_18_ = __webpack_require__(357);
+/* harmony import */ var ccxt_src_bitmart_js_WEBPACK_IMPORTED_MODULE_19_ = __webpack_require__(1837);
+/* harmony import */ var ccxt_src_bitmex_js_WEBPACK_IMPORTED_MODULE_20_ = __webpack_require__(9523);
+/* harmony import */ var ccxt_src_bitopro_js_WEBPACK_IMPORTED_MODULE_21_ = __webpack_require__(2753);
+/* harmony import */ var ccxt_src_bitpanda_js_WEBPACK_IMPORTED_MODULE_22_ = __webpack_require__(9110);
+/* harmony import */ var ccxt_src_bitrue_js_WEBPACK_IMPORTED_MODULE_23_ = __webpack_require__(9061);
+/* harmony import */ var ccxt_src_bitso_js_WEBPACK_IMPORTED_MODULE_24_ = __webpack_require__(3019);
+/* harmony import */ var ccxt_src_bitstamp_js_WEBPACK_IMPORTED_MODULE_25_ = __webpack_require__(382);
+/* harmony import */ var ccxt_src_bitteam_js_WEBPACK_IMPORTED_MODULE_26_ = __webpack_require__(112);
+/* harmony import */ var ccxt_src_bitvavo_js_WEBPACK_IMPORTED_MODULE_27_ = __webpack_require__(3727);
+/* harmony import */ var ccxt_src_bl3p_js_WEBPACK_IMPORTED_MODULE_28_ = __webpack_require__(5257);
+/* harmony import */ var ccxt_src_blockchaincom_js_WEBPACK_IMPORTED_MODULE_29_ = __webpack_require__(3205);
+/* harmony import */ var ccxt_src_blofin_js_WEBPACK_IMPORTED_MODULE_30_ = __webpack_require__(2520);
+/* harmony import */ var ccxt_src_btcalpha_js_WEBPACK_IMPORTED_MODULE_31_ = __webpack_require__(3413);
+/* harmony import */ var ccxt_src_btcbox_js_WEBPACK_IMPORTED_MODULE_32_ = __webpack_require__(5376);
+/* harmony import */ var ccxt_src_btcmarkets_js_WEBPACK_IMPORTED_MODULE_33_ = __webpack_require__(4936);
+/* harmony import */ var ccxt_src_btcturk_js_WEBPACK_IMPORTED_MODULE_34_ = __webpack_require__(9265);
+/* harmony import */ var ccxt_src_bybit_js_WEBPACK_IMPORTED_MODULE_35_ = __webpack_require__(5462);
+/* harmony import */ var ccxt_src_cex_js_WEBPACK_IMPORTED_MODULE_36_ = __webpack_require__(8846);
+/* harmony import */ var ccxt_src_coinbase_js_WEBPACK_IMPORTED_MODULE_37_ = __webpack_require__(7504);
+/* harmony import */ var ccxt_src_coinbaseadvanced_js_WEBPACK_IMPORTED_MODULE_38_ = __webpack_require__(3278);
+/* harmony import */ var ccxt_src_coinbaseexchange_js_WEBPACK_IMPORTED_MODULE_39_ = __webpack_require__(4293);
+/* harmony import */ var ccxt_src_coinbaseinternational_js_WEBPACK_IMPORTED_MODULE_40_ = __webpack_require__(1558);
+/* harmony import */ var ccxt_src_coincatch_js_WEBPACK_IMPORTED_MODULE_41_ = __webpack_require__(570);
+/* harmony import */ var ccxt_src_coincheck_js_WEBPACK_IMPORTED_MODULE_42_ = __webpack_require__(2741);
+/* harmony import */ var ccxt_src_coinex_js_WEBPACK_IMPORTED_MODULE_43_ = __webpack_require__(9344);
+/* harmony import */ var ccxt_src_coinlist_js_WEBPACK_IMPORTED_MODULE_44_ = __webpack_require__(7477);
+/* harmony import */ var ccxt_src_coinmate_js_WEBPACK_IMPORTED_MODULE_45_ = __webpack_require__(6016);
+/* harmony import */ var ccxt_src_coinmetro_js_WEBPACK_IMPORTED_MODULE_46_ = __webpack_require__(8692);
+/* harmony import */ var ccxt_src_coinone_js_WEBPACK_IMPORTED_MODULE_47_ = __webpack_require__(5377);
+/* harmony import */ var ccxt_src_coinsph_js_WEBPACK_IMPORTED_MODULE_48_ = __webpack_require__(2692);
+/* harmony import */ var ccxt_src_coinspot_js_WEBPACK_IMPORTED_MODULE_49_ = __webpack_require__(1669);
+/* harmony import */ var ccxt_src_cryptocom_js_WEBPACK_IMPORTED_MODULE_50_ = __webpack_require__(6068);
+/* harmony import */ var ccxt_src_cryptomus_js_WEBPACK_IMPORTED_MODULE_51_ = __webpack_require__(870);
+/* harmony import */ var ccxt_src_defx_js_WEBPACK_IMPORTED_MODULE_52_ = __webpack_require__(6077);
+/* harmony import */ var ccxt_src_delta_js_WEBPACK_IMPORTED_MODULE_53_ = __webpack_require__(1080);
+/* harmony import */ var ccxt_src_deribit_js_WEBPACK_IMPORTED_MODULE_54_ = __webpack_require__(2591);
+/* harmony import */ var ccxt_src_derive_js_WEBPACK_IMPORTED_MODULE_55_ = __webpack_require__(1839);
+/* harmony import */ var ccxt_src_digifinex_js_WEBPACK_IMPORTED_MODULE_56_ = __webpack_require__(779);
+/* harmony import */ var ccxt_src_ellipx_js_WEBPACK_IMPORTED_MODULE_57_ = __webpack_require__(1962);
+/* harmony import */ var ccxt_src_exmo_js_WEBPACK_IMPORTED_MODULE_58_ = __webpack_require__(7057);
+/* harmony import */ var ccxt_src_fmfwio_js_WEBPACK_IMPORTED_MODULE_59_ = __webpack_require__(3042);
+/* harmony import */ var ccxt_src_gate_js_WEBPACK_IMPORTED_MODULE_60_ = __webpack_require__(9403);
+/* harmony import */ var ccxt_src_gateio_js_WEBPACK_IMPORTED_MODULE_61_ = __webpack_require__(784);
+/* harmony import */ var ccxt_src_gemini_js_WEBPACK_IMPORTED_MODULE_62_ = __webpack_require__(8823);
+/* harmony import */ var ccxt_src_hashkey_js_WEBPACK_IMPORTED_MODULE_63_ = __webpack_require__(2937);
+/* harmony import */ var ccxt_src_hitbtc_js_WEBPACK_IMPORTED_MODULE_64_ = __webpack_require__(7996);
+/* harmony import */ var ccxt_src_hollaex_js_WEBPACK_IMPORTED_MODULE_65_ = __webpack_require__(4455);
+/* harmony import */ var ccxt_src_htx_js_WEBPACK_IMPORTED_MODULE_66_ = __webpack_require__(9946);
+/* harmony import */ var ccxt_src_huobi_js_WEBPACK_IMPORTED_MODULE_67_ = __webpack_require__(63);
+/* harmony import */ var ccxt_src_huobijp_js_WEBPACK_IMPORTED_MODULE_68_ = __webpack_require__(1325);
+/* harmony import */ var ccxt_src_hyperliquid_js_WEBPACK_IMPORTED_MODULE_69_ = __webpack_require__(1936);
+/* harmony import */ var ccxt_src_idex_js_WEBPACK_IMPORTED_MODULE_70_ = __webpack_require__(636);
+/* harmony import */ var ccxt_src_independentreserve_js_WEBPACK_IMPORTED_MODULE_71_ = __webpack_require__(4162);
+/* harmony import */ var ccxt_src_indodax_js_WEBPACK_IMPORTED_MODULE_72_ = __webpack_require__(7325);
+/* harmony import */ var ccxt_src_kraken_js_WEBPACK_IMPORTED_MODULE_73_ = __webpack_require__(8042);
+/* harmony import */ var ccxt_src_krakenfutures_js_WEBPACK_IMPORTED_MODULE_74_ = __webpack_require__(2300);
+/* harmony import */ var ccxt_src_kucoin_js_WEBPACK_IMPORTED_MODULE_75_ = __webpack_require__(1397);
+/* harmony import */ var ccxt_src_kucoinfutures_js_WEBPACK_IMPORTED_MODULE_76_ = __webpack_require__(6217);
+/* harmony import */ var ccxt_src_kuna_js_WEBPACK_IMPORTED_MODULE_77_ = __webpack_require__(5193);
+/* harmony import */ var ccxt_src_latoken_js_WEBPACK_IMPORTED_MODULE_78_ = __webpack_require__(8146);
+/* harmony import */ var ccxt_src_lbank_js_WEBPACK_IMPORTED_MODULE_79_ = __webpack_require__(3144);
+/* harmony import */ var ccxt_src_luno_js_WEBPACK_IMPORTED_MODULE_80_ = __webpack_require__(9248);
+/* harmony import */ var ccxt_src_mercado_js_WEBPACK_IMPORTED_MODULE_81_ = __webpack_require__(6419);
+/* harmony import */ var ccxt_src_mexc_js_WEBPACK_IMPORTED_MODULE_82_ = __webpack_require__(2403);
+/* harmony import */ var ccxt_src_myokx_js_WEBPACK_IMPORTED_MODULE_83_ = __webpack_require__(8982);
+/* harmony import */ var ccxt_src_ndax_js_WEBPACK_IMPORTED_MODULE_84_ = __webpack_require__(4460);
+/* harmony import */ var ccxt_src_novadax_js_WEBPACK_IMPORTED_MODULE_85_ = __webpack_require__(8473);
+/* harmony import */ var ccxt_src_oceanex_js_WEBPACK_IMPORTED_MODULE_86_ = __webpack_require__(3805);
+/* harmony import */ var ccxt_src_okcoin_js_WEBPACK_IMPORTED_MODULE_87_ = __webpack_require__(7915);
+/* harmony import */ var ccxt_src_okx_js_WEBPACK_IMPORTED_MODULE_88_ = __webpack_require__(3660);
+/* harmony import */ var ccxt_src_onetrading_js_WEBPACK_IMPORTED_MODULE_89_ = __webpack_require__(3573);
+/* harmony import */ var ccxt_src_oxfun_js_WEBPACK_IMPORTED_MODULE_90_ = __webpack_require__(6358);
+/* harmony import */ var ccxt_src_p2b_js_WEBPACK_IMPORTED_MODULE_91_ = __webpack_require__(4998);
+/* harmony import */ var ccxt_src_paradex_js_WEBPACK_IMPORTED_MODULE_92_ = __webpack_require__(6993);
+/* harmony import */ var ccxt_src_paymium_js_WEBPACK_IMPORTED_MODULE_93_ = __webpack_require__(3280);
+/* harmony import */ var ccxt_src_phemex_js_WEBPACK_IMPORTED_MODULE_94_ = __webpack_require__(9075);
+/* harmony import */ var ccxt_src_poloniex_js_WEBPACK_IMPORTED_MODULE_95_ = __webpack_require__(288);
+/* harmony import */ var ccxt_src_probit_js_WEBPACK_IMPORTED_MODULE_96_ = __webpack_require__(5037);
+/* harmony import */ var ccxt_src_timex_js_WEBPACK_IMPORTED_MODULE_97_ = __webpack_require__(6213);
+/* harmony import */ var ccxt_src_tokocrypto_js_WEBPACK_IMPORTED_MODULE_98_ = __webpack_require__(2490);
+/* harmony import */ var ccxt_src_tradeogre_js_WEBPACK_IMPORTED_MODULE_99_ = __webpack_require__(5887);
+/* harmony import */ var ccxt_src_upbit_js_WEBPACK_IMPORTED_MODULE_100_ = __webpack_require__(930);
+/* harmony import */ var ccxt_src_vertex_js_WEBPACK_IMPORTED_MODULE_101_ = __webpack_require__(4910);
+/* harmony import */ var ccxt_src_wavesexchange_js_WEBPACK_IMPORTED_MODULE_102_ = __webpack_require__(7073);
+/* harmony import */ var ccxt_src_whitebit_js_WEBPACK_IMPORTED_MODULE_103_ = __webpack_require__(5336);
+/* harmony import */ var ccxt_src_woo_js_WEBPACK_IMPORTED_MODULE_104_ = __webpack_require__(669);
+/* harmony import */ var ccxt_src_woofipro_js_WEBPACK_IMPORTED_MODULE_105_ = __webpack_require__(9641);
+/* harmony import */ var ccxt_src_xt_js_WEBPACK_IMPORTED_MODULE_106_ = __webpack_require__(5344);
+/* harmony import */ var ccxt_src_yobit_js_WEBPACK_IMPORTED_MODULE_107_ = __webpack_require__(7469);
+/* harmony import */ var ccxt_src_zaif_js_WEBPACK_IMPORTED_MODULE_108_ = __webpack_require__(1530);
+/* harmony import */ var ccxt_src_zonda_js_WEBPACK_IMPORTED_MODULE_109_ = __webpack_require__(6022);
+/* harmony import */ var ccxt_src_pro_alpaca_js_WEBPACK_IMPORTED_MODULE_110_ = __webpack_require__(6810);
+/* harmony import */ var ccxt_src_pro_ascendex_js_WEBPACK_IMPORTED_MODULE_111_ = __webpack_require__(1657);
+/* harmony import */ var ccxt_src_pro_bequant_js_WEBPACK_IMPORTED_MODULE_112_ = __webpack_require__(9338);
+/* harmony import */ var ccxt_src_pro_binance_js_WEBPACK_IMPORTED_MODULE_113_ = __webpack_require__(9544);
+/* harmony import */ var ccxt_src_pro_binancecoinm_js_WEBPACK_IMPORTED_MODULE_114_ = __webpack_require__(902);
+/* harmony import */ var ccxt_src_pro_binanceus_js_WEBPACK_IMPORTED_MODULE_115_ = __webpack_require__(8788);
+/* harmony import */ var ccxt_src_pro_binanceusdm_js_WEBPACK_IMPORTED_MODULE_116_ = __webpack_require__(8251);
+/* harmony import */ var ccxt_src_pro_bingx_js_WEBPACK_IMPORTED_MODULE_117_ = __webpack_require__(9456);
+/* harmony import */ var ccxt_src_pro_bitcoincom_js_WEBPACK_IMPORTED_MODULE_118_ = __webpack_require__(5343);
+/* harmony import */ var ccxt_src_pro_bitfinex_js_WEBPACK_IMPORTED_MODULE_119_ = __webpack_require__(1038);
+/* harmony import */ var ccxt_src_pro_bitget_js_WEBPACK_IMPORTED_MODULE_120_ = __webpack_require__(205);
+/* harmony import */ var ccxt_src_pro_bithumb_js_WEBPACK_IMPORTED_MODULE_121_ = __webpack_require__(6181);
+/* harmony import */ var ccxt_src_pro_bitmart_js_WEBPACK_IMPORTED_MODULE_122_ = __webpack_require__(3069);
+/* harmony import */ var ccxt_src_pro_bitmex_js_WEBPACK_IMPORTED_MODULE_123_ = __webpack_require__(3731);
+/* harmony import */ var ccxt_src_pro_bitopro_js_WEBPACK_IMPORTED_MODULE_124_ = __webpack_require__(4401);
+/* harmony import */ var ccxt_src_pro_bitpanda_js_WEBPACK_IMPORTED_MODULE_125_ = __webpack_require__(8265);
+/* harmony import */ var ccxt_src_pro_bitrue_js_WEBPACK_IMPORTED_MODULE_126_ = __webpack_require__(3333);
+/* harmony import */ var ccxt_src_pro_bitstamp_js_WEBPACK_IMPORTED_MODULE_127_ = __webpack_require__(3326);
+/* harmony import */ var ccxt_src_pro_bitvavo_js_WEBPACK_IMPORTED_MODULE_128_ = __webpack_require__(1327);
+/* harmony import */ var ccxt_src_pro_blockchaincom_js_WEBPACK_IMPORTED_MODULE_129_ = __webpack_require__(8693);
+/* harmony import */ var ccxt_src_pro_blofin_js_WEBPACK_IMPORTED_MODULE_130_ = __webpack_require__(1672);
+/* harmony import */ var ccxt_src_pro_bybit_js_WEBPACK_IMPORTED_MODULE_131_ = __webpack_require__(8518);
+/* harmony import */ var ccxt_src_pro_cex_js_WEBPACK_IMPORTED_MODULE_132_ = __webpack_require__(3774);
+/* harmony import */ var ccxt_src_pro_coinbase_js_WEBPACK_IMPORTED_MODULE_133_ = __webpack_require__(8160);
+/* harmony import */ var ccxt_src_pro_coinbaseadvanced_js_WEBPACK_IMPORTED_MODULE_134_ = __webpack_require__(5918);
+/* harmony import */ var ccxt_src_pro_coinbaseexchange_js_WEBPACK_IMPORTED_MODULE_135_ = __webpack_require__(1925);
+/* harmony import */ var ccxt_src_pro_coinbaseinternational_js_WEBPACK_IMPORTED_MODULE_136_ = __webpack_require__(998);
+/* harmony import */ var ccxt_src_pro_coincatch_js_WEBPACK_IMPORTED_MODULE_137_ = __webpack_require__(3242);
+/* harmony import */ var ccxt_src_pro_coincheck_js_WEBPACK_IMPORTED_MODULE_138_ = __webpack_require__(5317);
+/* harmony import */ var ccxt_src_pro_coinex_js_WEBPACK_IMPORTED_MODULE_139_ = __webpack_require__(9088);
+/* harmony import */ var ccxt_src_pro_coinone_js_WEBPACK_IMPORTED_MODULE_140_ = __webpack_require__(8673);
+/* harmony import */ var ccxt_src_pro_cryptocom_js_WEBPACK_IMPORTED_MODULE_141_ = __webpack_require__(6292);
+/* harmony import */ var ccxt_src_pro_defx_js_WEBPACK_IMPORTED_MODULE_142_ = __webpack_require__(8717);
+/* harmony import */ var ccxt_src_pro_deribit_js_WEBPACK_IMPORTED_MODULE_143_ = __webpack_require__(7791);
+/* harmony import */ var ccxt_src_pro_derive_js_WEBPACK_IMPORTED_MODULE_144_ = __webpack_require__(2127);
+/* harmony import */ var ccxt_src_pro_exmo_js_WEBPACK_IMPORTED_MODULE_145_ = __webpack_require__(5233);
+/* harmony import */ var ccxt_src_pro_gate_js_WEBPACK_IMPORTED_MODULE_146_ = __webpack_require__(9195);
+/* harmony import */ var ccxt_src_pro_gateio_js_WEBPACK_IMPORTED_MODULE_147_ = __webpack_require__(5843);
+/* harmony import */ var ccxt_src_pro_gemini_js_WEBPACK_IMPORTED_MODULE_148_ = __webpack_require__(375);
+/* harmony import */ var ccxt_src_pro_hashkey_js_WEBPACK_IMPORTED_MODULE_149_ = __webpack_require__(1481);
+/* harmony import */ var ccxt_src_pro_hitbtc_js_WEBPACK_IMPORTED_MODULE_150_ = __webpack_require__(4524);
+/* harmony import */ var ccxt_src_pro_hollaex_js_WEBPACK_IMPORTED_MODULE_151_ = __webpack_require__(8247);
+/* harmony import */ var ccxt_src_pro_htx_js_WEBPACK_IMPORTED_MODULE_152_ = __webpack_require__(3898);
+/* harmony import */ var ccxt_src_pro_huobi_js_WEBPACK_IMPORTED_MODULE_153_ = __webpack_require__(6335);
+/* harmony import */ var ccxt_src_pro_huobijp_js_WEBPACK_IMPORTED_MODULE_154_ = __webpack_require__(6973);
+/* harmony import */ var ccxt_src_pro_hyperliquid_js_WEBPACK_IMPORTED_MODULE_155_ = __webpack_require__(3984);
+/* harmony import */ var ccxt_src_pro_idex_js_WEBPACK_IMPORTED_MODULE_156_ = __webpack_require__(460);
+/* harmony import */ var ccxt_src_pro_independentreserve_js_WEBPACK_IMPORTED_MODULE_157_ = __webpack_require__(98);
+/* harmony import */ var ccxt_src_pro_kraken_js_WEBPACK_IMPORTED_MODULE_158_ = __webpack_require__(9050);
+/* harmony import */ var ccxt_src_pro_krakenfutures_js_WEBPACK_IMPORTED_MODULE_159_ = __webpack_require__(6396);
+/* harmony import */ var ccxt_src_pro_kucoin_js_WEBPACK_IMPORTED_MODULE_160_ = __webpack_require__(4965);
+/* harmony import */ var ccxt_src_pro_kucoinfutures_js_WEBPACK_IMPORTED_MODULE_161_ = __webpack_require__(905);
+/* harmony import */ var ccxt_src_pro_lbank_js_WEBPACK_IMPORTED_MODULE_162_ = __webpack_require__(1736);
+/* harmony import */ var ccxt_src_pro_luno_js_WEBPACK_IMPORTED_MODULE_163_ = __webpack_require__(2208);
+/* harmony import */ var ccxt_src_pro_mexc_js_WEBPACK_IMPORTED_MODULE_164_ = __webpack_require__(9219);
+/* harmony import */ var ccxt_src_pro_myokx_js_WEBPACK_IMPORTED_MODULE_165_ = __webpack_require__(3062);
+/* harmony import */ var ccxt_src_pro_ndax_js_WEBPACK_IMPORTED_MODULE_166_ = __webpack_require__(3887);
+/* harmony import */ var ccxt_src_pro_okcoin_js_WEBPACK_IMPORTED_MODULE_167_ = __webpack_require__(6187);
+/* harmony import */ var ccxt_src_pro_okx_js_WEBPACK_IMPORTED_MODULE_168_ = __webpack_require__(8588);
+/* harmony import */ var ccxt_src_pro_onetrading_js_WEBPACK_IMPORTED_MODULE_169_ = __webpack_require__(4357);
+/* harmony import */ var ccxt_src_pro_oxfun_js_WEBPACK_IMPORTED_MODULE_170_ = __webpack_require__(550);
+/* harmony import */ var ccxt_src_pro_p2b_js_WEBPACK_IMPORTED_MODULE_171_ = __webpack_require__(4934);
+/* harmony import */ var ccxt_src_pro_paradex_js_WEBPACK_IMPORTED_MODULE_172_ = __webpack_require__(1057);
+/* harmony import */ var ccxt_src_pro_phemex_js_WEBPACK_IMPORTED_MODULE_173_ = __webpack_require__(1619);
+/* harmony import */ var ccxt_src_pro_poloniex_js_WEBPACK_IMPORTED_MODULE_174_ = __webpack_require__(3456);
+/* harmony import */ var ccxt_src_pro_probit_js_WEBPACK_IMPORTED_MODULE_175_ = __webpack_require__(5738);
+/* harmony import */ var ccxt_src_pro_upbit_js_WEBPACK_IMPORTED_MODULE_176_ = __webpack_require__(5794);
+/* harmony import */ var ccxt_src_pro_vertex_js_WEBPACK_IMPORTED_MODULE_177_ = __webpack_require__(910);
+/* harmony import */ var ccxt_src_pro_whitebit_js_WEBPACK_IMPORTED_MODULE_178_ = __webpack_require__(4712);
+/* harmony import */ var ccxt_src_pro_woo_js_WEBPACK_IMPORTED_MODULE_179_ = __webpack_require__(5869);
+/* harmony import */ var ccxt_src_pro_woofipro_js_WEBPACK_IMPORTED_MODULE_180_ = __webpack_require__(8713);
+/* harmony import */ var ccxt_src_pro_xt_js_WEBPACK_IMPORTED_MODULE_181_ = __webpack_require__(2368);
 /*
 
 MIT License
@@ -402916,11 +399065,9 @@ SOFTWARE.
 
 //-----------------------------------------------------------------------------
 // this is updated by vss.js when building
-const ccxt_version = '4.4.70';
+const ccxt_version = '4.4.72';
 ccxt_src_base_Exchange_js_WEBPACK_IMPORTED_MODULE_0_/* .Exchange */ .k.ccxtVersion = ccxt_version;
 //-----------------------------------------------------------------------------
-
-
 
 
 
@@ -403103,8 +399250,6 @@ ccxt_src_base_Exchange_js_WEBPACK_IMPORTED_MODULE_0_/* .Exchange */ .k.ccxtVersi
 
 
 
-
-
 const ccxt_exchanges = {
     'ace': ccxt_src_ace_js_WEBPACK_IMPORTED_MODULE_1_/* ["default"] */ .A,
     'alpaca': ccxt_src_alpaca_js_WEBPACK_IMPORTED_MODULE_2_/* ["default"] */ .A,
@@ -403121,178 +399266,174 @@ const ccxt_exchanges = {
     'bitbns': ccxt_src_bitbns_js_WEBPACK_IMPORTED_MODULE_13_/* ["default"] */ .A,
     'bitcoincom': ccxt_src_bitcoincom_js_WEBPACK_IMPORTED_MODULE_14_/* ["default"] */ .A,
     'bitfinex': ccxt_src_bitfinex_js_WEBPACK_IMPORTED_MODULE_15_/* ["default"] */ .A,
-    'bitfinex1': ccxt_src_bitfinex1_js_WEBPACK_IMPORTED_MODULE_16_/* ["default"] */ .A,
-    'bitflyer': ccxt_src_bitflyer_js_WEBPACK_IMPORTED_MODULE_17_/* ["default"] */ .A,
-    'bitget': ccxt_src_bitget_js_WEBPACK_IMPORTED_MODULE_18_/* ["default"] */ .A,
-    'bithumb': ccxt_src_bithumb_js_WEBPACK_IMPORTED_MODULE_19_/* ["default"] */ .A,
-    'bitmart': ccxt_src_bitmart_js_WEBPACK_IMPORTED_MODULE_20_/* ["default"] */ .A,
-    'bitmex': ccxt_src_bitmex_js_WEBPACK_IMPORTED_MODULE_21_/* ["default"] */ .A,
-    'bitopro': ccxt_src_bitopro_js_WEBPACK_IMPORTED_MODULE_22_/* ["default"] */ .A,
-    'bitpanda': ccxt_src_bitpanda_js_WEBPACK_IMPORTED_MODULE_23_/* ["default"] */ .A,
-    'bitrue': ccxt_src_bitrue_js_WEBPACK_IMPORTED_MODULE_24_/* ["default"] */ .A,
-    'bitso': ccxt_src_bitso_js_WEBPACK_IMPORTED_MODULE_25_/* ["default"] */ .A,
-    'bitstamp': ccxt_src_bitstamp_js_WEBPACK_IMPORTED_MODULE_26_/* ["default"] */ .A,
-    'bitteam': ccxt_src_bitteam_js_WEBPACK_IMPORTED_MODULE_27_/* ["default"] */ .A,
-    'bitvavo': ccxt_src_bitvavo_js_WEBPACK_IMPORTED_MODULE_28_/* ["default"] */ .A,
-    'bl3p': ccxt_src_bl3p_js_WEBPACK_IMPORTED_MODULE_29_/* ["default"] */ .A,
-    'blockchaincom': ccxt_src_blockchaincom_js_WEBPACK_IMPORTED_MODULE_30_/* ["default"] */ .A,
-    'blofin': ccxt_src_blofin_js_WEBPACK_IMPORTED_MODULE_31_/* ["default"] */ .A,
-    'btcalpha': ccxt_src_btcalpha_js_WEBPACK_IMPORTED_MODULE_32_/* ["default"] */ .A,
-    'btcbox': ccxt_src_btcbox_js_WEBPACK_IMPORTED_MODULE_33_/* ["default"] */ .A,
-    'btcmarkets': ccxt_src_btcmarkets_js_WEBPACK_IMPORTED_MODULE_34_/* ["default"] */ .A,
-    'btcturk': ccxt_src_btcturk_js_WEBPACK_IMPORTED_MODULE_35_/* ["default"] */ .A,
-    'bybit': ccxt_src_bybit_js_WEBPACK_IMPORTED_MODULE_36_/* ["default"] */ .A,
-    'cex': ccxt_src_cex_js_WEBPACK_IMPORTED_MODULE_37_/* ["default"] */ .A,
-    'coinbase': ccxt_src_coinbase_js_WEBPACK_IMPORTED_MODULE_38_/* ["default"] */ .A,
-    'coinbaseadvanced': ccxt_src_coinbaseadvanced_js_WEBPACK_IMPORTED_MODULE_39_/* ["default"] */ .A,
-    'coinbaseexchange': ccxt_src_coinbaseexchange_js_WEBPACK_IMPORTED_MODULE_40_/* ["default"] */ .A,
-    'coinbaseinternational': ccxt_src_coinbaseinternational_js_WEBPACK_IMPORTED_MODULE_41_/* ["default"] */ .A,
-    'coincatch': ccxt_src_coincatch_js_WEBPACK_IMPORTED_MODULE_42_/* ["default"] */ .A,
-    'coincheck': ccxt_src_coincheck_js_WEBPACK_IMPORTED_MODULE_43_/* ["default"] */ .A,
-    'coinex': ccxt_src_coinex_js_WEBPACK_IMPORTED_MODULE_44_/* ["default"] */ .A,
-    'coinlist': ccxt_src_coinlist_js_WEBPACK_IMPORTED_MODULE_45_/* ["default"] */ .A,
-    'coinmate': ccxt_src_coinmate_js_WEBPACK_IMPORTED_MODULE_46_/* ["default"] */ .A,
-    'coinmetro': ccxt_src_coinmetro_js_WEBPACK_IMPORTED_MODULE_47_/* ["default"] */ .A,
-    'coinone': ccxt_src_coinone_js_WEBPACK_IMPORTED_MODULE_48_/* ["default"] */ .A,
-    'coinsph': ccxt_src_coinsph_js_WEBPACK_IMPORTED_MODULE_49_/* ["default"] */ .A,
-    'coinspot': ccxt_src_coinspot_js_WEBPACK_IMPORTED_MODULE_50_/* ["default"] */ .A,
-    'cryptocom': ccxt_src_cryptocom_js_WEBPACK_IMPORTED_MODULE_51_/* ["default"] */ .A,
-    'cryptomus': ccxt_src_cryptomus_js_WEBPACK_IMPORTED_MODULE_52_/* ["default"] */ .A,
-    'defx': ccxt_src_defx_js_WEBPACK_IMPORTED_MODULE_53_/* ["default"] */ .A,
-    'delta': ccxt_src_delta_js_WEBPACK_IMPORTED_MODULE_54_/* ["default"] */ .A,
-    'deribit': ccxt_src_deribit_js_WEBPACK_IMPORTED_MODULE_55_/* ["default"] */ .A,
-    'derive': ccxt_src_derive_js_WEBPACK_IMPORTED_MODULE_56_/* ["default"] */ .A,
-    'digifinex': ccxt_src_digifinex_js_WEBPACK_IMPORTED_MODULE_57_/* ["default"] */ .A,
-    'ellipx': ccxt_src_ellipx_js_WEBPACK_IMPORTED_MODULE_58_/* ["default"] */ .A,
-    'exmo': ccxt_src_exmo_js_WEBPACK_IMPORTED_MODULE_59_/* ["default"] */ .A,
-    'fmfwio': ccxt_src_fmfwio_js_WEBPACK_IMPORTED_MODULE_60_/* ["default"] */ .A,
-    'gate': ccxt_src_gate_js_WEBPACK_IMPORTED_MODULE_61_/* ["default"] */ .A,
-    'gateio': ccxt_src_gateio_js_WEBPACK_IMPORTED_MODULE_62_/* ["default"] */ .A,
-    'gemini': ccxt_src_gemini_js_WEBPACK_IMPORTED_MODULE_63_/* ["default"] */ .A,
-    'hashkey': ccxt_src_hashkey_js_WEBPACK_IMPORTED_MODULE_64_/* ["default"] */ .A,
-    'hitbtc': ccxt_src_hitbtc_js_WEBPACK_IMPORTED_MODULE_65_/* ["default"] */ .A,
-    'hollaex': ccxt_src_hollaex_js_WEBPACK_IMPORTED_MODULE_66_/* ["default"] */ .A,
-    'htx': ccxt_src_htx_js_WEBPACK_IMPORTED_MODULE_67_/* ["default"] */ .A,
-    'huobi': ccxt_src_huobi_js_WEBPACK_IMPORTED_MODULE_68_/* ["default"] */ .A,
-    'huobijp': ccxt_src_huobijp_js_WEBPACK_IMPORTED_MODULE_69_/* ["default"] */ .A,
-    'hyperliquid': ccxt_src_hyperliquid_js_WEBPACK_IMPORTED_MODULE_70_/* ["default"] */ .A,
-    'idex': ccxt_src_idex_js_WEBPACK_IMPORTED_MODULE_71_/* ["default"] */ .A,
-    'independentreserve': ccxt_src_independentreserve_js_WEBPACK_IMPORTED_MODULE_72_/* ["default"] */ .A,
-    'indodax': ccxt_src_indodax_js_WEBPACK_IMPORTED_MODULE_73_/* ["default"] */ .A,
-    'kraken': ccxt_src_kraken_js_WEBPACK_IMPORTED_MODULE_74_/* ["default"] */ .A,
-    'krakenfutures': ccxt_src_krakenfutures_js_WEBPACK_IMPORTED_MODULE_75_/* ["default"] */ .A,
-    'kucoin': ccxt_src_kucoin_js_WEBPACK_IMPORTED_MODULE_76_/* ["default"] */ .A,
-    'kucoinfutures': ccxt_src_kucoinfutures_js_WEBPACK_IMPORTED_MODULE_77_/* ["default"] */ .A,
-    'kuna': ccxt_src_kuna_js_WEBPACK_IMPORTED_MODULE_78_/* ["default"] */ .A,
-    'latoken': ccxt_src_latoken_js_WEBPACK_IMPORTED_MODULE_79_/* ["default"] */ .A,
-    'lbank': ccxt_src_lbank_js_WEBPACK_IMPORTED_MODULE_80_/* ["default"] */ .A,
-    'luno': ccxt_src_luno_js_WEBPACK_IMPORTED_MODULE_81_/* ["default"] */ .A,
-    'mercado': ccxt_src_mercado_js_WEBPACK_IMPORTED_MODULE_82_/* ["default"] */ .A,
-    'mexc': ccxt_src_mexc_js_WEBPACK_IMPORTED_MODULE_83_/* ["default"] */ .A,
-    'myokx': ccxt_src_myokx_js_WEBPACK_IMPORTED_MODULE_84_/* ["default"] */ .A,
-    'ndax': ccxt_src_ndax_js_WEBPACK_IMPORTED_MODULE_85_/* ["default"] */ .A,
-    'novadax': ccxt_src_novadax_js_WEBPACK_IMPORTED_MODULE_86_/* ["default"] */ .A,
-    'oceanex': ccxt_src_oceanex_js_WEBPACK_IMPORTED_MODULE_87_/* ["default"] */ .A,
-    'okcoin': ccxt_src_okcoin_js_WEBPACK_IMPORTED_MODULE_88_/* ["default"] */ .A,
-    'okx': ccxt_src_okx_js_WEBPACK_IMPORTED_MODULE_89_/* ["default"] */ .A,
-    'onetrading': ccxt_src_onetrading_js_WEBPACK_IMPORTED_MODULE_90_/* ["default"] */ .A,
-    'oxfun': ccxt_src_oxfun_js_WEBPACK_IMPORTED_MODULE_91_/* ["default"] */ .A,
-    'p2b': ccxt_src_p2b_js_WEBPACK_IMPORTED_MODULE_92_/* ["default"] */ .A,
-    'paradex': ccxt_src_paradex_js_WEBPACK_IMPORTED_MODULE_93_/* ["default"] */ .A,
-    'paymium': ccxt_src_paymium_js_WEBPACK_IMPORTED_MODULE_94_/* ["default"] */ .A,
-    'phemex': ccxt_src_phemex_js_WEBPACK_IMPORTED_MODULE_95_/* ["default"] */ .A,
-    'poloniex': ccxt_src_poloniex_js_WEBPACK_IMPORTED_MODULE_96_/* ["default"] */ .A,
-    'poloniexfutures': ccxt_src_poloniexfutures_js_WEBPACK_IMPORTED_MODULE_97_/* ["default"] */ .A,
-    'probit': ccxt_src_probit_js_WEBPACK_IMPORTED_MODULE_98_/* ["default"] */ .A,
-    'timex': ccxt_src_timex_js_WEBPACK_IMPORTED_MODULE_99_/* ["default"] */ .A,
-    'tokocrypto': ccxt_src_tokocrypto_js_WEBPACK_IMPORTED_MODULE_100_/* ["default"] */ .A,
-    'tradeogre': ccxt_src_tradeogre_js_WEBPACK_IMPORTED_MODULE_101_/* ["default"] */ .A,
-    'upbit': ccxt_src_upbit_js_WEBPACK_IMPORTED_MODULE_102_/* ["default"] */ .A,
-    'vertex': ccxt_src_vertex_js_WEBPACK_IMPORTED_MODULE_103_/* ["default"] */ .A,
-    'wavesexchange': ccxt_src_wavesexchange_js_WEBPACK_IMPORTED_MODULE_104_/* ["default"] */ .A,
-    'whitebit': ccxt_src_whitebit_js_WEBPACK_IMPORTED_MODULE_105_/* ["default"] */ .A,
-    'woo': ccxt_src_woo_js_WEBPACK_IMPORTED_MODULE_106_/* ["default"] */ .A,
-    'woofipro': ccxt_src_woofipro_js_WEBPACK_IMPORTED_MODULE_107_/* ["default"] */ .A,
-    'xt': ccxt_src_xt_js_WEBPACK_IMPORTED_MODULE_108_/* ["default"] */ .A,
-    'yobit': ccxt_src_yobit_js_WEBPACK_IMPORTED_MODULE_109_/* ["default"] */ .A,
-    'zaif': ccxt_src_zaif_js_WEBPACK_IMPORTED_MODULE_110_/* ["default"] */ .A,
-    'zonda': ccxt_src_zonda_js_WEBPACK_IMPORTED_MODULE_111_/* ["default"] */ .A,
+    'bitflyer': ccxt_src_bitflyer_js_WEBPACK_IMPORTED_MODULE_16_/* ["default"] */ .A,
+    'bitget': ccxt_src_bitget_js_WEBPACK_IMPORTED_MODULE_17_/* ["default"] */ .A,
+    'bithumb': ccxt_src_bithumb_js_WEBPACK_IMPORTED_MODULE_18_/* ["default"] */ .A,
+    'bitmart': ccxt_src_bitmart_js_WEBPACK_IMPORTED_MODULE_19_/* ["default"] */ .A,
+    'bitmex': ccxt_src_bitmex_js_WEBPACK_IMPORTED_MODULE_20_/* ["default"] */ .A,
+    'bitopro': ccxt_src_bitopro_js_WEBPACK_IMPORTED_MODULE_21_/* ["default"] */ .A,
+    'bitpanda': ccxt_src_bitpanda_js_WEBPACK_IMPORTED_MODULE_22_/* ["default"] */ .A,
+    'bitrue': ccxt_src_bitrue_js_WEBPACK_IMPORTED_MODULE_23_/* ["default"] */ .A,
+    'bitso': ccxt_src_bitso_js_WEBPACK_IMPORTED_MODULE_24_/* ["default"] */ .A,
+    'bitstamp': ccxt_src_bitstamp_js_WEBPACK_IMPORTED_MODULE_25_/* ["default"] */ .A,
+    'bitteam': ccxt_src_bitteam_js_WEBPACK_IMPORTED_MODULE_26_/* ["default"] */ .A,
+    'bitvavo': ccxt_src_bitvavo_js_WEBPACK_IMPORTED_MODULE_27_/* ["default"] */ .A,
+    'bl3p': ccxt_src_bl3p_js_WEBPACK_IMPORTED_MODULE_28_/* ["default"] */ .A,
+    'blockchaincom': ccxt_src_blockchaincom_js_WEBPACK_IMPORTED_MODULE_29_/* ["default"] */ .A,
+    'blofin': ccxt_src_blofin_js_WEBPACK_IMPORTED_MODULE_30_/* ["default"] */ .A,
+    'btcalpha': ccxt_src_btcalpha_js_WEBPACK_IMPORTED_MODULE_31_/* ["default"] */ .A,
+    'btcbox': ccxt_src_btcbox_js_WEBPACK_IMPORTED_MODULE_32_/* ["default"] */ .A,
+    'btcmarkets': ccxt_src_btcmarkets_js_WEBPACK_IMPORTED_MODULE_33_/* ["default"] */ .A,
+    'btcturk': ccxt_src_btcturk_js_WEBPACK_IMPORTED_MODULE_34_/* ["default"] */ .A,
+    'bybit': ccxt_src_bybit_js_WEBPACK_IMPORTED_MODULE_35_/* ["default"] */ .A,
+    'cex': ccxt_src_cex_js_WEBPACK_IMPORTED_MODULE_36_/* ["default"] */ .A,
+    'coinbase': ccxt_src_coinbase_js_WEBPACK_IMPORTED_MODULE_37_/* ["default"] */ .A,
+    'coinbaseadvanced': ccxt_src_coinbaseadvanced_js_WEBPACK_IMPORTED_MODULE_38_/* ["default"] */ .A,
+    'coinbaseexchange': ccxt_src_coinbaseexchange_js_WEBPACK_IMPORTED_MODULE_39_/* ["default"] */ .A,
+    'coinbaseinternational': ccxt_src_coinbaseinternational_js_WEBPACK_IMPORTED_MODULE_40_/* ["default"] */ .A,
+    'coincatch': ccxt_src_coincatch_js_WEBPACK_IMPORTED_MODULE_41_/* ["default"] */ .A,
+    'coincheck': ccxt_src_coincheck_js_WEBPACK_IMPORTED_MODULE_42_/* ["default"] */ .A,
+    'coinex': ccxt_src_coinex_js_WEBPACK_IMPORTED_MODULE_43_/* ["default"] */ .A,
+    'coinlist': ccxt_src_coinlist_js_WEBPACK_IMPORTED_MODULE_44_/* ["default"] */ .A,
+    'coinmate': ccxt_src_coinmate_js_WEBPACK_IMPORTED_MODULE_45_/* ["default"] */ .A,
+    'coinmetro': ccxt_src_coinmetro_js_WEBPACK_IMPORTED_MODULE_46_/* ["default"] */ .A,
+    'coinone': ccxt_src_coinone_js_WEBPACK_IMPORTED_MODULE_47_/* ["default"] */ .A,
+    'coinsph': ccxt_src_coinsph_js_WEBPACK_IMPORTED_MODULE_48_/* ["default"] */ .A,
+    'coinspot': ccxt_src_coinspot_js_WEBPACK_IMPORTED_MODULE_49_/* ["default"] */ .A,
+    'cryptocom': ccxt_src_cryptocom_js_WEBPACK_IMPORTED_MODULE_50_/* ["default"] */ .A,
+    'cryptomus': ccxt_src_cryptomus_js_WEBPACK_IMPORTED_MODULE_51_/* ["default"] */ .A,
+    'defx': ccxt_src_defx_js_WEBPACK_IMPORTED_MODULE_52_/* ["default"] */ .A,
+    'delta': ccxt_src_delta_js_WEBPACK_IMPORTED_MODULE_53_/* ["default"] */ .A,
+    'deribit': ccxt_src_deribit_js_WEBPACK_IMPORTED_MODULE_54_/* ["default"] */ .A,
+    'derive': ccxt_src_derive_js_WEBPACK_IMPORTED_MODULE_55_/* ["default"] */ .A,
+    'digifinex': ccxt_src_digifinex_js_WEBPACK_IMPORTED_MODULE_56_/* ["default"] */ .A,
+    'ellipx': ccxt_src_ellipx_js_WEBPACK_IMPORTED_MODULE_57_/* ["default"] */ .A,
+    'exmo': ccxt_src_exmo_js_WEBPACK_IMPORTED_MODULE_58_/* ["default"] */ .A,
+    'fmfwio': ccxt_src_fmfwio_js_WEBPACK_IMPORTED_MODULE_59_/* ["default"] */ .A,
+    'gate': ccxt_src_gate_js_WEBPACK_IMPORTED_MODULE_60_/* ["default"] */ .A,
+    'gateio': ccxt_src_gateio_js_WEBPACK_IMPORTED_MODULE_61_/* ["default"] */ .A,
+    'gemini': ccxt_src_gemini_js_WEBPACK_IMPORTED_MODULE_62_/* ["default"] */ .A,
+    'hashkey': ccxt_src_hashkey_js_WEBPACK_IMPORTED_MODULE_63_/* ["default"] */ .A,
+    'hitbtc': ccxt_src_hitbtc_js_WEBPACK_IMPORTED_MODULE_64_/* ["default"] */ .A,
+    'hollaex': ccxt_src_hollaex_js_WEBPACK_IMPORTED_MODULE_65_/* ["default"] */ .A,
+    'htx': ccxt_src_htx_js_WEBPACK_IMPORTED_MODULE_66_/* ["default"] */ .A,
+    'huobi': ccxt_src_huobi_js_WEBPACK_IMPORTED_MODULE_67_/* ["default"] */ .A,
+    'huobijp': ccxt_src_huobijp_js_WEBPACK_IMPORTED_MODULE_68_/* ["default"] */ .A,
+    'hyperliquid': ccxt_src_hyperliquid_js_WEBPACK_IMPORTED_MODULE_69_/* ["default"] */ .A,
+    'idex': ccxt_src_idex_js_WEBPACK_IMPORTED_MODULE_70_/* ["default"] */ .A,
+    'independentreserve': ccxt_src_independentreserve_js_WEBPACK_IMPORTED_MODULE_71_/* ["default"] */ .A,
+    'indodax': ccxt_src_indodax_js_WEBPACK_IMPORTED_MODULE_72_/* ["default"] */ .A,
+    'kraken': ccxt_src_kraken_js_WEBPACK_IMPORTED_MODULE_73_/* ["default"] */ .A,
+    'krakenfutures': ccxt_src_krakenfutures_js_WEBPACK_IMPORTED_MODULE_74_/* ["default"] */ .A,
+    'kucoin': ccxt_src_kucoin_js_WEBPACK_IMPORTED_MODULE_75_/* ["default"] */ .A,
+    'kucoinfutures': ccxt_src_kucoinfutures_js_WEBPACK_IMPORTED_MODULE_76_/* ["default"] */ .A,
+    'kuna': ccxt_src_kuna_js_WEBPACK_IMPORTED_MODULE_77_/* ["default"] */ .A,
+    'latoken': ccxt_src_latoken_js_WEBPACK_IMPORTED_MODULE_78_/* ["default"] */ .A,
+    'lbank': ccxt_src_lbank_js_WEBPACK_IMPORTED_MODULE_79_/* ["default"] */ .A,
+    'luno': ccxt_src_luno_js_WEBPACK_IMPORTED_MODULE_80_/* ["default"] */ .A,
+    'mercado': ccxt_src_mercado_js_WEBPACK_IMPORTED_MODULE_81_/* ["default"] */ .A,
+    'mexc': ccxt_src_mexc_js_WEBPACK_IMPORTED_MODULE_82_/* ["default"] */ .A,
+    'myokx': ccxt_src_myokx_js_WEBPACK_IMPORTED_MODULE_83_/* ["default"] */ .A,
+    'ndax': ccxt_src_ndax_js_WEBPACK_IMPORTED_MODULE_84_/* ["default"] */ .A,
+    'novadax': ccxt_src_novadax_js_WEBPACK_IMPORTED_MODULE_85_/* ["default"] */ .A,
+    'oceanex': ccxt_src_oceanex_js_WEBPACK_IMPORTED_MODULE_86_/* ["default"] */ .A,
+    'okcoin': ccxt_src_okcoin_js_WEBPACK_IMPORTED_MODULE_87_/* ["default"] */ .A,
+    'okx': ccxt_src_okx_js_WEBPACK_IMPORTED_MODULE_88_/* ["default"] */ .A,
+    'onetrading': ccxt_src_onetrading_js_WEBPACK_IMPORTED_MODULE_89_/* ["default"] */ .A,
+    'oxfun': ccxt_src_oxfun_js_WEBPACK_IMPORTED_MODULE_90_/* ["default"] */ .A,
+    'p2b': ccxt_src_p2b_js_WEBPACK_IMPORTED_MODULE_91_/* ["default"] */ .A,
+    'paradex': ccxt_src_paradex_js_WEBPACK_IMPORTED_MODULE_92_/* ["default"] */ .A,
+    'paymium': ccxt_src_paymium_js_WEBPACK_IMPORTED_MODULE_93_/* ["default"] */ .A,
+    'phemex': ccxt_src_phemex_js_WEBPACK_IMPORTED_MODULE_94_/* ["default"] */ .A,
+    'poloniex': ccxt_src_poloniex_js_WEBPACK_IMPORTED_MODULE_95_/* ["default"] */ .A,
+    'probit': ccxt_src_probit_js_WEBPACK_IMPORTED_MODULE_96_/* ["default"] */ .A,
+    'timex': ccxt_src_timex_js_WEBPACK_IMPORTED_MODULE_97_/* ["default"] */ .A,
+    'tokocrypto': ccxt_src_tokocrypto_js_WEBPACK_IMPORTED_MODULE_98_/* ["default"] */ .A,
+    'tradeogre': ccxt_src_tradeogre_js_WEBPACK_IMPORTED_MODULE_99_/* ["default"] */ .A,
+    'upbit': ccxt_src_upbit_js_WEBPACK_IMPORTED_MODULE_100_/* ["default"] */ .A,
+    'vertex': ccxt_src_vertex_js_WEBPACK_IMPORTED_MODULE_101_/* ["default"] */ .A,
+    'wavesexchange': ccxt_src_wavesexchange_js_WEBPACK_IMPORTED_MODULE_102_/* ["default"] */ .A,
+    'whitebit': ccxt_src_whitebit_js_WEBPACK_IMPORTED_MODULE_103_/* ["default"] */ .A,
+    'woo': ccxt_src_woo_js_WEBPACK_IMPORTED_MODULE_104_/* ["default"] */ .A,
+    'woofipro': ccxt_src_woofipro_js_WEBPACK_IMPORTED_MODULE_105_/* ["default"] */ .A,
+    'xt': ccxt_src_xt_js_WEBPACK_IMPORTED_MODULE_106_/* ["default"] */ .A,
+    'yobit': ccxt_src_yobit_js_WEBPACK_IMPORTED_MODULE_107_/* ["default"] */ .A,
+    'zaif': ccxt_src_zaif_js_WEBPACK_IMPORTED_MODULE_108_/* ["default"] */ .A,
+    'zonda': ccxt_src_zonda_js_WEBPACK_IMPORTED_MODULE_109_/* ["default"] */ .A,
 };
 const ccxt_pro = {
-    'alpaca': ccxt_src_pro_alpaca_js_WEBPACK_IMPORTED_MODULE_112_/* ["default"] */ .A,
-    'ascendex': ccxt_src_pro_ascendex_js_WEBPACK_IMPORTED_MODULE_113_/* ["default"] */ .A,
-    'bequant': ccxt_src_pro_bequant_js_WEBPACK_IMPORTED_MODULE_114_/* ["default"] */ .A,
-    'binance': ccxt_src_pro_binance_js_WEBPACK_IMPORTED_MODULE_115_/* ["default"] */ .A,
-    'binancecoinm': ccxt_src_pro_binancecoinm_js_WEBPACK_IMPORTED_MODULE_116_/* ["default"] */ .A,
-    'binanceus': ccxt_src_pro_binanceus_js_WEBPACK_IMPORTED_MODULE_117_/* ["default"] */ .A,
-    'binanceusdm': ccxt_src_pro_binanceusdm_js_WEBPACK_IMPORTED_MODULE_118_/* ["default"] */ .A,
-    'bingx': ccxt_src_pro_bingx_js_WEBPACK_IMPORTED_MODULE_119_/* ["default"] */ .A,
-    'bitcoincom': ccxt_src_pro_bitcoincom_js_WEBPACK_IMPORTED_MODULE_120_/* ["default"] */ .A,
-    'bitfinex': ccxt_src_pro_bitfinex_js_WEBPACK_IMPORTED_MODULE_121_/* ["default"] */ .A,
-    'bitfinex1': ccxt_src_pro_bitfinex1_js_WEBPACK_IMPORTED_MODULE_122_/* ["default"] */ .A,
-    'bitget': ccxt_src_pro_bitget_js_WEBPACK_IMPORTED_MODULE_123_/* ["default"] */ .A,
-    'bithumb': ccxt_src_pro_bithumb_js_WEBPACK_IMPORTED_MODULE_124_/* ["default"] */ .A,
-    'bitmart': ccxt_src_pro_bitmart_js_WEBPACK_IMPORTED_MODULE_125_/* ["default"] */ .A,
-    'bitmex': ccxt_src_pro_bitmex_js_WEBPACK_IMPORTED_MODULE_126_/* ["default"] */ .A,
-    'bitopro': ccxt_src_pro_bitopro_js_WEBPACK_IMPORTED_MODULE_127_/* ["default"] */ .A,
-    'bitpanda': ccxt_src_pro_bitpanda_js_WEBPACK_IMPORTED_MODULE_128_/* ["default"] */ .A,
-    'bitrue': ccxt_src_pro_bitrue_js_WEBPACK_IMPORTED_MODULE_129_/* ["default"] */ .A,
-    'bitstamp': ccxt_src_pro_bitstamp_js_WEBPACK_IMPORTED_MODULE_130_/* ["default"] */ .A,
-    'bitvavo': ccxt_src_pro_bitvavo_js_WEBPACK_IMPORTED_MODULE_131_/* ["default"] */ .A,
-    'blockchaincom': ccxt_src_pro_blockchaincom_js_WEBPACK_IMPORTED_MODULE_132_/* ["default"] */ .A,
-    'blofin': ccxt_src_pro_blofin_js_WEBPACK_IMPORTED_MODULE_133_/* ["default"] */ .A,
-    'bybit': ccxt_src_pro_bybit_js_WEBPACK_IMPORTED_MODULE_134_/* ["default"] */ .A,
-    'cex': ccxt_src_pro_cex_js_WEBPACK_IMPORTED_MODULE_135_/* ["default"] */ .A,
-    'coinbase': ccxt_src_pro_coinbase_js_WEBPACK_IMPORTED_MODULE_136_/* ["default"] */ .A,
-    'coinbaseadvanced': ccxt_src_pro_coinbaseadvanced_js_WEBPACK_IMPORTED_MODULE_137_/* ["default"] */ .A,
-    'coinbaseexchange': ccxt_src_pro_coinbaseexchange_js_WEBPACK_IMPORTED_MODULE_138_/* ["default"] */ .A,
-    'coinbaseinternational': ccxt_src_pro_coinbaseinternational_js_WEBPACK_IMPORTED_MODULE_139_/* ["default"] */ .A,
-    'coincatch': ccxt_src_pro_coincatch_js_WEBPACK_IMPORTED_MODULE_140_/* ["default"] */ .A,
-    'coincheck': ccxt_src_pro_coincheck_js_WEBPACK_IMPORTED_MODULE_141_/* ["default"] */ .A,
-    'coinex': ccxt_src_pro_coinex_js_WEBPACK_IMPORTED_MODULE_142_/* ["default"] */ .A,
-    'coinone': ccxt_src_pro_coinone_js_WEBPACK_IMPORTED_MODULE_143_/* ["default"] */ .A,
-    'cryptocom': ccxt_src_pro_cryptocom_js_WEBPACK_IMPORTED_MODULE_144_/* ["default"] */ .A,
-    'defx': ccxt_src_pro_defx_js_WEBPACK_IMPORTED_MODULE_145_/* ["default"] */ .A,
-    'deribit': ccxt_src_pro_deribit_js_WEBPACK_IMPORTED_MODULE_146_/* ["default"] */ .A,
-    'derive': ccxt_src_pro_derive_js_WEBPACK_IMPORTED_MODULE_147_/* ["default"] */ .A,
-    'exmo': ccxt_src_pro_exmo_js_WEBPACK_IMPORTED_MODULE_148_/* ["default"] */ .A,
-    'gate': ccxt_src_pro_gate_js_WEBPACK_IMPORTED_MODULE_149_/* ["default"] */ .A,
-    'gateio': ccxt_src_pro_gateio_js_WEBPACK_IMPORTED_MODULE_150_/* ["default"] */ .A,
-    'gemini': ccxt_src_pro_gemini_js_WEBPACK_IMPORTED_MODULE_151_/* ["default"] */ .A,
-    'hashkey': ccxt_src_pro_hashkey_js_WEBPACK_IMPORTED_MODULE_152_/* ["default"] */ .A,
-    'hitbtc': ccxt_src_pro_hitbtc_js_WEBPACK_IMPORTED_MODULE_153_/* ["default"] */ .A,
-    'hollaex': ccxt_src_pro_hollaex_js_WEBPACK_IMPORTED_MODULE_154_/* ["default"] */ .A,
-    'htx': ccxt_src_pro_htx_js_WEBPACK_IMPORTED_MODULE_155_/* ["default"] */ .A,
-    'huobi': ccxt_src_pro_huobi_js_WEBPACK_IMPORTED_MODULE_156_/* ["default"] */ .A,
-    'huobijp': ccxt_src_pro_huobijp_js_WEBPACK_IMPORTED_MODULE_157_/* ["default"] */ .A,
-    'hyperliquid': ccxt_src_pro_hyperliquid_js_WEBPACK_IMPORTED_MODULE_158_/* ["default"] */ .A,
-    'idex': ccxt_src_pro_idex_js_WEBPACK_IMPORTED_MODULE_159_/* ["default"] */ .A,
-    'independentreserve': ccxt_src_pro_independentreserve_js_WEBPACK_IMPORTED_MODULE_160_/* ["default"] */ .A,
-    'kraken': ccxt_src_pro_kraken_js_WEBPACK_IMPORTED_MODULE_161_/* ["default"] */ .A,
-    'krakenfutures': ccxt_src_pro_krakenfutures_js_WEBPACK_IMPORTED_MODULE_162_/* ["default"] */ .A,
-    'kucoin': ccxt_src_pro_kucoin_js_WEBPACK_IMPORTED_MODULE_163_/* ["default"] */ .A,
-    'kucoinfutures': ccxt_src_pro_kucoinfutures_js_WEBPACK_IMPORTED_MODULE_164_/* ["default"] */ .A,
-    'lbank': ccxt_src_pro_lbank_js_WEBPACK_IMPORTED_MODULE_165_/* ["default"] */ .A,
-    'luno': ccxt_src_pro_luno_js_WEBPACK_IMPORTED_MODULE_166_/* ["default"] */ .A,
-    'mexc': ccxt_src_pro_mexc_js_WEBPACK_IMPORTED_MODULE_167_/* ["default"] */ .A,
-    'myokx': ccxt_src_pro_myokx_js_WEBPACK_IMPORTED_MODULE_168_/* ["default"] */ .A,
-    'ndax': ccxt_src_pro_ndax_js_WEBPACK_IMPORTED_MODULE_169_/* ["default"] */ .A,
-    'okcoin': ccxt_src_pro_okcoin_js_WEBPACK_IMPORTED_MODULE_170_/* ["default"] */ .A,
-    'okx': ccxt_src_pro_okx_js_WEBPACK_IMPORTED_MODULE_171_/* ["default"] */ .A,
-    'onetrading': ccxt_src_pro_onetrading_js_WEBPACK_IMPORTED_MODULE_172_/* ["default"] */ .A,
-    'oxfun': ccxt_src_pro_oxfun_js_WEBPACK_IMPORTED_MODULE_173_/* ["default"] */ .A,
-    'p2b': ccxt_src_pro_p2b_js_WEBPACK_IMPORTED_MODULE_174_/* ["default"] */ .A,
-    'paradex': ccxt_src_pro_paradex_js_WEBPACK_IMPORTED_MODULE_175_/* ["default"] */ .A,
-    'phemex': ccxt_src_pro_phemex_js_WEBPACK_IMPORTED_MODULE_176_/* ["default"] */ .A,
-    'poloniex': ccxt_src_pro_poloniex_js_WEBPACK_IMPORTED_MODULE_177_/* ["default"] */ .A,
-    'poloniexfutures': ccxt_src_pro_poloniexfutures_js_WEBPACK_IMPORTED_MODULE_178_/* ["default"] */ .A,
-    'probit': ccxt_src_pro_probit_js_WEBPACK_IMPORTED_MODULE_179_/* ["default"] */ .A,
-    'upbit': ccxt_src_pro_upbit_js_WEBPACK_IMPORTED_MODULE_180_/* ["default"] */ .A,
-    'vertex': ccxt_src_pro_vertex_js_WEBPACK_IMPORTED_MODULE_181_/* ["default"] */ .A,
-    'whitebit': ccxt_src_pro_whitebit_js_WEBPACK_IMPORTED_MODULE_182_/* ["default"] */ .A,
-    'woo': ccxt_src_pro_woo_js_WEBPACK_IMPORTED_MODULE_183_/* ["default"] */ .A,
-    'woofipro': ccxt_src_pro_woofipro_js_WEBPACK_IMPORTED_MODULE_184_/* ["default"] */ .A,
-    'xt': ccxt_src_pro_xt_js_WEBPACK_IMPORTED_MODULE_185_/* ["default"] */ .A,
+    'alpaca': ccxt_src_pro_alpaca_js_WEBPACK_IMPORTED_MODULE_110_/* ["default"] */ .A,
+    'ascendex': ccxt_src_pro_ascendex_js_WEBPACK_IMPORTED_MODULE_111_/* ["default"] */ .A,
+    'bequant': ccxt_src_pro_bequant_js_WEBPACK_IMPORTED_MODULE_112_/* ["default"] */ .A,
+    'binance': ccxt_src_pro_binance_js_WEBPACK_IMPORTED_MODULE_113_/* ["default"] */ .A,
+    'binancecoinm': ccxt_src_pro_binancecoinm_js_WEBPACK_IMPORTED_MODULE_114_/* ["default"] */ .A,
+    'binanceus': ccxt_src_pro_binanceus_js_WEBPACK_IMPORTED_MODULE_115_/* ["default"] */ .A,
+    'binanceusdm': ccxt_src_pro_binanceusdm_js_WEBPACK_IMPORTED_MODULE_116_/* ["default"] */ .A,
+    'bingx': ccxt_src_pro_bingx_js_WEBPACK_IMPORTED_MODULE_117_/* ["default"] */ .A,
+    'bitcoincom': ccxt_src_pro_bitcoincom_js_WEBPACK_IMPORTED_MODULE_118_/* ["default"] */ .A,
+    'bitfinex': ccxt_src_pro_bitfinex_js_WEBPACK_IMPORTED_MODULE_119_/* ["default"] */ .A,
+    'bitget': ccxt_src_pro_bitget_js_WEBPACK_IMPORTED_MODULE_120_/* ["default"] */ .A,
+    'bithumb': ccxt_src_pro_bithumb_js_WEBPACK_IMPORTED_MODULE_121_/* ["default"] */ .A,
+    'bitmart': ccxt_src_pro_bitmart_js_WEBPACK_IMPORTED_MODULE_122_/* ["default"] */ .A,
+    'bitmex': ccxt_src_pro_bitmex_js_WEBPACK_IMPORTED_MODULE_123_/* ["default"] */ .A,
+    'bitopro': ccxt_src_pro_bitopro_js_WEBPACK_IMPORTED_MODULE_124_/* ["default"] */ .A,
+    'bitpanda': ccxt_src_pro_bitpanda_js_WEBPACK_IMPORTED_MODULE_125_/* ["default"] */ .A,
+    'bitrue': ccxt_src_pro_bitrue_js_WEBPACK_IMPORTED_MODULE_126_/* ["default"] */ .A,
+    'bitstamp': ccxt_src_pro_bitstamp_js_WEBPACK_IMPORTED_MODULE_127_/* ["default"] */ .A,
+    'bitvavo': ccxt_src_pro_bitvavo_js_WEBPACK_IMPORTED_MODULE_128_/* ["default"] */ .A,
+    'blockchaincom': ccxt_src_pro_blockchaincom_js_WEBPACK_IMPORTED_MODULE_129_/* ["default"] */ .A,
+    'blofin': ccxt_src_pro_blofin_js_WEBPACK_IMPORTED_MODULE_130_/* ["default"] */ .A,
+    'bybit': ccxt_src_pro_bybit_js_WEBPACK_IMPORTED_MODULE_131_/* ["default"] */ .A,
+    'cex': ccxt_src_pro_cex_js_WEBPACK_IMPORTED_MODULE_132_/* ["default"] */ .A,
+    'coinbase': ccxt_src_pro_coinbase_js_WEBPACK_IMPORTED_MODULE_133_/* ["default"] */ .A,
+    'coinbaseadvanced': ccxt_src_pro_coinbaseadvanced_js_WEBPACK_IMPORTED_MODULE_134_/* ["default"] */ .A,
+    'coinbaseexchange': ccxt_src_pro_coinbaseexchange_js_WEBPACK_IMPORTED_MODULE_135_/* ["default"] */ .A,
+    'coinbaseinternational': ccxt_src_pro_coinbaseinternational_js_WEBPACK_IMPORTED_MODULE_136_/* ["default"] */ .A,
+    'coincatch': ccxt_src_pro_coincatch_js_WEBPACK_IMPORTED_MODULE_137_/* ["default"] */ .A,
+    'coincheck': ccxt_src_pro_coincheck_js_WEBPACK_IMPORTED_MODULE_138_/* ["default"] */ .A,
+    'coinex': ccxt_src_pro_coinex_js_WEBPACK_IMPORTED_MODULE_139_/* ["default"] */ .A,
+    'coinone': ccxt_src_pro_coinone_js_WEBPACK_IMPORTED_MODULE_140_/* ["default"] */ .A,
+    'cryptocom': ccxt_src_pro_cryptocom_js_WEBPACK_IMPORTED_MODULE_141_/* ["default"] */ .A,
+    'defx': ccxt_src_pro_defx_js_WEBPACK_IMPORTED_MODULE_142_/* ["default"] */ .A,
+    'deribit': ccxt_src_pro_deribit_js_WEBPACK_IMPORTED_MODULE_143_/* ["default"] */ .A,
+    'derive': ccxt_src_pro_derive_js_WEBPACK_IMPORTED_MODULE_144_/* ["default"] */ .A,
+    'exmo': ccxt_src_pro_exmo_js_WEBPACK_IMPORTED_MODULE_145_/* ["default"] */ .A,
+    'gate': ccxt_src_pro_gate_js_WEBPACK_IMPORTED_MODULE_146_/* ["default"] */ .A,
+    'gateio': ccxt_src_pro_gateio_js_WEBPACK_IMPORTED_MODULE_147_/* ["default"] */ .A,
+    'gemini': ccxt_src_pro_gemini_js_WEBPACK_IMPORTED_MODULE_148_/* ["default"] */ .A,
+    'hashkey': ccxt_src_pro_hashkey_js_WEBPACK_IMPORTED_MODULE_149_/* ["default"] */ .A,
+    'hitbtc': ccxt_src_pro_hitbtc_js_WEBPACK_IMPORTED_MODULE_150_/* ["default"] */ .A,
+    'hollaex': ccxt_src_pro_hollaex_js_WEBPACK_IMPORTED_MODULE_151_/* ["default"] */ .A,
+    'htx': ccxt_src_pro_htx_js_WEBPACK_IMPORTED_MODULE_152_/* ["default"] */ .A,
+    'huobi': ccxt_src_pro_huobi_js_WEBPACK_IMPORTED_MODULE_153_/* ["default"] */ .A,
+    'huobijp': ccxt_src_pro_huobijp_js_WEBPACK_IMPORTED_MODULE_154_/* ["default"] */ .A,
+    'hyperliquid': ccxt_src_pro_hyperliquid_js_WEBPACK_IMPORTED_MODULE_155_/* ["default"] */ .A,
+    'idex': ccxt_src_pro_idex_js_WEBPACK_IMPORTED_MODULE_156_/* ["default"] */ .A,
+    'independentreserve': ccxt_src_pro_independentreserve_js_WEBPACK_IMPORTED_MODULE_157_/* ["default"] */ .A,
+    'kraken': ccxt_src_pro_kraken_js_WEBPACK_IMPORTED_MODULE_158_/* ["default"] */ .A,
+    'krakenfutures': ccxt_src_pro_krakenfutures_js_WEBPACK_IMPORTED_MODULE_159_/* ["default"] */ .A,
+    'kucoin': ccxt_src_pro_kucoin_js_WEBPACK_IMPORTED_MODULE_160_/* ["default"] */ .A,
+    'kucoinfutures': ccxt_src_pro_kucoinfutures_js_WEBPACK_IMPORTED_MODULE_161_/* ["default"] */ .A,
+    'lbank': ccxt_src_pro_lbank_js_WEBPACK_IMPORTED_MODULE_162_/* ["default"] */ .A,
+    'luno': ccxt_src_pro_luno_js_WEBPACK_IMPORTED_MODULE_163_/* ["default"] */ .A,
+    'mexc': ccxt_src_pro_mexc_js_WEBPACK_IMPORTED_MODULE_164_/* ["default"] */ .A,
+    'myokx': ccxt_src_pro_myokx_js_WEBPACK_IMPORTED_MODULE_165_/* ["default"] */ .A,
+    'ndax': ccxt_src_pro_ndax_js_WEBPACK_IMPORTED_MODULE_166_/* ["default"] */ .A,
+    'okcoin': ccxt_src_pro_okcoin_js_WEBPACK_IMPORTED_MODULE_167_/* ["default"] */ .A,
+    'okx': ccxt_src_pro_okx_js_WEBPACK_IMPORTED_MODULE_168_/* ["default"] */ .A,
+    'onetrading': ccxt_src_pro_onetrading_js_WEBPACK_IMPORTED_MODULE_169_/* ["default"] */ .A,
+    'oxfun': ccxt_src_pro_oxfun_js_WEBPACK_IMPORTED_MODULE_170_/* ["default"] */ .A,
+    'p2b': ccxt_src_pro_p2b_js_WEBPACK_IMPORTED_MODULE_171_/* ["default"] */ .A,
+    'paradex': ccxt_src_pro_paradex_js_WEBPACK_IMPORTED_MODULE_172_/* ["default"] */ .A,
+    'phemex': ccxt_src_pro_phemex_js_WEBPACK_IMPORTED_MODULE_173_/* ["default"] */ .A,
+    'poloniex': ccxt_src_pro_poloniex_js_WEBPACK_IMPORTED_MODULE_174_/* ["default"] */ .A,
+    'probit': ccxt_src_pro_probit_js_WEBPACK_IMPORTED_MODULE_175_/* ["default"] */ .A,
+    'upbit': ccxt_src_pro_upbit_js_WEBPACK_IMPORTED_MODULE_176_/* ["default"] */ .A,
+    'vertex': ccxt_src_pro_vertex_js_WEBPACK_IMPORTED_MODULE_177_/* ["default"] */ .A,
+    'whitebit': ccxt_src_pro_whitebit_js_WEBPACK_IMPORTED_MODULE_178_/* ["default"] */ .A,
+    'woo': ccxt_src_pro_woo_js_WEBPACK_IMPORTED_MODULE_179_/* ["default"] */ .A,
+    'woofipro': ccxt_src_pro_woofipro_js_WEBPACK_IMPORTED_MODULE_180_/* ["default"] */ .A,
+    'xt': ccxt_src_pro_xt_js_WEBPACK_IMPORTED_MODULE_181_/* ["default"] */ .A,
 };
 for (const exchange in ccxt_pro) {
     // const ccxtExchange = exchanges[exchange]
@@ -403305,7 +399446,7 @@ for (const exchange in ccxt_pro) {
 ccxt_pro.exchanges = Object.keys(ccxt_pro);
 ccxt_pro['Exchange'] = ccxt_src_base_Exchange_js_WEBPACK_IMPORTED_MODULE_0_/* .Exchange */ .k; // now the same for rest and ts
 //-----------------------------------------------------------------------------
-const ccxt_ccxt = Object.assign({ version: ccxt_version, Exchange: ccxt_src_base_Exchange_js_WEBPACK_IMPORTED_MODULE_0_/* .Exchange */ .k, Precise: ccxt_src_base_Precise_js_WEBPACK_IMPORTED_MODULE_186_/* .Precise */ .Y, 'exchanges': Object.keys(ccxt_exchanges), 'pro': ccxt_pro }, ccxt_exchanges, ccxt_src_base_functions_js_WEBPACK_IMPORTED_MODULE_187_, ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_188_);
+const ccxt_ccxt = Object.assign({ version: ccxt_version, Exchange: ccxt_src_base_Exchange_js_WEBPACK_IMPORTED_MODULE_0_/* .Exchange */ .k, Precise: ccxt_src_base_Precise_js_WEBPACK_IMPORTED_MODULE_182_/* .Precise */ .Y, 'exchanges': Object.keys(ccxt_exchanges), 'pro': ccxt_pro }, ccxt_exchanges, ccxt_src_base_functions_js_WEBPACK_IMPORTED_MODULE_183_, ccxt_src_base_errors_js_WEBPACK_IMPORTED_MODULE_184_);
 
 /* harmony default export */ const ts_ccxt = (ccxt_ccxt);
 //-----------------------------------------------------------------------------

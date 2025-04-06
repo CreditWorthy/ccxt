@@ -43,7 +43,7 @@ use BN\BN;
 use Sop\ASN1\Type\UnspecifiedType;
 use Exception;
 
-$version = '4.4.70';
+$version = '4.4.73';
 
 // rounding mode
 const TRUNCATE = 0;
@@ -62,7 +62,7 @@ const PAD_WITH_ZERO = 6;
 
 class Exchange {
 
-    const VERSION = '4.4.70';
+    const VERSION = '4.4.73';
 
     private static $base58_alphabet = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
     private static $base58_encoder = null;
@@ -352,7 +352,6 @@ class Exchange {
         'bitbns',
         'bitcoincom',
         'bitfinex',
-        'bitfinex1',
         'bitflyer',
         'bitget',
         'bithumb',
@@ -433,7 +432,6 @@ class Exchange {
         'paymium',
         'phemex',
         'poloniex',
-        'poloniexfutures',
         'probit',
         'timex',
         'tokocrypto',
@@ -1149,6 +1147,10 @@ class Exchange {
         }
 
         $this->after_construct();
+
+        if ($this->safe_bool($options, 'sandbox') || $this->safe_bool($options, 'testnet')) {
+            $this->set_sandbox_mode(true);
+        }
     }
 
     public function init_throttler() {
@@ -3594,7 +3596,8 @@ class Exchange {
         $length = count($keys);
         if ($length !== 0) {
             for ($i = 0; $i < $length; $i++) {
-                $network = $networks[$keys[$i]];
+                $key = $keys[$i];
+                $network = $networks[$key];
                 $deposit = $this->safe_bool($network, 'deposit');
                 if ($currencyDeposit === null || $deposit) {
                     $currency['deposit'] = $deposit;
@@ -3606,6 +3609,14 @@ class Exchange {
                 $active = $this->safe_bool($network, 'active');
                 if ($currencyActive === null || $active) {
                     $currency['active'] = $active;
+                }
+                // set $network 'active' to false if D or W is disabled
+                if ($this->safe_bool($network, 'active') === null) {
+                    if ($deposit && $withdraw) {
+                        $currency['networks'][$key]['active'] = true;
+                    } elseif ($deposit !== null && $withdraw !== null) {
+                        $currency['networks'][$key]['active'] = false;
+                    }
                 }
                 // find lowest $fee (which is more desired)
                 $fee = $this->safe_string($network, 'fee');
@@ -5243,6 +5254,25 @@ class Exchange {
             $params = $this->omit($params, array( $paramName1, $paramName2 ));
         }
         return array( $value, $params );
+    }
+
+    public function handle_request_network(array $params, array $request, string $exchangeSpecificKey, ?string $currencyCode = null, bool $isRequired = false) {
+        /**
+         * @param {array} $params - extra parameters
+         * @param {array} $request - existing dictionary of $request
+         * @param {string} $exchangeSpecificKey - the key for chain id to be set in $request
+         * @param {array} $currencyCode - (optional) existing dictionary of $request
+         * @param {boolean} $isRequired - (optional) whether that param is required to be present
+         * @return {array[]} - returns [$request, $params] where $request is the modified $request object and $params is the modified $params object
+         */
+        $networkCode = null;
+        list($networkCode, $params) = $this->handle_network_code_and_params($params);
+        if ($networkCode !== null) {
+            $request[$exchangeSpecificKey] = $this->network_code_to_id($networkCode, $currencyCode);
+        } elseif ($isRequired) {
+            throw new ArgumentsRequired($this->id . ' - "network" param is required for this request');
+        }
+        return array( $request, $params );
     }
 
     public function resolve_path($path, $params) {
@@ -7908,22 +7938,13 @@ class Exchange {
         return $result;
     }
 
-    public function remove_repeated_elements_from_array($input) {
+    public function remove_repeated_elements_from_array($input, bool $fallbackToTimestamp = true) {
         $uniqueResult = array();
         for ($i = 0; $i < count($input); $i++) {
             $entry = $input[$i];
-            $id = $this->safe_string($entry, 'id');
-            if ($id !== null) {
-                if ($this->safe_string($uniqueResult, $id) === null) {
-                    $uniqueResult[$id] = $entry;
-                }
-            } else {
-                $timestamp = $this->safe_integer_2($entry, 'timestamp', 0);
-                if ($timestamp !== null) {
-                    if ($this->safe_string($uniqueResult, $timestamp) === null) {
-                        $uniqueResult[$timestamp] = $entry;
-                    }
-                }
+            $uniqValue = $fallbackToTimestamp ? $this->safe_string_n($entry, array( 'id', 'timestamp', 0 )) : $this->safe_string($entry, 'id');
+            if ($uniqValue !== null && !(is_array($uniqueResult) && array_key_exists($uniqValue, $uniqueResult))) {
+                $uniqueResult[$uniqValue] = $entry;
             }
         }
         $values = is_array($uniqueResult) ? array_values($uniqueResult) : array();

@@ -4,7 +4,7 @@
 
 # -----------------------------------------------------------------------------
 
-__version__ = '4.4.70'
+__version__ = '4.4.73'
 
 # -----------------------------------------------------------------------------
 
@@ -33,7 +33,7 @@ from ccxt.base.decimal_to_precision import decimal_to_precision
 from ccxt.base.decimal_to_precision import DECIMAL_PLACES, TICK_SIZE, NO_PADDING, TRUNCATE, ROUND, ROUND_UP, ROUND_DOWN, SIGNIFICANT_DIGITS
 from ccxt.base.decimal_to_precision import number_to_string
 from ccxt.base.precise import Precise
-from ccxt.base.types import BalanceAccount, Currency, IndexType, OrderSide, OrderType, Trade, OrderRequest, Market, MarketType, Str, Num, Strings, CancellationRequest, Bool
+from ccxt.base.types import ConstructorArgs, BalanceAccount, Currency, IndexType, OrderSide, OrderType, Trade, OrderRequest, Market, MarketType, Str, Num, Strings, CancellationRequest, Bool
 
 # -----------------------------------------------------------------------------
 
@@ -369,7 +369,7 @@ class Exchange(object):
     }
     synchronous = True
 
-    def __init__(self, config={}):
+    def __init__(self, config: ConstructorArgs = {}):
         self.aiohttp_trust_env = self.aiohttp_trust_env or self.trust_env
         self.requests_trust_env = self.requests_trust_env or self.trust_env
 
@@ -409,6 +409,9 @@ class Exchange(object):
                 setattr(self, key, settings[key])
 
         self.after_construct()
+
+        if self.safe_bool(config, 'sandbox') or self.safe_bool(config, 'testnet'):
+            self.set_sandbox_mode(True)
 
         # convert all properties from underscore notation foo_bar to camelcase notation fooBar
         cls = type(self)
@@ -2918,7 +2921,8 @@ class Exchange(object):
         length = len(keys)
         if length != 0:
             for i in range(0, length):
-                network = networks[keys[i]]
+                key = keys[i]
+                network = networks[key]
                 deposit = self.safe_bool(network, 'deposit')
                 if currencyDeposit is None or deposit:
                     currency['deposit'] = deposit
@@ -2928,6 +2932,12 @@ class Exchange(object):
                 active = self.safe_bool(network, 'active')
                 if currencyActive is None or active:
                     currency['active'] = active
+                # set network 'active' to False if D or W is disabled
+                if self.safe_bool(network, 'active') is None:
+                    if deposit and withdraw:
+                        currency['networks'][key]['active'] = True
+                    elif deposit is not None and withdraw is not None:
+                        currency['networks'][key]['active'] = False
                 # find lowest fee(which is more desired)
                 fee = self.safe_string(network, 'fee')
                 feeMain = self.safe_string(currency, 'fee')
@@ -4285,6 +4295,23 @@ class Exchange(object):
         if value is not None:
             params = self.omit(params, [paramName1, paramName2])
         return [value, params]
+
+    def handle_request_network(self, params: dict, request: dict, exchangeSpecificKey: str, currencyCode: Str = None, isRequired: bool = False):
+        """
+        :param dict params: - extra parameters
+        :param dict request: - existing dictionary of request
+        :param str exchangeSpecificKey: - the key for chain id to be set in request
+        :param dict currencyCode: - (optional) existing dictionary of request
+        :param boolean isRequired: - (optional) whether that param is required to be present
+        :returns dict[]: - returns [request, params] where request is the modified request object and params is the modified params object
+        """
+        networkCode = None
+        networkCode, params = self.handle_network_code_and_params(params)
+        if networkCode is not None:
+            request[exchangeSpecificKey] = self.network_code_to_id(networkCode, currencyCode)
+        elif isRequired:
+            raise ArgumentsRequired(self.id + ' - "network" param is required for self request')
+        return [request, params]
 
     def resolve_path(self, path, params):
         return [
@@ -6444,19 +6471,13 @@ class Exchange(object):
                 return self.sort_by(result, 'id', True)
         return result
 
-    def remove_repeated_elements_from_array(self, input):
+    def remove_repeated_elements_from_array(self, input, fallbackToTimestamp: bool = True):
         uniqueResult = {}
         for i in range(0, len(input)):
             entry = input[i]
-            id = self.safe_string(entry, 'id')
-            if id is not None:
-                if self.safe_string(uniqueResult, id) is None:
-                    uniqueResult[id] = entry
-            else:
-                timestamp = self.safe_integer_2(entry, 'timestamp', 0)
-                if timestamp is not None:
-                    if self.safe_string(uniqueResult, timestamp) is None:
-                        uniqueResult[timestamp] = entry
+            uniqValue = self.safe_string_n(entry, ['id', 'timestamp', 0]) if fallbackToTimestamp else self.safe_string(entry, 'id')
+            if uniqValue is not None and not (uniqValue in uniqueResult):
+                uniqueResult[uniqValue] = entry
         values = list(uniqueResult.values())
         valuesLength = len(values)
         if valuesLength > 0:
